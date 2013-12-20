@@ -1,0 +1,227 @@
+#main-page-banner-wrapper
+  ul.bxslider
+    li
+      img src=asset_path("main-banner-background-1.jpg")
+    li
+      img src=asset_path("main-banner-background-2.jpg")
+    li
+      img src=asset_path("main-banner-background-5.jpg")
+.row.search-bar.box-shadow-bottom
+  .columns.large-5
+    .row
+      .columns.search-bar-background-left.box-shadow-left-bottom
+    ul#bx-pager
+      li
+        .triangle
+        .thumbnail-item
+          a data-slide-index="0" href=""
+            img src=asset_path("main-banner-background-1.jpg")
+      li
+        .triangle
+        .thumbnail-item
+          a data-slide-index="1" href=""
+            img src=asset_path("main-banner-background-2.jpg")
+      li
+        .triangle
+        .thumbnail-item
+          a data-slide-index="2" href=""
+            img src=asset_path("main-banner-background-5.jpg")
+  .columns.large-1
+    p
+  .columns.large-6
+    .row.search-form
+      =form_tag
+        .columns.large-10
+          =text_field_tag :search, nil, :placeholder => "Введіть, що шукаєте. Наприклад: Двері броньовані"
+        .columns.large-2
+          =submit_tag "", :class => ' search-button'
+    .columns.search-bar-background-right.box-shadow-right-bottom
+.row.main-page-wrapper
+  .columns.large-12
+    .row.main-short-description
+      .columns.large-6
+        h2
+          |ТзОВ «Стар-Буд»
+        span
+          |— 7 років креативної та ексклюзивної роботи на Західному ринку України.
+        p
+          |Основний напрямок діяльності компанії Стар-Буд – оптовий і роздрібний продаж будівельно оздоблювальних матеріалів у 10 областях України: Львівська, Закарпатська, Чернівецька,  Хмельницька, Житомирська, Вінницька, Івано-Франківська, Рівненська, Волинська, Тернопільська.
+      .columns.large-6
+        h2
+          |З нами вигідно та зручно
+        li У нас найкращі ціни!
+        li Своєчасна доставка гарантована великими складськими запасами.
+        li Ми продаємо тільки сертифіковані та якісні будівельні матеріали!
+        li
+          |Унікальний кошик пропозицій: новинки, акційні товари по мінімальним цінам, унікальні торгові пропозиції та шалені знижки
+        li Професійна консультація!
+        li Безкоштовний дизайн
+    .row
+      .columns.large-2.read-more
+        a
+          |Детальніше...
+    .row.centre-main-page-menu
+      /- @main_catalog.each do |main_menu|
+      /  .columns.large-4.float-left
+      /    .title-centre-main-page-menu
+      /      .row
+      /        .columns
+      /          h2
+      /            img src=main_menu.image
+      /            =main_menu.name
+      /    .row
+      /      .columns
+      /        -main_menu.sub_catalogs.each do |sub_catalog|
+      /          li
+      /            a =sub_catalog.name
+
+    .row.visual-constructor
+      .columns.large-2
+        .row
+          .columns
+            .row
+              .columns.visual-constructor-left
+                p
+      .columns.large-2
+        img src=asset_path("visual-constructor-icon.png")
+      .columns.large-5
+        h3
+          |Візуальний Конструктор
+        span
+          |За все время работы с рекламой, дизайном, организацией любых творческих процессов, автор вывел для себя важное правило.
+      .columns.large-1
+        p
+      .columns.large-1
+        button
+      .columns.large-1
+        .row
+          .columns
+            .row
+              .columns.visual-constructor-right
+                p
+    .row.interest-info
+      .columns.large-7
+        .row.title-wrapper
+          .columns.large-8.title.box-shadow-right-bottom.titl-backg
+            .title-inner.box-shadow-bottom.titl-backg
+              h2 Цікаві новини
+          .columns
+            li.item
+              .columns.large-3.image
+                a
+                  img src=asset_path("main-page-article-image-1.jpg")
+              .columns.large-9
+                h5
+                  a
+                    | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
+                span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
+                .main-page-read-more-wrapper
+                  .main-page-read-more.box-shadow-right-bottom
+                    a
+                      img src=asset_path("main_page_read_more.jpg")
+            li.item
+              .columns.large-3.image
+                a
+                  img src=asset_path("main-page-article-image-2.jpg")
+              .columns.large-9
+                h5
+                  a
+                    | Антарктические черви питаются костями, брезгуя затонувшими судами
+                span Ученые не исключают, что затонувшие в водах Антарктики корабли могут оставаться там в сохранности, так как местные черви предпочитают кости древесине, пишет издание Proceedings of the Royal Society B.
+                .main-page-read-more-wrapper
+                  .main-page-read-more.box-shadow-right-bottom
+                    a
+                      img src=asset_path("main_page_read_more.jpg")
+      .columns.large-5
+        .row.title-wrapper.video
+          .columns.title.box-shadow-right-bottom.titl-backg
+            .title-inner.box-shadow-bottom.titl-backg
+              h2 Корисні відео
+          .columns.video-item
+            img src=asset_path("main-page-video-1.jpg")
+          .columns
+            .row.row-video-2
+              .columns.large-6
+                img src=asset_path("main-page-video-2.jpg")
+              .columns.large-6
+                img src=asset_path("main-page-video-2.jpg")
+    .row.main-logo-carousel.box-shadow-bottom
+      .carousel-margin-left.box-shadow-left-bottom
+      .row.main-logo-carousel-inner
+        ul#logo-carousel
+          li
+            img src=asset_path("ursa-logo.png")
+          li
+            img src=asset_path("knauf-logo.png")
+          li
+            img src=asset_path("rigips-logo.png")
+          li
+            img src=asset_path("ursa-logo.png")
+          li
+            img src=asset_path("knauf-logo.png")
+          li
+            img src=asset_path("ceresit-logo.png")
+      .carousel-margin-right.box-shadow-right-bottom
+    .row.helpful-articles
+      .columns.large-7
+        .row.title-wrapper
+          .columns.large-8.title.box-shadow-right-bottom.titl-backg
+            .title-inner.box-shadow-bottom.titl-backg
+              h2 Цікаві новини
+      .row
+        .columns.large-6
+          li.item
+            .columns.large-3.image
+              a
+                img src=asset_path("main-page-article-image-1.jpg")
+            .columns.large-9
+              h5
+                a
+                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
+              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
+              .main-page-read-more-wrapper
+                .main-page-read-more.box-shadow-right-bottom
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+        .columns.large-6
+          li.item
+            .columns.large-3.image
+              a
+                img src=asset_path("main-page-article-image-1.jpg")
+            .columns.large-9
+              h5
+                a
+                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
+              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
+              .main-page-read-more-wrapper
+                .main-page-read-more.box-shadow-right-bottom
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+        .columns.large-6
+          li.item
+            .columns.large-3.image
+              a
+                img src=asset_path("main-page-article-image-1.jpg")
+            .columns.large-9
+              h5
+                a
+                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
+              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
+              .main-page-read-more-wrapper
+                .main-page-read-more.box-shadow-right-bottom
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+        .columns.large-6
+          li.item
+            .columns.large-3.image
+              a
+                img src=asset_path("main-page-article-image-1.jpg")
+            .columns.large-9
+              h5
+                a
+                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
+              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
+              .main-page-read-more-wrapper
+                .main-page-read-more.box-shadow-right-bottom
+                  a
+                    img src=asset_path("main_page_read_more.jpg")

@@ -1,0 +1,97 @@
+// Place all the styles related to the about_us controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.about-wrapper {
+    background: white;
+    padding-bottom: 100px;
+    margin-top: -85px;
+    position: relative;
+}
+.title-about-us {
+    clear: both;
+    padding-left: 0.9375rem;
+    padding-bottom: 60px;
+    margin-top: -10px;
+}
+
+.about-us-sidebar li a {
+    padding: 8px 0 8px 30px;
+    display: block;
+    background: #ebebeb;
+    font-size: 20px;
+    color: #004684;
+    font-weight: 200;
+}
+.about-us-sidebar li {
+    list-style: none;
+    padding: 1px 0 1px 0;
+}
+.about-us-sidebar li a:hover, .selected {
+    background: url("<%= asset_path('about_us_sidebar_link_hover_background_pattern.jpg') %>")!important;
+    color: white!important;
+}
+.selected {padding-left: 50px!important;}
+.about-wrapper h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
+.title-about-us h3 {
+    color: #666666;
+}
+.about-us-content h3 {
+    color: #005baa;
+    margin-top: 0;
+    line-height: 27px;
+    padding-bottom: 15px;
+}
+.about-us-content p {
+    font-size: 18px;
+    color: #666666;
+    font-weight: 100;
+}
+.about-us-content .large-9 img {
+    padding-bottom: 20px;
+}
+.about-wrapper .columns.large-12 {
+    position: relative;
+}
+.about-item, .about-item ul li {
+    list-style: none;
+}
+.about-item ul li h3 {
+    width: 15%;
+    padding-top: 5px;
+}
+.about-item ul li p {
+    width: 85%;
+}
+.about-item ul li h3,  .about-item ul li p {
+    float: left;
+    min-height: 54px;
+    display: block;
+}
+.about-item > ul {
+    width: 95%;
+    padding-left: 5%;
+}
+.history-about {
+    display: none;
+}
+.dbl {display: block}
+.about-item h4 {
+    font-size: 22px;
+    color: #005baa;
+    font-weight: 400;
+    padding-left: 10%;
+}
+.about-item h4 a {
+    border-bottom: 1px solid red;
+}
+.about-item h4 a {
+    border-bottom: 1px dashed rgba(0, 133 ,178, 0.3);
+    transition: 0.6s ease-out all;
+    -webkit-transition: 0.6s ease-out all;
+}
+.about-item h4 a:hover {
+    border-bottom: 1px dashed rgba(0, 133 ,178, 1);
+}

@@ -1,0 +1,12 @@
+= simple_form_for(@publication) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :image
+    = f.input :short_description
+    = f.input :description
+    = f.input :url
+
+  .form-actions
+    = f.button :submit

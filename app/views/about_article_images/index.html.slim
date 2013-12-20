@@ -1,0 +1,17 @@
+h1 Listing about_article_images
+
+table
+  tr
+    th
+    th
+    th
+
+  - @about_article_images.each do |about_article_image|
+    tr
+      td = link_to 'Show', about_article_image
+      td = link_to 'Edit', edit_about_article_image_path(about_article_image)
+      td = link_to 'Destroy', about_article_image, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New About article image', new_about_article_image_path

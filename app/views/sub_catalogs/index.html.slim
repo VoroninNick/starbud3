@@ -1,0 +1,17 @@
+h1 Listing sub_catalogs
+
+table
+  tr
+    th
+    th
+    th
+
+  - @sub_catalogs.each do |sub_catalog|
+    tr
+      td = link_to 'Show', sub_catalog
+      td = link_to 'Edit', edit_sub_catalog_path(sub_catalog)
+      td = link_to 'Destroy', sub_catalog, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Sub catalog', new_sub_catalog_path

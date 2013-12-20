@@ -1,0 +1,169 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+  title == content_for?(:title) ? yield(:title) : "Стар Буд"
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,cyrillic"
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?sensor=false"
+  = javascript_include_tag "//vk.com/js/api/openapi.js?101"
+  = javascript_include_tag "application"
+  = csrf_meta_tag
+
+body
+  #page-wrapper
+    .page-black-background
+    .row.header-wrapper
+      .row.header-top
+        .columns.large-2
+          p
+        .columns.large-10
+          .header-top-left
+            span
+              |Гуртова дистрибуція
+            span
+              |будівельно-облицювальних матеріалів.
+          .header-top-center
+            p
+              |тел.: +38
+              span
+                |(032) 242 38 41
+          .header-top-right
+            ul.header-social-buttons
+              li
+                a
+                  img src=asset_path("h-f.png")
+              li
+                a
+                  img src=asset_path("h-vk.png")
+              li
+                a
+                  img src=asset_path("h-t.png")
+              li
+                a
+                  img src=asset_path("h-g.png")
+      .row.header-bottom.header-box-shadow-right-bottom
+        .columns.large-3
+          a.main-header-logo href="/" title="На головну"
+            /= link_to image_tag("logo_ua.png") + '', root_path, :title => 'На головну'
+            img.header-box-shadow-right-bottom src=asset_path("starbud-header-logo.jpg")
+        .columns.large-9
+          ul#main-menu
+            li
+              = link_to 'Про нас', about_path, :class => is_active?("about")
+            li.catalog
+              = link_to 'Каталог', main_page_catalog_path, :class => is_active?("main_page_catalog")
+              /
+              /ul.main-menu-catalog
+              /  - @main_catalog.each do |main_menu|
+              /    li.sub-menu-item
+              /      h2
+              /        img src=main_menu.image
+              /        =main_menu.name
+              /      .sub-menu-links
+              /        -main_menu.sub_catalogs.each do |sub_catalog|
+              /          span
+              /            /= link_to sub_catalog.name, my_sub_catalog_path( sub_catalog: sub_catalog.id )
+              /            a =sub_catalog.name
+
+            li
+              = link_to 'Акції', actions_path, :class => is_active?("actions")
+            li
+              = link_to 'Публікації', publications_path, :class => is_active?("publications")
+            li
+              = link_to 'Контакти', contacts_path, :class => is_active?("contacts")
+    = yield
+  .footer-wrapper
+    .row.social-panel.box-shadow-bottom
+      .sb-margin-left.box-shadow-left-bottom
+      .row.social-buttons
+        .columns.large-2
+          span Давайте дружити у соц. мережах!
+        .columns.large-1
+          a
+            img src=asset_path("ff.png")
+        .columns.large-1
+          a
+            img src=asset_path("fvk.png")
+        .columns.large-1
+          a
+            img src=asset_path("ft.png")
+        .columns.large-1
+          a
+            img src=asset_path("fg.png")
+        .columns.large-2
+          span Бути в курсі нових надходжень:
+        .columns.large-4
+          .subscribe-form
+            .columns
+              input placeholder="Введіть свою електронну скриньку"
+              button.subscribe
+      .sb-margin-right.box-shadow-bottom
+    .row.white-bottom-padding
+    .row.footer-bottom-content
+      .columns.large-5
+        span © Інтер’єр салон «Стар-Дизайн™» . 2004 — 201
+        span Всі права застережено.&nbsp;
+        a
+          |Правила використання
+        span
+          |.&nbsp;
+        a
+          |Карта сайту.
+      .columns.large-7
+        nav.footer-menu
+          li
+            a
+              |Про нас
+          li
+            a
+              |Каталог
+          li
+            a
+              |Акції
+          li
+            a
+              |Публікації
+          li
+            a
+              |Співпраця
+          li
+            a
+              |Контакти
+    .row.footer-bottom-content-down
+      .columns.large-4.footer_down_left
+        .voronin_studio
+          a href="http://voroninstudio.eu/"
+            .voronin_studio_img
+              img.voronin-studio-lable src=asset_path("voronin-studio-lable.svg")
+              img.hover-voronin-studio-lable src=asset_path("studio-lable-white-1.png") style="display: none;"
+          .voronin_studio_text
+            p
+              |Розроблено в&nbsp;
+              a href="http://voroninstudio.eu/" студії  М. Вороніна
+              |&nbsp; в 2014 році.
+              a href="http://voroninstudio.eu/" &nbsp;Інформація про сайт.
+      .columns.large-1
+        p
+      .columns.large-5.footer-contacts
+        p
+          |тел./факс:
+          span
+            |&nbsp;(032)&nbsp;242&nbsp;38&nbsp;41
+          br
+          |вул. Луганська, 18, м. Львів, 79034, Україна
+      .columns.large-2.work-time
+        p
+          |Пн-Пт:
+          span  9:00 — 18:00
+        p
+          |Cб:
+          span 10:00 — 14:00
+
+
+
+

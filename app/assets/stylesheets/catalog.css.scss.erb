@@ -1,0 +1,190 @@
+// Place all the styles related to the catalog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//@font-face {
+//  font-family: 'LianaRegular';
+//  src: url('./fonts/liana/liana.eot');
+//  src: url('./fonts/liana/liana.eot') format('embedded-opentype'),
+//  url('./fonts/liana/liana.woff') format('woff'),
+//  url('./fonts/liana/liana.ttf') format('truetype'),
+//  url('./fonts/liana/liana.svg#LianaRegular') format('svg');
+//}
+@font-face {
+  font-family: 'LianaRegular';
+  src: url('./fonts/liana/liana.eot');
+  src: url('./fonts/liana/liana.eot') format('embedded-opentype'),
+  url('./fonts/liana/liana.woff') format('woff'),
+  url('./fonts/liana/liana.ttf') format('truetype'),
+  url('./fonts/liana/liana.svg#LianaRegular') format('svg');
+}
+
+.product-actions-label {
+  position: absolute;
+  width: 80px;
+  top: -43px;
+  left: -20px;
+}
+.catalog-content-wrapper h4 {
+  color: #666666;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -10px;
+}
+.catalog-content-wrapper p,  .catalog-content-wrapper span {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 100;
+}
+.title-variant-item span {
+  font-weight: 600;
+}
+.modifications-color li {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.modifications li {
+  border-radius: 50%;
+  width: 100px;
+  overflow: hidden;
+  height: 100px;
+}
+.modifications li img, .modifications-color li img {
+  position: relative;
+  top: -65%;
+}
+.catalog-content-wrapper li {list-style: none}
+.modifications li, .modifications-color li {
+  float: left;
+  margin: 5px;
+}
+.title-variant-item {
+  clear: both;
+}
+.catalog-content-title-wrapper h3 {
+  font-family: LianaRegular;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding-bottom: 45px;
+}
+.sidebar-menu h2 {
+  background: url("<%= asset_path('dor_backg_pattern.jpg') %>");
+  height: 50px;
+  width: 142%;
+  position: relative;
+  font-size: 29px;
+  left: -27px;
+  font-weight: 400;
+  -webkit-box-shadow: 2px 3px 0px #d2d2d2;
+  -moz-box-shadow: 2px 3px 0px #d2d2d2;
+  box-shadow: 2px 3px 0px #d2d2d2;
+  color: white;
+  padding: 3px 0 0 20px;
+}
+.catalog-sidebar {
+  padding-top: 15px;
+}
+.catalog-sidebar h3 {
+  color: #666666;
+  font-weight: 400;
+  font-size: 25px;
+  padding-bottom: 40px;
+}
+.sidebar-menu li {
+  list-style: none;
+  line-height: 30px;
+}
+.sidebar-menu h2 img {
+  padding: 0 12px 2px 0;
+}
+.sidebar-menu a {
+  color: #004684;
+  font-weight: 100;
+}
+.sidebar-menu ul {
+  position: relative;
+  padding-top: 20px;
+  left: -10px;
+  width: 116%;
+}
+.side-bar-visual-constructor h4 img {
+  width: 50px;
+  padding: 9px 0px 0px 0px;
+  float: left;
+}
+.side-bar-visual-constructor h4 {
+  background: url("<%= asset_path('catalog-sidebar-visual-constructor-background-pattern.gif') %>");
+  height: 83px;
+  position: relative;
+  width: 142%;
+  left: -27px;
+  display: block;
+  color: #005baa;
+  font-size: 29px;
+  padding: 0 0 0 27px;
+}
+.side-bar-visual-constructor h4 span {
+  padding-top: 9px;
+  display: block;
+  font-size: 27px;
+  padding-left: 35px;
+  line-height: 30px;
+  margin-left: 31px;
+  font-weight: 400;
+}
+.sidebar-inner {
+  padding-bottom: 150px;
+  background: #f7f7f7;
+  width: 93%;
+}
+.row.catalog-wrapper .columns.large-4 h3, .content-wrapper .columns.large-4 h3 {
+  padding-bottom: 18px;
+  padding-left: 12px;
+  font-weight: 400;
+  color: #666666;
+}
+.row.catalog-wrapper {
+  -webkit-box-shadow: -5px 0px 0px 0px rgba(80, 82, 84, 0.35), 5px 0px 0px 0px rgba(80, 82, 84, 0.35);
+  -moz-box-shadow: -5px 0px 0px 0px rgba(80, 82, 84, 0.35), 5px 0px 0px 0px rgba(80, 82, 84, 0.35);
+  box-shadow: -5px 0px 0px 0px rgba(80, 82, 84, 0.35), 5px 0px 0px 0px rgba(80, 82, 84, 0.35);
+}
+.catalog-content-title-wrapper .titles h3 {
+  font-family: LianaRegular!important;
+  font-size: 106px;
+  color: #cecece;
+}
+.catalog-content-title-wrapper .titles h4 {
+  color: #cecece;
+}
+.catalog-content-title-wrapper .line-wrapper, .catalog-content-title-wrapper .titles, .catalog-content-title-wrapper .image {
+  float: left;
+}
+.titles {
+  width: 44%;
+}
+.line-wrapper .line {
+  background: #cecece;
+  height: 1px;
+  width: 40%;
+}
+.line-wrapper .line {
+  background: #cecece;
+  height: 1px;
+  width: 105%;
+  position: absolute;
+  bottom: -78px;
+}
+.line-wrapper {
+  width: 250px;
+  height: 30px;
+  position: relative;
+}
+
+.item {
+  float: left;
+}

@@ -1,0 +1,17 @@
+h1 Listing dor_variant_performances
+
+table
+  tr
+    th
+    th
+    th
+
+  - @dor_variant_performances.each do |dor_variant_performance|
+    tr
+      td = link_to 'Show', dor_variant_performance
+      td = link_to 'Edit', edit_dor_variant_performance_path(dor_variant_performance)
+      td = link_to 'Destroy', dor_variant_performance, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Dor variant performance', new_dor_variant_performance_path

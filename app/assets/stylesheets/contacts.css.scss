@@ -1,0 +1,23 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contacts h4, .maps h4, .call-order h4, .contacts-obl-wrapper h4 {
+  color: #005baa;
+  font-size: 24px;
+  font-weight: 400;
+}
+#map {
+  width: 100%;
+  height: 430px;
+}
+.obl-ttl-wrapper {
+  background: #ebebeb;
+  position: relative;
+  left: -25px;
+}
+.obl-ttl-wrapper h4 {
+  padding: 6px 0 12px 25px;
+}
+.obl-ttl-wrapper-right {
+  width: 116%;
+}

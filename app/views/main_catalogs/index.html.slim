@@ -1,0 +1,17 @@
+h1 Listing main_catalogs
+
+table
+  tr
+    th
+    th
+    th
+
+  - @main_catalogs.each do |main_catalog|
+    tr
+      td = link_to 'Show', main_catalog
+      td = link_to 'Edit', edit_main_catalog_path(main_catalog)
+      td = link_to 'Destroy', main_catalog, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Main catalog', new_main_catalog_path

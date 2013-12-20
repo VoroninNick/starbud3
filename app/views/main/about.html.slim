@@ -1,0 +1,52 @@
+.row.about-wrapper.page-content-wrapper-box-shadow
+  .columns.large-12
+    .row
+      .columns
+        .title-about-us
+          h3
+            |Про нас
+    .row
+      .columns.large-3
+        nav.about-us-sidebar#about-us-sidebar
+          - @about_us.each do |sidebar|
+            li
+              a  data-id=sidebar.name = truncate sidebar.name, length: 16
+            /li
+            /  a
+            /    |Досягнення
+            /li
+            /  = link_to 'Сертифікати', "#certificates-about", :class => is_active?("about#history-about")
+            /li
+            /  a
+            /    |Співпраця
+            /li
+            /  a
+            /    |Вакансії
+      .columns.large-9.about-us-content
+        h3
+          |Компанія  Стар-Буд — два серця одна душа.
+        p
+          |Історія компанії «Стар-Буд» розпочалась у 2006 р., коли команда енергійних, цілеспрямованих людей вирішила створити справжнього лідера на ринку будівельних матеріалів. Лідера, який би допоміг втілити їхні ідеї та амбіції у життя.
+        .row
+          .columns.large-1
+            p
+          .columns.large-9
+            img src=asset_path("about1.jpg")
+          .columns.large-1
+            p
+        p
+          |Наступним кроком став вибір назви компанії, в якій хотілось підкреслити маєстат та силу їхніх характерів, унікальність та високий рівень майбутнього проекту. Назва вдало поєднала усі ці властивості, і сумніву не було – компанія стане справжньою Зіркою, тому й ім’я у неї зірко — Стар-Буд.
+        p
+          |Долаючи усі перепони на шляху компанія керувалась основним гаслом – Від терен до зірок  (Per aspera ad astra). Від так, все чим би не займалась компанія «Стар-Буд» ставало найкращим і найперспективнішим. Осінню  2009 р. на виставці «Буд-ЕКСПО-осінь-2009» виставковий стенд компанії признаний найкращим і отримав почесне 1 місце. З цього часу компанія «Стар-Буд» відвідує виставки не тільки українського формату але й міжнародного, серед яких: Comfort House — Київ, BUDMA — Познань, InterBudExpo - Київ, BUILDEX — Москва, СТРОЙЭКСПО  — Білорусія, MOSBUILD — Київ, Строительство и Архитектура — Київ, Made Expo – Мілан, KazBuild — Алмата, Интерстройэкспо – Москва, BUILDEX — Москва, BAU – Мюнхен, BakuBuild — Баку, AstanaBuild — Астана.
+        p
+          |В  короткий період, Стар-Буд перетворився з невеликої фірми в компанію лідер гуртово-роздрібної дистрибуції будівельно-оздоблювальних матеріалів.
+
+        - @about_us.each do |article|
+          li.about-item.history-about id=article.name
+            h3 =article.name
+            p =raw article.content
+            ul
+              - article.about_article_images do | image |
+                li
+                  a href=image.image.url
+                    img src=image.image.url

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LianaRegular';
+    src: url('liana.eot');
+    src: url('liana.eot') format('embedded-opentype'),
+         url('liana.woff') format('woff'),
+         url('liana.ttf') format('truetype'),
+         url('liana.svg#LianaRegular') format('svg');
+}

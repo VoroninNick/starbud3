@@ -1,0 +1,17 @@
+h1 Listing variants_colors
+
+table
+  tr
+    th
+    th
+    th
+
+  - @variants_colors.each do |variants_color|
+    tr
+      td = link_to 'Show', variants_color
+      td = link_to 'Edit', edit_variants_color_path(variants_color)
+      td = link_to 'Destroy', variants_color, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Variants color', new_variants_color_path

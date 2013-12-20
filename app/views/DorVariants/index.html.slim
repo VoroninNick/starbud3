@@ -1,0 +1,17 @@
+h1 Listing dor_variants
+
+table
+  tr
+    th
+    th
+    th
+
+  - @dor_variants.each do |dor_variant|
+    tr
+      td = link_to 'Show', dor_variant
+      td = link_to 'Edit', edit_dor_variant_path(dor_variant)
+      td = link_to 'Destroy', dor_variant, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Dor variant', new_dor_variant_path

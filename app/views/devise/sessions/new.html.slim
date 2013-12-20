@@ -1,0 +1,24 @@
+.row.login-wrapper.page-content-wrapper-box-shadow
+  .columns.large-12
+    h3
+      |Вхід в адмінпанель
+    .row
+      .columns.large-2
+        p
+      .columns.large-8
+        = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          .form-inputs.login-form
+            = f.input :email, :required => false, :autofocus => true, placeholder: 'starbud@ukr.net', :label=>false
+            = f.label :"Електронна скринька", :for=>"resource_email"
+            = f.input :password, :required => false, placeholder: 'пароль', :label=>false
+            = f.label :"Пароль", :for=>"resource_password"
+            = f.input :remember_me, :as => :boolean, :label=>false if devise_mapping.rememberable?
+            = f.label :"Запам'ятати мене", :for=>"resource_remember_me", :class=>" label-remember-me"
+
+          .form-actions
+            = f.button :submit, "", :class=>"login-button"
+          .clearfix
+
+        /= render "devise/shared/links"
+      .columns.large-2
+        p

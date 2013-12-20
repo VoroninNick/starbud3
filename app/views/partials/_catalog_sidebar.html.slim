@@ -1,0 +1,34 @@
+.columns.large-4
+  h3
+    |Каталог продукції
+  .row
+    .sidebar-inner
+      .row
+        .columns.large-9.catalog-sidebar
+          ul
+            - @main_catalog.each do |si|
+              li.sidebar-menu.sidebar-dor
+                h2
+                  img src=si.image
+                  =si.name
+                ul
+                  -si.sub_catalogs.each do |sc|
+                    li
+                      = link_to sc.name, main_catalog_sub_catalog_path(  si.name,  sc.sub_catalog_url)
+                      /a =sc.name
+                      ul
+                        -sc.brands.each do |br|
+                          li
+                            a =br.name
+                            ul
+                              -br.collections.each do |c|
+                                li
+                                  /= link_to c.name, main_catalog_sub_catalog_path( main_catalog: si.name, sub_catalog: sc.name )
+                                  a =c.name
+
+          ul
+            li.sidebar-menu.side-bar-visual-constructor
+              h4.box-shadow-right-bottom
+                img src=asset_path("visual-constructor-icon.png")
+                span
+                  |Візуальний Конструктор
