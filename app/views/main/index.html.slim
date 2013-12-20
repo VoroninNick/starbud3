@@ -61,19 +61,19 @@
         a
           |Детальніше...
     .row.centre-main-page-menu
-      /- @main_catalog.each do |main_menu|
-      /  .columns.large-4.float-left
-      /    .title-centre-main-page-menu
-      /      .row
-      /        .columns
-      /          h2
-      /            img src=main_menu.image
-      /            =main_menu.name
-      /    .row
-      /      .columns
-      /        -main_menu.sub_catalogs.each do |sub_catalog|
-      /          li
-      /            a =sub_catalog.name
+      - @main_catalog.each do |main_menu|
+        .columns.large-4.float-left
+          .title-centre-main-page-menu
+            .row
+              .columns
+                h2
+                  img src=main_menu.image
+                  =main_menu.name
+          .row
+            .columns
+              -main_menu.sub_catalogs.each do |sub_catalog|
+                li
+                  a =sub_catalog.name
 
     .row.visual-constructor
       .columns.large-2
