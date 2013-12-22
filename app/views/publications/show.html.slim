@@ -1,21 +1,34 @@
-p#notice = notice
+.row.publication-article-wrapper.page-content-wrapper-box-shadow
+  .columns.large-12
+    .row
+      .columns
+        .title-about-us
+          h3
+            |Публікації:
+            = @helpful_articles_item.title
+    .row
+      .columns.large-4.image
+        img src=@helpful_articles_item.image
+      .columns.large-8.content
+        h2 = @helpful_articles_item.title
+        p
+          span = @helpful_articles_item.created_at.strftime("%d. %m. %Y")
+        p = raw @helpful_articles_item.description
+    .row.title-wrapper
+      .columns.large-4.title.box-shadow-right-bottom.titl-backg
+        .title-inner.box-shadow-bottom.titl-backg
+          h2
+            |Читайте також
 
-p
-  strong Title:
-  = @publication.title
-p
-  strong Image:
-  = @publication.image
-p
-  strong Short description:
-  = @publication.short_description
-p
-  strong Description:
-  = @publication.description
-p
-  strong Url:
-  = @publication.url
+    .row
+      -@related_helpful_articles.each do |articles|
+        .columns.large-6
+          .row
+            .columns.large-4
+              img src= articles.image
+            .columns.large-8
+              h4
+                a href = helpful_article_item_path(articles.id) = truncate  articles.title, length: 70, omission: '...'
+              p = truncate_html articles.short_description, length: 140, omission: '...'
 
-= link_to 'Edit', edit_publication_path(@publication)
-'|
-= link_to 'Back', publications_path
+

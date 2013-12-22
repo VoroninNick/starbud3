@@ -5,11 +5,17 @@
 #new_user {
     position: relative;
 }
-
+.info {
+    position: absolute;
+    background: yellow;
+    right: 1px;
+    bottom: 1px;
+}
 p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   font-family: 'Open Sans', sans-serif;
 }
-.login-wrapper {
+
+.login-wrapper, .publication-article-wrapper {
     background: white;
     padding-bottom: 100px;
     margin-top: -85px;
@@ -346,7 +352,11 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   background: url("<%= asset_path('category-articles-title-background-pattern.jpg') %>");
   height: 50px;
 }
-.interest-info .title h2, .helpful-articles h2 {
+.publication-article-wrapper .titl-backg {
+    position: relative;
+    top: -4px;
+}
+.interest-info .title h2, .helpful-articles h2, .publication-article-wrapper h2 {
   font-size: 32px;
   color: #005baa;
   padding-left: 22px;
@@ -456,7 +466,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .row.helpful-articles .item {
   list-style: none;
   padding-top: 40px;
-  min-height: 200px;
+  min-height: 240px;
 }
 .helpful-articles .title-inner {
   position: relative;

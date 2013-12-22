@@ -9,8 +9,7 @@ class Publication < ActiveRecord::Base
   end
 
   rails_admin do
-    #label 'Article'
-    #label_plural 'Articles'
+    navigation_label 'Корисні статті'
     label 'Стаття'
     label_plural 'Статті'
 

@@ -1,0 +1,17 @@
+h1 Listing interest_news
+
+table
+  tr
+    th
+    th
+    th
+
+  - @interest_news.each do |interest_news|
+    tr
+      td = link_to 'Show', interest_news
+      td = link_to 'Edit', edit_interest_news_path(interest_news)
+      td = link_to 'Destroy', interest_news, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Interest news', new_interest_news_path

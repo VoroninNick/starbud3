@@ -6,7 +6,7 @@
       .row
         .columns.large-9.catalog-sidebar
           ul
-            - @main_catalog.each do |si|
+            - main_catalog.each do |si|
               li.sidebar-menu.sidebar-dor
                 h2
                   img src=si.image
@@ -14,12 +14,11 @@
                 ul
                   -si.sub_catalogs.each do |sc|
                     li
-                      = link_to sc.name, main_catalog_sub_catalog_path(  si.name,  sc.sub_catalog_url)
-                      /a =sc.name
+                      = link_to sc.name, my_sub_catalog_path(si.name, sc.name)
                       ul
                         -sc.brands.each do |br|
                           li
-                            a =br.name
+                            = link_to br.name, my_collection_path(si.name, sc.name, br.name)
                             ul
                               -br.collections.each do |c|
                                 li

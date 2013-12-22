@@ -1,18 +1,20 @@
 StarBud::Application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
+  get '/publications/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
+
+  get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
+  get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
+
+
+  resources :interest_news
   resources :dor_variant_performances
-
-  #resources :collections
-
-  #resources :brands
-
   resources :dors
-
-  #resources :dor_variant
 
   resources :variants_colors
 
-  #resources :sub_catalogs
 
   resources :main_catalogs do
     resources :sub_catalogs do
@@ -23,18 +25,20 @@ StarBud::Application.routes.draw do
       end
     end
   end
+
+
+
   resources :about_article_images
 
   resources :about_articles
 
   #get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
   #get ':main_catalog/:sub_catalog/:brand' => 'brand#show', :as => :my_brand
-  #get ':main_catalog/:sub_catalog/:brand/:collection' => 'catalog#brands_all', :as => :my_collection
 
-  get '/sub_catalog/:id', to:'catalog#all_brands', as:'my_sub_catalog'
 
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -47,6 +51,9 @@ StarBud::Application.routes.draw do
   get "/actions" => "main#actions", :as => :actions
   get "/publications" => "main#publications", :as => :publications
   get "/contacts" => "main#contacts", :as => :contacts
+
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

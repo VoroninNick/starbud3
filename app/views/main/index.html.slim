@@ -61,7 +61,7 @@
         a
           |Детальніше...
     .row.centre-main-page-menu
-      - @main_catalog.each do |main_menu|
+      - main_catalog.each do |main_menu|
         .columns.large-4.float-left
           .title-centre-main-page-menu
             .row
@@ -73,7 +73,8 @@
             .columns
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
-                  a =sub_catalog.name
+                  /a =sub_catalog.name
+                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
 
     .row.visual-constructor
       .columns.large-2
@@ -106,32 +107,21 @@
             .title-inner.box-shadow-bottom.titl-backg
               h2 Цікаві новини
           .columns
-            li.item
-              .columns.large-3.image
-                a
-                  img src=asset_path("main-page-article-image-1.jpg")
-              .columns.large-9
-                h5
+            -@interesting_news.each do |i_n|
+              li.item
+                .columns.large-3.image
                   a
-                    | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
-                span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
-                .main-page-read-more-wrapper
-                  .main-page-read-more.box-shadow-right-bottom
-                    a
-                      img src=asset_path("main_page_read_more.jpg")
-            li.item
-              .columns.large-3.image
-                a
-                  img src=asset_path("main-page-article-image-2.jpg")
-              .columns.large-9
-                h5
-                  a
-                    | Антарктические черви питаются костями, брезгуя затонувшими судами
-                span Ученые не исключают, что затонувшие в водах Антарктики корабли могут оставаться там в сохранности, так как местные черви предпочитают кости древесине, пишет издание Proceedings of the Royal Society B.
-                .main-page-read-more-wrapper
-                  .main-page-read-more.box-shadow-right-bottom
-                    a
-                      img src=asset_path("main_page_read_more.jpg")
+                    img src=i_n.image
+                    /img src=asset_path("main-page-article-image-1.jpg")
+                .columns.large-9
+                  h5
+                    a href = interest_news_item_path(i_n.id) = truncate  i_n.title, length: 70, omission: '...'
+                  span = truncate_html i_n.short_description, length: 140, omission: '...'
+                  .main-page-read-more-wrapper
+                    .main-page-read-more.box-shadow-right-bottom
+                      a
+                        img src=asset_path("main_page_read_more.jpg")
+
       .columns.large-5
         .row.title-wrapper.video
           .columns.title.box-shadow-right-bottom.titl-backg
@@ -167,61 +157,19 @@
         .row.title-wrapper
           .columns.large-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
-              h2 Цікаві новини
+              h2 Корисні статті
       .row
-        .columns.large-6
-          li.item
-            .columns.large-3.image
-              a
-                img src=asset_path("main-page-article-image-1.jpg")
-            .columns.large-9
-              h5
-                a
-                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
-              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
-              .main-page-read-more-wrapper
-                .main-page-read-more.box-shadow-right-bottom
-                  a
-                    img src=asset_path("main_page_read_more.jpg")
-        .columns.large-6
-          li.item
-            .columns.large-3.image
-              a
-                img src=asset_path("main-page-article-image-1.jpg")
-            .columns.large-9
-              h5
-                a
-                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
-              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
-              .main-page-read-more-wrapper
-                .main-page-read-more.box-shadow-right-bottom
-                  a
-                    img src=asset_path("main_page_read_more.jpg")
-        .columns.large-6
-          li.item
-            .columns.large-3.image
-              a
-                img src=asset_path("main-page-article-image-1.jpg")
-            .columns.large-9
-              h5
-                a
-                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
-              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
-              .main-page-read-more-wrapper
-                .main-page-read-more.box-shadow-right-bottom
-                  a
-                    img src=asset_path("main_page_read_more.jpg")
-        .columns.large-6
-          li.item
-            .columns.large-3.image
-              a
-                img src=asset_path("main-page-article-image-1.jpg")
-            .columns.large-9
-              h5
-                a
-                  | Власти одного из американских штатов предложили использовать беспилотники для слежки за комарами
-              span Власти американского штата Флорида предложили выслеживать надоедливых насекомых при помощи беспилотных летательных аппаратов (БПЛА).
-              .main-page-read-more-wrapper
-                .main-page-read-more.box-shadow-right-bottom
-                  a
-                    img src=asset_path("main_page_read_more.jpg")
+        -@publication_main_page.each do |article|
+          .columns.large-6
+            li.item
+              .columns.large-3.image
+                img src=article.image
+              .columns.large-9
+                h5
+                  a href = helpful_article_item_path(article.id) = truncate article.title, length: 70, omission: '...'
+                span = truncate_html article.short_description, length: 140, omission: '...'
+                .main-page-read-more-wrapper
+                  .main-page-read-more.box-shadow-right-bottom
+                    a
+                      img src=asset_path("main_page_read_more.jpg")
+

@@ -59,7 +59,7 @@ body
               = link_to 'Каталог', main_page_catalog_path, :class => is_active?("main_page_catalog")
 
               ul.main-menu-catalog
-                - @main_catalog.each do |main_menu|
+                - main_catalog.each do |main_menu|
                   li.sub-menu-item
                     h2
                       img src=main_menu.image
@@ -67,8 +67,7 @@ body
                     .sub-menu-links
                       -main_menu.sub_catalogs.each do |sub_catalog|
                         span
-                          /= link_to sub_catalog.name, my_sub_catalog_path( sub_catalog: sub_catalog.id )
-                          a =sub_catalog.name
+                          = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
 
             li
               = link_to 'Акції', actions_path, :class => is_active?("actions")

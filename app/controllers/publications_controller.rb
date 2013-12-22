@@ -10,6 +10,8 @@ class PublicationsController < ApplicationController
   # GET /publications/1
   # GET /publications/1.json
   def show
+    @helpful_articles_item = Publication.find_by_id(params[:id])
+    @related_helpful_articles = Publication.where('id != '+params[:id]+'').limit(4).order('updated_at desc')
   end
 
   # GET /publications/new

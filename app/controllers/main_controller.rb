@@ -1,7 +1,8 @@
 class MainController < ApplicationController
   def index
     @title = "Головна"
-    @main_catalog = MainCatalog.all()
+    @interesting_news = InterestNews.order('updated_at desc').limit(2)
+    @publication_main_page = Publication.order('updated_at desc').limit(4)
   end
   def about
     @title = "Про нас"
@@ -18,8 +19,8 @@ class MainController < ApplicationController
   end
   def publications
     @title = "Публікації"
-
   end
+
   def contacts
     @title = "Контакти"
   end
