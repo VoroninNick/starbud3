@@ -5,18 +5,6 @@
 
 
 $(document).ready ->
-#  $("#navigation").treeview
-#    animated:"normal"
-#    collapsed: true
-#    unique: true
-#    persist: "location"
-#    toggle: ->
-#      window.console and console.log("%o was toggled", this)
-
-#  $("#navigation").treeview
-#    collapsed: true
-#    unique: true
-#    persist: "location"
 
   $("#logo-carousel").flexisel
     visibleItems: 6

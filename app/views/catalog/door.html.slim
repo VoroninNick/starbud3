@@ -13,9 +13,77 @@
               |розсувні двері-гармошки
           .image
             img src=asset_path("one-item-icon-after-title-content.jpg")
+        .clearfix
         .catalog-content-wrapper
-          h2 =@door_test.name
-          img src=@door_test.door_variants_fulfillment_options[0].image
-
-
-
+          .columns.large-5.image-block
+            img src=@door_test.door_variants_fulfillment_options[0].image
+          .columns.large-7.content-block
+            h3 =@door_test.name
+            p =raw @door_test.descriptions
+            h5
+              |Варіанти виконання:
+            ul.varinty_vykon
+              -@door_test.door_variants_fulfillment_options.each do |img_v|
+                li
+                  img src=img_v.image
+            .clearfix
+            h5
+              |Варіанти кольору:
+            ul.varinty_color
+              -@door_test.door_variants_fulfillment_options.each do |img_v|
+                li
+                  ul
+                    -img_v.door_color_options.each do |img_v_c|
+                      li
+                        img src=img_v_c.image
+        .clearfix
+        .row.door-info-table
+          .columns.large-5
+            .title-table
+              |Шпон
+            .cont-table
+              |Палісандер
+            .cont-table
+              |Грецький горіх
+            .cont-table
+              |Горіх шате
+            .cont-table
+              |Ясень сканденавський
+            .end-table
+          .columns.large-7
+            .title-table
+              |Види скла
+            .cont-table
+              |Мателюкс білий з алмазним гравіруваннямб декороване стразами SWAROVSKI ELEMENTS
+            .cont-table
+              |Мателюкс вітражний
+            .cont-table
+              |Мателюкс графіт крісталайз
+            .end-table
+        .row.door-info
+          .columns.large-12
+            #door-info-tabs
+              ul
+                li#li_tab1 onclick="tab('tab1′)"
+                  a
+                    |Технічні характеристики
+                li#li_tab2 onclick="tab(‘tab2′)"
+                  a
+                    |Догляд
+                li#li_tab onclick="tab(‘tab3′)"
+                  a
+                    |Умови гарантії
+              #tab1.tabs
+                p
+                  |test
+                /-@door_test.dor_informations.each do |door_info|
+                /  .info-content
+                /    =door_info.specifications
+              #tab2.tabs
+                p
+                  |test
+                /=@door_test.dor_informations.care
+              #tab3.tabs
+                p
+                  |test
+                /=@door_test.dor_informations.environment
