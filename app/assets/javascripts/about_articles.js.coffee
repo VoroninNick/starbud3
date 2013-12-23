@@ -3,14 +3,24 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+#  showHide = (divId) ->
+#    if document.getElementById(divId).style.height is "530px"
+#      document.getElementById(divId).style.height = "0px"
+#    else
+#      document.getElementById(divId).style.height = "530px"
+  $('.about_us_start').removeClass(" dn")
   $("#about-us-sidebar").on "click", "a", ->
 
+    $('.about_us_start').addClass(" dn")
     # fade out all open subcontents
     $(".about-item:visible").fadeOut()
 
     # fade in new selected subcontent
     $(".about-item[id=" + $(this).attr("data-id") + "]").fadeIn()
 
+  mmbl = $(".vakancii")
+  $(".about-item h4 a").click ->
+    mmbl.toggleClass "vakanc_show"
 
 $ ->
   offset = $("#about-us-sidebar").offset()
@@ -29,4 +39,5 @@ $ ->
 #    $(".history-about").removeClass " dbl"
     $(this).addClass " selected"
 #    $(".history-about").addClass " dbl"
+
 
