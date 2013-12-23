@@ -17,7 +17,7 @@ class Door < ActiveRecord::Base
     self.door_url ||= name.parameterize
   end
   rails_admin do
-    navigation_label 'Двері2'
+    navigation_label 'Двері'
     label 'Двері'
     label_plural 'Двері'
 

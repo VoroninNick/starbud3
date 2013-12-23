@@ -6,5 +6,7 @@ class AboutArticleImage < ActiveRecord::Base
   belongs_to :about_article
   rails_admin do
   navigation_label 'Про нас'
+  label 'Фотографії для статті'
+  label_plural 'Фотографії для статті'
   end
 end

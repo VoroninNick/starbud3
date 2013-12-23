@@ -9,7 +9,7 @@ class DoorColorOption < ActiveRecord::Base
   attr_accessible :door_variants_fulfillment_option_attributes#, :allow_destroy => true
 
   rails_admin do
-    navigation_label 'Двері2'
+    navigation_label 'Двері'
     label 'Варіанти кольору'
     label_plural 'Варіанти кольору'
 

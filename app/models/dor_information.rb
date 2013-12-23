@@ -4,7 +4,7 @@ class DorInformation < ActiveRecord::Base
   belongs_to :door
 
   rails_admin do
-    navigation_label 'Двері2'
+    navigation_label 'Двері'
     label 'Додаткова інформація'
     label_plural 'Додаткова інформація'
 

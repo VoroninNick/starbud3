@@ -13,7 +13,7 @@ class CatalogController < ApplicationController
   end
   def door
     #@product_door = Door.find_by_door_url(params[:door_name])
-    @door_test = Door.find_by_door_url(params[:name])
+    @door_test = Door.find_by_name(params[:door])
   end
   def catalog_layout
     #@catalog_action ='item'

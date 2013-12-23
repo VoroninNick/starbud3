@@ -15,11 +15,6 @@
             img src=asset_path("one-item-icon-after-title-content.jpg")
         .catalog-content-wrapper
           h2 =@door_test.name
-          /.item
-          /  .image
-          /    img src=@door_collection.image
-          /  .info
-          /    h4
-          /      |Колекція
-          /    h5  =@door_collection.name
+          img src=@door_test.door_variants_fulfillment_options[0].image
+
 
