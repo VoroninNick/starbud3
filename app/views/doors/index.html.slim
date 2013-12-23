@@ -1,0 +1,17 @@
+h1 Listing doors
+
+table
+  tr
+    th
+    th
+    th
+
+  - @doors.each do |door|
+    tr
+      td = link_to 'Show', door
+      td = link_to 'Edit', edit_door_path(door)
+      td = link_to 'Destroy', door, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Door', new_door_path

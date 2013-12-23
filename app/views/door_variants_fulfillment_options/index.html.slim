@@ -1,0 +1,17 @@
+h1 Listing door_variants_fulfillment_options
+
+table
+  tr
+    th
+    th
+    th
+
+  - @door_variants_fulfillment_options.each do |door_variants_fulfillment_option|
+    tr
+      td = link_to 'Show', door_variants_fulfillment_option
+      td = link_to 'Edit', edit_door_variants_fulfillment_option_path(door_variants_fulfillment_option)
+      td = link_to 'Destroy', door_variants_fulfillment_option, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Door variants fulfillment option', new_door_variants_fulfillment_option_path

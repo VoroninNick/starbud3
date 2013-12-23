@@ -1,0 +1,17 @@
+h1 Listing dor_informations
+
+table
+  tr
+    th
+    th
+    th
+
+  - @dor_informations.each do |dor_information|
+    tr
+      td = link_to 'Show', dor_information
+      td = link_to 'Edit', edit_dor_information_path(dor_information)
+      td = link_to 'Destroy', dor_information, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Dor information', new_dor_information_path

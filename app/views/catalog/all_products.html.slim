@@ -1,0 +1,31 @@
+.row.catalog-wrapper
+  .columns.large-12
+    .row
+      = render :partial => 'partials/catalog_sidebar'
+      .columns.large-8
+        .catalog-content-title-wrapper
+          .line-wrapper
+            .line
+          .titles
+            h3
+              |Двері
+            h4
+              |розсувні двері-гармошки
+          .image
+            img src=asset_path("one-item-icon-after-title-content.jpg")
+        .catalog-content-wrapper
+          .item
+            .image
+              /img src=@door_collection.image
+            .info
+              h4
+                |Колекція
+              h5  =@door_collection.name
+          .clearfix
+          .row
+            - @door.each do |door|
+              .columns.large-3.float-left
+                .item
+                  img src=door.door_variants_fulfillment_options[0].image
+                  h5
+                    = link_to door.door_variants_fulfillment_options[0].name, show_door_path(door.name)

@@ -1,12 +1,24 @@
 StarBud::Application.routes.draw do
+  resources :dor_informations
+
+  resources :door_color_options
+
+  resources :door_variants_fulfillment_options
+
+  resources :doors
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
   get '/publications/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
+  get 'product/:door', to:'catalog#door', as:'show_door'
 
   get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
   get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
+  get ':main_catalog/:sub_catalog/:brand/:collection', to:'catalog#all_products', as:'all_products_from_collection'
+  #get ':main_catalog/:sub_catalog/:brand/:collection/:door', to:'catalog#door', as:'show_door'
+
 
 
   resources :interest_news

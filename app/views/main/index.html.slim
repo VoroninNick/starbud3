@@ -112,15 +112,13 @@
                 .columns.large-3.image
                   a
                     img src=i_n.image
-                    /img src=asset_path("main-page-article-image-1.jpg")
                 .columns.large-9
                   h5
                     a href = interest_news_item_path(i_n.id) = truncate  i_n.title, length: 70, omission: '...'
                   span = truncate_html i_n.short_description, length: 140, omission: '...'
                   .main-page-read-more-wrapper
                     .main-page-read-more.box-shadow-right-bottom
-                      a
-                        img src=asset_path("main_page_read_more.jpg")
+                      = link_to image_tag("main_page_read_more.jpg") + '', interest_news_item_path(i_n.id), :title => 'Детальніше'
 
       .columns.large-5
         .row.title-wrapper.video
@@ -170,6 +168,6 @@
                 span = truncate_html article.short_description, length: 140, omission: '...'
                 .main-page-read-more-wrapper
                   .main-page-read-more.box-shadow-right-bottom
-                    a
-                      img src=asset_path("main_page_read_more.jpg")
+                    = link_to image_tag("main_page_read_more.jpg") + '', helpful_article_item_path(article.id), :title => 'Детальніше'
+
 

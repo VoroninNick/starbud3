@@ -1,0 +1,17 @@
+h1 Listing door_color_options
+
+table
+  tr
+    th
+    th
+    th
+
+  - @door_color_options.each do |door_color_option|
+    tr
+      td = link_to 'Show', door_color_option
+      td = link_to 'Edit', edit_door_color_option_path(door_color_option)
+      td = link_to 'Destroy', door_color_option, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Door color option', new_door_color_option_path

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220103627) do
+ActiveRecord::Schema.define(version: 20131222233448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,6 +104,54 @@ ActiveRecord::Schema.define(version: 20131220103627) do
     t.datetime "updated_at"
   end
 
+  create_table "door_color_options", force: true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "alt_image"
+    t.string   "description_image"
+    t.string   "title_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "door_variants_fulfillment_option_id"
+  end
+
+  create_table "door_variants_fulfillment_options", force: true do |t|
+    t.string   "name"
+    t.integer  "door_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "alt_image"
+    t.string   "description_image"
+    t.string   "title_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doors", force: true do |t|
+    t.string   "name"
+    t.text     "descriptions"
+    t.integer  "action_id"
+    t.integer  "collection_id"
+    t.integer  "brand_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "door_url"
+  end
+
+  create_table "dor_informations", force: true do |t|
+    t.integer  "door_id"
+    t.text     "specifications"
+    t.text     "care"
+    t.text     "environment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "dor_variant_performances", force: true do |t|
     t.integer  "dor_id"
     t.string   "image_file_name"
@@ -115,6 +163,7 @@ ActiveRecord::Schema.define(version: 20131220103627) do
     t.string   "title_image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "dors", force: true do |t|
@@ -149,6 +198,7 @@ ActiveRecord::Schema.define(version: 20131220103627) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "main_catalogs_url"
+    t.string   "main_catalog_url"
   end
 
   create_table "product_variant_colors", force: true do |t|
@@ -238,7 +288,6 @@ ActiveRecord::Schema.define(version: 20131220103627) do
 
   create_table "variants_colors", force: true do |t|
     t.integer  "dor_id"
-    t.integer  "dor_variant_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -248,6 +297,8 @@ ActiveRecord::Schema.define(version: 20131220103627) do
     t.string   "title_image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.integer  "dor_variant_performances_id"
   end
 
 end

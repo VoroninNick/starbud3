@@ -22,8 +22,7 @@
                             ul
                               -br.collections.each do |c|
                                 li
-                                  /= link_to c.name, main_catalog_sub_catalog_path( main_catalog: si.name, sub_catalog: sc.name )
-                                  a =c.name
+                                  = link_to c.name, all_products_from_collection_path(si.name, sc.name, br.name, c.name )
 
           ul
             li.sidebar-menu.side-bar-visual-constructor
