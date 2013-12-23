@@ -1,14 +1,7 @@
 // Place all the styles related to the catalog controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-//@font-face {
-//  font-family: 'LianaRegular';
-//  src: url('./fonts/liana/liana.eot');
-//  src: url('./fonts/liana/liana.eot') format('embedded-opentype'),
-//  url('./fonts/liana/liana.woff') format('woff'),
-//  url('./fonts/liana/liana.ttf') format('truetype'),
-//  url('./fonts/liana/liana.svg#LianaRegular') format('svg');
-//}
+
 @font-face {
   font-family: 'LianaRegular';
   src: url('./fonts/liana/liana.eot');
@@ -17,7 +10,17 @@
   url('./fonts/liana/liana.ttf') format('truetype'),
   url('./fonts/liana/liana.svg#LianaRegular') format('svg');
 }
-
+.catalog-content-wrapper .info h4 {
+    font-family: LianaRegular!important;
+    color: #cfcecc;
+    padding-right: 30px;
+}
+.catalog-content-wrapper .info h5 a {
+    color: white!important;
+}
+.info h4, .info h5 {
+    text-align: right;
+}
 .product-actions-label {
   position: absolute;
   width: 80px;

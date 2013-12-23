@@ -17,8 +17,10 @@
           - @collections.each do |collect|
             .item
               .image
-                img src=collect.image
+                a href=all_products_from_collection_path(:main_catalog, :sub_catalog, :brand,  collect.name)
+                  img src=collect.image
               .info
                 h4
                   |Колекція
-                h5  =collect.name
+                h5
+                  = link_to collect.name, all_products_from_collection_path(:main_catalog, :sub_catalog, :brand,  collect.name)

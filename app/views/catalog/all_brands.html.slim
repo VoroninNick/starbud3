@@ -14,11 +14,13 @@
           .image
             img src="../assets/one-item-icon-after-title-content.jpg"
         .catalog-content-wrapper
+          .clearfix
           - @brand.each do |brands|
-            .item
+            .columns.large-3.float-left.item.brand-item
               .image
-                img src=brands.image
-              h4
-                =brands.name
+                a href=my_collection_path(:main_catalog, :sub_catalog,  brands.name)
+                  img src=brands.image
+              h5
+                = link_to brands.name, my_collection_path(:main_catalog, :sub_catalog,  brands.name)
               p
-                =brands.country
+                = "("+brands.country+")"
