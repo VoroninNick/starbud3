@@ -21,7 +21,9 @@ class Collection < ActiveRecord::Base
     list do
       field :name
       field :image
-      field :descriptions
+      field :descriptions, :ck_editor do
+
+      end
 
     end
 
