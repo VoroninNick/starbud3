@@ -11,17 +11,7 @@
           - @about_us.each do |sidebar|
             li
               a  data-id=sidebar.name = truncate sidebar.name, length: 16
-            /li
-            /  a
-            /    |Досягнення
-            /li
-            /  = link_to 'Сертифікати', "#certificates-about", :class => is_active?("about#history-about")
-            /li
-            /  a
-            /    |Співпраця
-            /li
-            /  a
-            /    |Вакансії
+
       .columns.large-9.about-us-content
         h3
           |Компанія  Стар-Буд — два серця одна душа.
@@ -48,5 +38,4 @@
             ul
               - article.about_article_images do | image |
                 li
-                  a href=image.image.url
-                    img src=image.image.url
+                  img src=image.image
