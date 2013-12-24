@@ -56,7 +56,9 @@ body
             li
               = link_to 'Про нас', about_path, :class => is_active?("about")
             li.catalog
-              = link_to 'Каталог', main_page_catalog_path, :class => is_active?("main_page_catalog")
+              a
+                |Каталог
+              /= link_to 'Каталог', main_page_catalog_path, :class => is_active?("main_page_catalog")
               ul.main-menu-catalog
                 - main_catalog.each do |main_menu|
                   li.sub-menu-item
@@ -71,7 +73,9 @@ body
             li
               = link_to 'Акції', actions_path, :class => is_active?("actions")
             li.publication
-              = link_to 'Публікації', publications_path, :class => is_active?("publications")
+              a
+                |Публікації
+              /= link_to 'Публікації', publications_path, :class => is_active?("publications")
               ul.main-menu-publications
                 span
                   = link_to 'Цікаві новини', interesting_news_path

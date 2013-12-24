@@ -14,19 +14,19 @@ $ ->
 $(document).ready ->
 
 #  publications sliders
-  $("#interesting_news_slider").superslides
-    play: true
-    delay: 10000
-    animation: 'fade'
-    animation_speed: 10000
-    animation_easing: 'swing'
-
-  $("#useful_video_slider").superslides
-    play: true
-    delay: 10000
-    animation: 'fade'
-    animation_speed: 10000
-    animation_easing: 'swing'
+#  $("#interesting_news_slider").superslides
+#    play: true
+#    delay: 10000
+#    animation: 'fade'
+#    animation_speed: 10000
+#    animation_easing: 'swing'
+#
+#  $("#useful_video_slider").superslides
+#    play: true
+#    delay: 10000
+#    animation: 'fade'
+#    animation_speed: 10000
+#    animation_easing: 'swing'
 
   $("#helpful_articles_slider").superslides
     play: true

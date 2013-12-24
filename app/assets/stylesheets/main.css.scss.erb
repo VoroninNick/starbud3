@@ -65,7 +65,11 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 #publication-sidebar .active_menu {
     background: url("<%= asset_path('about_us_sidebar_link_hover_background_pattern.jpg') %>")!important;
-    padding-left: 50px !important;
+    /*padding-left: 50px !important;*/
+}
+.publication > a, .catalog > a {
+    cursor: default;
+    text-decoration: none!important;
 }
 .main-menu-publications {
     list-style-type: none;
