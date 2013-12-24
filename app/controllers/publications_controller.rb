@@ -5,7 +5,7 @@ class PublicationsController < ApplicationController
 
   end
   def useful_video
-
+    @useful_video_item = UsefulVideo.order('updated_at desc')
   end
   def helpful_articles
     @helpful_article = Publication.order('updated_at desc')#.limit(3)

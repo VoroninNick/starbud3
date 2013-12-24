@@ -1,0 +1,2 @@
+module UsefulVideosHelper
+end

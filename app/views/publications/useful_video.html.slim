@@ -8,5 +8,13 @@
       .columns.large-7
         = render :partial => 'partials/publictions_sidebar'
     .row
-      h2
-        |Сторінка в стадії розробки
+      -@useful_video_item.each_with_index do |item, index|
+        .row.useful_video_item class=(index%2==0 ? "float_left" : "float_right")
+          .columns.large-6.video
+            =raw item.video_url
+          .columns.large-6.content
+            h5 =item.title
+            span
+              |Завантажено -
+              = item.created_at.strftime("%d. %m. %Y")
+            p =truncate_html item.descriptions, length: 300, omission: '...'

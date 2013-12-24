@@ -1,0 +1,17 @@
+h1 Listing useful_videos
+
+table
+  tr
+    th
+    th
+    th
+
+  - @useful_videos.each do |useful_video|
+    tr
+      td = link_to 'Show', useful_video
+      td = link_to 'Edit', edit_useful_video_path(useful_video)
+      td = link_to 'Destroy', useful_video, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Useful video', new_useful_video_path

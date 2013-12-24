@@ -9,9 +9,9 @@ class Publication < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label 'Корисні статті'
-    label 'Стаття'
-    label_plural 'Статті'
+    navigation_label 'Публікації'
+    label 'Корисні статті'
+    label_plural 'Корисні статті'
 
     list do
       field :title

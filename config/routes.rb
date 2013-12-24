@@ -1,4 +1,6 @@
 StarBud::Application.routes.draw do
+  resources :useful_videos
+
   resources :dor_informations
 
   resources :door_color_options
@@ -11,7 +13,7 @@ StarBud::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   get "publications/interesting_news" => "publications#interesting_news", :as => :interesting_news
-  get "publications/useful_video" => "publications#useful_video", :as => :useful_video
+  get "publications/useful_video" => "publications#useful_video", :as => :useful_video_link
   get "publications/helpful_articles" => "publications#helpful_articles", :as => :helpful_articles
 
   get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
