@@ -1,4 +1,4 @@
-.row.publication-wrapper
+.row.publication-wrapper.page-content-wrapper-box-shadow
   .columns.large-12
     .row
       .columns.large-5
@@ -46,6 +46,14 @@
                       img src=asset_path("main_page_read_more.jpg")
 
     .row
-      h1
-        |Сторінка в стадії розробки
+      -@helpful_article.each do |article|
+        .columns.large-4.helpful_articles.float-left
+          h5
+            a href = helpful_article_item_path(article.id) =truncate article.title, length: 60, omission: '...'
+          span =article.created_at.strftime("%d. %m. %Y")
+          .image
+            img src=article.image
+          p =truncate_html article.description, length: 140, omission: '...'
+
+
 

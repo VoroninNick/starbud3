@@ -73,7 +73,6 @@
             .columns
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
-                  /a =sub_catalog.name
                   = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
 
     .row.visual-constructor

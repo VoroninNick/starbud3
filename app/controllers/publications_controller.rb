@@ -8,7 +8,7 @@ class PublicationsController < ApplicationController
 
   end
   def helpful_articles
-
+    @helpful_article = Publication.order('updated_at desc')#.limit(3)
   end
 
   # GET /publications
