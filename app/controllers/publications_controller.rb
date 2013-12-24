@@ -1,6 +1,16 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
 
+  def interesting_news
+
+  end
+  def useful_video
+
+  end
+  def helpful_articles
+
+  end
+
   # GET /publications
   # GET /publications.json
   def index

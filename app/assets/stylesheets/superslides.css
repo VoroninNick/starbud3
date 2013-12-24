@@ -1,0 +1,83 @@
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+  height: 445px!important;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 15px;
+  background: url("../assets/g3k-banner-arrow-1.png")no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.slides-navigation a.next {
+  right: 15px;
+  background: url("../assets/g3k-banner-arrow-2.png")no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.slides-pagination {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    text-align: center;
+    width: 20%;
+    right: 0%;
+    margin-bottom: 1%;
+}
+.slides-pagination a {
+  width: 15px;
+  height: 15px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");*/
+  background: url("../assets/bullet1.png")no-repeat;
+  margin: 2px 20px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+    background: url("../assets/bullet-active.png")no-repeat;
+}
+
+.slides-container li>img {
+    top: -50%!important;
+}
+.slides-navigation a {
+    opacity: 0.4;
+}
+.slides-navigation a:hover {
+    opacity: 0.8;
+}

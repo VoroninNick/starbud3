@@ -11,11 +11,27 @@ $ ->
     else
       $("#publication-sidebar-wrapper").stop().animate marginTop: 0
 
+$(document).ready ->
 
-#  $("#publication-sidebar li a").click ->
-##    $(".about-us-sidebar li a").parent().removeClass  "selected"
-##    $(this).parent().addClass " selected"
-#    $("#publication-sidebar li a").removeClass  "selected"
-#    #    $(".history-about").removeClass " dbl"
-#    $(this).addClass " selected"
-##    $(".history-about").addClass " dbl"
+#  publications sliders
+  $("#interesting_news_slider").superslides
+    play: true
+    delay: 10000
+    animation: 'fade'
+    animation_speed: 10000
+    animation_easing: 'swing'
+
+  $("#useful_video_slider").superslides
+    play: true
+    delay: 10000
+    animation: 'fade'
+    animation_speed: 10000
+    animation_easing: 'swing'
+
+  $("#helpful_articles_slider").superslides
+    play: true
+    delay: 10000
+    animation: 'fade'
+    animation_speed: 10000
+    animation_easing: 'swing'
+

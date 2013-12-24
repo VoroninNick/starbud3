@@ -57,11 +57,51 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   font-family: 'Open Sans', sans-serif;
 }
 
-.login-wrapper, .publication-article-wrapper {
+.login-wrapper, .publication-article-wrapper, .publication-wrapper {
     background: white;
     padding-bottom: 100px;
     margin-top: -85px;
     position: relative;
+}
+#publication-sidebar .active_menu {
+    background: url("<%= asset_path('about_us_sidebar_link_hover_background_pattern.jpg') %>")!important;
+    padding-left: 50px !important;
+}
+.main-menu-publications {
+    list-style-type: none;
+    display: none;
+    width: 250px;
+    position: absolute;
+    background: rgba(1, 1, 1, 0.8);
+    top: 72px;
+    left: 0%;
+    border-left: 4px solid #00539c;
+    padding: 18px 0 25px 50px;
+}
+.main-menu-publications span a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.6s ease-out all;
+    -webkit-transition: 0.6s ease-out all;
+    color: white !important;
+    font-weight: 100;
+    font-size: 16px;
+}
+.main-menu-publications span a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+.main-menu-publications span {
+    float: left;
+    padding-bottom: 5px;
+}
+.publication > a:after {
+    width: 13px;
+    height: 8px;
+    display: block;
+    background: url("<%= asset_path('Blue&grey-arrow.png') %>")no-repeat;
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 36px;
 }
 .float-left {float:left!important;}
 .button.login-button {

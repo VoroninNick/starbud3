@@ -1,0 +1,50 @@
+.row.publication-wrapper
+  .columns.large-12
+    .row
+      .columns
+        .title-about-us
+          h3
+            |Публікації: Корисні статті
+    .publication-slider-wrapper
+      #helpful_articles_slider
+        ul.slides-container
+          li
+            img src=asset_path("main-banner-background-1.jpg")
+            .publication-slider-content
+              .publication-slider-content-inner
+                h3
+                  |test 1
+                p
+                  |test 1
+                .publication-slider-content-read-more
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+          li
+            img src=asset_path("main-banner-background-2.jpg")
+            .publication-slider-content
+              .publication-slider-content-inner
+                h3
+                  |test 2
+                p
+                  |test 2
+                .publication-slider-content-read-more
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+          li
+            img src=asset_path("main-banner-background-5.jpg")
+            .publication-slider-content
+              .publication-slider-content-inner
+                h3
+                  |test 3
+                p
+                  |test 3
+                .publication-slider-content-read-more
+                  a
+                    img src=asset_path("main_page_read_more.jpg")
+
+    .row
+      = render :partial => 'partials/publictions_sidebar'
+      .columns.large-8
+        h1
+          |Сторінка в стадії розробки
+

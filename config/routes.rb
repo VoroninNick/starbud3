@@ -10,6 +10,10 @@ StarBud::Application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  get "publications/interesting_news" => "publications#interesting_news", :as => :interesting_news
+  get "publications/useful_video" => "publications#useful_video", :as => :useful_video
+  get "publications/helpful_articles" => "publications#helpful_articles", :as => :helpful_articles
+
   get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
   get '/publications/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
   get 'product/:door', to:'catalog#door', as:'show_door'
