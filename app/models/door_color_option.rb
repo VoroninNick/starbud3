@@ -1,5 +1,5 @@
 class DoorColorOption < ActiveRecord::Base
-  attr_accessible :name, :door_variants_fulfillment_option_id, :image, :alt_image, :description_image, :title_image
+  attr_accessible :name, :door_variants_fulfillment_option_id, :image, :alt_image, :description_image, :title_image, :delete_image
 
   has_attached_file :image
 
@@ -25,7 +25,9 @@ class DoorColorOption < ActiveRecord::Base
 
     edit do
       field :name
-      field :image
+      field :image, :paperclip do
+
+      end
       field :alt_image
       field :description_image
       field :title_image

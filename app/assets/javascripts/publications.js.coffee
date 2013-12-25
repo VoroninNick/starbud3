@@ -12,21 +12,7 @@ $ ->
       $("#publication-sidebar-wrapper").stop().animate marginTop: 0
 
 $(document).ready ->
-
-#  publications sliders
-#  $("#interesting_news_slider").superslides
-#    play: true
-#    delay: 10000
-#    animation: 'fade'
-#    animation_speed: 10000
-#    animation_easing: 'swing'
-#
-#  $("#useful_video_slider").superslides
-#    play: true
-#    delay: 10000
-#    animation: 'fade'
-#    animation_speed: 10000
-#    animation_easing: 'swing'
+  $("#tab-container").easytabs()
 
   $("#helpful_articles_slider").superslides
     play: true

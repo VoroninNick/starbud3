@@ -38,7 +38,7 @@
                         img src=img_v_c.image
         .clearfix
         .row.door-info-table
-          .columns.large-5
+          .columns.large-5.left
             .title-table
               |Шпон
             .cont-table
@@ -50,7 +50,7 @@
             .cont-table
               |Ясень сканденавський
             .end-table
-          .columns.large-7
+          .columns.large-7.right
             .title-table
               |Види скла
             .cont-table
@@ -61,43 +61,32 @@
               |Мателюкс графіт крісталайз
             .end-table
         .row.door-info
-          /.columns.large-12
-        /ul#tabs1.mctabs
-        /  li
-        /    a href="#view1"
-        /      |Технічні характеристики
-        /  li
-        /    a href="#view2"
-        /      |Догляд
-        /  li
-        /    a href="#view3"
-        /      |Умови гарантії
-        /.panel-container
-        /  #view1
-        /    |content 1
-        /
-        /  #view2
-        /    |content 2
-        /
-        /  #view3
-        /    |content 3
-        #wrapper.tab1
-          a.tab1 href="#"
-            |Вкладка 1
-          a.tab2 href="#"
-            |Вкладка 2
-          a.tab3 href="#"
-            |Вкладка 3
-
-          .tab1
-            |Содержимое 1
-          .tab2
-            |Содержимое 2
-          .tab3
-            |Содержимое 3
-
-
-
+          .columns#tab-container.tab-container
+            ul.etabs.header-box-shadow-right-bottom
+              li.tab
+                a href="#tabs1-html"
+                  |Технічні характеристики
+              li.tab
+                a href="#tabs1-js"
+                  |Догляд
+              li.tab
+                a href="#tabs1-css"
+                  |Умови гарантії
+            #tabs1-html.tab-content.header-box-shadow-right-bottom
+              .tab-content-inner
+                h2
+                  |Контент технічні характеристики
+                .tab-bottom-line
+            #tabs1-js.tab-content.header-box-shadow-right-bottom
+              .tab-content-inner
+                h2
+                  |Контент догляд
+                .tab-bottom-line
+            #tabs1-css.tab-content.header-box-shadow-right-bottom
+              .tab-content-inner
+                h2
+                  |Контент умови гарантії
+                .tab-bottom-line
             /#door-info-tabs
             /  ul
             /    li#li_tab1 onclick="tab('tab1′)"
