@@ -13,6 +13,9 @@ $ ->
 
 $(document).ready ->
   $("#tab-container").easytabs()
+  $("#tab2-container").easytabs()
+  $("#variant-tab-container").easytabs()
+
 
   $("#helpful_articles_slider").superslides
     play: true
