@@ -1,0 +1,26 @@
+.row.promotion-wrapper.page-content-wrapper-box-shadow
+  .columns.large-12
+    .row
+      .columns
+        .title-about-us
+          h3
+            |Акції:
+    .row
+      .columns
+        ul
+          -@promotion_item.each do |p|
+            li
+              h3
+                =link_to p.title,promotion_one_item_path(p.id), class: " starbud-link"
+              .image.box-shadow-right-bottom
+                .image-inner
+                  = image_tag p.image.url, alt: ''
+                .diff-date.box-shadow-bottom
+                  span
+                    |Залишилось
+                    =p.end_promotion.yday - Date.today.yday
+                    | днів
+              p.promotion-short-description =p.short_description
+              .readmore
+                =link_to "Детальніше...",promotion_one_item_path(p.id), class: " starbud-link"
+              .clearfix

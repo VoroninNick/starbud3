@@ -2,6 +2,7 @@ class MainController < ApplicationController
   def index
     @title = "Головна"
     @interesting_news = InterestNews.order('updated_at desc').limit(2)
+    @interest_video = VideoOnMainPage.order('updated_at desc').limit(3)
     @publication_main_page = Publication.order('updated_at desc').limit(4)
   end
   def about
@@ -16,6 +17,9 @@ class MainController < ApplicationController
   end
   def actions
     @title = "Акції"
+    @promotion_item = Promotion.order('updated_at desc')
+    #require 'timespan'
+    #time_span_from_dates = Date.diff(Promotion.first.begin_promotion, Promotion.first.end_promotion)
   end
   def publications
     @title = "Публікації"

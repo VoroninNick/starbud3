@@ -1,0 +1,51 @@
+.row.promotion-wrapper.page-content-wrapper-box-shadow
+  .columns.large-12
+    .row.promotion-one-item-content
+      .columns
+        .title-about-us
+          h3
+            |Акції:
+            =@promotion_item.title
+        ul
+          li
+            .image.box-shadow-right-bottom
+              .image-inner
+                = image_tag @promotion_item.image.url, alt: ''
+              .diff-date.box-shadow-bottom
+                span
+                  |Залишилось
+                  =@promotion_item.end_promotion.yday - Date.today.yday
+                  | днів
+            h3.promotion-padding-top =@promotion_item.title
+            p
+              span
+                =@promotion_item.short_description
+            p
+              span
+                =@promotion_item.begin_promotion.strftime("Період проведення акції: %d %m")
+                /.to_formatted_s(:long)
+                /.strftime("Період проведення акції: %d %m")
+                |--
+                =@promotion_item.end_promotion.strftime("%d %m %y")
+            =raw @promotion_item.description
+      .row.title-wrapper.promocion-wrapper
+        .columns.large-3.title.box-shadow-right-bottom.titl-backg
+          .title-inner.box-shadow-bottom.titl-backg
+            h2 Інші акції
+        .columns.large-9
+          p
+            |
+      .row
+        .columns.large-1
+          p
+            |
+        .columns.large-10
+          -@related_promotion_items.each do |rp|
+            .columns.large-5
+              h3 =rp.title
+              .image
+                = image_tag rp.image.url, alt: '', class: " box-shadow-right-bottom"
+              p =rp.short_description
+        .columns.large-1
+          p
+            |

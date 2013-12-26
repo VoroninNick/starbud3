@@ -37,7 +37,6 @@ class Door < ActiveRecord::Base
 
       end
       field :dor_informations
-
     end
 
   end

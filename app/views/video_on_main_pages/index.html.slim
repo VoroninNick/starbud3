@@ -1,0 +1,17 @@
+h1 Listing video_on_main_pages
+
+table
+  tr
+    th
+    th
+    th
+
+  - @video_on_main_pages.each do |video_on_main_page|
+    tr
+      td = link_to 'Show', video_on_main_page
+      td = link_to 'Edit', edit_video_on_main_page_path(video_on_main_page)
+      td = link_to 'Destroy', video_on_main_page, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Video on main page', new_video_on_main_page_path

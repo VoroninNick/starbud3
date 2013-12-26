@@ -119,19 +119,16 @@
                     .main-page-read-more.box-shadow-right-bottom
                       = link_to image_tag("main_page_read_more.jpg") + '', interest_news_item_path(i_n.id), :title => 'Детальніше'
 
-      .columns.large-5
+      .columns.large-5.video-wrapper
         .row.title-wrapper.video
           .columns.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
               h2 Корисні відео
-          .columns.video-item
-            img src=asset_path("main-page-video-1.jpg")
+        .row.content-video-wrapper
           .columns
-            .row.row-video-2
-              .columns.large-6
-                img src=asset_path("main-page-video-2.jpg")
-              .columns.large-6
-                img src=asset_path("main-page-video-2.jpg")
+            -@interest_video.each do |v|
+              .video-item
+                =raw v.video_url
     .row.main-logo-carousel.box-shadow-bottom
       .carousel-margin-left.box-shadow-left-bottom
       .row.main-logo-carousel-inner

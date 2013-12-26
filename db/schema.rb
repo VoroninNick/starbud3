@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131225094247) do
+ActiveRecord::Schema.define(version: 20131226102958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -229,6 +229,20 @@ ActiveRecord::Schema.define(version: 20131225094247) do
     t.datetime "updated_at"
   end
 
+  create_table "promotions", force: true do |t|
+    t.string   "title"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "short_description"
+    t.datetime "begin_promotion"
+    t.datetime "end_promotion"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "publications", force: true do |t|
     t.string   "title"
     t.string   "image_file_name"
@@ -313,6 +327,14 @@ ActiveRecord::Schema.define(version: 20131225094247) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "dor_variant_performances_id"
+  end
+
+  create_table "video_on_main_pages", force: true do |t|
+    t.string   "title"
+    t.string   "video_url"
+    t.text     "descriptions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

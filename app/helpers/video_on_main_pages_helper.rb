@@ -1,0 +1,2 @@
+module VideoOnMainPagesHelper
+end

@@ -65,3 +65,7 @@ gem 'truncate_html'
 
 gem "devise"
 #gem 'rails_12factor'
+
+#gem 'timespan', :git => 'git://github.com/toxaq/timespan.git'
+
+gem 'time_diff'

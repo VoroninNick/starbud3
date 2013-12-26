@@ -1,4 +1,8 @@
 StarBud::Application.routes.draw do
+  resources :promotions
+
+  resources :video_on_main_pages
+
   resources :useful_videos
 
   resources :dor_informations
@@ -19,6 +23,8 @@ StarBud::Application.routes.draw do
   get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
   get '/publications/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
   get 'product/:door', to:'catalog#door', as:'show_door'
+
+  get '/promotion/:id', to:'promotions#show', as:'promotion_one_item'
 
   get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
   get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
@@ -66,7 +72,7 @@ StarBud::Application.routes.draw do
   root 'main#index'
   get "/about" => "main#about", :as => :about
   get "/catalog" => "main#catalog", :as => :main_page_catalog
-  get "/actions" => "main#actions", :as => :actions
+  get "/promotion" => "main#actions", :as => :actions
   get "/publications" => "main#publications", :as => :publications
   get "/contacts" => "main#contacts", :as => :contacts
 
