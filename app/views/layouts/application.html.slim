@@ -77,12 +77,48 @@ body
                 |Публікації
               /= link_to 'Публікації', publications_path, :class => is_active?("publications")
               ul.main-menu-publications
-                span
-                  = link_to 'Цікаві новини', interesting_news_path
-                span
-                  = link_to 'Корисні відео', useful_video_link_path
-                span
-                  = link_to 'Корисні статті', helpful_articles_path
+                li
+                  span
+                    img src=asset_path("icon-dor.png")
+                    |Свіжі новини
+                  .clearfix
+                  ul.main-menu-interest-news
+                    -main_catalog_ia.each do |ia|
+                      li
+                        h4
+                          a =truncate ia.title, length: 40, omission: '...'
+                        .clearfix
+                        span =ia.created_at.strftime("%d. %m. %Y")
+                        .clearfix
+                        .main-menu-article-content = truncate_html ia.description, length: 80, omission: '...'
+                  /= link_to image_tag("icon-dor.png") + 'Цікаві новини', interesting_news_path, :title => 'Цікаві новини'
+                  .clearfix
+                  = link_to 'Переглянути всі новини', interesting_news_path, class: ' show-all'
+                li
+                  span
+                    img src=asset_path("icon-dor.png")
+                    |Цікаві відео
+                  ul.main-menu-useful-video
+                    -main_catalog_iv.each do |iv|
+                      li
+                        =raw iv.video_url
+                  .clearfix
+                  = link_to 'Переглянути всі відео', useful_video_link_path, class: ' show-all'
+                li
+                  span
+                    img src=asset_path("icon-dor.png")
+                    |Корисні статті
+                  ul.main-menu-helpful-articles
+                    -main_catalog_ha.each do |ha|
+                      li
+                        h4
+                          a =truncate ha.title, length: 40, omission: '...'
+                        .clearfix
+                        span =ha.created_at.strftime("%d. %m. %Y")
+                        .clearfix
+                        .main-menu-article-content = truncate_html ha.description, length: 80, omission: '...'
+                  .clearfix
+                  = link_to 'Переглянути всі статті', helpful_articles_path, class: ' show-all'
 
             li
               = link_to 'Контакти', contacts_path, :class => is_active?("contacts")

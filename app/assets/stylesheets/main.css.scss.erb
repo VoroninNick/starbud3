@@ -74,13 +74,20 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .main-menu-publications {
     list-style-type: none;
     display: none;
-    width: 250px;
+    width: 850px;
     position: absolute;
     background: rgba(1, 1, 1, 0.8);
     top: 72px;
-    left: 0%;
+    left: -500px;
     border-left: 4px solid #00539c;
     padding: 18px 0 25px 50px;
+}
+.main-menu-publications .clearfix+a {
+    padding: 0!important;
+}
+.main-menu-publications li span {
+    color: white;
+    display: block;
 }
 .main-menu-publications span a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -89,6 +96,44 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     color: white !important;
     font-weight: 100;
     font-size: 16px;
+}
+.main-menu-publications li span img {
+    padding-right: 15px;
+}
+.main-menu-publications li a {
+    color: white!important;
+}
+.main-menu-publications>li {
+    width: 33%;
+    float: left;
+}
+.main-menu-useful-video li iframe {
+    width: 100%!important;
+    max-height: 125px!important;
+}
+.main-menu-publications p, .main-menu-publications p span, .main-menu-publications p strong, .main-menu-publications li span {
+    color: white;
+    font-weight: 100;
+}
+.main-menu-publications li {
+    list-style: none;
+}
+.main-menu-publications p,  .main-menu-publications span {
+    line-height: 20px;
+    font-size: 14px;
+}
+.main-menu-publications h4 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 6px 0 6px 0;
+}
+.main-menu-publications ul li {
+    border-bottom: 1px solid white;
+}
+.main-menu-publications .show-all {
+    position: absolute;
+    bottom: 0px;
 }
 .main-menu-publications span a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -1035,7 +1080,27 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .promotion-padding-top {
     padding-top: 55px;
 }
-
+.row.content-video-wrapper .columns iframe {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.row.content-video-wrapper .columns iframe:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…s='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+.item .columns.large-3.image {
+    height: 110px!important;
+}
+.item .columns.large-3.image img {
+    height: 100%;
+}
 
 
 

@@ -8,6 +8,15 @@
       .columns.large-7
         = render :partial => 'partials/publictions_sidebar'
     .row
-      h2
-        |Сторінка в стадії розробки
+      -@interest_article.each do |article|
+        .columns.large-6.interesting_news.float-left
+          h5
+            a.starbud-link href = interest_news_item_path(article.id) =truncate article.title, length: 60, omission: '...'
+          .columns.large-4.image
+            img src=article.image
+          .columns.large-8
+            p =truncate_html article.description, length: 140, omission: '...'
+          .row
+            .columns
+              span =article.created_at.strftime("%d. %m. %Y")
 

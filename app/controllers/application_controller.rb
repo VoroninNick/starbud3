@@ -7,4 +7,17 @@ class ApplicationController < ActionController::Base
   def main_catalog
     return  MainCatalog.all()
   end
+
+  helper_method :main_catalog_ia
+  def main_catalog_ia
+    return  InterestNews.order('updated_at desc').limit(3)
+  end
+  helper_method :main_catalog_iv
+  def main_catalog_iv
+    return  UsefulVideo.order('updated_at desc').limit(3)
+  end
+  helper_method :main_catalog_ha
+  def main_catalog_ha
+    return  Publication.order('updated_at desc').limit(3)
+  end
 end

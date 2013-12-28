@@ -1,30 +1,25 @@
 StarBud::Application.routes.draw do
+
   resources :promotions
-
   resources :video_on_main_pages
-
   resources :useful_videos
-
   resources :dor_informations
-
   resources :door_color_options
-
   resources :door_variants_fulfillment_options
-
   resources :doors
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  get "publications/interesting_news" => "publications#interesting_news", :as => :interesting_news
-  get "publications/useful_video" => "publications#useful_video", :as => :useful_video_link
-  get "publications/helpful_articles" => "publications#helpful_articles", :as => :helpful_articles
+  get "публікації/свіжі_новини" => "publications#interesting_news", :as => :interesting_news
+  get "публікації/цікаві_відео" => "publications#useful_video", :as => :useful_video_link
+  get "публікації/корисні статті" => "publications#helpful_articles", :as => :helpful_articles
 
-  get '/publications/helpful_article/:id' => 'publications#show', :as => :helpful_article_item
-  get '/publications/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
-  get 'product/:door', to:'catalog#door', as:'show_door'
+  get '/публікації/корисні_статті/:id' => 'publications#show', :as => :helpful_article_item
+  get '/публікації/свіжі_новини/:id' => 'interest_news#show', :as => :interest_news_item
+  get 'продукт/:door', to:'catalog#door', as:'show_door'
 
-  get '/promotion/:id', to:'promotions#show', as:'promotion_one_item'
+  get '/акція/:id', to:'promotions#show', as:'promotion_one_item'
 
   get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
   get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
@@ -36,9 +31,7 @@ StarBud::Application.routes.draw do
   resources :interest_news
   resources :dor_variant_performances
   resources :dors
-
   resources :variants_colors
-
 
   resources :main_catalogs do
     resources :sub_catalogs do
@@ -50,10 +43,7 @@ StarBud::Application.routes.draw do
     end
   end
 
-
-
   resources :about_article_images
-
   resources :about_articles
 
   #get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
@@ -70,11 +60,11 @@ StarBud::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#index'
-  get "/about" => "main#about", :as => :about
-  get "/catalog" => "main#catalog", :as => :main_page_catalog
-  get "/promotion" => "main#actions", :as => :actions
-  get "/publications" => "main#publications", :as => :publications
-  get "/contacts" => "main#contacts", :as => :contacts
+  get "/про_нас" => "main#about", :as => :about
+  get "/каталог" => "main#catalog", :as => :main_page_catalog
+  get "/акції" => "main#actions", :as => :actions
+  get "/публікації" => "main#publications", :as => :publications
+  get "/контакти" => "main#contacts", :as => :contacts
 
 
 

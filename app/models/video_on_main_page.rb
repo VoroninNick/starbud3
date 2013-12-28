@@ -3,8 +3,8 @@ class VideoOnMainPage < ActiveRecord::Base
 
   rails_admin do
     navigation_label 'На головну'
-    label 'Корисні відео'
-    label_plural 'Корисні відео'
+    label 'Цікаве відео'
+    label_plural 'Цікаві відео'
     list do
       field :title
       field :video_url
@@ -12,7 +12,9 @@ class VideoOnMainPage < ActiveRecord::Base
     end
     edit do
       field :title
-      field :video_url
+      field :video_url  do
+        label '?controls=2&showinfo=0'
+      end
       field :descriptions
     end
   end

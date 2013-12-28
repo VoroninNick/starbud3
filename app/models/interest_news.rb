@@ -9,9 +9,9 @@ class InterestNews < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label 'Цікаві новини'
-    label 'Стаття'
-    label_plural 'Статті'
+    navigation_label 'На головну'
+    label 'Цікава новина'
+    label_plural 'Цікаві новини'
 
     list do
       field :title
@@ -27,7 +27,7 @@ class InterestNews < ActiveRecord::Base
         #label 'image'
       end
       field :image, :paperclip do
-        # whatever
+        label 'Фотографія повинна бути такого то розміру : тестовий текст...'
       end
     end
   end

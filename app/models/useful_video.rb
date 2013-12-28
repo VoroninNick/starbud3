@@ -12,7 +12,9 @@ rails_admin do
   end
   edit do
     field :title
-    field :video_url
+    field :video_url  do
+      label '?controls=2&showinfo=0'
+    end
     field :descriptions
   end
 end

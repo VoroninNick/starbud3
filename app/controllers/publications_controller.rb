@@ -2,13 +2,14 @@ class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
 
   def interesting_news
+    @interest_article = InterestNews.order('updated_at desc')
 
   end
   def useful_video
     @useful_video_item = UsefulVideo.order('updated_at desc')
   end
   def helpful_articles
-    @helpful_article = Publication.order('updated_at desc')#.limit(3)
+    @helpful_article = Publication.order('updated_at desc')
   end
 
   # GET /publications
