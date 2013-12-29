@@ -80,7 +80,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     top: 72px;
     left: -500px;
     border-left: 4px solid #00539c;
-    padding: 18px 0 25px 50px;
+    padding: 18px 0 45px 30px;
 }
 .main-menu-publications .clearfix+a {
     padding: 0!important;
@@ -104,8 +104,12 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     color: white!important;
 }
 .main-menu-publications>li {
-    width: 33%;
+    width: 31%;
     float: left;
+    padding: 0 1% 0 1%;
+}
+.main-menu-interest-news, .main-menu-useful-video, .main-menu-helpful-articles {
+    padding-top: 8px;
 }
 .main-menu-useful-video li iframe {
     width: 100%!important;
@@ -130,10 +134,13 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .main-menu-publications ul li {
     border-bottom: 1px solid white;
+    padding: 2px 0 3px 0;
+    margin-bottom: 8px;
 }
 .main-menu-publications .show-all {
     position: absolute;
-    bottom: 0px;
+    bottom: 14px;
+    margin-left: 20px;
 }
 .main-menu-publications span a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -352,7 +359,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .search-bar {
   background: url("<%= asset_path('search-pannel-background-pattern.jpg') %>");
   height: 110px;
-  z-index: 10;
+  /*z-index: 10;*/
   position: relative;
 }
 .centre-main-page-menu li {
@@ -433,7 +440,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   height: 35px;
   position: relative;
   top: 5px;
-  z-index: 11;
+  z-index: 3;
 }
 .visual-constructor span {
   font-size: 17px;
@@ -899,7 +906,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   display: block;
 }
 
-.sub-menu-item h2 {
+.sub-menu-item h2, .main-menu-publications li > h2 {
     color: white;
     font-size: 22px;
     font-weight: 500;
@@ -965,7 +972,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     -moz-box-shadow: -5px 0px 0px 0px rgba(80, 82, 84, 0.35), 5px 0px 0px 0px rgba(80, 82, 84, 0.35);
     box-shadow: -5px 0px 0px 0px rgba(80, 82, 84, 0.35), 5px 0px 0px 0px rgba(80, 82, 84, 0.35);
 }
-.sub-menu-item h2 img {
+.sub-menu-item h2 img, .main-menu-publications h2 img {
     padding-right: 15px;
 }
 .row.content-video-wrapper .columns div:nth-of-type(1) iframe {
