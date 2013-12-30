@@ -23,8 +23,6 @@
             p
               span
                 =@promotion_item.begin_promotion.strftime("Період проведення акції: %d %m")
-                /.to_formatted_s(:long)
-                /.strftime("Період проведення акції: %d %m")
                 |--
                 =@promotion_item.end_promotion.strftime("%d %m %y")
             =raw @promotion_item.description
@@ -42,7 +40,8 @@
         .columns.large-10
           -@related_promotion_items.each do |rp|
             .columns.large-5
-              h3 =rp.title
+              h3
+                =link_to rp.title,promotion_one_item_path(rp.id), class: " starbud-link"
               .image
                 = image_tag rp.image.url, alt: '', class: " box-shadow-right-bottom"
               p =rp.short_description

@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131227133709) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
     t.string   "image_file_name"
@@ -262,12 +259,12 @@ ActiveRecord::Schema.define(version: 20131227133709) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      limit: 2
-    t.integer  "year",       limit: 8
+    t.integer  "year",       limit: 5
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
 
   create_table "sub_catalogs", force: true do |t|
     t.string   "name"
@@ -290,7 +287,7 @@ ActiveRecord::Schema.define(version: 20131227133709) do
 
   create_table "useful_videos", force: true do |t|
     t.string   "title"
-    t.text     "video_url"
+    t.text     "video_url",    limit: 255
     t.text     "descriptions"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -311,8 +308,8 @@ ActiveRecord::Schema.define(version: 20131227133709) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "variants_colors", force: true do |t|
     t.integer  "dor_id"
@@ -331,7 +328,7 @@ ActiveRecord::Schema.define(version: 20131227133709) do
 
   create_table "video_on_main_pages", force: true do |t|
     t.string   "title"
-    t.text     "video_url"
+    t.text     "video_url",    limit: 255
     t.text     "descriptions"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -5,8 +5,7 @@ class DoorColorOption < ActiveRecord::Base
 
   belongs_to :door_variants_fulfillment_option
 
-  accepts_nested_attributes_for :door_variants_fulfillment_option#, :allow_destroy => true
-  attr_accessible :door_variants_fulfillment_option_attributes#, :allow_destroy => true
+
 
   rails_admin do
     navigation_label 'Двері'

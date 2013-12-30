@@ -102,6 +102,15 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .main-menu-publications li a {
     color: white!important;
+    transition: 0.6s ease-out all;
+    -webkit-transition: 0.6s ease-out all;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.main-menu-publications li a:hover {
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+.show-all {
+    text-decoration: none!important;
 }
 .main-menu-publications>li {
     width: 31%;
@@ -700,7 +709,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .row.social-panel.box-shadow-bottom {
   top: -55px;
-  z-index: 11;
+  z-index: 4;
 }
 .subscribe, .subscribe:hover {
   background: url("<%= asset_path('soc-button-subs.jpg') %>")no-repeat;
@@ -911,20 +920,20 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     font-size: 22px;
     font-weight: 500;
 }
-.thumbnail-item .active:after{
-  bottom: 83%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-bottom-color: #88b7d5;
-  border-width: 14px;
-  margin-left: -16px;
-}
+/*.thumbnail-item .active:after{*/
+  /*bottom: 83%;*/
+  /*left: 50%;*/
+  /*border: solid transparent;*/
+  /*content: " ";*/
+  /*height: 0;*/
+  /*width: 0;*/
+  /*position: absolute;*/
+  /*pointer-events: none;*/
+  /*border-color: rgba(136, 183, 213, 0);*/
+  /*border-bottom-color: #88b7d5;*/
+  /*border-width: 14px;*/
+  /*margin-left: -16px;*/
+/*}*/
 .row.catalog-wrapper, .row.content-wrapper {
   margin-top: -85px;
   padding-top: 85px;
@@ -974,6 +983,21 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .sub-menu-item h2 img, .main-menu-publications h2 img {
     padding-right: 15px;
+}
+#bx-pager li .thumbnail-item .active {
+    border: 1px solid red;
+    /*bottom: 83%;*/
+    /*left: 50%;*/
+    /*border: solid transparent;*/
+    /*content: " ";*/
+    /*height: 0;*/
+    /*width: 0;*/
+    /*position: absolute;*/
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #88b7d5;
+    border-width: 14px;
+    margin-left: -16px;
 }
 .row.content-video-wrapper .columns div:nth-of-type(1) iframe {
     width: 98%!important;

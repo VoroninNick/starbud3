@@ -17,9 +17,9 @@
                   = image_tag p.image.url, alt: ''
                 .diff-date.box-shadow-bottom
                   span
-                    |Залишилось
-                    =p.end_promotion.yday - Date.today.yday
-                    | днів
+                    |Залишилось&nbsp;
+                    =((p.end_promotion - Time.now)/1.day).ceil
+                    |&nbsp;днів
               p.promotion-short-description =p.short_description
               .readmore
                 =link_to "Детальніше...",promotion_one_item_path(p.id), class: " starbud-link"
