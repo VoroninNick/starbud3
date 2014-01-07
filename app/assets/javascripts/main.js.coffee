@@ -41,3 +41,10 @@ $(document).ready ->
 
   $(".bxslider").bxSlider
     pagerCustom: "#bx-pager"
+    auto: true
+
+  $("#variants-color").bxSlider
+    pagerCustom: "#variants"
+    mode: 'fade'
+#    pause: 2000
+#    easing: 'swing'

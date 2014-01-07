@@ -15,144 +15,110 @@
             img src=asset_path("one-item-icon-after-title-content.jpg")
         .clearfix
         .catalog-content-wrapper
-          .columns.large-5.image-block
-            img src=@door_test.door_variants_fulfillment_options[0].image
-          .columns.large-7.content-block
+          .columns.image-block
+            a href=@door_test.door_variants_fulfillment_options[0].image
+              img src=@door_test.door_variants_fulfillment_options[0].image
+          .columns.content-block
             h3 =@door_test.name
             p =raw @door_test.descriptions
+
             h5
               |Варіанти виконання:
-            .columns#variant-tab-container.tab-container
-              ul.varinty_vykon
-                -@door_test.door_variants_fulfillment_options.each do |img_v|
-                  li.tab
-                    =link_to 't ',"#"+img_v.name
-              .clearfix
-              h5
-                |Варіанти кольору:
-              /ul.varinty_color
-              -@door_test.door_variants_fulfillment_options.each do |img_v|
-                -img_v.door_color_options.each do |img_v_c|
-                  ul id=img_v_c.name
-                    li
-                      a href=''
-                        img src=img_v_c.image
+            ul#variants
+              li.box-shadow-right-bottom
+                .thumbnail-item
+                  a data-slide-index="0" href=""
+                    img src=asset_path("dveri-1.jpg")
+              li.box-shadow-right-bottom
+                .thumbnail-item
+                  a data-slide-index="1" href=""
+                    img src=asset_path("dveri-3.jpg")
+            /.columns#variant-tab-container.tab-container
+            /  ul.varinty_vykon
+            /    -@door_test.door_variants_fulfillment_options.each do |img_v|
+            /      li.tab
+            /        =link_to 't ',"#"+img_v.name
 
-              /#tabs1-html.tab-content
-                /.tab-content-inner
-                  /h2
-                  /  |Контент технічні характеристики
-                  /.tab-bottom-line
-            /ul.varinty_vykon
-            /  -@door_test.door_variants_fulfillment_options.each do |img_v|
-            /    li
-            /      img src=img_v.image
-            /.clearfix
-            /h5
-            /  |Варіанти кольору:
-            /ul.varinty_color
-            /  -@door_test.door_variants_fulfillment_options.each do |img_v|
-            /    li
-            /      ul
-            /        -img_v.door_color_options.each do |img_v_c|
-            /          li
-            /            img src=img_v_c.image
-          /.columns#tab2-container.tab-container
-          /  ul.etabs
-          /    li.tab
-          /      a href="#tabs1-html1"
-          /        |Технічні характеристики1
-          /    li.tab
-          /      a href="#tabs1-js1"
-          /        |Технічні характеристики2
-          /    #tabs1-html1.tab-content.header-box-shadow-right-bottom
-          /      .tab-content-inner
-          /        h2
-          /          |Контент технічні характеристики1
-          /        .tab-bottom-line
-          /    #tabs1-js1.tab-content.header-box-shadow-right-bottom
-          /      .tab-content-inner
-          /        h2
-          /          |Контент технічні характеристики2
-          /        .tab-bottom-line
+            .clearfix
+            h5
+              |Варіанти кольору:
+            ul#variants-color
+              li
+                ul
+                  li
+                    a href=asset_path("dveri-1.jpg")
+                      img src=asset_path("dveri-1.jpg")
+                  li
+                    a href=asset_path("dveri-2.jpg")
+                      img src=asset_path("dveri-2.jpg")
+              li
+                ul
+                  li
+                    a href=asset_path("dveri-3.jpg")
+                      img src=asset_path("dveri-3.jpg")
+                  li
+                    a href=asset_path("dveri-4.jpg")
+                      img src=asset_path("dveri-4.jpg")
+              //ul.varinty_color
+              /-@door_test.door_variants_fulfillment_options.each do |img_v|
+              /  -img_v.door_color_options.each do |img_v_c|
+              /    ul id=img_v_c.name
+              /      li
+              /        a href=''
+              /          img src=img_v_c.image
 
-        .clearfix
-        .row.door-info-table
-          .columns.large-5.left
-            .title-table
-              |Шпон
-            .cont-table
-              |Палісандер
-            .cont-table
-              |Грецький горіх
-            .cont-table
-              |Горіх шате
-            .cont-table
-              |Ясень сканденавський
-            .end-table
-          .columns.large-7.right
-            .title-table
-              |Види скла
-            .cont-table
-              |Мателюкс білий з алмазним гравіруваннямб декороване стразами SWAROVSKI ELEMENTS
-            .cont-table
-              |Мателюкс вітражний
-            .cont-table
-              |Мателюкс графіт крісталайз
-            .end-table
-        .row.door-info
-          .columns#tab-container.tab-container
-            ul.etabs.header-box-shadow-right-bottom
-              li.tab
-                a href="#tabs1-html"
-                  |Технічні характеристики
-              li.tab
-                a href="#tabs1-js"
-                  |Догляд
-              li.tab
-                a href="#tabs1-css"
-                  |Умови гарантії
-            #tabs1-html.tab-content.header-box-shadow-right-bottom
-              .tab-content-inner
-                p
-                  |Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
-                /=@door_test.dor_informations.specifications
-                .tab-bottom-line
-            #tabs1-js.tab-content.header-box-shadow-right-bottom
-              .tab-content-inner
-                p
-                  |Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
-                .tab-bottom-line
-            #tabs1-css.tab-content.header-box-shadow-right-bottom
-              .tab-content-inner
-                p
-                  |Nunc tinciduntProin dolorAenean lacinia
-                   Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.
+          .clearfix
+          .row.door-info-table
+            .columns.large-5.left
+              .title-table
+                |Шпон
+              .cont-table
+                |Палісандер
+              .cont-table
+                |Грецький горіх
+              .cont-table
+                |Горіх шате
+              .cont-table
+                |Ясень сканденавський
+              .end-table
+            .columns.large-7.right
+              .title-table
+                |Види скла
+              .cont-table
+                |Мателюкс білий з алмазним гравіруваннямб декороване стразами SWAROVSKI ELEMENTS
+              .cont-table
+                |Мателюкс вітражний
+              .cont-table
+                |Мателюкс графіт крісталайз
+              .end-table
+          .row.door-info
+            .columns#tab-container.tab-container
+              ul.etabs.header-box-shadow-right-bottom
+                li.tab
+                  a href="#tabs1-html"
+                    |Технічні характеристики
+                li.tab
+                  a href="#tabs1-js"
+                    |Догляд
+                li.tab
+                  a href="#tabs1-css"
+                    |Умови гарантії
+              #tabs1-html.tab-content.header-box-shadow-right-bottom
+                .tab-content-inner
+                  p
+                    |Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
+                  /=@door_test.dor_informations.specifications
+                  .tab-bottom-line
+              #tabs1-js.tab-content.header-box-shadow-right-bottom
+                .tab-content-inner
+                  p
+                    |Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
+                  .tab-bottom-line
+              #tabs1-css.tab-content.header-box-shadow-right-bottom
+                .tab-content-inner
+                  p
+                    |Nunc tinciduntProin dolorAenean lacinia
+                     Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.
 
-                   Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.
-                .tab-bottom-line
-            /#door-info-tabs
-            /  ul
-            /    li#li_tab1 onclick="tab('tab1′)"
-            /      a
-            /        |Технічні характеристики
-            /    li#li_tab2 onclick="tab(‘tab2′)"
-            /      a
-            /        |Догляд
-            /    li#li_tab onclick="tab(‘tab3′)"
-            /      a
-            /        |Умови гарантії
-            /  #tab1.tabs
-            /    p
-            /      |test
-            /    /-@door_test.dor_informations.each do |door_info|
-            /    /  .info-content
-            /    /    =door_info.specifications
-            /  #tab2.tabs
-            /    p
-            /      |test
-            /    /=@door_test.dor_informations.care
-            /  #tab3.tabs
-            /    p
-            /      |test
-            /    /=@door_test.dor_informations.environment
+                     Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.
+                  .tab-bottom-line

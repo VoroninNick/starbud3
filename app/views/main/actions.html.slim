@@ -9,6 +9,7 @@
       .columns
         ul
           -@promotion_item.each do |p|
+            -@end_time_promo =((p.end_promotion - Time.now)/1.day).ceil
             li
               h3
                 =link_to p.title,promotion_one_item_path(p.id), class: " starbud-link"
@@ -17,9 +18,29 @@
                   = image_tag p.image.url, alt: ''
                 .diff-date.box-shadow-bottom
                   span
-                    |Залишилось&nbsp;
-                    =((p.end_promotion - Time.now)/1.day).ceil
-                    |&nbsp;днів
+                    -if @end_time_promo < 1
+                      |Акція завершилась
+
+                    -elsif @end_time_promo == 1 || @end_time_promo == 21 || @end_time_promo == 31 ||@end_time_promo == 41 ||@end_time_promo == 51 ||@end_time_promo == 61 ||@end_time_promo == 71 ||@end_time_promo == 81 ||@end_time_promo == 91 ||@end_time_promo.ceil == 101
+                      |Залишився&nbsp;
+                      =@end_time_promo
+                      |&nbsp;день
+
+                    -elsif @end_time_promo > 1 && @end_time_promo < 5 || @end_time_promo >= 22 && @end_time_promo <=24 || @end_time_promo >= 32 && @end_time_promo <=34 || @end_time_promo >= 42 && @end_time_promo <=44 || @end_time_promo >= 52 && @end_time_promo <=54
+                      |Залишилось&nbsp;
+                      =@end_time_promo
+                      |&nbsp;дні
+
+                    -elsif @end_time_promo >=5 && @end_time_promo <=20 || @end_time_promo >= 25 && @end_time_promo <=30 || @end_time_promo >= 35 && @end_time_promo <=40 || @end_time_promo >= 45 && @end_time_promo <=50 || @end_time_promo >= 55 && @end_time_promo <=60
+                      |Залишилось&nbsp;
+                      =@end_time_promo
+                      |&nbsp;днів
+
+                    -else
+                      |Залишилось&nbsp;
+                      =@end_time_promo
+                      |&nbsp;днів
+
               p.promotion-short-description =p.short_description
               .readmore
                 =link_to "Детальніше...",promotion_one_item_path(p.id), class: " starbud-link"

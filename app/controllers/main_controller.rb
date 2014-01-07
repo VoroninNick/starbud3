@@ -18,6 +18,7 @@ class MainController < ApplicationController
   def actions
     @title = "Акції"
     @promotion_item = Promotion.order('updated_at desc')
+
     #require 'timespan'
     #time_span_from_dates = Date.diff(Promotion.first.begin_promotion, Promotion.first.end_promotion)
   end

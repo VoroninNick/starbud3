@@ -20,4 +20,5 @@ class ApplicationController < ActionController::Base
   def main_catalog_ha
     return  Publication.order('updated_at desc').limit(3)
   end
+
 end

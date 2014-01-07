@@ -2,12 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-#$(document).ready ->
-#  $("#navigation").treeview
-#    collapsed: true
-#    unique: true
-#    persist: "location"
-#$(document).ready ->
+$(document).ready ->
+#  for dor image colors view
+  $("#variants-color ul li a").click ->
+    mainImage = $(this).attr("href") #Find Image Name
+    mainLinkToImage = $(this).attr("href")
+    $(".image-block a").attr href: mainLinkToImage
+    $(".image-block a img").attr src: mainImage
+    false
+#tabs dor options
 tab = (tab) ->
   document.getElementById("tab1").style.display = "none"
   document.getElementById("tab2").style.display = "none"

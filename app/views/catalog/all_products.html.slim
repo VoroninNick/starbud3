@@ -26,7 +26,7 @@
             - @door.each do |door|
               .columns.large-3.float-left
                 .item
-                  img src=door.door_variants_fulfillment_options[0].image
+                  a href=show_door_path(door.name)
+                    img src=door.door_variants_fulfillment_options[0].image
                   h5
-                    /= link_to door.door_variants_fulfillment_options[0].name, show_door_path(door.name)
                     = link_to door.name, show_door_path(door.name)
