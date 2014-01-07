@@ -168,7 +168,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     top: 36px;
 }
 .float-left {float:left!important;}
-.button.login-button {
+.button.login-button, .form-actions input {
     background: url("<%= asset_path('soc-button-subs.jpg') %>")no-repeat;
     width: 46px;
     height: 45px;
@@ -176,6 +176,9 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     -moz-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
     box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
     padding: 0;
+}
+.form-actions {
+    float: right;
 }
 .login-wrapper h3 {
     color: #666666;
@@ -189,7 +192,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .user_remember_me,  .label-remember-me {
     float: left;
 }
-.login-form input {
+.login-form input, .input input {
     height: 55px;
     border: none;
     background-color: rgba(235, 235, 235, 0.29);
@@ -201,6 +204,18 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     font-style: italic;
     padding-left: 15px;
     padding-right: 15px;
+}
+.input textarea {
+    height: 238px;
+    border: none;
+    background-color: rgba(235, 235, 235, 0.29);
+    -moz-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    font-size: 1.2em;
+    font-weight: 300;
+    font-style: italic;
+    padding: 15px;
 }
 .login-form .user_remember_me input, .login-form .user_remember_me input:focus {
     box-shadow: none;
@@ -215,7 +230,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     display: block;
     height: 80px;
 }
-.login-form input:focus {
+.login-form input:focus, .input input:focus, .input textarea:focus {
     background-color: #ebebeb;
     -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
     -webkit-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
@@ -225,7 +240,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     outline: none!important;
     outline-style: none!important;
 }
-.login-form label {
+.login-form label, .control-label {
     font-weight: 400;
     font-size: 0.8em;
     letter-spacing: -1px;

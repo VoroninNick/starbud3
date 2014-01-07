@@ -13,6 +13,8 @@ class CatalogController < ApplicationController
   end
   def door
     #@product_door = Door.find_by_door_url(params[:door_name])
+    @main_catalog_from_door
+    @main_sub_catalog_from_door
     @door_test = Door.find_by_name(params[:door])
   end
   def catalog_layout

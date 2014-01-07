@@ -62,21 +62,20 @@
       .columns.large-3
         h4
           |Зворотній зв’язок:
-      .column.large-12
-        /= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
-        /  .form-horizontal-left
-        /    = f.input :name, :required => true, placeholder: 'Микола Валерійович', :label=>false
-        /    = f.label :"Ваше ім'я", :for=>"contact_name"
-        /    = f.input :email, :required => true, placeholder: '+38 (050) 417 07 28', :label=>false
-        /    = f.label :"Контактний телефон", :for=>"contact_email"
-        /    = f.input :phone, :required => false, placeholder: 'voronin.nick@gmail.com', :label=>false
-        /    = f.label :"Електронна пошта", :for=>"contact_phone"
-        /  .form-horizontal-right
-        /    = f.input :message, :as => :text, :required => false, placeholder: 'Зателефонувати мені по питання придбання 1000 кубіків рубіків у Львові.', :label=>false
-        /    = f.label :"Додаткові відомості", :for=>"contact_message"
-        /    .form-actions
-        /      img src="assets/g3k-button-arrow-1.png"
-        /      = f.button :submit, 'Надіслати !', :class=> "btn btn-primary"
+      .column.large-12.contacts-form
+        = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
+          .columns.large-6.form-horizontal-left
+            = f.input :name, :required => true, placeholder: 'Олександр Олександрієвський', :label=>false
+            = f.label :"ім'я", :for=>"contact_name"
+            = f.input :phone, :required => false, placeholder: 'voronin.nick@gmail.com', :label=>false
+            = f.label :"ел.скринька", :for=>"contact_phone"
+            = f.input :email, :required => true, placeholder: '+38 (050) 417 07 28', :label=>false
+            = f.label :"телефон", :for=>"contact_email"
+          .columns.large-6.form-horizontal-right
+            = f.input :message, :as => :text, :required => false, placeholder: 'Будемо раді почути відгути та запитання від Вас.', :label=>false
+            = f.label :"текст вашого повідомлення", :for=>"contact_message"
+            .form-actions
+              = f.button :submit, '', :class=> "btn btn-primary"
     .row.contacts-obl-wrapper
       .columns.large-4
         h4
