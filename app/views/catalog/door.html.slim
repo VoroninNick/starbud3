@@ -25,40 +25,52 @@
             h5
               |Варіанти виконання:
             ul#variants
-              li.box-shadow-right-bottom
-                .thumbnail-item
-                  a data-slide-index="0" href=""
-                    img src=asset_path("dveri-1.jpg")
-              li.box-shadow-right-bottom
-                .thumbnail-item
-                  a data-slide-index="1" href=""
-                    img src=asset_path("dveri-3.jpg")
-            /.columns#variant-tab-container.tab-container
-            /  ul.varinty_vykon
-            /    -@door_test.door_variants_fulfillment_options.each do |img_v|
-            /      li.tab
-            /        =link_to 't ',"#"+img_v.name
+              -count =0
+              -@door_test.door_variants_fulfillment_options.each do |img_v|
+                li.box-shadow-right-bottom
+                  .thumbnail-item
+                    a data-slide-index=count href=""
+                      =image_tag img_v.image.url
+                -count+=1
+            /ul#variants
+            /  li.box-shadow-right-bottom
+            /    .thumbnail-item
+            /      a data-slide-index="0" href=""
+            /        img src=asset_path("dveri-1.jpg")
+            /  li.box-shadow-right-bottom
+            /    .thumbnail-item
+            /      a data-slide-index="1" href=""
+            /        img src=asset_path("dveri-3.jpg")
 
             .clearfix
             h5
               |Варіанти кольору:
             ul#variants-color
-              li
-                ul
-                  li
-                    a href=asset_path("dveri-1.jpg")
-                      img src=asset_path("dveri-1.jpg")
-                  li
-                    a href=asset_path("dveri-2.jpg")
-                      img src=asset_path("dveri-2.jpg")
-              li
-                ul
-                  li
-                    a href=asset_path("dveri-3.jpg")
-                      img src=asset_path("dveri-3.jpg")
-                  li
-                    a href=asset_path("dveri-4.jpg")
-                      img src=asset_path("dveri-4.jpg")
+              -@door_test.door_variants_fulfillment_options.each do |img_v|
+                li
+                  ul
+                    -img_v.door_color_options.each do |img_v_c|
+                      li
+                        a href=img_v_c.image.url
+                          =image_tag img_v_c.image.url
+
+            /ul#variants-color
+            /  li
+            /    ul
+            /      li
+            /        a href=asset_path("dveri-1.jpg")
+            /          img src=asset_path("dveri-1.jpg")
+            /      li
+            /        a href=asset_path("dveri-2.jpg")
+            /          img src=asset_path("dveri-2.jpg")
+            /  li
+            /    ul
+            /      li
+            /        a href=asset_path("dveri-3.jpg")
+            /          img src=asset_path("dveri-3.jpg")
+            /      li
+            /        a href=asset_path("dveri-4.jpg")
+            /          img src=asset_path("dveri-4.jpg")
               //ul.varinty_color
               /-@door_test.door_variants_fulfillment_options.each do |img_v|
               /  -img_v.door_color_options.each do |img_v_c|
