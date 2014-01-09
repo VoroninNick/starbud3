@@ -29,9 +29,10 @@ body
               |будівельно-облицювальних матеріалів.
           .header-top-center
             p
-              |тел.: +38
-              span
-                |(032) 242 38 41
+              a href="tel:+380322423841"
+                |тел.: +38
+                span
+                  |(032) 242 38 41
           .header-top-right
             ul.header-social-buttons
               li
@@ -49,8 +50,8 @@ body
       .row.header-bottom.header-box-shadow-right-bottom
         .columns.large-3
           a.main-header-logo href="/" title="На головну"
-            /= link_to image_tag("logo_ua.png") + '', root_path, :title => 'На головну'
             img.header-box-shadow-right-bottom src=asset_path("starbud-header-logo.jpg")
+          .clearfix
         .columns.large-9
           ul#main-menu
             li
@@ -58,7 +59,6 @@ body
             li.catalog
               a
                 |Каталог
-              /= link_to 'Каталог', main_page_catalog_path, :class => is_active?("main_page_catalog")
               ul.main-menu-catalog
                 - main_catalog.each do |main_menu|
                   li.sub-menu-item
@@ -75,7 +75,6 @@ body
             li.publication
               a
                 |Публікації
-              /= link_to 'Публікації', publications_path, :class => is_active?("publications")
               ul.main-menu-publications
                 li
                   h2
@@ -87,12 +86,10 @@ body
                       li
                         h4
                           a href = interest_news_item_path(ia.id) = truncate  ia.title, length: 40, omission: '...'
-                          /a =truncate ia.title, length: 40, omission: '...'
                         .clearfix
                         span =ia.created_at.strftime("%d. %m. %Y")
                         .clearfix
                         .main-menu-article-content = truncate_html ia.description, length: 80, omission: '...'
-                  /= link_to image_tag("icon-dor.png") + 'Цікаві новини', interesting_news_path, :title => 'Цікаві новини'
                   .clearfix
                   = link_to 'Переглянути всі новини', interesting_news_path, class: ' show-all'
                 li
@@ -114,7 +111,6 @@ body
                       li
                         h4
                           a href = helpful_article_item_path(ha.id) = truncate ha.title, length: 40, omission: '...'
-                          /a =truncate ha.title, length: 40, omission: '...'
                         .clearfix
                         span =ha.created_at.strftime("%d. %m. %Y")
                         .clearfix
@@ -201,7 +197,8 @@ body
         p
           |тел./факс:
           span
-            |&nbsp;(032)&nbsp;242&nbsp;38&nbsp;41
+            a href="tel:+380322423841"
+              |&nbsp;(032)&nbsp;242&nbsp;38&nbsp;41
           br
           |вул. Луганська, 18, м. Львів, 79034, Україна
       .columns.large-2.work-time

@@ -6,13 +6,14 @@
         .catalog-content-title-wrapper
           .line-wrapper
             .line
-          .titles
-            h3
-              |Двері
-            h4
-              |розсувні двері-гармошки
-          .image
-            img src=asset_path("one-item-icon-after-title-content.jpg")
+          .catalog-content-title-inner
+            .titles
+              h3
+                |Дверi
+              h4 = @current_sub_catalog.name
+            .image
+              img src=asset_path("one-item-icon-after-title-content.jpg")
+            .clearfix
         .clearfix
         .catalog-content-wrapper
           .columns.image-block
@@ -32,15 +33,6 @@
                     a data-slide-index=count href=""
                       =image_tag img_v.image.url
                 -count+=1
-            /ul#variants
-            /  li.box-shadow-right-bottom
-            /    .thumbnail-item
-            /      a data-slide-index="0" href=""
-            /        img src=asset_path("dveri-1.jpg")
-            /  li.box-shadow-right-bottom
-            /    .thumbnail-item
-            /      a data-slide-index="1" href=""
-            /        img src=asset_path("dveri-3.jpg")
 
             .clearfix
             h5
@@ -53,27 +45,8 @@
                       li
                         a href=img_v_c.image.url
                           =image_tag img_v_c.image.url
-
-            /ul#variants-color
-            /  li
-            /    ul
-            /      li
-            /        a href=asset_path("dveri-1.jpg")
-            /          img src=asset_path("dveri-1.jpg")
-            /      li
-            /        a href=asset_path("dveri-2.jpg")
-            /          img src=asset_path("dveri-2.jpg")
-            /  li
-            /    ul
-            /      li
-            /        a href=asset_path("dveri-3.jpg")
-            /          img src=asset_path("dveri-3.jpg")
-            /      li
-            /        a href=asset_path("dveri-4.jpg")
-            /          img src=asset_path("dveri-4.jpg")
-
           .clearfix
-          .row.door-info-table
+          .door-info-table
             .columns.large-5.left
               .title-table
                 |Шпон
@@ -96,30 +69,30 @@
               .cont-table
                 |Мателюкс графіт крісталайз
               .end-table
-          .row.door-info
+          .door-info
             .columns#tab-container.tab-container
               ul.etabs.header-box-shadow-right-bottom
                 li.tab
-                  a href="#tabs1-html"
+                  a href="#tab-th"
                     |Технічні характеристики
                 li.tab
-                  a href="#tabs1-js"
+                  a href="#tab-d"
                     |Догляд
                 li.tab
-                  a href="#tabs1-css"
+                  a href="#tab-ug"
                     |Умови гарантії
-              #tabs1-html.tab-content.header-box-shadow-right-bottom
+              #tab-th.tab-content.header-box-shadow-right-bottom
                 .tab-content-inner
                   p
                     |Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
                   /=@door_test.dor_informations.specifications
                   .tab-bottom-line
-              #tabs1-js.tab-content.header-box-shadow-right-bottom
+              #tab-d.tab-content.header-box-shadow-right-bottom
                 .tab-content-inner
                   p
                     |Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
                   .tab-bottom-line
-              #tabs1-css.tab-content.header-box-shadow-right-bottom
+              #tab-ug.tab-content.header-box-shadow-right-bottom
                 .tab-content-inner
                   p
                     |Nunc tinciduntProin dolorAenean lacinia

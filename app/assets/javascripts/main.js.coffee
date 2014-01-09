@@ -41,6 +41,7 @@ $(document).ready ->
 
   $(".bxslider").bxSlider
     pagerCustom: "#bx-pager"
+    mode: 'fade'
     auto: true
 
   $("#variants-color").bxSlider

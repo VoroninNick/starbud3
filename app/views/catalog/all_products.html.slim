@@ -6,27 +6,36 @@
         .catalog-content-title-wrapper
           .line-wrapper
             .line
-          .titles
-            h3
-              |Двері
-            h4
-              |розсувні двері-гармошки
-          .image
-            img src=asset_path("one-item-icon-after-title-content.jpg")
-        .catalog-content-wrapper
-          .item
+          .catalog-content-title-inner
+            .titles
+              h3
+                |Дверi
+              h4 = @current_sub_catalog.name
             .image
-              /img src=@door_collection.image
+              img src=asset_path("one-item-icon-after-title-content.jpg")
+            .clearfix
+        .catalog-content-wrapper
+          .current-collection-wrapper
+            .image
+              img src=@current_collection.image.url
             .info
               h4
-                |Колекція
-              /h5  =@door_collection.name
+                |Колекцiя
+              h5  =@current_collection.name
           .clearfix
-          .row
+          .row.doors-from-collections
             - @door.each do |door|
+              - c = Collection.find door.collection_id
+              - b = Brand.find c.brand_id
+              - s = SubCatalog.find b.sub_catalog_id
+              - m = MainCatalog.find s.main_catalog_id
               .columns.large-3.float-left
                 .item
-                  a href=show_door_path(door.name)
+                  a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
                     img src=door.door_variants_fulfillment_options[0].image
                   h5
-                    = link_to door.name, show_door_path(door.name)
+                    = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
+                  span
+                    |(
+                    =@current_collection.name
+                    |)

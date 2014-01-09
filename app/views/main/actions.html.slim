@@ -1,10 +1,9 @@
 .row.promotion-wrapper.page-content-wrapper-box-shadow
   .columns.large-12
-    .row
-      .columns
-        .title-about-us
-          h3
-            |Акції:
+    .columns
+      .title-about-us
+        h3
+          |Акції:
     .row
       .columns
         ul
@@ -15,7 +14,8 @@
                 =link_to p.title,promotion_one_item_path(p.id), class: " starbud-link"
               .image.box-shadow-right-bottom
                 .image-inner
-                  = image_tag p.image.url, alt: ''
+                  a href=promotion_one_item_path(p.id)
+                    = image_tag p.image.url, alt: ''
                 .diff-date.box-shadow-bottom
                   span
                     -if @end_time_promo < 1

@@ -6,21 +6,24 @@
         .catalog-content-title-wrapper
           .line-wrapper
             .line
-          .titles
-            h3
-              |Двері
-            h4
-              |розсувні двері-гармошки
-          .image
-            img src="../assets/one-item-icon-after-title-content.jpg"
+          .catalog-content-title-inner
+            .titles
+              h3
+                |Дверi
+              h4 = @current_sub_catalog.name
+            .image
+              img src=asset_path("one-item-icon-after-title-content.jpg")
+            .clearfix
         .catalog-content-wrapper
           .clearfix
           - @brand.each do |brands|
+            - s = SubCatalog.find brands.sub_catalog_id
+            - m = MainCatalog.find s.main_catalog_id
             .columns.large-3.float-left.item.brand-item
               .image
-                a href=my_collection_path(:main_catalog, :sub_catalog,  brands.name)
+                a href=my_collection_path(m.name, s.name,  brands.name)
                   img src=brands.image
               h5
-                = link_to brands.name, my_collection_path(:main_catalog, :sub_catalog,  brands.name)
+                = link_to brands.name, my_collection_path(m.name, s.name,  brands.name)
               p
                 = "("+brands.country+")"

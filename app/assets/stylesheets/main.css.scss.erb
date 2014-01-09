@@ -230,6 +230,12 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     display: block;
     height: 80px;
 }
+.header-top-center p a {
+    color: white;
+}
+.footer-contacts p span a {
+    color: #d3dce3;
+}
 .login-form input:focus, .input input:focus, .input textarea:focus {
     background-color: #ebebeb;
     -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
@@ -360,6 +366,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   position: relative;
   top: -50px;
   left: 10px;
+    display: block;
 }
 #main-page-banner-wrapper {
   width: 100%;
@@ -373,13 +380,38 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .row.header-wrapper {
   position: relative;
-  z-index: 5;
+  z-index: 70;
 }
 .search-bar {
   background: url("<%= asset_path('search-pannel-background-pattern.jpg') %>");
   height: 110px;
   position: relative;
+    z-index: 70;
 }
+.related-promotion-wrapper {
+    padding-top: 30px;
+}
+.related-promotion-items {
+    padding-bottom: 70px;
+}
+.related-promotion-items h3 {
+    color: #005baa;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.related-promotion-items p {
+    color: #666666!important;
+    font-size: 16px;
+    font-weight: 100;
+    width: 100%!important;
+    line-height: 20px;
+    padding-top: 18px;
+}
+.related-promotion-item {
+    padding-top: 30px;
+}
+
 .centre-main-page-menu li {
   padding-top: 16px;
   padding-left: 42px;
@@ -868,9 +900,9 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .columns.search-bar-background-right {
   right: -10px;
 }
-.bxslider li {
-  left: -38px;
-}
+/*.row.header-wrapper {*/
+  /*left: -38px;*/
+/*}*/
 #bx-pager li {
   list-style: none;
   float: left;
@@ -1048,7 +1080,11 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 
 .promotion-wrapper li .image img {
-    /*width: 94%;*/
+    height: 100%;
+}
+.left-minus-15 {
+    position: relative;
+    left: -15px;
 }
 .promotion-wrapper li .image .diff-date {
     background: url("<%= asset_path('promotion-background-patern.jpg') %>");

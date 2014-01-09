@@ -1,22 +1,27 @@
 class CatalogController < ApplicationController
   #layout 'layout-catalog'
   def all_brands
-    @brand = SubCatalog.find_by_name(params[:sub_catalog]).brands
+    @brand = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).brands
+    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
   end
+
   def all_collections
     @collections = Brand.find_by_name(params[:brand]).collections
+    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
   end
+
   def all_products
-    #@door_collection = Collection.find_by_collection_url(params[:name])
-    @door = Collection.find_by_name(params[:collection]).doors
-    @door_collection = Door.find_by_door_url(params[:name])
+    @door = Collection.find_by_name(params[:collection].gsub('_',' ')).doors
+    @current_collection = Collection.find_by_name(params[:collection].gsub('_',' '))
+    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
   end
+
   def door
-    #@product_door = Door.find_by_door_url(params[:door_name])
-    @main_catalog_from_door
-    @main_sub_catalog_from_door
-    @door_test = Door.find_by_name(params[:door])
+    c = Collection.find_by_name(params[:collection].gsub('_',' '))
+    @door_test = Door.where(collection_id: c.id, name: params[:door].gsub('_',' ')).first
+    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
   end
+
   def catalog_layout
     #@catalog_action ='item'
     #render :template => 'main/catalog'

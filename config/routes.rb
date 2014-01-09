@@ -17,13 +17,14 @@ StarBud::Application.routes.draw do
 
   get '/публікації/корисні_статті/:id' => 'publications#show', :as => :helpful_article_item
   get '/публікації/свіжі_новини/:id' => 'interest_news#show', :as => :interest_news_item
-  get 'продукт/:door', to:'catalog#door', as:'show_door'
+  #get 'продукт/:door', to:'catalog#door', as:'show_door'
 
   get '/акція/:id', to:'promotions#show', as:'promotion_one_item'
 
   get ':main_catalog/:sub_catalog', to:'catalog#all_brands', as:'my_sub_catalog'
   get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
   get ':main_catalog/:sub_catalog/:brand/:collection', to:'catalog#all_products', as:'all_products_from_collection'
+  get ':main_catalog/:sub_catalog/:brand/:collection/:door', to:'catalog#door', as:'show_door'
   #get ':main_catalog/:sub_catalog/:brand/:collection/:door', to:'catalog#door', as:'show_door'
 
 

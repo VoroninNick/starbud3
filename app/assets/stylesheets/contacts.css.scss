@@ -4,7 +4,7 @@
 .contacts h4, .maps h4, .call-order h4, .contacts-obl-wrapper h4 {
   color: #005baa;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
 }
 #map {
   width: 100%;
@@ -20,4 +20,16 @@
 }
 .obl-ttl-wrapper-right {
   width: 116%;
+}
+.maps p {
+  color: #666666;
+  font-size: 21px;
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+.call-order .columns h4 {
+  padding: 85px 0 20px 0;
+}
+.contacts-obl-wrapper .columns>h4 {
+  padding: 120px 0 52px 0;
 }
