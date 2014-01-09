@@ -3,7 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-#  for dor image colors view
+
+  $("#catalog-sidebar").treeview
+    persist: "location"
+    collapsed: true
+    unique: true
+
+  #  for dor image colors view
   $("#variants-color ul li a").click ->
     mainImage = $(this).attr("href") #Find Image Name
     mainLinkToImage = $(this).attr("href")

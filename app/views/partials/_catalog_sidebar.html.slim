@@ -5,24 +5,24 @@
     .sidebar-inner
       .row
         .columns.large-9.catalog-sidebar
-          ul
+          ul#catalog-sidebar
             - main_catalog.each do |si|
               li.sidebar-menu.sidebar-dor
                 h2
                   img src=si.image
                   =si.name
-                ul
+                ul.sub-cat
                   -si.sub_catalogs.each do |sc|
                     li
-                      = link_to sc.name, my_sub_catalog_path(si.name, sc.name)
-                      ul
+                      = link_to sc.name, my_sub_catalog_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'))
+                      ul.brands-cat
                         -sc.brands.each do |br|
                           li
-                            = link_to br.name, my_collection_path(si.name, sc.name, br.name)
-                            ul
+                            = link_to br.name, my_collection_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'), br.name.gsub(' ','_'))
+                            ul.coll-cat
                               -br.collections.each do |c|
                                 li
-                                  = link_to c.name, all_products_from_collection_path(si.name, sc.name, br.name, c.name )
+                                  = link_to c.name, all_products_from_collection_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'), br.name.gsub(' ','_'), c.name.gsub(' ','_') )
 
           ul
             li.sidebar-menu.side-bar-visual-constructor

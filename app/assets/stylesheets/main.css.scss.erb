@@ -563,6 +563,16 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   padding-top: 40px;
   clear: both;
 }
+.treeview .hitarea {
+    background: url("<%= asset_path('sidebar-arrow.png') %>")no-repeat;
+}
+.collapsable-hitarea {
+    -moz-transform: rotate(90deg); /* Для Firefox */
+    -ms-transform: rotate(90deg); /* Для IE */
+    -webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(90deg); /* Для Opera */
+    transform: rotate(90deg);
+}
 .item .image {
   padding-top: 10px;
 }
