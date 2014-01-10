@@ -14,6 +14,40 @@
 .columns.large-9.about-us-content {
     padding-bottom: 100px;
 }
+.main-menu-publications ul {
+    margin-left: 0;
+}
+.main-menu-publications>li h2 {
+    margin-bottom: 0px;
+}
+.main-menu-interest-news {
+    padding-top: 12px;
+}
+.main-menu-useful-video {
+    padding-top: 28px;
+}
+#video-main-menu li iframe {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.main-menu-publications ul li:hover {
+    background: rgba(26,26,26, 0.9);
+}
+.main-menu-helpful-articles {
+    padding-top: 9px;
+}
+.main-menu-publications .video {
+    width: 25%;
+    margin: 0 4% 0 4%;
+}
+.main-menu-useful-video li {
+    border-bottom: none!important;
+    padding: 0!important;
+    width: 186px;
+}
+.main-menu-useful-video li iframe {
+    width: 186px;
+}
 .franchyza li {
     font-size: 18px;
     color: #666666;
@@ -81,6 +115,30 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     border-left: 4px solid #00539c;
     padding: 18px 0 45px 30px;
 }
+.main-menu-publications li h4 a {
+    font-size: 14px;
+    font-weight: 500;
+}
+.main-menu-publications li span {
+    color: #c2c2c2!important;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 100;
+    margin-top: -2px;
+}
+#video-main-menu li iframe {
+    width: 186px!important;
+    height: 104px!important;
+}
+.main-menu-publications li p {
+    color: #e1e1e1;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 16px;
+}
+.main-menu-publications ul li:last-child {
+    border: none!important;
+}
 .main-menu-publications .clearfix+a {
     padding: 0!important;
 }
@@ -116,9 +174,6 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     float: left;
     padding: 0 1% 0 1%;
 }
-.main-menu-interest-news, .main-menu-useful-video, .main-menu-helpful-articles {
-    padding-top: 8px;
-}
 .main-menu-useful-video li iframe {
     width: 100%!important;
     max-height: 125px!important;
@@ -147,8 +202,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .main-menu-publications .show-all {
     position: absolute;
-    bottom: 14px;
-    margin-left: 20px;
+    bottom: 16px;
 }
 .main-menu-publications span a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -226,10 +280,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .bxslider {
     margin-left: 0!important;
 }
-.thumbnail-item a {
-    display: block;
-    height: 80px;
-}
+
 .header-top-center p a {
     color: white;
 }
@@ -286,7 +337,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   -moz-box-shadow: 2px 3px 0px #d2d2d2;
   box-shadow: 2px 3px 0px #d2d2d2;
 }
-.row.centre-main-page-menu li {
+.centre-main-page-menu li {
   list-style: none;
 }
 .visual-constructor, .columns.visual-constructor-left, .columns.visual-constructor-right {
@@ -441,7 +492,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .centre-main-page-menu a:hover {
   border-bottom: 1px solid rgba(0, 70, 132, 1);
 }
-.row.centre-main-page-menu li:last-child {
+.centre-main-page-menu li:last-child {
   padding-bottom: 70px;
 }
 .main-page-wrapper h2 {
@@ -450,7 +501,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .main-page-wrapper .columns .large-6 h2 {
   color: #005baa;
 }
-.row.main-short-description {
+.main-short-description {
   padding-top: 63px;
 }
 .main-short-description span {
@@ -468,7 +519,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   font-weight: 100;
   padding-bottom: 110px;
 }
-.row.centre-main-page-menu {
+.centre-main-page-menu {
   background: #f7f7f7;
   padding: 40px 0 0 0;
 }
@@ -498,7 +549,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   color: #848585;
   font-weight: 100 !important;
 }
-.row.main-short-description li {
+.main-short-description li {
   list-style: none;
   padding-left: 25px;
   font-size: 1em;
@@ -507,7 +558,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   line-height: 24px;
   padding-bottom: 8px;
 }
-.row.main-short-description li:before {
+.main-short-description li:before {
   display: block;
   position: relative;
   content: '';
@@ -520,6 +571,71 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .read-more {
   float: right;
   padding-bottom: 40px;
+    padding-right: 2.375rem;
+}
+
+.bord-bottom:after {
+    content: '';
+    background: #e4e4e4;
+    bottom: 0px;
+    position: absolute;
+    width: 85px;
+    height: 1px;
+}
+.thumbnail-item a {
+    position:relative;
+    overflow:hidden;
+}
+.thumbnail-item:before, .thumbnail-item:after  {
+    content: '';
+    position: absolute;
+    z-index: 12;
+    width: 2px;
+    bottom: 1px;
+    height: 79px;
+}
+.row.thumbnail-panel-box-shadow-top {
+    background: rgba(25, 25, 25, 0.3);
+    height: 4px;
+    position: relative;
+    top: -150px;
+    z-index: 71;
+    width: 85%;
+}
+.bxslider li:before, .bxslider li:after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: rgba(25, 25, 25, 0.3);
+}
+.bxslider li:before {top: 0px;}
+.bxslider li:after {bottom: 0px;}
+.thumbnail-item:before {left: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-left.png') %>")no-repeat;}
+.thumbnail-item:after {right: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-right.png') %>")no-repeat;}
+.active .triangle {
+    border: 10px solid #f8f9f9;
+    border-top: none;
+    border-color: transparent #fdfdfd transparent;
+    position: absolute;
+    left: 39px;
+    top: 0;
+    z-index: 11;
+}
+.active .triangle:before, .active .triangle:after {
+    content:'';
+    position:absolute;
+    z-index: 11;
+    height: 10px;
+    width: 100px;
+    top: 0px;
+    background:#fdfdfd;
+}
+.active .triangle:before {
+    right:10px;
+}
+.active .triangle:after {
+    left:10px;
 }
 .read-more a {
   float: right;
@@ -545,9 +661,13 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     top: -4px;
 }
 .interest-info .title h2, .helpful-articles h2, .publication-article-wrapper h2 {
-  font-size: 32px;
-  color: #005baa;
-  padding-left: 22px;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 11px 0 12px 28px;
+    color: #005baa;
+}
+.main-page-wrapper .interest-info .title-inner {
+    top: -4px;
 }
 .interest-info .title-inner {
   position: relative;
@@ -573,8 +693,13 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     -o-transform: rotate(90deg); /* Для Opera */
     transform: rotate(90deg);
 }
-.item .image {
-  padding-top: 10px;
+.helpful-articles-content .item .image {
+    padding-top: 14px!important;
+    height: 137px;
+    overflow: hidden;
+}
+.helpful-articles-content .columns.large-4.image img {
+    min-height: 108px;
 }
 .item span {
   color: #666666;
@@ -910,10 +1035,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .columns.search-bar-background-right {
   right: -10px;
 }
-/*.row.header-wrapper {*/
-  /*left: -38px;*/
-/*}*/
 #bx-pager li {
+    position: relative;
   list-style: none;
   float: left;
   overflow: hidden;
@@ -929,17 +1052,29 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   top: 10px;
   height: 100px;
 }
+#bx-pager li .active img {
+    top: 0px!important;
+}
 .bx-viewport {
   height: 620px!important;
 }
 .main-menu-catalog {
   display: none;
-  width: 750px;
+  width: 790px;
   position: absolute;
   background: rgba(1, 1, 1, 0.8);
   top: 73px;
-  left: -165%;
+  left: -175%;
   border-left: 4px solid #00539c;
+}
+.sub-menu-item.nomer_2 {
+    width: 28%;
+}
+.sub-menu-item.nomer_1 {
+    width: 31%;
+}
+.sub-menu-item.nomer_3 {
+    width: 40%;
 }
 .sub-menu-links span a {
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -971,20 +1106,6 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     font-size: 22px;
     font-weight: 500;
 }
-/*.thumbnail-item .active:after{*/
-  /*bottom: 83%;*/
-  /*left: 50%;*/
-  /*border: solid transparent;*/
-  /*content: " ";*/
-  /*height: 0;*/
-  /*width: 0;*/
-  /*position: absolute;*/
-  /*pointer-events: none;*/
-  /*border-color: rgba(136, 183, 213, 0);*/
-  /*border-bottom-color: #88b7d5;*/
-  /*border-width: 14px;*/
-  /*margin-left: -16px;*/
-/*}*/
 .row.catalog-wrapper, .row.content-wrapper {
   margin-top: -85px;
   padding-top: 85px;
@@ -999,7 +1120,6 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   padding-bottom: 100px;
 }
 .catalog {
-  /*padding: 27px 50px 21px 31px!important;*/
   padding: 27px 0px 21px 0px !important;
 }
 .catalog > a:after {
@@ -1012,15 +1132,21 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   right: 15px;
   top: 36px;
 }
-/*, #main-menu > .catalog:hover a:first-child:after*/
+
 .active_menu:first-child:after {
   background-position: bottom;
 }
 .sub-menu-item {
-  list-style: none;
-  /*width: 33%;*/
-  padding: 20px 17px 34px 34px;
-  float: left;
+    list-style: none;
+    width: 33%;
+    padding: 24px 14px 28px 26px;
+    float: left;
+}
+.sub-menu-links span {
+    padding-bottom: 3px;
+}
+.sub-menu-links {
+    padding-left: 45px;
 }
 .sub-menu-links a {
   color: white!important;
@@ -1035,21 +1161,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .sub-menu-item h2 img, .main-menu-publications h2 img {
     padding-right: 15px;
 }
-#bx-pager li .thumbnail-item .active {
-    border: 1px solid red;
-    /*bottom: 83%;*/
-    /*left: 50%;*/
-    /*border: solid transparent;*/
-    /*content: " ";*/
-    /*height: 0;*/
-    /*width: 0;*/
-    /*position: absolute;*/
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-bottom-color: #88b7d5;
-    border-width: 14px;
-    margin-left: -16px;
-}
+
 .row.content-video-wrapper .columns div:nth-of-type(1) iframe {
     width: 98%!important;
     min-height: 200px!important;
@@ -1183,6 +1295,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .item .columns.large-3.image {
     height: 110px!important;
+    margin-top: 11px;
 }
 .item .columns.large-3.image img {
     height: 100%;
@@ -1191,7 +1304,6 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .bxslider li h2 {
     position: relative;
     z-index: 32;
-    color: red;
     top: -46%;
     left: 20%;
 }

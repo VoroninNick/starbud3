@@ -34,9 +34,8 @@
         li.about-item.history-about id=article.name.gsub(' ','_')
           h3 =article.name
           p =raw article.content
-          ul
+          ul.sert
             - article.about_article_images.each do | image |
-              li
-                img src=image.image.url
-
-
+              li.image
+                a href=image.image
+                  img src=image.image.url

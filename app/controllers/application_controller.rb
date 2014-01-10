@@ -10,15 +10,15 @@ class ApplicationController < ActionController::Base
 
   helper_method :main_catalog_ia
   def main_catalog_ia
-    return  InterestNews.order('updated_at desc').limit(3)
+    return  InterestNews.order('updated_at desc').limit(2)
   end
   helper_method :main_catalog_iv
   def main_catalog_iv
-    return  UsefulVideo.order('updated_at desc').limit(3)
+    return  UsefulVideo.order('updated_at desc').limit(2)
   end
   helper_method :main_catalog_ha
   def main_catalog_ha
-    return  Publication.order('updated_at desc').limit(3)
+    return  Publication.order('updated_at desc').limit(2)
   end
 
 end

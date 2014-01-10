@@ -8,26 +8,30 @@
       img src=asset_path("main-banner-background-2.jpg")
     li
       img src=asset_path("main-banner-background-5.jpg")
+.row.thumbnail-panel-box-shadow-top
 .row.search-bar.box-shadow-bottom
   .columns.large-5
     .row
       .columns.search-bar-background-left.box-shadow-left-bottom
     ul#bx-pager
       li
-        .triangle
         .thumbnail-item
           a data-slide-index="0" href=""
+            .triangle
             img src=asset_path("main-banner-background-1.jpg")
+        .bord-bottom
       li
-        .triangle
         .thumbnail-item
           a data-slide-index="1" href=""
+            .triangle
             img src=asset_path("main-banner-background-2.jpg")
+        .bord-bottom
       li
-        .triangle
         .thumbnail-item
           a data-slide-index="2" href=""
+            .triangle
             img src=asset_path("main-banner-background-5.jpg")
+        .bord-bottom
   .columns.large-1
     p
   .columns.large-6
@@ -40,7 +44,7 @@
     .columns.search-bar-background-right.box-shadow-right-bottom
 .row.main-page-wrapper
   .columns.large-12
-    .row.main-short-description
+    .main-short-description
       .columns.large-6
         h2
           |ТзОВ «Стар-Буд»
@@ -60,9 +64,8 @@
         li Безкоштовний дизайн
     .row
       .columns.large-2.read-more
-        a
-          |Детальніше...
-    .row.centre-main-page-menu
+        = link_to 'Детальніше...', about_path, :class => is_active?("about")
+    .centre-main-page-menu
       - main_catalog.each do |main_menu|
         .columns.large-4.float-left
           .title-centre-main-page-menu
@@ -76,7 +79,8 @@
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
                   = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
-
+      .clearfix
+    .clearfix
     .row.visual-constructor
       .columns.large-2
         .row
@@ -154,16 +158,16 @@
           .columns.large-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
               h2 Корисні статті
-      .row
+      .helpful-articles-content
         -@publication_main_page.each do |article|
           .columns.large-6
             li.item
-              .columns.large-3.image
+              .columns.large-4.image
                 img src=article.image
-              .columns.large-9
+              .columns.large-8
                 h5
-                  a href = helpful_article_item_path(article.id) = truncate article.title, length: 70, omission: '...'
-                span = truncate_html article.short_description, length: 140, omission: '...'
+                  a href = helpful_article_item_path(article.id) = truncate article.title, length: 60, omission: '...'
+                span = truncate_html article.short_description, length: 130, omission: '...'
                 .main-page-read-more-wrapper
                   .main-page-read-more.box-shadow-right-bottom
                     = link_to image_tag("main_page_read_more.jpg") + '', helpful_article_item_path(article.id), :title => 'Детальніше'

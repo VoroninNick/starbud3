@@ -3,25 +3,24 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-#  showHide = (divId) ->
-#    if document.getElementById(divId).style.height is "530px"
-#      document.getElementById(divId).style.height = "0px"
-#    else
-#      document.getElementById(divId).style.height = "530px"
+#  text spoiler
+  $(".spoiler h4").click ->
+    $(this).parent().children("div.splCont").toggle "normal"
+    false
+#  sidebar menu
   $('.about_us_start').removeClass(" dn")
   $("#about-us-sidebar").on "click", "a", ->
-
     $('.about_us_start').addClass(" dn")
     # fade out all open subcontents
     $(".about-item:visible").fadeOut()
-
     # fade in new selected subcontent
     $(".about-item[id=" + $(this).attr("data-id") + "]").fadeIn()
+# add class selected oncklick on sidebar menu item
+  $(".about-us-sidebar li a").click ->
+    $(".about-us-sidebar li a").removeClass  "selected"
+    $(this).addClass " selected"
 
-  mmbl = $(".vakancii")
-  $(".about-item h4 a").click ->
-    mmbl.toggleClass "vakanc_show"
-
+#    auto positions sidebar menu
 $ ->
   offset = $("#about-us-sidebar").offset()
   topPadding = 50
@@ -32,12 +31,5 @@ $ ->
       $("#about-us-sidebar").stop().animate marginTop: 0
 
 
-  $(".about-us-sidebar li a").click ->
-#    $(".about-us-sidebar li a").parent().removeClass  "selected"
-#    $(this).parent().addClass " selected"
-    $(".about-us-sidebar li a").removeClass  "selected"
-#    $(".history-about").removeClass " dbl"
-    $(this).addClass " selected"
-#    $(".history-about").addClass " dbl"
 
 

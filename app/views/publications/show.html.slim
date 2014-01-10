@@ -1,34 +1,33 @@
 .row.publication-article-wrapper.page-content-wrapper-box-shadow
   .columns.large-12
-    .row
-      .columns
-        .title-about-us
-          h3
-            |Публікації:
-            = @helpful_articles_item.title
-    .row
-      .columns.large-4.image
-        img src=@helpful_articles_item.image
-      .columns.large-8.content
-        h2 = @helpful_articles_item.title
-        p
-          span = @helpful_articles_item.created_at.strftime("%d. %m. %Y")
-        p = raw @helpful_articles_item.description
-    .row.title-wrapper
+    .columns
+      .title-about-us
+        h3
+          |Публікації:
+          = @helpful_articles_item.title
+    .columns.large-4.image
+      img src=@helpful_articles_item.image
+    .columns.large-8.content
+      h2 = @helpful_articles_item.title
+      p
+        span.publication-date = @helpful_articles_item.created_at.strftime("%d. %m. %Y")
+      p = raw @helpful_articles_item.description
+    .title-wrapper
       .columns.large-4.title.box-shadow-right-bottom.titl-backg
         .title-inner.box-shadow-bottom.titl-backg
           h2
             |Читайте також
-
-    .row
+          .clearfix
+    .clearfix
+    .publication-items
       -@related_helpful_articles.each do |articles|
-        .columns.large-6
-          .row
-            .columns.large-4
+        .columns.large-6.publication-item
+          .columns
+            h4
+              a.starbud-link href = helpful_article_item_path(articles.id) = truncate  articles.title, length: 43, omission: '...'
+          .columns.large-4
+            a href = helpful_article_item_path(articles.id)
               img src= articles.image
-            .columns.large-8
-              h4
-                a href = helpful_article_item_path(articles.id) = truncate  articles.title, length: 70, omission: '...'
-              p = truncate_html articles.short_description, length: 140, omission: '...'
-
-
+            span.publication-date = articles.created_at.strftime("%d. %m. %Y")
+          .columns.large-8
+            p = truncate_html articles.short_description, length: 140, omission: '...'
