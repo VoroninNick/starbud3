@@ -37,5 +37,5 @@
           ul.sert
             - article.about_article_images.each do | image |
               li.image
-                a href=image.image
+                a.fancybox rel="group" href=image.image
                   img src=image.image.url

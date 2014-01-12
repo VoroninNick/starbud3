@@ -609,10 +609,11 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     width: 100%;
     background: rgba(25, 25, 25, 0.3);
 }
+
 .bxslider li:before {top: 0px;}
 .bxslider li:after {bottom: 0px;}
-.thumbnail-item:before {left: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-left.png') %>")no-repeat;}
-.thumbnail-item:after {right: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-right.png') %>")no-repeat;}
+.main-page-tumb .thumbnail-item:before {left: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-left.png') %>")no-repeat;}
+.main-page-tumb .thumbnail-item:after {right: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-right.png') %>")no-repeat;}
 .active .triangle {
     border: 10px solid #f8f9f9;
     border-top: none;

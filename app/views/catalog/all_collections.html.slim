@@ -19,7 +19,7 @@
             - b = Brand.find collect.brand_id
             - s = SubCatalog.find b.sub_catalog_id
             - m = MainCatalog.find s.main_catalog_id
-            .item
+            .item.item-coll
               .image
                 a href=all_products_from_collection_path(m.name, s.name, b.name,  collect.name.gsub(' ','_'))
                   img src=collect.image
