@@ -1,13 +1,26 @@
 .row.publication-article-wrapper.page-content-wrapper-box-shadow
+  .columns.breadcrambs
+    span
+      |//&nbsp;
+      a href="/"
+        |Головна
+      |&nbsp;/&nbsp;
+      span
+        |Публікації
+      |&nbsp;/&nbsp;
+      = link_to 'Корисні статті', helpful_article_item_path
+      |&nbsp;/&nbsp;
+      span = @helpful_articles_item.title
   .columns.large-12
-    .columns
+    .columns.large-5
       .title-about-us
         h3
-          |Публікації:
-          = @helpful_articles_item.title
+    .columns.large-7
+      = render :partial => 'partials/publictions_sidebar'
+    .clearfix
     .columns.large-4.image
       img src=@helpful_articles_item.image.url(:large)
-    .columns.large-8.content
+    .columns.large-8.content.publ-content
       h2 = @helpful_articles_item.title
       p
         span.publication-date = @helpful_articles_item.created_at.strftime("%d. %m. %Y")

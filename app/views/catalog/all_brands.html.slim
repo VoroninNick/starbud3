@@ -8,8 +8,7 @@
             .line
           .catalog-content-title-inner
             .titles
-              h3
-                |Дверi
+              h3 = @main_catalog.name
               h4 = @current_sub_catalog.name
             .image
               img src=asset_path("one-item-icon-after-title-content.jpg")

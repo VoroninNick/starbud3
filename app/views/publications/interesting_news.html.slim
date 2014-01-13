@@ -1,10 +1,21 @@
 .row.publication-wrapper.page-content-wrapper-box-shadow
+  .columns.breadcrambs
+    span
+      |//&nbsp;
+      a href="/"
+        |Головна
+      |&nbsp;/&nbsp;
+      span
+        |Публікації
+      |&nbsp;/&nbsp;
+      span
+        |Свіжі новини
   .columns.large-12
     .row
       .columns.large-5
         .title-about-us
           h3
-            |Публікації: Цікаві новини
+            /|Публікації: Цікаві новини
       .columns.large-7
         = render :partial => 'partials/publictions_sidebar'
     .row
@@ -15,7 +26,7 @@
           .columns.large-4.image
             img src=article.image
           .columns.large-8
-            p =truncate_html article.description, length: 140, omission: '...'
+            p =truncate_html article.short_description, length: 130, omission: '...'
           .row
             .columns
               span =article.created_at.strftime("%d. %m. %Y")

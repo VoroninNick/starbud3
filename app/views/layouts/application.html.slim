@@ -89,7 +89,8 @@ body
                         .clearfix
                         span =ia.created_at.strftime("%d. %m. %Y")
                         .clearfix
-                        .main-menu-article-content = truncate_html ia.description, length: 100, omission: '...'
+                        .main-menu-article-content
+                          p = truncate_html ia.short_description, length: 100, omission: '...'
                   .clearfix
                   = link_to 'Переглянути всі новини', interesting_news_path, class: ' show-all'
                 li.video
@@ -114,7 +115,8 @@ body
                         .clearfix
                         span =ha.created_at.strftime("%d. %m. %Y")
                         .clearfix
-                        .main-menu-article-content = truncate_html ha.description, length: 100, omission: '...'
+                        .main-menu-article-content
+                          p = truncate_html ha.short_description, length: 100, omission: '...'
                   .clearfix
                   = link_to 'Переглянути всі статті', helpful_articles_path, class: ' show-all'
 

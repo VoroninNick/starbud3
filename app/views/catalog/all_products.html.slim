@@ -8,8 +8,7 @@
             .line
           .catalog-content-title-inner
             .titles
-              h3
-                |Дверi
+              h3 = @main_catalog.name
               h4 = @current_sub_catalog.name
             .image
               img src=asset_path("one-item-icon-after-title-content.jpg")
@@ -32,7 +31,7 @@
               .columns.large-3.float-left
                 .item
                   a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
-                    img src=door.door_variants_fulfillment_options[0].image
+                    img src=door.door_variants_fulfillment_options[0].image(:thumb)
                   h5
                     = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
                   span

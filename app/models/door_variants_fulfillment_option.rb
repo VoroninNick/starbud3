@@ -1,7 +1,10 @@
 class DoorVariantsFulfillmentOption < ActiveRecord::Base
   attr_accessible :name, :door_id, :image, :alt_image, :description_image, :title_image
 
-  has_attached_file :image
+  has_attached_file :image, styles:{
+      thumb: "266x590#", large: "1400x700#"
+  },url:'/assets/images/door/door_variants_fulfilment_option/:id/image_:style.:extension',
+                    path:':rails_root/public:url'
 
   belongs_to :door
 

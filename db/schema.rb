@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227133709) do
+ActiveRecord::Schema.define(version: 20140113170919) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -172,6 +172,41 @@ ActiveRecord::Schema.define(version: 20131227133709) do
   create_table "dors", force: true do |t|
     t.string   "name"
     t.text     "descriptions"
+    t.integer  "action_id"
+    t.integer  "collection_id"
+    t.integer  "brand_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "floor_technical_data", force: true do |t|
+    t.string   "name"
+    t.integer  "floor_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "alt_image"
+    t.string   "description_image"
+    t.string   "title_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "floors", force: true do |t|
+    t.string   "name"
+    t.string   "image_interior_file_name"
+    t.string   "image_interior_content_type"
+    t.integer  "image_interior_file_size"
+    t.datetime "image_interior_updated_at"
+    t.string   "image_structure_file_name"
+    t.string   "image_structure_content_type"
+    t.integer  "image_structure_file_size"
+    t.datetime "image_structure_updated_at"
+    t.string   "image_perspective_file_name"
+    t.string   "image_perspective_content_type"
+    t.integer  "image_perspective_file_size"
+    t.datetime "image_perspective_updated_at"
     t.integer  "action_id"
     t.integer  "collection_id"
     t.integer  "brand_id"

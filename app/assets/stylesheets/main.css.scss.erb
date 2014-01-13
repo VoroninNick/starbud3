@@ -432,6 +432,19 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .row.header-wrapper {
   position: relative;
   z-index: 70;
+    height: 160px;
+}
+.fancybox-overlay {
+    background: url("<%= asset_path('fancybox_overlay.png') %>");
+}
+.fancybox-close {
+    background: url("<%= asset_path('pop-up-close.png') %>")no-repeat;
+    -webkit-box-shadow: 3px 4px 0px rgba(217, 217, 217, 0.8);
+    -moz-box-shadow: 3px 4px 0px rgba(217, 217, 217, 0.8);
+    box-shadow: 3px 4px 0px rgba(217, 217, 217, 0.8);
+}
+.fancybox-skin {
+    padding: 60px 120px!important;
 }
 .search-bar {
   background: url("<%= asset_path('search-pannel-background-pattern.jpg') %>");

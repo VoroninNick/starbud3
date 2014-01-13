@@ -11,7 +11,7 @@ $(document).ready ->
       $.fancybox.open cloudZoom.getGalleryList() # and pass Cloud Zoom's image list to Fancy Box.
       false
 
-  $(".fancybox").fancybox()
+  $(".fancybox[rel=group]").fancybox()
   $("#catalog-sidebar").treeview
     persist: "location"
     collapsed: true

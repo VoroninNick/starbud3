@@ -1,10 +1,21 @@
 .row.publication-wrapper.page-content-wrapper-box-shadow
+  .columns.breadcrambs
+    span
+      |//&nbsp;
+      a href="/"
+        |Головна
+      |&nbsp;/&nbsp;
+      span
+        |Публікації
+      |&nbsp;/&nbsp;
+      span
+        |Корисні статті
   .columns.large-12
     .row
       .columns.large-5
         .title-about-us
           h3
-            |Публікації: Корисні статті
+            /|Публікації: Корисні статті
       .columns.large-7
         = render :partial => 'partials/publictions_sidebar'
     .row
@@ -53,7 +64,7 @@
           span =article.created_at.strftime("%d. %m. %Y")
           .image
             img src=article.image
-          p =truncate_html article.description, length: 140, omission: '...'
+          p =truncate_html article.short_description, length: 130, omission: '...'
 
 
 

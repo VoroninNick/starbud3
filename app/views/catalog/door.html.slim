@@ -17,8 +17,8 @@
         .clearfix
         .catalog-content-wrapper
           .columns.image-block
-            a.fancybox rel="group" href=@door_test.door_variants_fulfillment_options[0].image
-              img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image data-cloudzoom="useZoom:#{@door_test.door_variants_fulfillment_options[0].image}"
+            a.fancybox rel="group" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+              img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb) data-cloudzoom="useZoom:#{@door_test.door_variants_fulfillment_options[0].image(:thumb)}"
           .columns.content-block
             h3 =@door_test.name
             p =raw @door_test.descriptions
@@ -31,7 +31,7 @@
                 li.box-shadow-right-bottom
                   .thumbnail-item
                     a data-slide-index=count href=""
-                      =image_tag img_v.image.url
+                      =image_tag img_v.image.url(:thumb)
                 -count+=1
 
             .clearfix
@@ -43,8 +43,8 @@
                   ul
                     -img_v.door_color_options.each do |img_v_c|
                       li
-                        a href=img_v_c.image.url
-                          =image_tag img_v_c.image.url
+                        a href=img_v_c.image.url(:thumb) rel="group"
+                          =image_tag img_v_c.image.url(:thumb)
           .clearfix
           .door-info-table
             .columns.large-5.left

@@ -1,0 +1,2 @@
+class FloorTechnicalDataController < ApplicationController
+end

@@ -6,6 +6,7 @@ class Collection < ActiveRecord::Base
   belongs_to :brand
 
   has_many :doors
+  has_many :floors
 
   validates :name, :uniqueness => true, presence: true
   before_validation :generate_collection_url

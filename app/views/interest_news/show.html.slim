@@ -1,14 +1,29 @@
 .row.publication-article-wrapper.page-content-wrapper-box-shadow
+  .columns.breadcrambs
+    span
+      |//&nbsp;
+      a href="/"
+        |Головна
+      |&nbsp;/&nbsp;
+      span
+        |Публікації
+      |&nbsp;/&nbsp;
+      = link_to 'Свіжі новини', interest_news_item_path
+      |&nbsp;/&nbsp;
+      span = @interest_news_item.title
   .columns.large-12
-    .columns
+    .columns.large-5
       .title-about-us
         h3
-          |Публікації:&nbsp;
-          = @interest_news_item.title
-          |.
+      /    /|Публікації:&nbsp;
+      /    /= @interest_news_item.title
+      /    /|.
+    .columns.large-7
+      = render :partial => 'partials/publictions_sidebar'
+    .clearfix
     .columns.large-4.image
       img src=@interest_news_item.image.url(:large)
-    .columns.large-8.content
+    .columns.large-8.content.publ-content
       h2 = @interest_news_item.title
       p
         span.publication-date = @interest_news_item.created_at.strftime("%d. %m. %Y")
