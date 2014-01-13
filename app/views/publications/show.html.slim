@@ -6,7 +6,7 @@
           |Публікації:
           = @helpful_articles_item.title
     .columns.large-4.image
-      img src=@helpful_articles_item.image
+      img src=@helpful_articles_item.image.url(:large)
     .columns.large-8.content
       h2 = @helpful_articles_item.title
       p
@@ -27,7 +27,7 @@
               a.starbud-link href = helpful_article_item_path(articles.id) = truncate  articles.title, length: 43, omission: '...'
           .columns.large-4
             a href = helpful_article_item_path(articles.id)
-              img src= articles.image
+              img src= articles.image.url(:thumb)
             span.publication-date = articles.created_at.strftime("%d. %m. %Y")
           .columns.large-8
             p = truncate_html articles.short_description, length: 140, omission: '...'

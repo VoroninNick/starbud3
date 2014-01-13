@@ -64,7 +64,7 @@
         li Безкоштовний дизайн
     .row
       .columns.large-2.read-more
-        = link_to 'Детальніше...', about_path, :class => is_active?("about")
+        = link_to 'Детальніше...', about_path, :class => is_active?("about_us")
     .centre-main-page-menu
       - main_catalog.each do |main_menu|
         .columns.large-4.float-left
@@ -116,7 +116,7 @@
               li.item
                 .columns.large-3.image
                   a
-                    img src=i_n.image
+                    img src=i_n.image.url(:thumb)
                 .columns.large-9
                   h5
                     a href = interest_news_item_path(i_n.id) = truncate  i_n.title, length: 70, omission: '...'
@@ -163,7 +163,7 @@
           .columns.large-6
             li.item
               .columns.large-4.image
-                img src=article.image
+                img src=article.image.url(:thumb)
               .columns.large-8
                 h5
                   a href = helpful_article_item_path(article.id) = truncate article.title, length: 60, omission: '...'
