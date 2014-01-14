@@ -4,14 +4,9 @@
 #->
 #  CloudZoom.quickStart()
 $(document).ready ->
-  $ ->
-    $("#zoom1").bind "click", -> # Bind a click event to a Cloud Zoom instance.
-      cloudZoom = $(this).data("CloudZoom") # On click, get the Cloud Zoom object,
-      cloudZoom.closeZoom()
-      $.fancybox.open cloudZoom.getGalleryList() # and pass Cloud Zoom's image list to Fancy Box.
-      false
 
-  $(".fancybox[rel=group]").fancybox()
+  $(".fancybox").fancybox()
+
   $("#catalog-sidebar").treeview
     persist: "location"
     collapsed: true

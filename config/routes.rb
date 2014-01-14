@@ -32,6 +32,7 @@ StarBud::Application.routes.draw do
   get ':main_catalog/:sub_catalog/:brand' => 'catalog#all_collections', :as => :my_collection
   get ':main_catalog/:sub_catalog/:brand/:collection', to:'catalog#all_products', as:'all_products_from_collection'
   get ':main_catalog/:sub_catalog/:brand/:collection/:door', to:'catalog#door', as:'show_door'
+  get ':main_catalog/:sub_catalog/:brand/:collection/:floor', to:'catalog#floor', as:'show_floor'
 
 
 

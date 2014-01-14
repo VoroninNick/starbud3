@@ -38,12 +38,23 @@
               - s = SubCatalog.find b.sub_catalog_id
               - m = MainCatalog.find s.main_catalog_id
               .columns.large-3.float-left
-                .item
-                  /a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
-                  img src=f.image_structure.url
-                  h5 = f.name
-                   / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
-                  span
-                    |(
-                    =@current_collection.name
-                    |)
+                .item.floor-one-item
+                  a.fancybox href="#floor-id#{f.id}"
+                    img src=f.image_structure.url
+                    h5 = f.name
+                     / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
+                    span
+                      |(
+                      =@current_collection.name
+                      |)
+              div style="display: none"
+                  div id="floor-id#{f.id}"
+                     h1 = f.name
+                     span =b.name
+                      |&nbsp;,
+                      =c.name
+                       /a href="/#{b.name}/#{c.name}"
+                         |= b.name
+
+
+
