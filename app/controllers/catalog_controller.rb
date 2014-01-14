@@ -17,6 +17,13 @@ class CatalogController < ApplicationController
     @current_collection = Collection.find_by_name(params[:collection].gsub('_',' '))
     @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
     @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    @floor = Collection.find_by_name(params[:collection].gsub('_',' ')).floors
+    if @main_catalog.name =="Пiдлога"
+      render "catalog/all_products_floor"
+    end
+  end
+
+  def all_products_floor
   end
 
   def door
@@ -26,6 +33,9 @@ class CatalogController < ApplicationController
     @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
   end
 
+  def floor
+
+  end
   def catalog_layout
     #@catalog_action ='item'
     #render :template => 'main/catalog'

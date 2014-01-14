@@ -1,5 +1,5 @@
 class Floor < ActiveRecord::Base
-  attr_accessible :name, :image_interior, :image_structure, :image_perspective, :action_id, :collection_id, :brand_id, :floor_url
+  attr_accessible :name, :image_interior, :image_structure, :image_perspective, :action_id, :collection_id, :brand_id
 
   has_attached_file :image_interior
   has_attached_file :image_structure
@@ -12,10 +12,10 @@ class Floor < ActiveRecord::Base
   attr_accessible :floor_technical_datas_attributes#, :allow_destroy => true
 
 
-  before_validation :floor_url
-  def generate_floor_url
-    self.floor_url ||= name.parameterize
-  end
+  #before_validation :floor_url
+  #def generate_floor_url
+  #  self.floor_url ||= name.parameterize
+  #end
   rails_admin do
     navigation_label 'Підлога'
     label 'Підлога'

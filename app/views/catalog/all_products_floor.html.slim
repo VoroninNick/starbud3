@@ -13,27 +13,36 @@
             .image
               img src=@main_catalog.image.url
             .clearfix
-        .catalog-content-wrapper
+          .clearfix
+        .catalog-content-wrapper.floor-content-wrapper
           .current-collection-wrapper
             .image
               img src=@current_collection.image.url
             .info
-              h4
-                |Колекцiя
-              h5  =@current_collection.name
+              h4 =@current_collection.name
           .clearfix
+          .floor-desription
+            h2 = @current_collection.name
+            p =@current_collection.descriptions
+          .coll-line
+            h3
+              |Колекцiя
+
+          /.row.floors-from-collections
+          /  - @floor.each do |f|
+          /    h1 = f.name
           .row.doors-from-collections
-            - @door.each do |door|
-              - c = Collection.find door.collection_id
+            - @floor.each do |f|
+              - c = Collection.find f.collection_id
               - b = Brand.find c.brand_id
               - s = SubCatalog.find b.sub_catalog_id
               - m = MainCatalog.find s.main_catalog_id
               .columns.large-3.float-left
                 .item
-                  a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
-                    img src=door.door_variants_fulfillment_options[0].image(:thumb)
-                  h5
-                    = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
+                  /a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
+                  img src=f.image_structure.url
+                  h5 = f.name
+                   / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
                   span
                     |(
                     =@current_collection.name
