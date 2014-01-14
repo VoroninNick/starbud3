@@ -10,7 +10,7 @@
             .titles
               h3 = @main_catalog.name
               h4 = @current_sub_catalog.name
-            .image
+            .image.box-shadow-right-bottom
               img src=@main_catalog.image.url
             .clearfix
           .clearfix
@@ -28,9 +28,6 @@
             h3
               |Колекцiя
 
-          /.row.floors-from-collections
-          /  - @floor.each do |f|
-          /    h1 = f.name
           .row.doors-from-collections
             - @floor.each do |f|
               - c = Collection.find f.collection_id
@@ -39,7 +36,7 @@
               - m = MainCatalog.find s.main_catalog_id
               .columns.large-3.float-left
                 .item.floor-one-item
-                  a.fancybox href="#floor-id#{f.id}"
+                  a.fancybox href="#floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
                     img src=f.image_structure.url
                     h5 = f.name
                      / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
@@ -48,13 +45,40 @@
                       =@current_collection.name
                       |)
               div style="display: none"
-                  div id="floor-id#{f.id}"
-                     h1 = f.name
-                     span =b.name
-                      |&nbsp;,
-                      =c.name
-                       /a href="/#{b.name}/#{c.name}"
-                         |= b.name
+                div id="floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
+                  .row.floor-one-item-wrapper
+                    .columns.large-12
+                      .columns.large-5
+                        h4 = f.name
+                        .l-content
+                          .columns.floor-breadcrambs
+                            span
+                              |//&nbsp;
+                              = link_to b.name, my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'))
+                              |&nbsp;/&nbsp;
+                              = link_to c.name, all_products_from_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'),c.name.gsub(' ','_'))
+                          h5.tech-pad-top
+                            |Технічні дані
+                          .flt-image
+                            -f.floor_technical_datas.each do |ftd|
+                              .column.large-3.ftd-one-item.float-left
+                                img src=ftd.image.url(:thumb)
+                            .clearfix
 
+                          .clearfix
+
+                        h5.p-b
+                          |Інтер'єр
+                        .fl-image.img-wrp
+                          img.header-box-shadow-right-bottom src=f.image_interior.url
+                      .columns.large-7
+                        h4
+                          |Структура
+                        .fr-image.img-wrp
+                          img.header-box-shadow-right-bottom src=f.image_structure.url
+                        h4.p-b
+                          |Перспектива
+                        .fr-image.img-wrp
+                          img.header-box-shadow-right-bottom src=f.image_perspective.url
 
 

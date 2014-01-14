@@ -11,11 +11,6 @@ class Floor < ActiveRecord::Base
   accepts_nested_attributes_for :floor_technical_datas#, :allow_destroy => true
   attr_accessible :floor_technical_datas_attributes#, :allow_destroy => true
 
-
-  #before_validation :floor_url
-  #def generate_floor_url
-  #  self.floor_url ||= name.parameterize
-  #end
   rails_admin do
     navigation_label 'Підлога'
     label 'Підлога'

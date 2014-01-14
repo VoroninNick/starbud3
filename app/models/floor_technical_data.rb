@@ -1,7 +1,10 @@
 class FloorTechnicalData < ActiveRecord::Base
   attr_accessible :name, :floor_id, :image, :alt_image, :description_image, :title_image
 
-  has_attached_file :image
+  has_attached_file :image, styles:{
+      thumb: "100x100#"
+  },url:'/assets/images/floor/floor_technical_data/:id/image_:style.:extension',
+                    path:':rails_root/public:url'
 
   belongs_to :about_article
   rails_admin do

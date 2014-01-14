@@ -1,5 +1,5 @@
 class AboutArticle < ActiveRecord::Base
-  attr_accessible :content, :name
+  attr_accessible :content, :name, :index_article
 
   has_many :about_article_images
 
@@ -22,9 +22,11 @@ class AboutArticle < ActiveRecord::Base
     list do
       field :content
       field :name
+      field :index_article
 
     end
     edit do
+      field :index_article
       field :name
       field :content, :ck_editor do
       end

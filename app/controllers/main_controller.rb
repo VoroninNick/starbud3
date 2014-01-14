@@ -7,7 +7,7 @@ class MainController < ApplicationController
   end
   def about
     @title = "Про нас"
-    @about_us = AboutArticle.order('updated_at desc')
+    @about_us = AboutArticle.order('index_article asc')
 
   end
   def catalog

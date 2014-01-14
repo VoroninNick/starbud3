@@ -8,17 +8,16 @@
             .line
           .catalog-content-title-inner
             .titles
-              h3
-                |Дверi
+              h3 = @main_catalog.name
               h4 = @current_sub_catalog.name
-            .image
-              img src=asset_path("one-item-icon-after-title-content.jpg")
+            .image.box-shadow-right-bottom
+              img src=@main_catalog.image.url
             .clearfix
-        .clearfix
+          .clearfix
         .catalog-content-wrapper
           .columns.image-block
-            a.fancybox rel="group" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
-              img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb) data-cloudzoom="useZoom:#{@door_test.door_variants_fulfillment_options[0].image(:thumb)}"
+            a.fancybox data-fancybox-group="door-group" rel="door-group" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+              img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
           .columns.content-block
             h3 =@door_test.name
             p =raw @door_test.descriptions
@@ -43,8 +42,9 @@
                   ul
                     -img_v.door_color_options.each do |img_v_c|
                       li
-                        a href=img_v_c.image.url(:thumb) rel="group"
-                          =image_tag img_v_c.image.url(:thumb)
+                        a href=img_v_c.image.url(:thumb)  data-fancybox-group="door-group" rel="door-group"
+                          img src=img_v_c.image.url(:thumb)
+                          /=image_tag img_v_c.image.url(:thumb)
           .clearfix
           .door-info-table
             .columns.large-5.left
