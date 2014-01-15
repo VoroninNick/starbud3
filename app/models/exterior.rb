@@ -1,27 +1,26 @@
-class IntExt < ActiveRecord::Base
-  attr_accessible :name, :image_interior, :image_structure, :action_id, :collection_id, :brand_id, :sub_catalog_id, :cpde_product
+class Exterior < ActiveRecord::Base
+  attr_accessible :name, :image_interior, :image_structure, :action_id, :collection_id, :brand_id, :sub_catalog_id, :code_product
 
   has_attached_file :image_interior, styles:{
-       large: "555x375#"
-  },url:'/assets/images/int_ext/image_interior/:id/image_:style.:extension',
+      large: "555x375#"
+  },url:'/assets/images/exterior/image_interior/:id/image_:style.:extension',
                     path:':rails_root/public:url'
   has_attached_file :image_structure, styles:{
       thumb: "237x321#", large: "840x502#"
-  },url:'/assets/images/int_ext/image_structure/:id/image_:style.:extension',
+  },url:'/assets/images/exterior/image_structure/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
 
-  #belongs_to :collection
   belongs_to :sub_catalog
 
   rails_admin do
     navigation_label "Інтер'єр і Екстер'єр"
-    label "Інтер'єр"
-    label_plural "Інтер'єри"
+    label "Екстер'єр"
+    label_plural "Екстер'єри"
 
     list do
       field :name
-      field :cpde_product
+      field :code_product
       field :sub_catalog
       field :image_interior
       field :image_structure
@@ -29,7 +28,7 @@ class IntExt < ActiveRecord::Base
 
     edit do
       field :name
-      field :cpde_product do
+      field :code_product do
         label 'Код товару'
       end
       field :sub_catalog

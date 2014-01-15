@@ -4,14 +4,18 @@ class CatalogController < ApplicationController
     @brand = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).brands
     @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
     @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
 
     #@description_sub_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' ')).sub_catalog
     @subcat = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
 
     @it_et = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).int_exts
+    @ext = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).exteriors
 
-    if @main_catalog.name =="Iнтер'ер" || @main_catalog.name =="Екстер'ер"
+    if @main_catalog.name =="Iнтер'ер"
       render "catalog/all_products_int_ext"
+    elsif @main_catalog.name =="Екстер'ер"
+      render "catalog/all_products_exterior"
     end
 
   end
@@ -39,7 +43,8 @@ class CatalogController < ApplicationController
 
   def all_products_int_ext
   end
-
+  def all_products_exterior
+  end
   def door
     c = Collection.find_by_name(params[:collection].gsub('_',' '))
     @door_test = Door.where(collection_id: c.id, name: params[:door].gsub('_',' ')).first

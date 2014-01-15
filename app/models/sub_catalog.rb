@@ -11,6 +11,7 @@ class SubCatalog < ActiveRecord::Base
   attr_accessible :brands
 
   has_many :int_exts
+  has_many :exteriors
 
   validates :name, :uniqueness => true, presence: true
   before_validation :sub_catalog_url
