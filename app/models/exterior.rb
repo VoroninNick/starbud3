@@ -11,7 +11,7 @@ class Exterior < ActiveRecord::Base
                     path:':rails_root/public:url'
 
 
-  belongs_to :sub_catalog
+  belongs_to :brand
 
   rails_admin do
     navigation_label "Інтер'єр і Екстер'єр"
@@ -21,7 +21,7 @@ class Exterior < ActiveRecord::Base
     list do
       field :name
       field :code_product
-      field :sub_catalog
+      field :brand
       field :image_interior
       field :image_structure
     end
@@ -31,7 +31,7 @@ class Exterior < ActiveRecord::Base
       field :code_product do
         label 'Код товару'
       end
-      field :sub_catalog
+      field :brand
       field :image_interior, :paperclip do
         label "Інтре'єр"
       end

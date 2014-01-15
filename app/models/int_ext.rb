@@ -11,8 +11,7 @@ class IntExt < ActiveRecord::Base
                     path:':rails_root/public:url'
 
 
-  #belongs_to :collection
-  belongs_to :sub_catalog
+  belongs_to :brand
 
   rails_admin do
     navigation_label "Інтер'єр і Екстер'єр"
@@ -22,7 +21,7 @@ class IntExt < ActiveRecord::Base
     list do
       field :name
       field :cpde_product
-      field :sub_catalog
+      field :brand
       field :image_interior
       field :image_structure
     end
@@ -32,7 +31,7 @@ class IntExt < ActiveRecord::Base
       field :cpde_product do
         label 'Код товару'
       end
-      field :sub_catalog
+      field :brand
       field :image_interior, :paperclip do
         label "Інтре'єр"
       end

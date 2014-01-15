@@ -9,7 +9,8 @@ class Brand < ActiveRecord::Base
   has_many :collections
   attr_accessible :collections
 
-  #has_many :dors
+  has_many :int_exts
+  has_many :exteriors
 
   validates :name, :uniqueness => true, presence: true
   before_validation :generate_brand_url
@@ -34,7 +35,7 @@ class Brand < ActiveRecord::Base
       field :name
       field :image
       field :country
-      field :sub_catalog
+      field :sub_catalog, :belongs_to_association
       #field :dors
     end
   end

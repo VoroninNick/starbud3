@@ -8,10 +8,8 @@ class SubCatalog < ActiveRecord::Base
   belongs_to :main_catalog
 
   has_many :brands
+  accepts_nested_attributes_for :brands
   attr_accessible :brands
-
-  has_many :int_exts
-  has_many :exteriors
 
   validates :name, :uniqueness => true, presence: true
   before_validation :sub_catalog_url

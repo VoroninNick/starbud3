@@ -10,9 +10,10 @@
             .titles
               h3 = @main_catalog.name
               h4 = @current_sub_catalog.name
-            .image
-              img src=asset_path("one-item-icon-after-title-content.jpg")
+            .image.box-shadow-right-bottom
+              img src=@main_catalog.image.url
             .clearfix
+          .clearfix
         .catalog-content-wrapper
           - @collections.each do |collect|
             - b = Brand.find collect.brand_id

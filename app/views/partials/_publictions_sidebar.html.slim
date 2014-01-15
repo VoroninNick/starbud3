@@ -2,8 +2,11 @@
   #publication-sidebar-wrapper
     nav.publication-sidebar#publication-sidebar
       li
-        = link_to 'Свіжі новини', interesting_news_path, :class => is_active?("interesting_news")
+        span
+          = link_to 'Свіжі новини', interesting_news_path, :class => is_active?("interesting_news")
       li
-        = link_to 'Цікаві відео', useful_video_link_path, :class => is_active?("useful_video")
+        span
+          = link_to 'Цікаві відео', useful_video_link_path, :class => is_active?("useful_video")
       li
-        = link_to 'Корисні статті', helpful_articles_path, :class => is_active?("helpful_articles")
+        span
+          = link_to 'Корисні статті', helpful_articles_path, :class => is_active?("helpful_articles")
