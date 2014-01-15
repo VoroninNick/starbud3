@@ -4,6 +4,16 @@ class CatalogController < ApplicationController
     @brand = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).brands
     @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
     @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+
+    #@description_sub_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' ')).sub_catalog
+    @subcat = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
+
+    @it_et = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).int_exts
+
+    if @main_catalog.name =="Iнтер'ер" || @main_catalog.name =="Екстер'ер"
+      render "catalog/all_products_int_ext"
+    end
+
   end
 
   def all_collections
@@ -18,12 +28,16 @@ class CatalogController < ApplicationController
     @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
     @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
     @floor = Collection.find_by_name(params[:collection].gsub('_',' ')).floors
+
     if @main_catalog.name =="Пiдлога"
       render "catalog/all_products_floor"
     end
   end
 
   def all_products_floor
+  end
+
+  def all_products_int_ext
   end
 
   def door
