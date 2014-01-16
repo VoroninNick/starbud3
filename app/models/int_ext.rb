@@ -14,7 +14,7 @@ class IntExt < ActiveRecord::Base
   belongs_to :brand
 
   rails_admin do
-    navigation_label "Інтер'єр і Екстер'єр"
+    navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
     label "Інтер'єр"
     label_plural "Інтер'єри"
 
@@ -34,10 +34,12 @@ class IntExt < ActiveRecord::Base
       field :brand
       field :image_interior, :paperclip do
         label "Інтре'єр"
+        help ''
       end
 
       field :image_structure, :paperclip do
         label 'Структура'
+        help ''
       end
     end
   end

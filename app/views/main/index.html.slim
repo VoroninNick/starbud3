@@ -65,7 +65,7 @@
     .row
       .columns.large-2.read-more
         = link_to 'Детальніше...', about_path, :class => is_active?("about_us")
-    .centre-main-page-menu
+    #centre-main-page-menu-link.centre-main-page-menu
       - main_catalog.each do |main_menu|
         .columns.large-4.float-left
           .title-centre-main-page-menu
@@ -105,7 +105,7 @@
             .row
               .columns.visual-constructor-right
                 p
-    .row.interest-info
+    .row.interest-info#publication-link
       .columns.large-7
         .row.title-wrapper
           .columns.large-8.title.box-shadow-right-bottom.titl-backg

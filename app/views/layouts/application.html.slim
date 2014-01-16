@@ -78,7 +78,7 @@ body
               ul.main-menu-publications
                 li
                   h2
-                    img src=asset_path("icon-dor.png")
+                    img src=asset_path("news-white.png")
                     |Свіжі новини
                   .clearfix
                   ul.main-menu-interest-news
@@ -95,7 +95,7 @@ body
                   = link_to 'Переглянути всі новини', interesting_news_path, class: ' show-all'
                 li.video
                   h2
-                    img src=asset_path("icon-dor.png")
+                    img src=asset_path("Video-white.png")
                     |Цікаві відео
                   ul#video-main-menu.main-menu-useful-video
                     -main_catalog_iv.each do |iv|
@@ -105,7 +105,7 @@ body
                   = link_to 'Переглянути всі відео', useful_video_link_path, class: ' show-all'
                 li
                   h2
-                    img src=asset_path("icon-dor.png")
+                    img src=asset_path("Publications-white.png")
                     |Корисні статті
                   ul.main-menu-helpful-articles
                     -main_catalog_ha.each do |ha|
@@ -166,19 +166,19 @@ body
             a
               |Про нас
           li
-            a
+            a href="/#centre-main-page-menu-link"
               |Каталог
           li
             a
               |Акції
           li
-            a
+            a href="/#publication-link"
               |Публікації
           li
             a
               |Співпраця
           li
-            a
+            a href="about_us/#Співпраця"
               |Контакти
     .row.footer-bottom-content-down
       .columns.large-4.footer_down_left

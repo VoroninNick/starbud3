@@ -1,6 +1,8 @@
 class Brand < ActiveRecord::Base
   attr_accessible :name, :image, :country, :sub_catalog_id, :brand_url
 
+  attr_accessible :text_to_brand
+
   has_attached_file :image
 
   belongs_to :sub_catalog
@@ -8,6 +10,8 @@ class Brand < ActiveRecord::Base
 
   has_many :collections
   attr_accessible :collections
+
+  has_ancestry
 
   has_many :int_exts
   has_many :exteriors
@@ -20,7 +24,7 @@ class Brand < ActiveRecord::Base
 
   rails_admin do
     navigation_label 'Каталог'
-    label 'Бранд'
+    label 'Бренд'
     label_plural 'Бренди'
 
     list do
@@ -32,11 +36,24 @@ class Brand < ActiveRecord::Base
     end
 
     edit do
-      field :name
-      field :image
-      field :country
-      field :sub_catalog, :belongs_to_association
-      #field :dors
+      field :name do
+        label "Назава бренду"
+      end
+      field :image do
+        label "Логотип бренду"
+      end
+      field :country do
+        label "Країна виробник"
+      end
+      field :text_to_brand, :ck_editor do
+        label "Текст для бренду"
+        help "Це поле передбачене виключно для брендів Інтер'єру, Екстер'єру, та Супутніх товарів."
+      end
+      field :sub_catalog do
+        label "Під каталог"
+        help "Виберіть із випадаючого списку назву під каталогу ,до якого відноситься бренд який ви заповняєте."
+      end
+
     end
   end
 end

@@ -17,13 +17,13 @@
         .catalog-content-wrapper.floor-content-wrapper
           .current-collection-wrapper
             .image
-              img src=@current_collection.image.url
+              img src=@current_collection.image.url(:large)
             .info
               h4 =@current_collection.name
           .clearfix
           .floor-desription
             h2 = @current_collection.name
-            p =@current_collection.descriptions
+            p = raw @current_collection.descriptions
           .coll-line
             h3
               |Колекцiя
@@ -37,7 +37,7 @@
               .columns.large-3.float-left
                 .item.floor-one-item
                   a.fancybox href="#floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
-                    img src=f.image_structure.url
+                    img src=f.image_structure.url(:thum)
                     h5 = f.name
                      / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
                     span
@@ -70,15 +70,16 @@
                         h5.p-b
                           |Інтер'єр
                         .fl-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_interior.url
+                          img.header-box-shadow-right-bottom src=f.image_interior.url(:large)
                       .columns.large-7
-                        h4
-                          |Структура
-                        .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_structure.url
                         h4.p-b
                           |Перспектива
                         .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_perspective.url
+                          img.header-box-shadow-right-bottom src=f.image_perspective.url(:large)
+                        h4
+                          |Структура
+                        .fr-image.img-wrp
+                          img.header-box-shadow-right-bottom src=f.image_structure.url(:large)
+
 
 

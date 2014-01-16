@@ -17,13 +17,13 @@ class DorInformation < ActiveRecord::Base
 
     edit do
       field :specifications, :ck_editor do
-
+         label 'Технічні харектеристики'
       end
       field :care, :ck_editor do
-
+        label 'Догляди'
       end
       field :environment, :ck_editor do
-
+        label 'Умови гарантії'
       end
 
     end

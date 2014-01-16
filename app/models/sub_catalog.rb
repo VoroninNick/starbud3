@@ -7,6 +7,8 @@ class SubCatalog < ActiveRecord::Base
 
   belongs_to :main_catalog
 
+  has_ancestry
+
   has_many :brands
   accepts_nested_attributes_for :brands
   attr_accessible :brands

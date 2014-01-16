@@ -55,10 +55,12 @@ gem 'contact_us'
 
 gem 'mail_form'
 gem 'rails_admin'
+gem 'ancestry'
 
 gem 'ckeditor'
 gem 'protected_attributes'
 gem 'paperclip'
+gem 'cocaine'
 
 gem 'russian'
 

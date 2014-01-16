@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115130942) do
+ActiveRecord::Schema.define(version: 20140116141119) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.integer  "index_article"
   end
 
+  create_table "article_abouts", force: true do |t|
+    t.text     "main_article_about_us"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "brands", force: true do |t|
     t.string   "name"
     t.string   "image_file_name"
@@ -46,6 +52,8 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.string   "brand_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ancestry"
+    t.text     "text_to_brand"
   end
 
   create_table "catalog_brands", force: true do |t|
@@ -91,6 +99,7 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.string   "collection_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ancestry"
   end
 
   create_table "create_catalogs", force: true do |t|
@@ -145,6 +154,7 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "door_url"
+    t.text     "table"
   end
 
   create_table "dor_informations", force: true do |t|
@@ -230,6 +240,12 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.integer  "action_id"
     t.integer  "collection_id"
     t.integer  "brand_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "for_brands", force: true do |t|
+    t.integer  "sub_catalog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -370,6 +386,7 @@ ActiveRecord::Schema.define(version: 20140115130942) do
     t.datetime "updated_at"
     t.string   "sub_catalog_url"
     t.text     "description"
+    t.string   "ancestry"
   end
 
   create_table "test_products", force: true do |t|

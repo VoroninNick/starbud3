@@ -1,9 +1,18 @@
 class Floor < ActiveRecord::Base
   attr_accessible :name, :image_interior, :image_structure, :image_perspective, :action_id, :collection_id, :brand_id
 
-  has_attached_file :image_interior
-  has_attached_file :image_structure
-  has_attached_file :image_perspective
+  has_attached_file :image_interior, styles:{
+      large: "540x300#"
+  },url:'/assets/images/floor/image_interior/:id/image_:style.:extension',
+                    path:':rails_root/public:url'
+  has_attached_file :image_structure, styles:{thum: "201x75#",
+      large: "840x315#"
+  },url:'/assets/images/floor/image_structure/:id/image_:style.:extension',
+                    path:':rails_root/public:url'
+  has_attached_file :image_perspective, styles:{thum: "201x75#",
+      large: "840x315#"
+  },url:'/assets/images/floorimage_perspective/:id/image_:style.:extension',
+                    path:':rails_root/public:url'
 
   belongs_to :collection
 
@@ -35,9 +44,11 @@ class Floor < ActiveRecord::Base
 
       field :image_structure, :paperclip do
         label 'Структура'
+        help 'розмір зображення повинен бути 840x315'
       end
       field :image_perspective, :paperclip do
         label 'Перспектива'
+        help 'розмір зображення повинен бути 840x315'
       end
     end
 

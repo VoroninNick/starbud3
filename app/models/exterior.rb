@@ -14,7 +14,7 @@ class Exterior < ActiveRecord::Base
   belongs_to :brand
 
   rails_admin do
-    navigation_label "Інтер'єр і Екстер'єр"
+    navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
     label "Екстер'єр"
     label_plural "Екстер'єри"
 

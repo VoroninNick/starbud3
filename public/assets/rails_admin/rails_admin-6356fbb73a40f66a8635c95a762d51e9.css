@@ -241,7 +241,10 @@ textarea {
   text-decoration: none;
   font-size: 100%;
   list-style: none; }
-
+fieldset.has_many_association_type {
+    padding-bottom: 30px;
+    border-bottom: 1px solid!important;
+}
 .ui-helper-clearfix:after {
   content: ".";
   display: block;

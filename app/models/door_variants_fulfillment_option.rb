@@ -29,7 +29,10 @@ class DoorVariantsFulfillmentOption < ActiveRecord::Base
 
     edit do
       field :name
-      field :image
+      field :image, :paperclip do
+        label 'Варіанти виконання'
+        help 'Перша завантажена фотографія буде відображатися як головна. Розмір фотографії 1400x700.'
+      end
       field :alt_image
       field :description_image
       field :title_image

@@ -8,11 +8,15 @@
             .line
           .catalog-content-title-inner
             .titles
-              -if @main_catalog.name == "Супутнi товари"
-                h3.related_products_title = @main_catalog.name
-              -else
-                h3 = @main_catalog.name
-              h4 = @current_sub_catalog.name
+              .title-top
+                -if @main_catalog.name == "Супутнi товари"
+                  h3.related_products_title = @main_catalog.name
+                -else
+                  h3 = @main_catalog.name
+                .clearfix
+              .title-bottom
+                h4 = @current_sub_catalog.name
+                .clearfix
             .image.box-shadow-right-bottom
               img src=@main_catalog.image.url
             .clearfix

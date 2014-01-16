@@ -21,19 +21,18 @@ class DoorColorOption < ActiveRecord::Base
       field :alt_image
       field :description_image
       field :title_image
-      field :door_variants_fulfillment_option
 
     end
 
     edit do
       field :name
       field :image, :paperclip do
-
+        label 'Варіанти кольору'
+        help ' Розмір фотографії 1400x700.'
       end
       field :alt_image
       field :description_image
       field :title_image
-      #field :door_variants_fulfillment_option
 
     end
   end

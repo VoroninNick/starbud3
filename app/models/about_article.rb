@@ -26,11 +26,22 @@ class AboutArticle < ActiveRecord::Base
 
     end
     edit do
-      field :index_article
-      field :name
-      field :content, :ck_editor do
+      field :name  do
+        label 'Назва статті'
+        help 'Введена назва статті, використовується для назв пунктів бокового меню.'
+        end
+      field :index_article do
+        label 'Індекс позиції в меню'
+        help 'Введіть будьласка порядковий номер, за яким буде відсортоване бокове меню.'
       end
-      field :about_article_images
+      field :content, :ck_editor do
+        label 'Контент'
+      end
+      field :about_article_images do
+        label 'Сертифікати'
+        help 'Це поле призначається виключно для сертифікатів.'
+      end
+
     end
   end
 end
