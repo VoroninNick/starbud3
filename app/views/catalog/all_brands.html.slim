@@ -28,9 +28,9 @@
             - m = MainCatalog.find s.main_catalog_id
             .columns.large-3.float-left.item.brand-item
               .image
-                a href=my_collection_path(m.name, s.name,  brands.name)
+                a href=my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), brands.name.gsub(' ','_'))
                   img src=brands.image
               h5
-                = link_to brands.name, my_collection_path(m.name, s.name,  brands.name)
+                = link_to brands.name, my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'),  brands.name.gsub(' ','_'))
               p
                 = "("+brands.country+")"

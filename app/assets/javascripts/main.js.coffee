@@ -2,7 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
+AnimatedLayer1 = ->
+  $(".image-layer-1").transition
+    x: 1500
+    y: 0
+  , 1200, "easeOutQuint"
 
 $(document).ready ->
 
@@ -42,7 +46,14 @@ $(document).ready ->
   $(".bxslider").bxSlider
     pagerCustom: "#bx-pager"
     mode: 'fade'
-    auto: true
+#    auto: true
+    onSliderLoad: ->
+      setTimeout AnimatedLayer1, 800
+#    onSlideAfter: ->
+#      # do mind-blowing JS stuff here
+#      alert "A slide has finished transitioning. Bravo. Click OK to continue!"
+
+
 
   $("#variants-color").bxSlider
     pagerCustom: "#variants"

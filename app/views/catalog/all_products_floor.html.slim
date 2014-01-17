@@ -19,7 +19,10 @@
             .image
               img src=@current_collection.image.url(:large)
             .info
-              h4 =@current_collection.name
+              .info-inner
+                h4
+                  |Колекцiя
+                h5  =@current_collection.name
           .clearfix
           .floor-desription
             h2 = @current_collection.name
@@ -37,7 +40,7 @@
               .columns.large-3.float-left
                 .item.floor-one-item
                   a.fancybox href="#floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
-                    img src=f.image_structure.url(:thum)
+                    img src=f.image_perspective.url(:thum)
                     h5 = f.name
                      / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
                     span

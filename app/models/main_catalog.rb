@@ -1,5 +1,6 @@
 class MainCatalog < ActiveRecord::Base
   attr_accessible :name, :image
+  attr_accessible :index_main_catalog
 
   attr_accessible :main_catalogs_url
 
@@ -20,11 +21,16 @@ class MainCatalog < ActiveRecord::Base
 
     list do
       field :name
+      field :index_main_catalog
       field :image
     end
 
     edit do
       field :name
+      field :index_main_catalog do
+        label 'Індекс позиції в меню'
+        help 'Введіть будьласка порядковий номер, за яким буде відсортоване головні каталоги меню.'
+      end
       field :image
     end
   end

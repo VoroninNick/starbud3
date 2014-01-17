@@ -11,10 +11,10 @@ class Brand < ActiveRecord::Base
   has_many :collections
   attr_accessible :collections
 
-  has_ancestry
-
   has_many :int_exts
   has_many :exteriors
+  has_many :related_products
+  attr_accessible :related_products
 
   validates :name, :uniqueness => true, presence: true
   before_validation :generate_brand_url

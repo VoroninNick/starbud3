@@ -2,6 +2,8 @@
   ul.bxslider
     li
       img src=asset_path("main-banner-background-1.jpg")
+      img.image-layer-1 src=asset_path("Door-1.png")
+      img.image-layer-2 src=asset_path("Door-2.png")
       h2
         |test
     li
@@ -79,6 +81,14 @@
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
                   = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
+      .columns.large-4.float-left
+        .pdf-block
+          a href=""
+            .link-image
+              img src=asset_path("PDF-icon.png")
+            .clearfix
+            |Завантажити каталог
+
       .clearfix
     .clearfix
     .row.visual-constructor

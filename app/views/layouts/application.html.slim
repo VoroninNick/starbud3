@@ -49,7 +49,7 @@ body
       .row.header-bottom.header-box-shadow-right-bottom
         .columns.large-3
           a.main-header-logo href="/" title="На головну"
-            img.header-box-shadow-right-bottom src=asset_path("starbud-header-logo.jpg")
+            img.header-box-shadow-right-bottom src=asset_path("Logo.png")
           .clearfix
         .columns.large-9
           ul#main-menu
@@ -61,7 +61,7 @@ body
               ul.main-menu-catalog
                 - temp_class_number = 1
                 - main_catalog.each do |main_menu|
-                  li.sub-menu-item class = "nomer_#{temp_class_number}"
+                  li.sub-menu-item.float-left class = "nomer_#{temp_class_number}"
                     h2
                       img src=main_menu.image
                       =main_menu.name

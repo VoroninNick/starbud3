@@ -18,29 +18,29 @@
             .clearfix
           .clearfix
         .catalog-content-wrapper.int-ext-content-wrapper
-          -@ext.each do |ext|
-            - s = SubCatalog.find ext.sub_catalog_id
+          -@related.each do |r|
+            - s = SubCatalog.find r.sub_catalog_id
             - m = MainCatalog.find s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
-              a.fancybox href="#ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
-                img src=ext.image_structure.url(:thumb)
+              a.fancybox href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
+                img src=r.image_structure.url(:thumb)
                 .ie-title-info
                   h3
-                    a.fancybox.starbud-link href="#ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
-                      = ext.name
+                    a.fancybox.starbud-link href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
+                      = r.name
                       p
                         |(&nbsp;
-                        = ext.code_product
+                        = r.code_product
                         |&nbsp;)
             div style="display: none"
-              div id="ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
+              div id="r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
                 .row.floor-one-item-wrapper
                   .columns.large-12
                     .columns.large-5
-                      h5.int-ext-l =ext.name
+                      h5.int-ext-l =r.name
                       h4.int-ext-code
                         |(&nbsp;
-                        = ext.code_product
+                        = r.code_product
                         |&nbsp;)
                       .columns.floor-breadcrambs
                         span
@@ -53,12 +53,9 @@
                         h4.int-ext-s
                           |Інтер'єр
                         .int-image
-                          img.header-box-shadow-right-bottom src=ext.image_interior.url
+                          img.header-box-shadow-right-bottom src=r.image_interior.url
                     .columns.large-7
                       h5.int-ext-l
                         |Структура
                       .struct-image
-                        img.header-box-shadow-right-bottom src=ext.image_structure.url(:large)
-
-        .columns.about-int-ext-wrapper
-          = raw @subcat.description
+                        img.header-box-shadow-right-bottom src=r.image_structure.url(:large)

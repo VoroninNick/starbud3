@@ -13,14 +13,16 @@
             .image
               img src=@main_catalog.image.url
             .clearfix
+          .clearfix
         .catalog-content-wrapper
           .current-collection-wrapper
             .image
-              img src=@current_collection.image.url
+              img src=@current_collection.image.url(:large)
             .info
-              h4
-                |Колекцiя
-              h5  =@current_collection.name
+              .info-inner
+                h4
+                  |Колекцiя
+                h5  =@current_collection.name
           .clearfix
           .row.doors-from-collections
             - @door.each do |door|

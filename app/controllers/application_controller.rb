@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :main_catalog
   def main_catalog
-    return  MainCatalog.all()
+    return  MainCatalog.order('index_main_catalog asc')
   end
 
   helper_method :main_catalog_ia
