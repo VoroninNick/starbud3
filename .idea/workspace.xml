@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d622f07-62fd-4238-9e14-3c364a1e3b41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_brands.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_brands.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_collections.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_collections.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products_floor.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products_floor.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/brand.rb" afterPath="$PROJECT_DIR$/app/models/brand.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/catalog_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/catalog_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/door.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/door.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.slim" afterPath="$PROJECT_DIR$/app/views/main/index.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/main_catalog.rb" afterPath="$PROJECT_DIR$/app/models/main_catalog.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarBud.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +21,7 @@
     <SUITE FILE_PATH="coverage/StarBud@Rails_console__StarBud.coverage" NAME="Rails console: StarBud Coverage Results" MODIFIED="1389631543953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_rollback__StarBud.coverage" NAME="db:rollback: StarBud Coverage Results" MODIFIED="1389820509579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@assets_precompile__StarBud.coverage" NAME="assets:precompile: StarBud Coverage Results" MODIFIED="1387990417382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
-    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1389948250931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
+    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1389957956910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_migrate__StarBud.coverage" NAME="db:migrate: StarBud Coverage Results" MODIFIED="1389953714776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_reset__StarBud.coverage" NAME="db:reset: StarBud Coverage Results" MODIFIED="1387495712203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/StarBud@db_create__StarBud.coverage" NAME="db:create: StarBud Coverage Results" MODIFIED="1388359224052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
@@ -51,7 +38,31 @@
     <favorites_list name="StarBud" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="main.css.scss.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="460" column="15" selection-start="11055" selection-end="11055" vertical-scroll-proportion="0.87986463" vertical-offset="7300" max-vertical-offset="25245">
+              <folding>
+                <element signature="e#18370#18639#2" expanded="true" />
+                <element signature="e#19097#19324#2" expanded="true" />
+                <element signature="e#33821#33976#2" expanded="true" />
+                <element signature="e#34314#34469#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.slim" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="43" selection-start="525" selection-end="525" vertical-scroll-proportion="-10.615385" vertical-offset="13" max-vertical-offset="3944">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -89,7 +100,6 @@
         <option value="$PROJECT_DIR$/config/initializers/rails_admin.rb" />
         <option value="$PROJECT_DIR$/app/models/collection.rb" />
         <option value="$PROJECT_DIR$/app/models/dor_information.rb" />
-        <option value="$PROJECT_DIR$/app/views/catalog/door.html.slim" />
         <option value="$PROJECT_DIR$/app/models/about_article.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/about_article_image.rb" />
@@ -111,7 +121,6 @@
         <option value="$PROJECT_DIR$/app/models/related_product.rb" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/catalog_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/main.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_products.html.slim" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_collections.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" />
@@ -119,10 +128,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20140117101319_add_died_index_to_main_menu.rb" />
         <option value="$PROJECT_DIR$/app/models/main_catalog.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/catalog/door.html.slim" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/main.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -193,7 +204,95 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -226,6 +325,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,7 +740,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1308" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38619676" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -627,7 +748,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2696" sideWeight="0.6712963" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3696" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2424" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4640235" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5139912" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -709,11 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="110" selection-start="1748" selection-end="1748" vertical-scroll-proportion="-13.730769" vertical-offset="408" max-vertical-offset="1479" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="13" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1394" />
@@ -746,11 +862,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/main/about.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="38" selection-start="450" selection-end="450" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="527" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/dor_information.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="603" selection-end="603" vertical-scroll-proportion="0.72671753" vertical-offset="0" max-vertical-offset="655" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140116141119_create_article_abouts.rb">
@@ -824,15 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="7" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1411">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="3" selection-start="1296" selection-end="1308" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1139">
-          <folding>
-            <marker date="1389950261228" expanded="true" signature="-1:-1" placeholder="pagerCustom: &quot;#bx-pager&quot;..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,32 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="45" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.7386364" vertical-offset="0" max-vertical-offset="3774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="21" selection-start="3258" selection-end="3258" vertical-scroll-proportion="-18.307692" vertical-offset="1020" max-vertical-offset="3247">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1115" column="36" selection-start="26576" selection-end="26576" vertical-scroll-proportion="0.6666667" vertical-offset="18561" max-vertical-offset="23341">
-          <folding>
-            <element signature="e#18389#18658#2" expanded="true" />
-            <element signature="e#19116#19343#2" expanded="true" />
-            <element signature="e#31694#31849#2" expanded="true" />
-            <element signature="e#32187#32342#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/about_article.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="75" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.55877864" vertical-offset="246" max-vertical-offset="901">
@@ -1133,13 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/door.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="14" selection-start="1862" selection-end="1862" vertical-scroll-proportion="1.6417445" vertical-offset="102" max-vertical-offset="1428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/floor_technical_data.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
@@ -1151,6 +1220,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="43" selection-start="455" selection-end="455" vertical-scroll-proportion="0.41526717" vertical-offset="0" max-vertical-offset="655">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="61" selection-start="2921" selection-end="2921" vertical-scroll-proportion="-5.1960783" vertical-offset="976" max-vertical-offset="4012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/door.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="14" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/dor_information.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="24" selection-start="527" selection-end="538" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="57" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.8108108" vertical-offset="731" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="50" selection-start="1354" selection-end="1356" vertical-scroll-proportion="0.58473283" vertical-offset="416" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="43" selection-start="525" selection-end="525" vertical-scroll-proportion="-10.615385" vertical-offset="13" max-vertical-offset="3944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="460" column="15" selection-start="11055" selection-end="11055" vertical-scroll-proportion="0.87986463" vertical-offset="7300" max-vertical-offset="25245">
+          <folding>
+            <element signature="e#18370#18639#2" expanded="true" />
+            <element signature="e#19097#19324#2" expanded="true" />
+            <element signature="e#33821#33976#2" expanded="true" />
+            <element signature="e#34314#34469#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

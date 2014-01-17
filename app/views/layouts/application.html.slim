@@ -70,6 +70,20 @@ body
                         span
                           = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
                     - temp_class_number +=1
+                li.sub-menu-item.float-left.pdf-cat
+                  h2
+                    img src=asset_path("icon-pdf.png")
+                    |Каталог
+                  .sub-menu-links
+                    span
+                      a href=""
+                        |Завантажити
+                  /.pdf-link-to-file-wrapper
+                  /  a href=""
+                  /    img src=asset_path("icon-pdf.png")
+                  /    span
+                  /      |Завантажити каталог
+
             li
               = link_to 'Акції', actions_path, :class => is_active?("actions")
             li.publication
