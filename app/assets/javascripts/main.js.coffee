@@ -42,7 +42,7 @@ $(document).ready ->
   $(".bxslider").bxSlider
     pagerCustom: "#bx-pager"
     mode: 'fade'
-#    auto: true
+    auto: true
     onSliderLoad: ->
       $('.image-layer-1').addClass('animated slideInLeft')
       $('.image-layer-2').addClass('animated slideInDown')
