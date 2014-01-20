@@ -82,9 +82,45 @@
 }
 .image-block {
     width: 40%;
+    position: relative;
+}
+.special-offer-label {
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    width: 105px;
+    min-height: 100px;
+}
+.description-door {
+    min-height: 250px;
+}
+#variants-color .door_color_one_item:first-child {
+    margin-left: -20px;
+}
+#variants-color .door_color_one_item {
+    position: relative;
+    margin-left: -27px;
+    transition: 0.4s ease-out all;
+    -webkit-transition: 0.4s ease-out all;
+}
+.door_color_active {
+    z-index: 100!important;
+    /*width: 105px!important;*/
+    /*height: 105px!important;*/
+    position: relative;
+    /*top: -10px;*/
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.door-info {
+    padding-bottom: 120px;
 }
 .content-block {
     width: 60%;
+    padding-right: 0!important;
 }
 .image-block img {
     width: 279px;
@@ -130,7 +166,9 @@
     margin: 0;
 }
 #variants-color {
-    left: -20px;
+    /*left: -20px;*/
+    width: 123%!important;
+    padding-top: 20px;
 }
 #variants-color ul li img {
     position: relative;
@@ -663,11 +701,6 @@
     width: 100%;
     position: relative;
 }
-/*.floor-content-wrapper .info {*/
-    /*left: 37px!important;*/
-    /*float: left;*/
-    /*bottom: 33px;*/
-/*}*/
 .brand-item {
     min-height: 200px;
 }

@@ -16,12 +16,14 @@
           .clearfix
         .catalog-content-wrapper
           .columns.image-block
-            a.fancybox data-fancybox-group="door-group" rel="door-group" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+            .special-offer-label
+              img src=@door_test.special_offer.image(:thumb)
+            a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
               img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
           .columns.content-block
             h3 =@door_test.name
-            p =raw @door_test.descriptions
-
+            .description-door
+              p =raw @door_test.descriptions
             h5
               |Варіанти виконання:
             ul#variants
@@ -37,14 +39,15 @@
             h5
               |Варіанти кольору:
             ul#variants-color
+              - door_color_z_index = -20
               -@door_test.door_variants_fulfillment_options.each do |img_v|
                 li
                   ul
                     -img_v.door_color_options.each do |img_v_c|
-                      li
-                        a href=img_v_c.image.url(:thumb)
-                          img src=img_v_c.image.url(:thumb)  data-fancybox-group="door-group" rel="door-group"
-                          /=image_tag img_v_c.image.url(:thumb)
+                      li.door_color_one_item.box-shadow-right-bottom style="z-index:#{door_color_z_index}; "
+                        a.fancybox href=img_v_c.image.url(:thumb) data-fancybox-group="doorgroup" rel="doorgroup"
+                          img src=img_v_c.image.url(:thumb)
+                        -door_color_z_index +=10
           .clearfix
           =raw @door_test.table
           .door-info
@@ -71,4 +74,5 @@
                 #tab-ug.tab-content.header-box-shadow-right-bottom
                   .tab-content-inner
                     = raw i.environment
-                  .tab-bottom-line
+                    .tab-bottom-line
+            .clearfix

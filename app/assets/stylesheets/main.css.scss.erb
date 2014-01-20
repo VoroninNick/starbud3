@@ -785,10 +785,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.main-page-wrapper .item .image img:hover, .main-page-wrapper .main-logo-carousel img:hover {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\' filterRes=\'800\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -webkit-filter: grayscale(0%);
-}
+
 .main-logo-carousel {
   background: url("<%= asset_path('main-carousel-logo-backround-pattern.jpg') %>");
   height: 189px;
@@ -1403,7 +1400,6 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .promotion-wrapper li .readmore a {
     float: right;
     margin-right: 10%;
-    /*border-bottom: 1px solid rgba(0,91,170, 0.3 );*/
 }
 .starbud-link {
     border-bottom: 1px solid rgba(0,91,170, 0.3 );
@@ -1478,6 +1474,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     padding-top: 10px;
     margin-bottom: 10px;
 }
-
-
+.main-page-wrapper .item .image img:hover, .main-page-wrapper .main-logo-carousel img:hover, .helpful-articles-content .item:hover .image img, .interest-info .item:hover .image img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\' filterRes=\'800\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
 

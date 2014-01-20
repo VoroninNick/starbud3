@@ -14,6 +14,8 @@ $(document).ready ->
 
   #  for dor image colors view
   $("#variants-color ul li a").click ->
+    $("#variants-color ul li").removeClass(' door_color_active')
+    $(this).parent().addClass(' door_color_active')
     mainImage = $(this).attr("href") #Find Image Name
     mainLinkToImage = $(this).attr("href")
     $(".image-block a").attr href: mainLinkToImage

@@ -10,7 +10,7 @@
           li
             .image.box-shadow-right-bottom
               .image-inner
-                = image_tag @promotion_item.image.url, alt: ''
+                = image_tag @promotion_item.image.url(:large), alt: ''
               .diff-date.box-shadow-bottom
                 -@end_time_promo =((@promotion_item.end_promotion - Time.now)/1.day).ceil
                 span
@@ -64,7 +64,7 @@
               =link_to rp.title,promotion_one_item_path(rp.id), class: " starbud-link"
             .image
               a href=promotion_one_item_path(rp.id)
-                = image_tag rp.image.url, alt: '', class: " box-shadow-right-bottom"
+                = image_tag rp.image.url(:thumb), alt: '', class: " box-shadow-right-bottom"
             p =rp.short_description
       .columns.large-1
         p

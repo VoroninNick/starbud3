@@ -15,7 +15,7 @@
               .image.box-shadow-right-bottom
                 .image-inner
                   a href=promotion_one_item_path(p.id)
-                    = image_tag p.image.url, alt: ''
+                    = image_tag p.image.url(:large), alt: ''
                 .diff-date.box-shadow-bottom
                   span
                     -if @end_time_promo < 1
