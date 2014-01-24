@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120112333) do
+ActiveRecord::Schema.define(version: 20140120220153) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20140120112333) do
     t.string   "brand_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ancestry"
     t.text     "text_to_brand"
   end
 
@@ -99,7 +98,6 @@ ActiveRecord::Schema.define(version: 20140120112333) do
     t.string   "collection_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ancestry"
   end
 
   create_table "create_catalogs", force: true do |t|
@@ -296,6 +294,18 @@ ActiveRecord::Schema.define(version: 20140120112333) do
     t.integer  "index_main_catalog"
   end
 
+  create_table "main_label_carousels", force: true do |t|
+    t.string   "label_name"
+    t.string   "label_image_file_name"
+    t.string   "label_image_content_type"
+    t.integer  "label_image_file_size"
+    t.datetime "label_image_updated_at"
+    t.string   "label_alt"
+    t.integer  "index_sorting"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "product_variant_colors", force: true do |t|
     t.string   "name"
     t.string   "image_file_name"
@@ -385,7 +395,6 @@ ActiveRecord::Schema.define(version: 20140120112333) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "door_id"
   end
 
   create_table "sub_catalogs", force: true do |t|
@@ -399,7 +408,6 @@ ActiveRecord::Schema.define(version: 20140120112333) do
     t.datetime "updated_at"
     t.string   "sub_catalog_url"
     t.text     "description"
-    t.string   "ancestry"
   end
 
   create_table "test_products", force: true do |t|

@@ -18,9 +18,9 @@
             .clearfix
           .clearfix
         .catalog-content-wrapper.int-ext-content-wrapper
-          -@related.each do |r|
-            - s = SubCatalog.find r.sub_catalog_id
-            - m = MainCatalog.find s.main_catalog_id
+          -@rel_prod.each do |r|
+            - s = SubCatalog.find_by_name r.sub_catalog_id
+            - m = MainCatalog.find_by_name s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
               a.fancybox href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
                 img src=r.image_structure.url(:thumb)

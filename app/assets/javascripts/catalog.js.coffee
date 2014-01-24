@@ -5,8 +5,10 @@
 #  CloudZoom.quickStart()
 $(document).ready ->
 
+#defaault fancy box
   $(".fancybox").fancybox()
 
+#sidebar catalog
   $("#catalog-sidebar").treeview
     persist: "location"
     collapsed: true
@@ -21,6 +23,7 @@ $(document).ready ->
     $(".image-block a").attr href: mainLinkToImage
     $(".image-block a img").attr src: mainImage
     false
+
 #tabs dor options
 tab = (tab) ->
   document.getElementById("tab1").style.display = "none"

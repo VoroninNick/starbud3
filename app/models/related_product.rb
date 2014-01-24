@@ -12,6 +12,7 @@ class RelatedProduct < ActiveRecord::Base
 
 
   belongs_to :brand
+  attr_accessible :brand
 
   rails_admin do
     navigation_label "Інтер'єр, Екстер'єр, Супутні товари"

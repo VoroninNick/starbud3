@@ -17,7 +17,8 @@
         .catalog-content-wrapper
           .columns.image-block
             .special-offer-label
-              img src=@door_test.special_offer.image(:thumb)
+              -@door_test.special_offer do |d|
+                img src=ds.image(:thumb)
             a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
               img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
           .columns.content-block

@@ -16,16 +16,13 @@ class CatalogController < ApplicationController
     @subcat = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
     @it_et = Brand.find_by_name(params[:brand].gsub('_',' ')).int_exts
     @ext = Brand.find_by_name(params[:brand].gsub('_',' ')).exteriors
-
+    @rel_prod = Brand.find_by_name(params[:brand].gsub('_',' ')).related_products
 
     if @main_catalog.name =="Iнтер'ер"
       render "catalog/all_products_int_ext"
     elsif @main_catalog.name =="Екстер'ер"
       render "catalog/all_products_exterior"
-    end
-
-    @related = Brand.find_by_name(params[:brand].gsub('_',' ')).related_products
-    if @main_catalog.name =="Супутнi товари"
+    elsif @main_catalog.name =="Супутнi товари"
       render "catalog/all_products_related_products"
     end
   end

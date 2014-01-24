@@ -20,5 +20,8 @@ class ApplicationController < ActionController::Base
   def main_catalog_ha
     return  Publication.order('updated_at desc').limit(2)
   end
-
+  helper_method :main_carousel_label
+  def main_carousel_label
+    return MainLabelCarousel.order('index_sorting desc')
+  end
 end

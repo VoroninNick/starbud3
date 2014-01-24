@@ -190,18 +190,22 @@
       .carousel-margin-left.box-shadow-left-bottom
       .row.main-logo-carousel-inner
         ul#logo-carousel
-          li
-            img src=asset_path("ursa-logo.png")
-          li
-            img src=asset_path("knauf-logo.png")
-          li
-            img src=asset_path("rigips-logo.png")
-          li
-            img src=asset_path("ursa-logo.png")
-          li
-            img src=asset_path("knauf-logo.png")
-          li
-            img src=asset_path("ceresit-logo.png")
+          -main_carousel_label.each do |mcl|
+            li
+              img src=mcl.label_image
+
+          /li
+          /  img src=asset_path("ursa-logo.png")
+          /li
+          /  img src=asset_path("knauf-logo.png")
+          /li
+          /  img src=asset_path("rigips-logo.png")
+          /li
+          /  img src=asset_path("ursa-logo.png")
+          /li
+          /  img src=asset_path("knauf-logo.png")
+          /li
+          /  img src=asset_path("ceresit-logo.png")
       .carousel-margin-right.box-shadow-right-bottom
     .row.helpful-articles
       .columns.large-7
