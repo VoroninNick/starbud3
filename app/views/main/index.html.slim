@@ -1,89 +1,35 @@
-#main-page-banner-wrapper
-  ul.bxslider
-    li
-      img src=asset_path("main-banner-background-1.jpg")
-      .image-layer-1
-        img src=asset_path("Door-1.png")
-      .image-layer-2
-        img src=asset_path("Door-2.png")
-      .content-layer
-        .content-inner
-          h3
-            |Натуральна вільха
-          span
-            strong
-              |- 20 %
-          p
-            |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
-      .button-layer.box-shadow-right-bottom
-        = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
-    li
-      img src=asset_path("main-banner-background-2.jpg")
-      .image-layer-1
-        img src=asset_path("Door-1.png")
-      .image-layer-2
-        img src=asset_path("Door-2.png")
-      .content-layer
-        .content-inner
-          h3
-            |Натуральна вільха
-          span
-            strong
-              |- 20 %
-          p
-            |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
-      .button-layer.box-shadow-right-bottom
-        = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
-    li
-      img src=asset_path("main-banner-background-5.jpg")
-      .image-layer-1
-        img src=asset_path("Door-1.png")
-      .image-layer-2
-        img src=asset_path("Door-2.png")
-      .content-layer
-        .content-inner
-          h3
-            |Натуральна вільха
-          span
-            strong
-              |- 20 %
-          p
-            |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
-      .button-layer.box-shadow-right-bottom
-        = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
+= render :partial => 'partials/main_banner'
 .row.thumbnail-panel-box-shadow-top
 .row.search-bar.box-shadow-bottom
   .columns.large-5
     .row
       .columns.search-bar-background-left.box-shadow-left-bottom
     ul#bx-pager.main-page-tumb
-      li
-        .thumbnail-item
-          a data-slide-index="0" href=""
-            .triangle
-            img src=asset_path("main-banner-background-1.jpg")
-        .bord-bottom
-      li
-        .thumbnail-item
-          a data-slide-index="1" href=""
-            .triangle
-            img src=asset_path("main-banner-background-2.jpg")
-        .bord-bottom
-      li
-        .thumbnail-item
-          a data-slide-index="2" href=""
-            .triangle
-            img src=asset_path("main-banner-background-5.jpg")
-        .bord-bottom
+      -dsi = 0
+      -@main_banner.each do |m|
+        -m.main_banner_slides.each do |s|
+          li
+            .thumbnail-item
+              a data-slide-index=dsi href=""
+                .triangle
+                img src=s.back_image
+            .bord-bottom
+            -dsi+=1
   .columns.large-1
     p
   .columns.large-6
     .row.search-form
-      =form_tag
-        .columns.large-10
-          =text_field_tag :search, nil, :placeholder => "Введіть, що шукаєте. Наприклад: Двері броньовані"
-        .columns.large-2
-          =submit_tag "", :class => ' search-button'
+      javascript:
+        (function() {
+          var cx =  '010860152595732084541:5u3zesyvtke';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      gcse:search
     .columns.search-bar-background-right.box-shadow-right-bottom
 .row.main-page-wrapper
   .columns.large-12
@@ -129,7 +75,6 @@
               img src=asset_path("PDF-icon.png")
             .clearfix
             |Завантажити каталог
-
       .clearfix
     .clearfix
     .row.visual-constructor
@@ -193,19 +138,6 @@
           -main_carousel_label.each do |mcl|
             li
               img src=mcl.label_image
-
-          /li
-          /  img src=asset_path("ursa-logo.png")
-          /li
-          /  img src=asset_path("knauf-logo.png")
-          /li
-          /  img src=asset_path("rigips-logo.png")
-          /li
-          /  img src=asset_path("ursa-logo.png")
-          /li
-          /  img src=asset_path("knauf-logo.png")
-          /li
-          /  img src=asset_path("ceresit-logo.png")
       .carousel-margin-right.box-shadow-right-bottom
     .row.helpful-articles
       .columns.large-7

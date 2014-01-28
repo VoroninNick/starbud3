@@ -1,54 +1,30 @@
 .row.content-wrapper
   .columns.large-12
-    /.row
-    .columns.large-4
-      h3
-        |Контакти
-    .clearfix
-    .contacts
-      .columns.large-3
-        h4
-          |Адреса:
-        p
-          span
-            |м. Львів, вул. Луганська, 18
-      .columns.large-1
-        p
-          |
-      .columns.large-3
-        h4
-          |Графік роботи:
-        p
-          span.day
-            |Пн-Пт:
-          span.time
-            |8:30 — 18:00
-        p
-          span.day
-            |Cб:
-          span.time
-            |9:00 — 14:00
-      .columns.large-1
-        p
-          |
+    -@contact_page.each do |c|
       .columns.large-4
-        h4
-          |Телефони:
-        p
-          span.ttl
-            |т./факс
-          span.tell
-            |+38 (032) 242 38 41
-        p
-          span.ttl
-            |моб.:
-          span.tell
-            |+38 (067) 340 09 01
-        p
-          span.ttl
-            |@:
-          span.mail
-            |starbud@ukr.net
+        h3
+          |Контакти
+      .clearfix
+      .contacts
+        .columns.large-3
+          h4
+            |Адреса:
+          = raw c.address
+        .columns.large-1
+          h4
+            |
+        .columns.large-3
+          h4
+            |Графік роботи:
+          = raw c.working_hours
+        .columns.large-1
+          h4
+            |
+        .columns.large-4
+          h4
+            |Телефони:
+          = raw c.phones
+        .clearfix
     .maps
       .columns
         h4
@@ -81,277 +57,86 @@
       .columns
         h4
           |Представники в області:
-      .column.large-12
-        .row.obl-contacts
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Закарпатська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Віра
-                p
-                  span
-                    |+38 (067) 670 13 09
-                p
-                  a.mailto href="mailto:starbud@ukr.net"
-                    |starbud@ukr.net
+      .column.large-12.obl-contacts
+        /.row
+        -@region_person.each_with_index do |o, index|
+          -if index%3==0
+            .columns.large-4.obl-address.oa_left.float_left
+              .obl-ttl-wrapper.box-shadow-right-bottom
+                h4 = o.region
+              .row
+                .columns
+                  .clearfix
+                  .oai
+                    .oait
+                      |координатор:
+                    .rez =o.name
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait.mob
+                      |моб.:
+                    .rez =raw o.phones
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait
+                      |@:
+                    .rez
+                      a.mailto href="mailto:#{o.mails}" = o.mails
+                    .clearfix
+                  .clearfix
 
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Львівська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Наталя
-                p
-                  span
-                    |+38 (067) 340 09 01
-                p
-                  a.mailto href="mailto:n.kravets@star-bud.com.ua"
-                    |n.kravets@star-bud.com.ua
+          -elsif index%3==1
+            .columns.large-4.obl-address.oa_center.float_left
+              .obl-ttl-wrapper.box-shadow-right-bottom
+                h4 = o.region
+              .row
+                .columns
+                  .clearfix
+                  .oai
+                    .oait
+                      |координатор:
+                    .rez =o.name
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait.mob
+                      |моб.:
+                    .rez =raw o.phones
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait
+                      |@:
+                    .rez
+                      a.mailto href="mailto:#{o.mails}" = o.mails
+                    .clearfix
+                  .clearfix
 
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom.obl-ttl-wrapper-right
-              h4
-                |Івано-Франківська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Олена
-                p
-                  span
-                    |+38 (097) 103 13 06
-                p
-                  a.mailto href="mailto:gorbachenko@star-bud.com.ua"
-                    |gorbachenko@star-bud.com.ua
-
-
-        .row.obl-contacts
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Волинська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Роксолана
-                p
-                  span
-                    |+38 (067) 670 04 33
-                  span
-                    |+38 (067) 340 30 82
-                p
-                  a.mailto href="mailto:star-bud@ukr.net"
-                    |star-bud@ukr.net
-
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Тернопільська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Олеся
-                p
-                  span
-                    |+38 (067) 696 70 53
-                p
-                  a.mailto href="mailto:office@star-bud.com.ua"
-                    |office@star-bud.com.ua
-
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom.obl-ttl-wrapper-right
-              h4
-                |Чернівецька
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Олена
-                p
-                  span
-                    |+38 (067) 103 13 06
-                p
-                  a.mailto href="mailto:vira.familia@starbud.com.ua"
-                    |vira.familia@starbud.com.ua
-
-        .row.obl-contacts
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Житомирська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Олеся
-                p
-                  span
-                    |+38 (067) 017 09 90
-                  span
-                    |+38 (067) 696 70 53
-                p
-                  a.mailto href="mailto:office@star-bud.com.ua"
-                    |office@star-bud.com.ua
-
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Вінницька
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Віра
-                p
-                  span
-                    |+38 (067) 670 13 09
-                p
-                  a.mailto href="mailto:starbud@ukr.net"
-                    |starbud@ukr.net
-
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom.obl-ttl-wrapper-right
-              h4
-                |Хмельницька
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Олеся
-                p
-                  span
-                    |+38 (067) 696 70 53
-                p
-                  a.mailto href="mailto:office@star-bud.com.ua"
-                    |office@star-bud.com.ua
-
-        .row.obl-contacts
-          .columns.large-4.obl-address
-            .obl-ttl-wrapper.box-shadow-right-bottom
-              h4
-                |Рівненська
-            .row
-              .columns.large-4
-                p
-                  span
-                    |Координатор:
-                p
-                  span
-                    |моб.:
-                p
-                  span
-                    |@:
-              .columns.large-8
-                p
-                  span
-                    |Роксолана
-                p
-                  span
-                    |+38 (067) 670 04 33
-                p
-                  a.mailto href="mailto:star-bud@ukr.net"
-                    |star-bud@ukr.net
-
-
-
-
-
+          -elsif index%3==2
+            .columns.large-4.obl-address.oa_right.float_left
+              .obl-ttl-wrapper.box-shadow-right-bottom
+                h4 = o.region
+              .row
+                .columns
+                  .clearfix
+                  .oai
+                    .oait
+                      |координатор:
+                    .rez =o.name
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait.mob
+                      |моб.:
+                    .rez =raw o.phones
+                    .clearfix
+                  .clearfix
+                  .oai
+                    .oait
+                      |@:
+                    .rez
+                      a.mailto href="mailto:#{o.mails}" = o.mails
+                    .clearfix
+                  .clearfix

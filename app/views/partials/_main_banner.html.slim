@@ -1,0 +1,67 @@
+#main-page-banner-wrapper
+  ul.bxslider
+    -@main_banner.each do |m|
+      -m.main_banner_slides.each do |s|
+        li
+          a href=""
+            img src=s.back_image.url
+            .image-layer-1
+              img src=s.layer_image.url
+            .image-layer-2
+              img src=s.layer_image.url
+            .content-layer
+              .content-inner
+                =raw s.content
+            .button-layer.box-shadow-right-bottom
+               = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
+    /li
+    /  img src=asset_path("main-banner-background-1.jpg")
+    /  .image-layer-1
+    /    img src=asset_path("Door-1.png")
+    /  .image-layer-2
+    /    img src=asset_path("Door-2.png")
+    /  .content-layer
+    /    .content-inner
+    /      h3
+    /        |Натуральна вільха
+    /      span
+    /        strong
+    /          |- 20 %
+    /      p
+    /        |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
+    /  .button-layer.box-shadow-right-bottom
+    /    = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
+    /li
+    /  img src=asset_path("main-banner-background-2.jpg")
+    /  .image-layer-1
+    /    img src=asset_path("Door-1.png")
+    /  .image-layer-2
+    /    img src=asset_path("Door-2.png")
+    /  .content-layer
+    /    .content-inner
+    /      h3
+    /        |Натуральна вільха
+    /      span
+    /        strong
+    /          |- 20 %
+    /      p
+    /        |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
+    /  .button-layer.box-shadow-right-bottom
+    /    = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '
+    /li
+    /  img src=asset_path("main-banner-background-5.jpg")
+    /  .image-layer-1
+    /    img src=asset_path("Door-1.png")
+    /  .image-layer-2
+    /    img src=asset_path("Door-2.png")
+    /  .content-layer
+    /    .content-inner
+    /      h3
+    /        |Натуральна вільха
+    /      span
+    /        strong
+    /          |- 20 %
+    /      p
+    /        |Акційний розпродаж екологічних дверей.З 31.07.2013 до 24.08.2014 діє акція в салоні.
+    /  .button-layer.box-shadow-right-bottom
+    /    = link_to image_tag("main_page_read_more.jpg") + '', :title => ' '

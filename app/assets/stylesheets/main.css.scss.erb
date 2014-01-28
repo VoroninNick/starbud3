@@ -496,7 +496,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 #main-menu li > a {
   color: #004b8c;
-    padding: 28px 41px 21px 40px;
+    padding: 28px 41px 22px 40px;
 }
 .active_menu {
     background: #0055a1;
@@ -901,7 +901,11 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .row.search-form {
   position: relative;
-  top: 33px;
+    top: 16px;
+    z-index: 11;
+}
+.row.search-form table {
+    /*background: none!important;*/
 }
 .row.social-panel.box-shadow-bottom {
   top: -55px;
@@ -911,6 +915,33 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   background: url("<%= asset_path('soc-button-subs.jpg') %>")no-repeat;
   height: 45px;
   width: 46px;
+    -webkit-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
+    -moz-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
+    box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
+    padding-right: 0!important;
+}
+.subscribe-form input {
+    height: 45px;
+    border: none;
+    background-color: rgba(235, 235, 235, 0.29);
+    -moz-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    font-size: 1.2em;
+    font-weight: 300;
+    font-style: italic;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.subscribe-form input:focus {
+    background-color: #ebebeb;
+    -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: 3px 3px #c3c3c3;
+    color: #003162;
+    font-size: 1.4em;
+    outline: none !important;
+    outline-style: none !important;
 }
 .subscribe-form input {
   height: 45px;
@@ -918,6 +949,13 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .subscribe-form .columns {
     padding-left: 0!important;
+}
+.social-buttons .columns {
+    padding-top: 2px;
+}
+.social-buttons .large-2 span {
+    padding-top: 6px;
+    display: block;
 }
 .row.social-buttons {
   position: relative;
@@ -1278,6 +1316,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     border-left: 7px solid #00539c;
     color: white;
     width: 31%;
+    min-height: 222px;
 }
 .content-inner {
     padding: 15px;
@@ -1462,12 +1501,53 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     font-weight: 500;
     margin: 0;
 }
-.content-layer span strong {
+.content-layer div strong {
     font-size: 87px;
     padding: 0;
     margin: 0;
     font-weight: 900;
     line-height: 55px;
+}
+.gsc-control-cse {
+    border: none!important;
+    background: none!important;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border: none!important;
+    background: url("<%= asset_path('main_page_search_button.png') %>")no-repeat!important;
+    width: 35px!important;
+    height: 35px!important;
+}
+.gsc-search-button input {
+    border: none!important;
+}
+.gsc-search-box.gsc-search-box-tools .gsc-search-box {
+    background: none!important;
+    border: none!important;
+}
+.gsib_a {
+    padding: 0px 0px 0!important;
+}
+.gsib_b {
+    display: none;
+}
+#gs_tti50 input {
+    padding: 8px!important;
+}
+.gsc-search-button {
+    position: relative;
+    top: 5px;
+}
+#___gcse_0 {
+    top: -8px;
+    position: relative;
+}
+#gsc-i-id1 {
+    font-size: 16px;
+    font-size: 0.875rem;
+}
+.cse input.gsc-search-button, input.gsc-search-button, .gsc-search-button.gsc-search-button-v2 {
+    border: none!important;
 }
 .content-layer p {
     font-size: 13px;

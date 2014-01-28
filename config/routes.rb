@@ -1,6 +1,11 @@
 # coding: utf-8
 StarBud::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+
   get "/about_us" => "main#about", :as => :about
   get "/catalog" => "main#catalog", :as => :main_page_catalog
   get "/promotion" => "main#actions", :as => :actions
@@ -16,8 +21,7 @@ StarBud::Application.routes.draw do
   resources :door_variants_fulfillment_options
   resources :doors
 
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
 
   get "publication/interesting_news" => "publications#interesting_news", :as => :interesting_news
   get "publication/useful_video" => "publications#useful_video", :as => :useful_video_link

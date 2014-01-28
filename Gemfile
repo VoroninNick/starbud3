@@ -58,8 +58,11 @@ gem 'rails_admin'
 gem 'ancestry'
 
 gem 'ckeditor'
+gem 'carrierwave'
+gem "mini_magick"
 gem 'protected_attributes'
 gem 'paperclip'
+
 gem 'cocaine'
 
 gem 'russian'
@@ -75,3 +78,6 @@ gem "devise"
 #gem 'timespan', :git => 'git://github.com/toxaq/timespan.git'
 
 gem 'time_diff'
+
+#google se
+gem "google_cse"

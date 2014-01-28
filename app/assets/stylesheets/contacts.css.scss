@@ -13,13 +13,89 @@
 .obl-ttl-wrapper {
   background: #ebebeb;
   position: relative;
-  left: -25px;
+}
+.oa_left .obl-ttl-wrapper {
+  width: 110%;
+  left: -55px;
+}
+.oa_left {
+  float: left!important;
+}
+.oa_center .obl-ttl-wrapper {
+  width: 110%;
+  left: -30px;
+}
+.oa_right .obl-ttl-wrapper {
+  width: 119%;
 }
 .obl-ttl-wrapper h4 {
   padding: 6px 0 12px 25px;
 }
 .obl-ttl-wrapper-right {
   width: 116%;
+}
+.rez p {
+  padding: 0!important;
+  margin: 0!important;
+}
+.oait {
+  font-size: 14px;
+  color: #666;
+  font-weight: 100;
+  padding-top: 4px;
+}
+.oait.mob {
+  padding-top: 10px;
+}
+.oa_left .columns {
+  padding-left: 0;
+}
+.oa_right .columns {
+  padding-left: 3rem;
+}
+.rez {
+  font-size: 20px;
+  color: #666;
+  padding-left: 15px;
+}
+.obl-address .columns {
+  min-height: 140px;
+}
+.oai {
+  padding-top: 10px;
+}
+.rez span {
+  font-size: 18px!important;
+  color: #666!important;
+}
+.rez a {
+  font-size: 18px;
+  color: #005baa;
+  font-weight: 100;
+}
+.contacts p {
+  font-size: 19px;
+  color: #666;
+  font-weight: 100;
+  margin-bottom: 0;
+  position: relative;
+}
+.contacts p span a {
+  color: #666;
+  font-size: 20px;
+  font-weight: 400;
+}
+.cm {
+  color: #003162!important;
+}
+.contacts {
+  padding-bottom: 50px;
+}
+.contacts p span {
+  position: absolute;
+  right: 0;
+  font-weight: 400;
+  font-size: 20px;
 }
 .maps p {
   color: #666666;
@@ -32,4 +108,8 @@
 }
 .contacts-obl-wrapper .columns>h4 {
   padding: 120px 0 52px 0;
+}
+
+.obl-address .oait, .obl-address .rez {
+  float: left;
 }

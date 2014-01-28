@@ -4,6 +4,8 @@ class MainController < ApplicationController
     @interesting_news = InterestNews.order('updated_at desc').limit(2)
     @interest_video = VideoOnMainPage.order('updated_at desc').limit(3)
     @publication_main_page = Publication.order('updated_at desc').limit(4)
+    @main_banner = MainBanner.order('updated_at desc')
+    @subs = Subscribe.new
   end
   def about
     @title = "Про нас"
@@ -30,13 +32,7 @@ class MainController < ApplicationController
   def contacts
     @title = "Контакти"
     @contact = Contact.new
-    #@contact.request = request
-    #if @contact.deliver
-    #  flash.now[:error] = nil
-    #  flash.now[:notice] = 'Thank you for your message!'
-    #else
-    #  flash.now[:error] = 'Cannot send message.'
-    #  #render :new
-    #end
+    @contact_page = ContanctPage.order('updated_at desc')
+    @region_person = RegionContact.order('region asc')
   end
 end

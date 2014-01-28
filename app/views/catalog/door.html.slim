@@ -21,7 +21,7 @@
                 img src=ds.image(:thumb)
             a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
               img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
-          .columns.content-block
+          #variants-doors.columns.content-block
             h3 =@door_test.name
             .description-door
               p =raw @door_test.descriptions

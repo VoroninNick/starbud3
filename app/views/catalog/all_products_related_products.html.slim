@@ -19,8 +19,8 @@
           .clearfix
         .catalog-content-wrapper.int-ext-content-wrapper
           -@rel_prod.each do |r|
-            - s = SubCatalog.find_by_name r.sub_catalog_id
-            - m = MainCatalog.find_by_name s.main_catalog_id
+            /- s = SubCatalog.find_by_name r.sub_catalog_id
+            /- m = MainCatalog.find_by_name s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
               a.fancybox href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
                 img src=r.image_structure.url(:thumb)
@@ -42,12 +42,12 @@
                         |(&nbsp;
                         = r.code_product
                         |&nbsp;)
-                      .columns.floor-breadcrambs
-                        span
-                          |//&nbsp;
-                          = m.name
-                          |&nbsp;/&nbsp;
-                          = link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
+                      /.columns.floor-breadcrambs
+                      /  span
+                      /    |//&nbsp;
+                      /    = m.name
+                      /    |&nbsp;/&nbsp;
+                      /    = link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
 
                       .int-image-wrap
                         h4.int-ext-s

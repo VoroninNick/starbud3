@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120220153) do
+ActiveRecord::Schema.define(version: 20140128093310) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -86,6 +86,22 @@ ActiveRecord::Schema.define(version: 20140120220153) do
     t.integer  "product_variants_id"
   end
 
+  create_table "ckeditor_assets", force: true do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
+
   create_table "collections", force: true do |t|
     t.string   "name"
     t.string   "image_file_name"
@@ -96,6 +112,14 @@ ActiveRecord::Schema.define(version: 20140120220153) do
     t.integer  "actions_label_id"
     t.integer  "brand_id"
     t.string   "collection_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contanct_pages", force: true do |t|
+    t.string   "address"
+    t.string   "working_hours"
+    t.string   "phones"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -281,6 +305,30 @@ ActiveRecord::Schema.define(version: 20140120220153) do
     t.datetime "updated_at"
   end
 
+  create_table "main_banner_slides", force: true do |t|
+    t.string   "name"
+    t.string   "back_image_file_name"
+    t.string   "back_image_content_type"
+    t.integer  "back_image_file_size"
+    t.datetime "back_image_updated_at"
+    t.string   "layer_image_file_name"
+    t.string   "layer_image_content_type"
+    t.integer  "layer_image_file_size"
+    t.datetime "layer_image_updated_at"
+    t.text     "content"
+    t.integer  "index_sorting"
+    t.integer  "future"
+    t.integer  "main_banner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "main_banners", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "main_catalogs", force: true do |t|
     t.string   "name"
     t.string   "image_file_name"
@@ -368,6 +416,17 @@ ActiveRecord::Schema.define(version: 20140120220153) do
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
 
+  create_table "region_contacts", force: true do |t|
+    t.string   "region"
+    t.string   "name"
+    t.string   "phones"
+    t.string   "mails"
+    t.integer  "contanct_page_id"
+    t.integer  "index_sorting"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "related_products", force: true do |t|
     t.string   "name"
     t.integer  "code_product"
@@ -408,6 +467,12 @@ ActiveRecord::Schema.define(version: 20140120220153) do
     t.datetime "updated_at"
     t.string   "sub_catalog_url"
     t.text     "description"
+  end
+
+  create_table "subscribes", force: true do |t|
+    t.string   "mail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "test_products", force: true do |t|
