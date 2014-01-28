@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d622f07-62fd-4238-9e14-3c364a1e3b41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/_main_banner.html.slim" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\013\original\268662389_640.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\014\original\brand-test.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/related_product/image_interior/1/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/related_product/image_interior/1/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/related_product/image_interior/1/image_original.jpg" afterPath="$PROJECT_DIR$/public/assets/images/related_product/image_interior/1/image_original.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_original.jpg" afterPath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_original.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/carousel/label/1/image_original.png" afterPath="$PROJECT_DIR$/public/assets/images/carousel/label/1/image_original.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/carousel/label/4/image_original.png" afterPath="$PROJECT_DIR$/public/assets/images/carousel/label/4/image_original.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/related_product/image_structure/1/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StarBud.iml" afterPath="$PROJECT_DIR$/.idea/StarBud.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/contacts.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/contacts.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/contacts.html.slim" afterPath="$PROJECT_DIR$/app/views/main/contacts.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/door.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/door.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.slim" afterPath="$PROJECT_DIR$/app/views/main/index.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/interest_news/show.html.slim" afterPath="$PROJECT_DIR$/app/views/interest_news/show.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" afterPath="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarBud.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,16 +55,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css.scss.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css.scss.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="498" column="25" selection-start="11764" selection-end="11764" vertical-scroll-proportion="0.42857143" vertical-offset="8316" max-vertical-offset="26639">
+            <state line="498" column="25" selection-start="11764" selection-end="11764" vertical-scroll-proportion="-2.9411764" vertical-offset="8316" max-vertical-offset="26639">
               <folding>
                 <element signature="e#18370#18639#2" expanded="true" />
                 <element signature="e#34625#34780#2" expanded="true" />
                 <element signature="e#35118#35273#2" expanded="true" />
                 <element signature="e#36961#37188#2" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="24" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.8671498" vertical-offset="1035" max-vertical-offset="1496">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,10 +146,10 @@
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/document.rb" />
         <option value="$PROJECT_DIR$/app/models/ckeditor/attachment_file.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -1055,19 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="16" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0" vertical-offset="1052" max-vertical-offset="1496">
-          <folding>
-            <marker date="1390912002528" expanded="true" signature="-1:-1" placeholder="#..." />
-            <marker date="1390912002528" expanded="true" signature="-1:-1" placeholder="#..." />
-            <marker date="1390912002528" expanded="true" signature="-1:-1" placeholder="#..." />
-            <marker date="1390912002528" expanded="true" signature="-1:-1" placeholder="#..." />
-            <marker date="1390912002528" expanded="true" signature="-1:-1" placeholder="#..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state line="158" column="62" selection-start="6081" selection-end="6105" vertical-scroll-proportion="-17.076923" vertical-offset="2242" max-vertical-offset="2856">
@@ -1084,13 +1053,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="498" column="25" selection-start="11764" selection-end="11764" vertical-scroll-proportion="0.42857143" vertical-offset="8316" max-vertical-offset="26639">
+        <state line="498" column="25" selection-start="11764" selection-end="11764" vertical-scroll-proportion="-2.9411764" vertical-offset="8316" max-vertical-offset="26639">
           <folding>
             <element signature="e#18370#18639#2" expanded="true" />
             <element signature="e#34625#34780#2" expanded="true" />
             <element signature="e#35118#35273#2" expanded="true" />
             <element signature="e#36961#37188#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="24" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.8671498" vertical-offset="1035" max-vertical-offset="1496">
+          <folding />
         </state>
       </provider>
     </entry>

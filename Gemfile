@@ -79,5 +79,5 @@ gem "devise"
 
 gem 'time_diff'
 
-#google se
-gem "google_cse"
+##google se
+#gem "google_cse"
