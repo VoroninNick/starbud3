@@ -29,7 +29,15 @@
               |Варіанти виконання:
             ul#variants
               -count =0
+              /- not_null_1 = 0
               -@door_test.door_variants_fulfillment_options.each do |img_v|
+                /-not_null_1 = not_null_1+img_v.door_color_options.size
+                /-if not_null_1 ==0
+                /  li.box-shadow-right-bottom
+                /    .thumbnail-item
+                /      a.fancybox data-slide-index=count href="" data-fancybox-group="doorgroup" rel="doorgroup"
+                /        =image_tag img_v.image.url(:thumb)
+                /-else
                 li.box-shadow-right-bottom
                   .thumbnail-item
                     a data-slide-index=count href=""
@@ -37,8 +45,13 @@
                 -count+=1
 
             .clearfix
-            h5
-              |Варіанти кольору:
+            - not_null = 0
+            -@door_test.door_variants_fulfillment_options.each do |i|
+              -not_null = not_null+i.door_color_options.size
+            -if not_null == 0
+            -else
+              h5
+                |Варіанти кольору:
             ul#variants-color
               - door_color_z_index = -20
               -@door_test.door_variants_fulfillment_options.each do |img_v|

@@ -19,8 +19,8 @@
           .clearfix
         .catalog-content-wrapper.int-ext-content-wrapper
           -@rel_prod.each do |r|
-            /- s = SubCatalog.find_by_name r.sub_catalog_id
-            /- m = MainCatalog.find_by_name s.main_catalog_id
+            /- s = SubCatalog.find rpr.sub_catalog_id
+            /- m = MainCatalog.find s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
               a.fancybox href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
                 img src=r.image_structure.url(:thumb)
@@ -53,9 +53,9 @@
                         h4.int-ext-s
                           |Інтер'єр
                         .int-image
-                          img.header-box-shadow-right-bottom src=r.image_interior.url
+                          img.header-box-shadow-right-bottom src=r.image_interior.url alt=r.alt_inter title=r.title_inter
                     .columns.large-7
                       h5.int-ext-l
                         |Структура
                       .struct-image
-                        img.header-box-shadow-right-bottom src=r.image_structure.url(:large)
+                        img.header-box-shadow-right-bottom src=r.image_structure.url(:large)  alt=r.alt_inter title=r.title_inter

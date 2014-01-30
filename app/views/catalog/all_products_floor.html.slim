@@ -65,7 +65,7 @@
                           .flt-image
                             -f.floor_technical_datas.each do |ftd|
                               .column.large-3.ftd-one-item.float-left
-                                img src=ftd.image.url(:thumb)
+                                img src=ftd.image.url(:thumb) alt=ftd.alt_image title=ftd.title_image
                             .clearfix
 
                           .clearfix
@@ -73,16 +73,16 @@
                         h5.p-b
                           |Інтер'єр
                         .fl-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_interior.url(:large)
+                          img.header-box-shadow-right-bottom src=f.image_interior.url(:large) alt=f.alt_inter title=f.title_inter
                       .columns.large-7
                         h4.p-b
                           |Перспектива
                         .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_perspective.url(:large)
+                          img.header-box-shadow-right-bottom src=f.image_perspective.url(:large) alt=f.alt_per title=f.title_per
                         h4
                           |Структура
                         .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_structure.url(:large)
+                          img.header-box-shadow-right-bottom src=f.image_structure.url(:large) alt=f.alt_struct title=f.title_struct
 
 
 

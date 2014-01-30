@@ -10,7 +10,8 @@ $(document).ready ->
 
 #sidebar catalog
   $("#catalog-sidebar").treeview
-    persist: "location"
+#    persist: "location"
+    persist: "cookie"
     collapsed: true
     unique: true
 

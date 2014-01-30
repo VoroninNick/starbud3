@@ -42,11 +42,11 @@
     .contacts-form
       = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
         .columns.large-6.form-horizontal-left
-          = f.input :name, :required => true, placeholder: 'Олександр Олександрієвський', :label=>false
+          = f.input :name, :required => true, placeholder: 'Олександр Олександрієвський', :label=>false, :class=>" name"
           = f.label :"ім'я", :for=>"contact_name"
-          = f.input :phone, :required => false, placeholder: 'voronin.nick@gmail.com', :label=>false
+          = f.input :email, :required => false, placeholder: 'voronin.nick@gmail.com', :label=>false
           = f.label :"ел.скринька", :for=>"contact_phone"
-          = f.input :email, :required => true, placeholder: '+38 (050) 417 07 28', :label=>false
+          = f.input :phone, :required => true, placeholder: '+38 (050) 417 07 28', :label=>false
           = f.label :"телефон", :for=>"contact_email"
         .columns.large-6.form-horizontal-right
           = f.input :message, :as => :text, :required => false, placeholder: 'Будемо раді почути відгути та запитання від Вас.', :label=>false

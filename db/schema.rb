@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128093310) do
+ActiveRecord::Schema.define(version: 20140129135115) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -230,6 +230,15 @@ ActiveRecord::Schema.define(version: 20140128093310) do
     t.integer  "sub_catalog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "alt_inter"
+    t.string   "title_inter"
+    t.text     "desc_inter"
+    t.string   "alt_struct"
+    t.string   "title_struct"
+    t.text     "desc_struct"
+    t.string   "alt_per"
+    t.string   "title_per"
+    t.text     "desc_per"
   end
 
   create_table "floor_technical_data", force: true do |t|
@@ -265,6 +274,15 @@ ActiveRecord::Schema.define(version: 20140128093310) do
     t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "alt_inter"
+    t.string   "title_inter"
+    t.text     "desc_inter"
+    t.string   "alt_struct"
+    t.string   "title_struct"
+    t.text     "desc_struct"
+    t.string   "alt_per"
+    t.string   "title_per"
+    t.text     "desc_per"
   end
 
   create_table "for_brands", force: true do |t|
@@ -290,6 +308,15 @@ ActiveRecord::Schema.define(version: 20140128093310) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "cpde_product"
+    t.string   "alt_inter"
+    t.string   "title_inter"
+    t.text     "desc_inter"
+    t.string   "alt_struct"
+    t.string   "title_struct"
+    t.text     "desc_struct"
+    t.string   "alt_per"
+    t.string   "title_per"
+    t.text     "desc_per"
   end
 
   create_table "interest_news", force: true do |t|
@@ -444,6 +471,15 @@ ActiveRecord::Schema.define(version: 20140128093310) do
     t.integer  "sub_catalog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "alt_inter"
+    t.string   "title_inter"
+    t.text     "desc_inter"
+    t.string   "alt_struct"
+    t.string   "title_struct"
+    t.text     "desc_struct"
+    t.string   "alt_per"
+    t.string   "title_per"
+    t.text     "desc_per"
   end
 
   create_table "special_offers", force: true do |t|

@@ -19,7 +19,7 @@ class DoorColorOption < ActiveRecord::Base
       field :name
       field :image
       field :alt_image
-      field :description_image
+      #field :description_image
       field :title_image
 
     end
@@ -31,7 +31,7 @@ class DoorColorOption < ActiveRecord::Base
         help ' Розмір фотографії 1400x700.'
       end
       field :alt_image
-      field :description_image
+      #field :description_image
       field :title_image
 
     end

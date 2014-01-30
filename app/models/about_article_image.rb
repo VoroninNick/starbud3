@@ -9,13 +9,13 @@ class AboutArticleImage < ActiveRecord::Base
   belongs_to :about_article
   rails_admin do
     navigation_label 'Про нас'
-    label 'Фотографії для статті'
-    label_plural 'Фотографії для статті'
+    label 'Сертифікат'
+    label_plural 'Сертифікати'
 
     list do
       field :image
       field :alt_image
-      field :description_image
+      #field :description_image
       field :title_image
     end
 
@@ -25,7 +25,7 @@ class AboutArticleImage < ActiveRecord::Base
         help 'Розмір зображенн, якщо вертикальне то висота - 1000px, а якщо горизонтальне то ширина - 1000px.'
       end
       field :alt_image
-      field :description_image
+      #field :description_image
       field :title_image
     end
   end

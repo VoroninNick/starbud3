@@ -67,7 +67,7 @@
             .columns
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
-                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name, sub_catalog.name)
+                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name.gsub(' ','_'), sub_catalog.name.gsub(' ','_'))
       .columns.large-4.float-left
         .pdf-block
           a href=""

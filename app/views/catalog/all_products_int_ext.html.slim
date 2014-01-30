@@ -19,18 +19,17 @@
             - s = SubCatalog.find ie.sub_catalog_id
             - m = MainCatalog.find s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
-              a.fancybox href="#ie-id#{ie.id}" data-fancybox-group="ie-group" rel="ie-group"
+              a.fancybox href="#ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group"
                 img src=ie.image_structure.url(:thumb)
                 .ie-title-info
                   h3
-                    a.fancybox.starbud-link href="#ie-id#{ie.id}" data-fancybox-group="ie-group" rel="ie-group"
-                      = ie.name
+                    a.fancybox.starbud-link href="#ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group" = ie.name
                       p
                         |(&nbsp;
                         = ie.cpde_product
                         |&nbsp;)
             div style="display: none"
-              div id="ie-id#{ie.id}" data-fancybox-group="ie-group" rel="ie-group"
+              div id="ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group"
                 .row.floor-one-item-wrapper
                   .columns.large-12
                     .columns.large-5
@@ -50,12 +49,12 @@
                         h4.int-ext-s
                           |Інтер'єр
                         .int-image
-                          img.header-box-shadow-right-bottom src=ie.image_interior.url
+                          img.header-box-shadow-right-bottom src=ie.image_interior.url alt=ie.alt_inter title=ie.title_inter
                     .columns.large-7
                       h5.int-ext-l
                         |Структура
                       .struct-image
-                        img.header-box-shadow-right-bottom src=ie.image_structure.url(:large)
+                        img.header-box-shadow-right-bottom src=ie.image_structure.url(:large)  alt=ie.alt_struct title=ie.title_struct
 
         .columns.about-int-ext-wrapper
           = raw @subcat.description

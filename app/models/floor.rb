@@ -1,6 +1,9 @@
 class Floor < ActiveRecord::Base
   attr_accessible :name, :image_interior, :image_structure, :image_perspective, :action_id, :collection_id, :brand_id
 
+  attr_accessible :alt_inter, :alt_struct, :alt_per, :title_inter, :title_struct, :title_per, :desc_inter, :desc_struct, :desc_per
+
+
   has_attached_file :image_interior, styles:{
       large: "540x300#"
   },url:'/assets/images/floor/image_interior/:id/image_:style.:extension',
@@ -40,16 +43,25 @@ class Floor < ActiveRecord::Base
       field :image_interior, :paperclip do
         label "Інтре'єр"
       end
+      field :alt_inter
+      field :title_inter
+      #field :desc_inter
       field :floor_technical_datas
 
       field :image_structure, :paperclip do
         label 'Структура'
         help 'розмір зображення повинен бути 840x315'
       end
+      field :alt_struct
+      field :title_struct
+      #field :desc_struct
       field :image_perspective, :paperclip do
         label 'Перспектива'
         help 'розмір зображення повинен бути 840x315'
       end
+      field :alt_per
+      field :title_per
+      #field :desc_per
     end
 
   end
