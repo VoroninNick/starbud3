@@ -1,6 +1,8 @@
 class MainBannerSlide < ActiveRecord::Base
   attr_accessible :name, :back_image, :layer_image, :content, :index_sorting, :future, :main_banner_id
 
+  attr_accessible :slide_link
+
   has_attached_file :back_image, styles:{
       large: "2500x1600>"
   },url:'/assets/images/main_banner/slide/:id/image_:style.:extension',
@@ -27,6 +29,7 @@ class MainBannerSlide < ActiveRecord::Base
       field :back_image
       field :layer_image
       field :content
+      field :slide_link
     end
     edit do
       field :name do
@@ -50,6 +53,10 @@ class MainBannerSlide < ActiveRecord::Base
         help ''
       end
       field :content, :ck_editor do
+        label ''
+        help ''
+      end
+      field :slide_link do
         label ''
         help ''
       end

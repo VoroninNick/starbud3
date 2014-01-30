@@ -137,7 +137,8 @@
         ul#logo-carousel
           -main_carousel_label.each do |mcl|
             li
-              img src=mcl.label_image
+              a href=mcl.link
+                img src=mcl.label_image
       .carousel-margin-right.box-shadow-right-bottom
     .row.helpful-articles
       .columns.large-7

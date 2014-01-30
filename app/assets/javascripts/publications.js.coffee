@@ -16,11 +16,15 @@ $(document).ready ->
   $("#tab2-container").easytabs()
   $("#variant-tab-container").easytabs()
 
-
-  $("#helpful_articles_slider").superslides
-    play: true
-    delay: 10000
-    animation: 'fade'
-    animation_speed: 10000
-    animation_easing: 'swing'
+  $("#helpful_articles_banner").bxSlider
+    mode: 'fade'
+    controls: false
+    auto: true
+    speed: 500
+    easing: 'swing'
+    onSliderLoad: ->
+      $('.publication-slider-content-inner h3').addClass('animated slideInLeft')
+      $('.publication-slider-content-inner p').addClass('animated slideInDown')
+      $('.publication-slider-content').addClass('animated slideInDown')
+      $('.publication-slider-content-read-more').addClass('animated slideInRight')
 
