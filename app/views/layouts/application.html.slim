@@ -88,8 +88,7 @@ body
               ul.main-menu-publications
                 li
                   h2
-                    img src=asset_path("news-white.png")
-                    |Свіжі новини
+                    = link_to image_tag("news-white.png") + 'Свіжі новини', interesting_news_path, class: ' pmtl'
                   .clearfix
                   ul.main-menu-interest-news
                     -main_catalog_ia.each do |ia|
@@ -105,8 +104,7 @@ body
                   = link_to 'Переглянути всі новини', interesting_news_path, class: ' show-all'
                 li.video
                   h2
-                    img src=asset_path("Video-white.png")
-                    |Цікаві відео
+                    = link_to image_tag("Video-white.png") + 'Цікаві відео', useful_video_link_path, class: ' pmtl'
                   ul#video-main-menu.main-menu-useful-video
                     -main_catalog_iv.each do |iv|
                       li
@@ -115,8 +113,7 @@ body
                   = link_to 'Переглянути всі відео', useful_video_link_path, class: ' show-all'
                 li
                   h2
-                    img src=asset_path("Publications-white.png")
-                    |Корисні статті
+                    = link_to image_tag("Publications-white.png") + 'Корисні статті', helpful_articles_path, class: ' pmtl'
                   ul.main-menu-helpful-articles
                     -main_catalog_ha.each do |ha|
                       li
@@ -159,7 +156,9 @@ body
           .subscribe-form
             .columns
               input placeholder="Введіть свою електронну скриньку"
-              button.subscribe
+              .subscribe
+                a href=""
+                  img src=asset_path("Arrow-button.png")
       .sb-margin-right.box-shadow-bottom
     .row.white-bottom-padding
     .row.footer-bottom-content

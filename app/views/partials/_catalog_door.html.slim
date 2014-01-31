@@ -1,0 +1,76 @@
+.catalog-content-wrapper
+  .columns.image-block
+    .special-offer-label
+      -@door_test.special_offer do |d|
+        img src=ds.image(:thumb)
+    a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+      img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+  #variants-doors.columns.content-block
+    h3 =@door_test.name
+    .description-door
+      p =raw @door_test.descriptions
+    h5
+      |Варіанти виконання:
+    ul#variants
+      -count =0
+      /- not_null_1 = 0
+      -@door_test.door_variants_fulfillment_options.each do |img_v|
+        /-not_null_1 = not_null_1+img_v.door_color_options.size
+        /-if not_null_1 ==0
+        /  li.box-shadow-right-bottom
+        /    .thumbnail-item
+        /      a.fancybox data-slide-index=count href="" data-fancybox-group="doorgroup" rel="doorgroup"
+        /        =image_tag img_v.image.url(:thumb)
+        /-else
+        li.box-shadow-right-bottom
+          .thumbnail-item
+            a data-slide-index=count href=""
+              =image_tag img_v.image.url(:thumb)
+        -count+=1
+
+    .clearfix
+    - not_null = 0
+    -@door_test.door_variants_fulfillment_options.each do |i|
+      -not_null = not_null+i.door_color_options.size
+    -if not_null == 0
+    -else
+      h5
+        |Варіанти кольору:
+    ul#variants-color
+      - door_color_z_index = -20
+      -@door_test.door_variants_fulfillment_options.each do |img_v|
+        li
+          ul
+            -img_v.door_color_options.each do |img_v_c|
+              li.door_color_one_item.box-shadow-right-bottom style="z-index:#{door_color_z_index}; "
+                a.fancybox href=img_v_c.image.url(:thumb) data-fancybox-group="doorgroup" rel="doorgroup"
+                  img src=img_v_c.image.url(:thumb)
+                -door_color_z_index +=10
+  .clearfix
+  =raw @door_test.table
+  .door-info
+    .columns#tab-container.tab-container
+      ul.etabs.header-box-shadow-right-bottom
+        li.tab
+          a href="#tab-th"
+            |Технічні характеристики
+        li.tab
+          a href="#tab-d"
+            |Догляд
+        li.tab
+          a href="#tab-ug"
+            |Умови гарантії
+      - @door_test.dor_informations.each do |i|
+        #tab-th.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.specifications
+            .tab-bottom-line
+        #tab-d.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.care
+            .tab-bottom-line
+        #tab-ug.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.environment
+            .tab-bottom-line
+    .clearfix

@@ -738,11 +738,14 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     background: linear-gradient(to bottom, #d4d4d4 0%,#d4d4d4 0%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d4d4', endColorstr='#d4d4d4',GradientType=0 );
 }
-.interest-info .title h2, .helpful-articles h2, .publication-article-wrapper h2 {
+.interest-info .title h2 .ptl, .helpful-articles h2 .ptl, .publication-article-wrapper h2 .ptl {
     font-size: 22px;
     font-weight: 500;
     padding: 11px 0 12px 28px;
     color: #005baa;
+}
+.pmtl {
+    border-bottom: none!important;
 }
 .main-page-wrapper .interest-info .title-inner {
     top: -4px;
@@ -982,15 +985,14 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     top: 16px;
     z-index: 11;
 }
-.row.search-form table {
-    /*background: none!important;*/
+.subscribe-form input, .subscribe {
+    float: left;
 }
 .row.social-panel.box-shadow-bottom {
   top: -55px;
   z-index: 4;
 }
 .subscribe, .subscribe:hover {
-  background: url("<%= asset_path('soc-button-subs.jpg') %>")no-repeat;
   height: 45px;
   width: 46px;
     -webkit-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8);
@@ -1308,7 +1310,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   background: white;
     position: relative;
 }
-.bxslider, .bxslider li, .bxslider li img {
+.bxslider, .bxslider li, .bxslider li > a>img {
   height: 620px!important;
 }
 .active_menu {}
@@ -1370,8 +1372,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .image-layer-1 {
     position: absolute;
     z-index: 32;
-    top: 17%;
-    left: 15%;
+    top: 35%;
+    left: 13%;
     width: 450px !important;
     -webkit-animation-duration: 1.4s;
     -moz-animation-duration: 1.4s;
@@ -1388,8 +1390,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .image-layer-2 {
     position: absolute;
     z-index: 33;
-    top: 16%;
-    left: 16%;
+    top: 34%;
+    left: 14%;
     width: 450px !important;
     -webkit-animation-duration: 0.5s;
     -moz-animation-duration: 0.5s;

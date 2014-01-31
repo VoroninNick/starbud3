@@ -54,7 +54,7 @@
     .row
       .columns.large-2.read-more
         = link_to 'Детальніше...', about_path, :class => is_active?("about_us")
-    #centre-main-page-menu-link.centre-main-page-menu
+    .row#centre-main-page-menu-link.centre-main-page-menu
       - main_catalog.each do |main_menu|
         .columns.large-4.float-left
           .title-centre-main-page-menu
@@ -108,7 +108,8 @@
         .row.title-wrapper
           .columns.large-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
-              h2 Свіжі новини
+              h2
+                = link_to 'Свіжі новини', interesting_news_path, class: ' ptl'
           .columns
             -@interesting_news.each do |i_n|
               li.item
@@ -127,7 +128,8 @@
         .row.title-wrapper.video
           .columns.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
-              h2 Цікаві відео
+              h2
+                = link_to 'Цікаві відео', useful_video_link_path, class: ' ptl'
         .row.content-video-wrapper
           .columns
             -@interest_video.each do |v|
@@ -147,7 +149,8 @@
         .row.title-wrapper
           .columns.large-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
-              h2 Корисні статті
+              h2
+                = link_to 'Корисні статті', helpful_articles_path, class: ' ptl'
       .helpful-articles-content
         -@publication_main_page.each do |article|
           .columns.large-6

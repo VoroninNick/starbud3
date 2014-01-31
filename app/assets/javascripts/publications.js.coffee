@@ -20,7 +20,6 @@ $(document).ready ->
     mode: 'fade'
     controls: false
     auto: true
-    speed: 500
     easing: 'swing'
     onSliderLoad: ->
       $('.publication-slider-content-inner h3').addClass('animated slideInLeft')

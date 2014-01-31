@@ -54,5 +54,3 @@ $(document).ready ->
   $("#variants-color").bxSlider
     pagerCustom: "#variants"
     mode: 'fade'
-#    pause: 2000
-#    easing: 'swing'

@@ -1,0 +1,41 @@
+.catalog-content-wrapper
+  .columns.image-block
+    .special-offer-label
+      -@door_test.special_offer do |d|
+        img src=ds.image(:thumb)
+    a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+      img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+  #variants-doors.columns.content-block
+    h3 =@door_test.name
+    .description-door
+      p =raw @door_test.descriptions
+
+    .clearfix
+  .clearfix
+  =raw @door_test.table
+  .door-info
+    .columns#tab-container.tab-container
+      ul.etabs.header-box-shadow-right-bottom
+        li.tab
+          a href="#tab-th"
+            |Технічні характеристики
+        li.tab
+          a href="#tab-d"
+            |Догляд
+        li.tab
+          a href="#tab-ug"
+            |Умови гарантії
+      - @door_test.dor_informations.each do |i|
+        #tab-th.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.specifications
+            .tab-bottom-line
+        #tab-d.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.care
+            .tab-bottom-line
+        #tab-ug.tab-content.header-box-shadow-right-bottom
+          .tab-content-inner
+            = raw i.environment
+            .tab-bottom-line
+    .clearfix
