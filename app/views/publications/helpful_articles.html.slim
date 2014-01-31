@@ -22,7 +22,7 @@
     .row
       .helpful_articles_banner_wrapper.back_grad.box-shadow-right-bottom
         .helpful_articles_banner_inner
-          #helpful_articles_banner
+          #helpful_articles_banner.box-shadow-right-bottom
             - @helpful_article_banner.each do |hb|
               ul
                 li
@@ -32,7 +32,7 @@
                       h3 = truncate hb.title, length: 60, omission: '...'
                       p = truncate_html hb.short_description, length: 330, omission: '...'
                       .publication-slider-content-read-more.box-shadow-right-bottom
-                        a href = helpful_article_item_path(hb.id)
+                        a href = hb.link
                           |Детальніше
                 .clearfix
 
