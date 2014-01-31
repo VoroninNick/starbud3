@@ -94,7 +94,9 @@
       .columns.large-1
         p
       .columns.large-1
-        button
+        .vb
+          a href="#"
+            img src=asset_path("Arrow-button.png")
       .columns.large-1
         .row
           .columns
@@ -119,7 +121,7 @@
                   span = truncate_html i_n.short_description, length: 140, omission: '...'
                   .main-page-read-more-wrapper
                     .main-page-read-more.box-shadow-right-bottom
-                      = link_to image_tag("main_page_read_more.jpg") + '', interest_news_item_path(i_n.id), :title => 'Детальніше'
+                      = link_to image_tag("Arrow-button.png") + '', interest_news_item_path(i_n.id), :title => 'Детальніше'
 
       .columns.large-5.video-wrapper
         .row.title-wrapper.video
@@ -158,6 +160,6 @@
                 span = truncate_html article.short_description, length: 130, omission: '...'
                 .main-page-read-more-wrapper
                   .main-page-read-more.box-shadow-right-bottom
-                    = link_to image_tag("main_page_read_more.jpg") + '', helpful_article_item_path(article.id), :title => 'Детальніше'
+                    = link_to image_tag("Arrow-button.png") + '', helpful_article_item_path(article.id), :title => 'Детальніше'
 
 
