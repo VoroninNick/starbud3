@@ -3,8 +3,8 @@ class UsefulVideo < ActiveRecord::Base
 
 rails_admin do
   navigation_label 'Публікації'
-  label 'Корисні відео'
-  label_plural 'Корисні відео'
+  label 'Цікаві відео'
+  label_plural 'Цікаві відео'
   list do
      field :title
      field :video_url

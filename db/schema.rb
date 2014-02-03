@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140130163811) do
+ActiveRecord::Schema.define(version: 20140203094149) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -381,6 +381,17 @@ ActiveRecord::Schema.define(version: 20140130163811) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
+  end
+
+  create_table "pdf_catalogs", force: true do |t|
+    t.string   "title"
+    t.string   "path_file_name"
+    t.string   "path_content_type"
+    t.integer  "path_file_size"
+    t.datetime "path_updated_at"
+    t.integer  "selected_catalog"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "product_variant_colors", force: true do |t|

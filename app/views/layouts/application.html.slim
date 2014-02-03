@@ -77,8 +77,9 @@ body
                     |Каталог
                   .sub-menu-links
                     span
-                      a href=""
-                        |Завантажити
+                      -pdf_catalog.each do |pdf|
+                        a href=pdf.path
+                          |Завантажити
 
             li
               = link_to 'Акції', actions_path, :class => is_active?("actions")

@@ -2,7 +2,7 @@ class Publication < ActiveRecord::Base
   attr_accessible :title, :image, :short_description, :description, :url
 
   has_attached_file :image, styles:{
-      thumb: "300x300>", large: "600x600>"
+      thumb: "260x260>", large: "800x800>"
   },url:'/assets/images/publications/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
@@ -31,7 +31,7 @@ class Publication < ActiveRecord::Base
       end
       field :image, :paperclip do
         label 'Зображення'
-        help 'Зображення повинне мати розмір 600 х 600'
+        help 'Зображення повинне мати розмір 800 х 800'
       end
     end
   end

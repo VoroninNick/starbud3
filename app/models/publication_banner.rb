@@ -10,7 +10,7 @@ class PublicationBanner < ActiveRecord::Base
   rails_admin do
     navigation_label 'Публікації'
     label 'Банер'
-    label_plural 'Слайди'
+    label_plural 'Слайди для банера публікацій'
 
     list do
       field :title

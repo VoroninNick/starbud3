@@ -2,7 +2,7 @@ class InterestNews < ActiveRecord::Base
   attr_accessible :title, :image, :short_description, :description, :url
 
   has_attached_file :image, styles:{
-      thumb: "220x220#", large: "350x500#"
+      thumb: "260x260>", large: "800x800>"
   },url:'/assets/images/interest_news/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
@@ -13,9 +13,9 @@ class InterestNews < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label 'На головну'
-    label 'Цікава новина'
-    label_plural 'Цікаві новини'
+    navigation_label 'Публікації'
+    label 'Свіжа новина'
+    label_plural 'Свіжі новини'
 
     list do
       field :title
@@ -29,9 +29,14 @@ class InterestNews < ActiveRecord::Base
       field :short_description
       field :description, :ck_editor do
       end
+
       field :image, :paperclip do
-        label 'Фотографія повинна бути такого то розміру : тестовий текст...'
+        label 'Зображення'
+        help 'Зображення повинне мати розмір 800 х 800'
       end
+
     end
+
   end
+
 end

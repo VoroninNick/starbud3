@@ -20,15 +20,16 @@
   .columns.large-6
     .row.search-form
       javascript:
-        (function() {
-          var cx =  '010860152595732084541:5u3zesyvtke';
-          var gcse = document.createElement('script');
-          gcse.type = 'text/javascript';
-          gcse.async = true;
-          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(gcse, s);
-        })();
+          (function() {
+            var cx = '010860152595732084541:dgjb7gnpx94';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
       gcse:search
     .columns.search-bar-background-right.box-shadow-right-bottom
 .row.main-page-wrapper
@@ -70,11 +71,12 @@
                   = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name.gsub(' ','_'), sub_catalog.name.gsub(' ','_'))
       .columns.large-4.float-left
         .pdf-block
-          a href=""
-            .link-image
-              img src=asset_path("PDF-icon.png")
-            .clearfix
-            |Завантажити каталог
+          -pdf_catalog.each do |pdf|
+            a href=pdf.path
+              .link-image
+                img src=asset_path("PDF-icon.png")
+              .clearfix
+              |Завантажити каталог
       .clearfix
     .clearfix
     .row.visual-constructor
