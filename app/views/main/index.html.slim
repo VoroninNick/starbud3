@@ -155,7 +155,7 @@
                 = link_to 'Корисні статті', helpful_articles_path, class: ' ptl'
       .helpful-articles-content
         -@publication_main_page.each do |article|
-          .columns.large-6
+          .columns.large-6.float-left
             li.item
               .columns.large-4.image
                 img src=article.image.url(:thumb)
