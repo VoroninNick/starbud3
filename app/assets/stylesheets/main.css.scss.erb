@@ -394,8 +394,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .row.header-top {
   color: #e1e1e1;
-    padding-top: 4px;
-    padding-bottom: 14px;
+    /*padding-top: 4px;*/
+    padding-bottom: 2px;
 }
 .header-bottom {
     background: #f7f7f7; /* Old browsers */
@@ -444,6 +444,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .header-social-buttons {
   padding-top: 10px;
+    float: right;
 }
 .main-header-logo {
   position: relative;
@@ -484,8 +485,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     background: linear-gradient(to bottom,  #ffffff 0%,#fcfcfc 9%,#efefef 30%,#cccccc 72%,#c2c2c2 88%,#bebebe 99%,#bdbdbd 99%,#afafaf 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#afafaf',GradientType=0 ); /* IE6-9 */
 
-    height: 110px;
-  position: relative;
+    height: 105px;
+    position: relative;
     z-index: 69;
     margin-top: -150px;
 }
@@ -524,7 +525,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 #main-menu li > a {
   color: #004b8c;
-    padding: 28px 41px 22px 40px;
+    padding: 28px 41px 23px 40px;
 }
 #main-menu .active_menu {
     border-top: 1px solid #2e78b9;
@@ -545,6 +546,42 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     right: 1px;
     background: #003970;
     width: 1px;
+    height: 100%;
+    top: 0;
+}
+#gsc-iw-id1 table {
+    border: none!important;
+    background: none!important;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border: none!Important;
+    background: none!important;
+}
+.gsc-input-box-focus, .gsc-input-box-hover {
+    border: none!important;
+}
+#gs_tti50 input:focus {
+    background-color: #ebebeb;
+    -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: 3px 3px #c3c3c3;
+    color: #003162;
+    font-size: 1.4em;
+    outline: none !important;
+    outline-style: none !important;
+    border: none!important;
+}
+#gs_tti50 input {
+    padding: 8px !important;
+    background-image: none !important;
+    border: none!important;
+    background-color: rgba(235, 235, 235, 0.29)!important;
+    -moz-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15);
+    font-size: 1.2em;
+    font-weight: 300;
+    font-style: italic;
 }
 .active_menu {
     background: #3178ba; /* Old browsers */
@@ -657,7 +694,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     background: #e4e4e4;
     bottom: 0px;
     position: absolute;
-    width: 85px;
+    width: 100px;
     height: 1px;
 }
 .thumbnail-item a {
@@ -690,7 +727,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 
 .bxslider li:before {top: 0px;}
 .bxslider li:after {bottom: 0px;}
-.main-page-tumb .thumbnail-item:before {left: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-left.png') %>")no-repeat;}
+.main-page-tumb .thumbnail-item:before {left: 0px;background: url("<%= asset_path('thumbnail-main-banner-border-left.png') %>")no-repeat;}
 .main-page-tumb .thumbnail-item:after {right: 15px;background: url("<%= asset_path('thumbnail-main-banner-border-right.png') %>")no-repeat;}
 .active .triangle {
     border: 10px solid #f8f9f9;
@@ -1089,7 +1126,8 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .header-top-left span {
   color: #e1e1e1;
-  font-size: 15px;
+  font-size: 14px;
+    line-height: 18px;
   font-weight: 100;
   display: block;
 }
@@ -1102,6 +1140,10 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 }
 .header-top-center p span {
   font-size: 21px;
+    font-weight: 400;
+}
+.header-top-right {
+    width: 33%!important;
 }
 .header-top-left, .header-top-center, .header-top-right {
   width: 30%;
@@ -1227,7 +1269,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
     background: linear-gradient(to bottom,  #ffffff 0%,#fcfcfc 9%,#efefef 30%,#cccccc 72%,#c2c2c2 88%,#bebebe 99%,#bdbdbd 99%,#afafaf 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#afafaf',GradientType=0 ); /* IE6-9 */
 
-    height: 110px;
+    height: 105px;
   width: 55px;
   position: absolute;
   top: 0px;
@@ -1245,7 +1287,7 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
   overflow: hidden;
   width: 115px;
   height: 90px;
-  padding-left: 4%;
+  /*padding-left: 4%;*/
   padding-right: 4%;
   margin-top: 6px;
 }
@@ -1672,9 +1714,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 .gsib_b {
     display: none;
 }
-#gs_tti50 input {
-    padding: 8px!important;
-}
+
 .gsc-search-button {
     position: relative;
     top: 5px;

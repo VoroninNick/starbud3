@@ -100,7 +100,7 @@
 .bx-wrapper .bx-prev {
 	left: 0px;
 	/*background: url(images/controls.png) no-repeat 0 -32px;*/
-    background: rgba(111, 111, 111, 0.2);
+    background: rgba(111, 111, 111, 0.05);
     height: 100%;
 }
 .bx-wrapper  .bx-prev:before {}
@@ -114,11 +114,15 @@
     height: 41px;
     background: url(main-banner-arrow-back.png)no-repeat;
 }
-
+.bx-wrapper .bx-prev:hover, .bx-wrapper .bx-next:hover {
+    background: rgba(111, 111, 111, 0.2);
+    transition: 0.6s ease-out all;
+    -webkit-transition: 0.6s ease-out all;
+}
 .bx-wrapper .bx-next {
 	right: 0px;
 	/*background: url(images/controls.png) no-repeat -43px -32px;*/
-    background: rgba(111, 111, 111, 0.2);
+    background: rgba(111, 111, 111, 0.05);
     height: 100%;
 }
 .bx-wrapper .bx-next:before {}
@@ -143,7 +147,8 @@
 
 .bx-wrapper .bx-controls-direction a {
     position: absolute;
-    top: 3%;
+    top: 8%;
+    height: 95%;
     margin-top: -16px;
     outline: 0;
     width: 90px;

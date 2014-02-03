@@ -4,6 +4,13 @@
 
 
 $(document).ready ->
+  setTimeout (->
+    $("#gsc-i-id1").attr "placeholder", "Введіть, що ви шукаєте..."
+  ), 5000
+
+  url = document.location.href
+  $.each $(".sub-menu-links span a"), ->
+    $("this").parent("#main-menu>li a").addClass " active_menu"  unless url.indexOf(@href) is -1
 
   $("#logo-carousel").flexisel
     visibleItems: 6
