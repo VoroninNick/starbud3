@@ -3,30 +3,36 @@
     .special-offer-label
       -@door_test.special_offer do |d|
         img src=d.image(:thumb)
-    a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
-      img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+    - if @door_test.door_variants_fulfillment_options.count <=0
+      a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=asset_path("doors-blank.png")
+        img.cloudzoom src=asset_path("doors-blank.png")
+    -else
+      a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+        img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
   #variants-doors.columns.content-block
     h3 =@door_test.name
     .description-door
       p =raw @door_test.descriptions
-    h5
-      |Варіанти виконання:
-    ul#variants
-      -count =0
-      /- not_null_1 = 0
-      -@door_test.door_variants_fulfillment_options.each do |img_v|
-        /-not_null_1 = not_null_1+img_v.door_color_options.size
-        /-if not_null_1 ==0
-        /  li.box-shadow-right-bottom
-        /    .thumbnail-item
-        /      a.fancybox data-slide-index=count href="" data-fancybox-group="doorgroup" rel="doorgroup"
-        /        =image_tag img_v.image.url(:thumb)
-        /-else
-        li.box-shadow-right-bottom
-          .thumbnail-item
-            a data-slide-index=count href=""
-              =image_tag img_v.image.url(:thumb)
-        -count+=1
+    - if @door_test.door_variants_fulfillment_options.count <=0
+    -else
+      h5
+        |Варіанти виконання:
+      ul#variants
+        -count =0
+        /- not_null_1 = 0
+        -@door_test.door_variants_fulfillment_options.each do |img_v|
+          /-not_null_1 = not_null_1+img_v.door_color_options.size
+          /-if not_null_1 ==0
+          /  li.box-shadow-right-bottom
+          /    .thumbnail-item
+          /      a.fancybox data-slide-index=count href="" data-fancybox-group="doorgroup" rel="doorgroup"
+          /        =image_tag img_v.image.url(:thumb)
+          /-else
+          li.box-shadow-right-bottom
+            .thumbnail-item
+              a data-slide-index=count href=""
+                =image_tag img_v.image.url(:thumb)
+          -count+=1
 
     .clearfix
     - not_null = 0

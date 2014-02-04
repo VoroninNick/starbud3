@@ -8,6 +8,12 @@ $(document).ready ->
     $("#gsc-i-id1").attr "placeholder", "Введіть, що ви шукаєте..."
   ), 5000
 
+  $("#main-menu li a").each ->
+    if $(this).attr("href") is "/publication/"
+      $(this).addClass "active"
+
+
+
   url = document.location.href
   $.each $(".sub-menu-links span a"), ->
     $("this").parent("#main-menu>li a").addClass " active_menu"  unless url.indexOf(@href) is -1

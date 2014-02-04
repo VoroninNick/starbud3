@@ -40,7 +40,8 @@
       -@helpful_article.each do |article|
         .columns.large-4.helpful_articles.float-left
           h5
-            a href = helpful_article_item_path(article.id) =truncate article.title, length: 60, omission: '...'
+            =link_to truncate(article.title, length: 60, omission: '...'), helpful_article_item_path(article.id), :class => current_class?(helpful_article_item_path(article.id))
+            /a href = helpful_article_item_path(article.id) =truncate article.title, length: 60, omission: '...', :class => current_class?(helpful_article_item_path)
           span =article.created_at.strftime("%d. %m. %Y")
           .image
             img src=article.image

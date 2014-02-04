@@ -13,6 +13,8 @@ StarBud::Application.routes.draw do
   get "/contacts" => "main#contacts", :as => :contacts
   root 'main#index'
 
+  resources "contacts", only: [:new, :create]
+
   resources :promotions
   resources :video_on_main_pages
   resources :useful_videos

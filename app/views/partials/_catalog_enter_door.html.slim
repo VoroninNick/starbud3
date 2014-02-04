@@ -3,8 +3,12 @@
     .special-offer-label
       -@door_test.special_offer do |d|
         img src=d.image(:thumb)
-    a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
-      img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+    - if @door_test.door_variants_fulfillment_options.count <=0
+      a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=asset_path("doors-blank.png")
+        img.cloudzoom src=asset_path("doors-blank.png")
+    -else
+      a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
+        img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
   #variants-doors.columns.content-block
     h3 =@door_test.name
     .description-door

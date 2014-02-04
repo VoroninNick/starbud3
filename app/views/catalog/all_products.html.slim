@@ -36,8 +36,11 @@
               - m = MainCatalog.find s.main_catalog_id
               .columns.large-3.float-left
                 .item
-                  a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
-                    img src=door.door_variants_fulfillment_options[0].image(:thumb)
+                  - if door.door_variants_fulfillment_options.count <=0
+                    =link_to image_tag("doors-blank.png")+'',show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' door_blank'
+                  - else
+                    a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
+                      img src=door.door_variants_fulfillment_options[0].image(:thumb)
                   h5
                     = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
                   span

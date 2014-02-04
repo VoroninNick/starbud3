@@ -51,10 +51,9 @@ end
 # gem 'debugger', group: [:development, :main]
 
 gem "simple_form", "~> 3.0.0"
-
 gem 'contact_us'
-
 gem 'mail_form'
+
 gem 'rails_admin'
 gem 'ancestry'
 
