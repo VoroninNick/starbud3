@@ -34,7 +34,12 @@ class RelatedProduct < ActiveRecord::Base
       field :code_product do
         label 'Код товару'
       end
-      field :brand
+      field :brand_id, :enum do
+
+        enum do
+          Brand.includes(:sub_catalog).all.map { |i| [i.sub_catalog.name + ', ' + i.name, i.id] }
+        end
+      end
       field :image_interior, :paperclip do
         label "Інтре'єр"
       end

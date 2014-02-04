@@ -37,7 +37,12 @@ class Door < ActiveRecord::Base
         label 'Назва дверей'
       end
       field :special_offer
-      field :collection do
+      field :collection_id, :enum do
+
+        enum do
+          Collection.includes(:brand).all.map { |i| [i.brand.name + ', ' + i.name, i.id] }
+        end
+
         label 'Колекція'
         help 'Із випадаючого списку виберіть колекцію до якої належать дані двері.'
       end

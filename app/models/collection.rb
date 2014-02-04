@@ -18,7 +18,7 @@ class Collection < ActiveRecord::Base
   has_many :doors
   has_many :floors
 
-  validates :name, :uniqueness => true, presence: true
+  #validates :name, :uniqueness => true, presence: true
   before_validation :generate_collection_url
   def generate_collection_url
     self.collection_url ||= name.parameterize
@@ -47,7 +47,12 @@ class Collection < ActiveRecord::Base
       field :descriptions, :ck_editor do
         label "Опис до колекції"
       end
-      field :brand do
+      field :brand_id, :enum do
+
+        enum do
+          Brand.includes(:sub_catalog).all.map { |i| [i.sub_catalog.name + ', ' + i.name, i.id] }
+        end
+
         label "Бренд"
         help "Виберіть із випадаючого списку назву бренду ,до якого відноситься колекція яку ви вводите."
       end

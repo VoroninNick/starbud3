@@ -49,7 +49,11 @@ class Brand < ActiveRecord::Base
         label "Текст для бренду"
         help "Це поле передбачене виключно для брендів Інтер'єру, Екстер'єру, та Супутніх товарів."
       end
-      field :sub_catalog do
+      field :sub_catalog_id, :enum do
+
+        enum do
+          SubCatalog.includes(:main_catalog).all.map { |i| [i.main_catalog.name + ', ' + i.name, i.id] }
+        end
         label "Під каталог"
         help "Виберіть із випадаючого списку назву під каталогу ,до якого відноситься бренд який ви заповняєте."
       end

@@ -2,7 +2,7 @@
   .columns.image-block
     .special-offer-label
       -@door_test.special_offer do |d|
-        img src=ds.image(:thumb)
+        img src=d.image(:thumb)
     a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=@door_test.door_variants_fulfillment_options[0].image(:thumb)
       img.cloudzoom src=@door_test.door_variants_fulfillment_options[0].image(:thumb)
   #variants-doors.columns.content-block

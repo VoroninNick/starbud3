@@ -39,7 +39,12 @@ class Floor < ActiveRecord::Base
 
     edit do
       field :name
-      field :collection
+      field :collection_id, :enum do
+
+        enum do
+          Collection.includes(:brand).all.map { |i| [i.brand.name + ', ' + i.name, i.id] }
+        end
+      end
       field :image_interior, :paperclip do
         label "Інтре'єр"
       end
