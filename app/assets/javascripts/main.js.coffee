@@ -10,13 +10,40 @@ $(document).ready ->
 
   $("#main-menu li a").each ->
     if $(this).attr("href") is "/publication/"
-      $(this).addClass "active"
+      $(".publication a").addClass "active"
 
 
 
   url = document.location.href
-  $.each $(".sub-menu-links span a"), ->
-    $("this").parent("#main-menu>li a").addClass " active_menu"  unless url.indexOf(@href) is -1
+
+  if url.indexOf("publication") >=0
+    $(".publication>a").addClass(" active_menu ")
+
+  if url.indexOf("helpful_articles") >=0
+    $(".ps3 a").addClass(" active_menu ")
+
+  if url.indexOf("useful_video") >=0
+    $(".ps2 a").addClass(" active_menu ")
+
+  if url.indexOf("interest_news") >=0
+    $(".ps1 a").addClass(" active_menu ")
+
+
+  if url.indexOf("%D0%94%D0%B2%D0%B5%D1%80i") >=0
+    $(".catalog>a").addClass(" active_menu ")
+
+  if url.indexOf("%D0%9Fi%D0%B4%D0%BB%D0%BE%D0%B3%D0%B0") >=0
+    $(".catalog>a").addClass(" active_menu ")
+
+  if url.indexOf("%D0%95%D0%BA%D1%81%D1%82%D0%B5%D1%80'%D0%B5%D1%80") >=0
+    $(".catalog>a").addClass(" active_menu ")
+
+  if url.indexOf("I%D0%BD%D1%82%D0%B5%D1%80'%D0%B5%D1%80") >=0
+    $(".catalog>a").addClass(" active_menu ")
+  if url.indexOf("%D0%A1%D1%83%D0%BF%D1%83%D1%82%D0%BDi_%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8") >=0
+    $(".catalog>a").addClass(" active_menu ")
+
+
 
   $("#logo-carousel").flexisel
     visibleItems: 6

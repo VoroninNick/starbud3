@@ -1,12 +1,12 @@
 .columns.large-12
   #publication-sidebar-wrapper
     nav.publication-sidebar#publication-sidebar
-      li
+      li.ps1
         = link_to 'Свіжі новини', interesting_news_path, :class => is_active?("interesting_news")
         .clearfix
-      li
+      li.ps2
         = link_to 'Цікаві відео', useful_video_link_path, :class => is_active?("useful_video")
         .clearfix
-      li
+      li.ps3
         = link_to 'Корисні статті', helpful_articles_path, :class => is_active?("helpful_articles")
         .clearfix
