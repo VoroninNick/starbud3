@@ -52,7 +52,7 @@
                   .row.floor-one-item-wrapper
                     .columns.large-12
                       .columns.large-5
-                        h4 = f.name
+                        h4.p-b = f.name
                         .l-content
                           .columns.floor-breadcrambs
                             span
@@ -74,6 +74,7 @@
                           |Інтер'єр
                         .fl-image.img-wrp
                           img.header-box-shadow-right-bottom src=f.image_interior.url(:large) alt=f.alt_inter title=f.title_inter
+
                       .columns.large-7
                         h4.p-b
                           |Перспектива

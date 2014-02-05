@@ -18,9 +18,9 @@ class MainBannerSlide < ActiveRecord::Base
 
 
   rails_admin do
-    navigation_label 'Слайдери'
-    label 'Банер слайд'
-    label_plural 'Банери слайди'
+    #navigation_label 'Слайдери'
+    #label 'Банер слайд'
+    #label_plural 'Банери слайди'
 
     list do
       field :name
@@ -45,12 +45,12 @@ class MainBannerSlide < ActiveRecord::Base
         help ''
       end
       field :back_image, :paperclip do
-        label ''
-        help ''
+        label 'Фонове зображення'
+        help 'Повинне мати розмір 2500 х 1600'
       end
       field :layer_image, :paperclip do
-        label ''
-        help ''
+        label 'Слойове зображення'
+        help 'Повинне мати розмір 500 х 600'
       end
       field :content, :ck_editor do
         label ''

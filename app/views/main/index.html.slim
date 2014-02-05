@@ -1,9 +1,9 @@
 = render :partial => 'partials/main_banner'
 .row.thumbnail-panel-box-shadow-top
+.clearfix
 .row.search-bar.box-shadow-bottom
   .columns.large-5
-    .row
-      .columns.search-bar-background-left.box-shadow-left-bottom
+    .columns.search-bar-background-left
     ul#bx-pager.main-page-tumb
       -dsi = 0
       -@main_banner.each do |m|
@@ -17,6 +17,7 @@
             .bord-bottom
             -dsi+=1
             .clearfix
+      .clearfix
   .columns.large-1
     p
   .columns.large-6
@@ -33,7 +34,8 @@
             s.parentNode.insertBefore(gcse, s);
           })();
       gcse:search
-    .columns.search-bar-background-right.box-shadow-right-bottom
+    .columns.search-bar-background-right
+  .clearfix
 .row.main-page-wrapper
   .columns.large-12
     .main-short-description
@@ -140,14 +142,14 @@
               .video-item
                 =raw v.video_url
     .row.main-logo-carousel.box-shadow-bottom
-      .carousel-margin-left.box-shadow-left-bottom
+      .carousel-margin-left
       .row.main-logo-carousel-inner
         ul#logo-carousel
           -main_carousel_label.each do |mcl|
             li
               a href=mcl.link
                 img src=mcl.label_image
-      .carousel-margin-right.box-shadow-right-bottom
+      .carousel-margin-right
     .row.helpful-articles
       .columns.large-7
         .row.title-wrapper
