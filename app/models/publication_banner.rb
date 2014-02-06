@@ -16,7 +16,6 @@ class PublicationBanner < ActiveRecord::Base
       field :title
       field :image
       field :short_description
-      #field :description
       field :index_sorting
       field :link
     end
@@ -33,10 +32,6 @@ class PublicationBanner < ActiveRecord::Base
         label ''
         help ''
       end
-      #field :description do
-      #  label ''
-      #  help ''
-      #end
       field :index_sorting do
         label ''
         help ''

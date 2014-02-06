@@ -18,25 +18,25 @@ $(document).ready ->
     map: map
     title: "Текст \"Назва\""
   )
-#  jQuery.extend jQuery.validator.messages,
-#    required: "Це поле необхідно заповнити"
-#    remote: "Виправте це поле щоб продовжити"
-#    email: "Введіть правильний e-mail адресу."
-#    url: "Введіть правильний URL."
-#    date: "Введіть правильну дату."
-#    dateISO: "Введіть правильну дату (ISO)."
-#    number: "Введіть число."
-#    tell: "Введіть число."
-#    digits: "Введіть лише цифри."
-#    creditcard: "Введіть правильний номер вашої кредитної картки."
-#    equalTo: "Повторіть введення значення ще раз."
-#    accept: "Будь ласка, введіть значення з правильним розширенням."
-#    maxlength: jQuery.format("Не можна вводити більш {0} символів.")
-#    minlength: jQuery.format("Повинно бути не менше{0} символів.")
-#    rangelength: jQuery.format("Введіть від {0} до {1} символів.")
-#    range: jQuery.format("Введіть число від {0} до {1}.")
-#    max: jQuery.format("Введіть число менше або рівне {0}.")
-#    min: jQuery.format("Введіть число більше або рівне {0}.")
+  jQuery.extend jQuery.validator.messages,
+    required: "Це поле необхідно заповнити"
+    remote: "Виправте це поле щоб продовжити"
+    email: "Введіть правильний e-mail адресу."
+    url: "Введіть правильний URL."
+    date: "Введіть правильну дату."
+    dateISO: "Введіть правильну дату (ISO)."
+    number: "Введіть число."
+    tell: "Введіть число."
+    digits: "Введіть лише цифри."
+    creditcard: "Введіть правильний номер вашої кредитної картки."
+    equalTo: "Повторіть введення значення ще раз."
+    accept: "Будь ласка, введіть значення з правильним розширенням."
+    maxlength: jQuery.format("Не можна вводити більш {0} символів.")
+    minlength: jQuery.format("Повинно бути не менше{0} символів.")
+    rangelength: jQuery.format("Введіть від {0} до {1} символів.")
+    range: jQuery.format("Введіть число від {0} до {1}.")
+    max: jQuery.format("Введіть число менше або рівне {0}.")
+    min: jQuery.format("Введіть число більше або рівне {0}.")
 
 
   $(".contacts-form form").validate
@@ -75,6 +75,4 @@ $(document).ready ->
       phone:
         required: "Введіть ваш номер телефону."
         digits: "Невірний формат номера телефону."
-#
-#  $(".contacts-form form").validationEngine()
 

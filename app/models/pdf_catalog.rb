@@ -12,7 +12,6 @@ class PdfCatalog < ActiveRecord::Base
     list do
       field :title
       field :path
-      #field :selected_catalog
     end
     edit do
       field :title
@@ -20,7 +19,6 @@ class PdfCatalog < ActiveRecord::Base
         label ''
         help ''
       end
-      #field :selected_catalog
     end
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203094149) do
+ActiveRecord::Schema.define(version: 20140206103142) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -239,6 +239,12 @@ ActiveRecord::Schema.define(version: 20140203094149) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+  end
+
+  create_table "feedback_emails", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "floor_technical_data", force: true do |t|
@@ -534,6 +540,12 @@ ActiveRecord::Schema.define(version: 20140203094149) do
 
   create_table "subscribes", force: true do |t|
     t.string   "mail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "terms_of_uses", force: true do |t|
+    t.text     "descriptions"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

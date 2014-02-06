@@ -14,10 +14,12 @@
               img src=@main_catalog.image.url
             .clearfix
           .clearfix
+        .curent-brand-descriptions
+          = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@it_et.each do |ie|
-            - s = SubCatalog.find ie.sub_catalog_id
-            - m = MainCatalog.find s.main_catalog_id
+            /- s = SubCatalog.find ie.sub_catalog_id
+            /- m = MainCatalog.find s.main_catalog_id
             .columns.large-3.ie-one-item.float-left
               a.fancybox href="#ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group"
                 img src=ie.image_structure.url(:thumb)
@@ -40,10 +42,10 @@
                         |&nbsp;)
                       .columns.floor-breadcrambs
                         span
-                          |//&nbsp;
-                          = m.name
-                          |&nbsp;/&nbsp;
-                          = link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
+                          /|//&nbsp;
+                          /= m.name
+                          /|&nbsp;/&nbsp;
+                          /= link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
 
                       .int-image-wrap
                         h4.int-ext-s

@@ -27,7 +27,6 @@ class Publication < ActiveRecord::Base
       field :title
       field :short_description
       field :description, :ck_editor do
-        #label 'image'
       end
       field :image, :paperclip do
         label 'Зображення'

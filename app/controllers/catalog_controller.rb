@@ -9,9 +9,11 @@ class CatalogController < ApplicationController
   def all_collections
     @collections = Brand.find_by_name(params[:brand].gsub('_',' ')).collections
     @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
-    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    @current_brand = Brand.find_by_name(params[:brand].gsub('_',' '))
 
+    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
     @subcat = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
+
     @it_et = Brand.find_by_name(params[:brand].gsub('_',' ')).int_exts
     @ext = Brand.find_by_name(params[:brand].gsub('_',' ')).exteriors
     @rel_prod = Brand.find_by_name(params[:brand].gsub('_',' ')).related_products

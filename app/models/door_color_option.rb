@@ -11,6 +11,7 @@ class DoorColorOption < ActiveRecord::Base
 
 
   rails_admin do
+
     navigation_label 'Двері'
     label 'Варіанти кольору'
     label_plural 'Варіанти кольору'
@@ -19,9 +20,7 @@ class DoorColorOption < ActiveRecord::Base
       field :name
       field :image
       field :alt_image
-      #field :description_image
       field :title_image
-
     end
 
     edit do
@@ -31,9 +30,8 @@ class DoorColorOption < ActiveRecord::Base
         help ' Розмір фотографії 1400x700.'
       end
       field :alt_image
-      #field :description_image
       field :title_image
-
     end
+
   end
 end

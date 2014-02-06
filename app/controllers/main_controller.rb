@@ -34,5 +34,10 @@ class MainController < ApplicationController
     @contact = Contact.new
     @contact_page = ContanctPage.order('updated_at desc')
     @region_person = RegionContact.order('region asc')
+
+  end
+
+  def terms_of_use
+    @tou = TermsOfUse.all
   end
 end

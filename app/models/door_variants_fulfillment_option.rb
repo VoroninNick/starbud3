@@ -10,8 +10,8 @@ class DoorVariantsFulfillmentOption < ActiveRecord::Base
 
   has_many :door_color_options
 
-  accepts_nested_attributes_for :door_color_options#, :allow_destroy => true
-  attr_accessible :door_color_options_attributes#, :allow_destroy => true
+  accepts_nested_attributes_for :door_color_options
+  attr_accessible :door_color_options_attributes
 
   rails_admin do
     navigation_label 'Двері'
@@ -21,7 +21,6 @@ class DoorVariantsFulfillmentOption < ActiveRecord::Base
       field :name
       field :image
       field :alt_image
-      #field :description_image
       field :title_image
       field :door_color_options
 
@@ -34,7 +33,6 @@ class DoorVariantsFulfillmentOption < ActiveRecord::Base
         help 'Перша завантажена фотографія буде відображатися як головна. Розмір фотографії 1400x700.'
       end
       field :alt_image
-      #field :description_image
       field :title_image
       field :door_color_options
 

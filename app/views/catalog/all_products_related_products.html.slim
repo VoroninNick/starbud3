@@ -17,6 +17,8 @@
               img src=@main_catalog.image.url
             .clearfix
           .clearfix
+        .curent-brand-descriptions
+          = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@rel_prod.each do |r|
             /- s = SubCatalog.find rpr.sub_catalog_id

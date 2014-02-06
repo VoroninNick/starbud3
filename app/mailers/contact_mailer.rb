@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class UserMailer < ActionMailer::Base
+class ContactMailer < ActionMailer::Base
   default from: "support@voroninstudio.eu"
   default to: 	'nazariy.papizh@gmail.com'
 
@@ -12,4 +12,5 @@ class UserMailer < ActionMailer::Base
     #default to: to
     mail(:subject => "New message from your website!", to: to)
   end
+
 end

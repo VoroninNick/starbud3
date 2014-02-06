@@ -40,7 +40,7 @@
         h4
           |Зворотній зв’язок:
     .contacts-form
-      = simple_form_for @contact, :html => {:class => 'form-horizontal' },url:  contacts_path, method: :post do |f|
+      = simple_form_for @contact, :html => {:class => 'form-horizontal' },:url => contacts_path do |f|
         .columns.large-6.form-horizontal-left
           = f.input :name, :required => true, placeholder: 'Олександр Олександрієвський', :label=>false, :class=>" name"
           = f.label :"ім'я", :for=>"contact_name"

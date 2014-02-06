@@ -20,8 +20,8 @@ class Floor < ActiveRecord::Base
   belongs_to :collection
 
   has_many :floor_technical_datas
-  accepts_nested_attributes_for :floor_technical_datas#, :allow_destroy => true
-  attr_accessible :floor_technical_datas_attributes#, :allow_destroy => true
+  accepts_nested_attributes_for :floor_technical_datas
+  attr_accessible :floor_technical_datas_attributes
 
   rails_admin do
     navigation_label 'Підлога'
@@ -50,7 +50,6 @@ class Floor < ActiveRecord::Base
       end
       field :alt_inter
       field :title_inter
-      #field :desc_inter
       field :floor_technical_datas
 
       field :image_structure, :paperclip do
@@ -59,14 +58,12 @@ class Floor < ActiveRecord::Base
       end
       field :alt_struct
       field :title_struct
-      #field :desc_struct
       field :image_perspective, :paperclip do
         label 'Перспектива'
         help 'розмір зображення повинен бути 840x315'
       end
       field :alt_per
       field :title_per
-      #field :desc_per
     end
 
   end

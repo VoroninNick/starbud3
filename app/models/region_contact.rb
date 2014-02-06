@@ -1,8 +1,6 @@
 class RegionContact < ActiveRecord::Base
   attr_accessible :region, :name, :phones, :mails, :contanct_page_id, :index_sorting
 
-  #belongs_to :contanct_page
-
   rails_admin do
     navigation_label 'Контакти'
     label 'Регіональний представник'
