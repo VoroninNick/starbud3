@@ -7,7 +7,7 @@
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\assets\images\about_us\certeficate\16\image_thumb.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\013\original\268662389_640.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\014\original\brand-test.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
     </list>
     <ignored path="StarBud.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +40,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="about_articles.css.scss.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="about_articles.css.scss.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="0.3617021" vertical-offset="0" max-vertical-offset="2074">
+            <state line="6" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="2074">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css.scss.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1214" column="17" selection-start="37254" selection-end="37254" vertical-scroll-proportion="0.7732342" vertical-offset="20430" max-vertical-offset="31195">
               <folding />
             </state>
           </provider>
@@ -116,11 +125,11 @@
         <option value="$PROJECT_DIR$/app/controllers/errors_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/error.html.slim" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/errors/not_found_error.htm.slim" />
         <option value="$PROJECT_DIR$/app/views/errors/internal_server_error.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
       </list>
     </option>
   </component>
@@ -701,7 +710,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1308" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38619676" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -715,7 +724,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2584" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47283408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47283408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1086,16 +1095,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1795" column="43" selection-start="51858" selection-end="51858" vertical-scroll-proportion="-4.509804" vertical-offset="30285" max-vertical-offset="31195">
+        <state line="6" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="2074">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="0.3617021" vertical-offset="0" max-vertical-offset="2074">
+        <state line="1214" column="17" selection-start="37254" selection-end="37254" vertical-scroll-proportion="0.7732342" vertical-offset="20430" max-vertical-offset="31195">
           <folding />
         </state>
       </provider>
