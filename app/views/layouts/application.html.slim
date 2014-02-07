@@ -3,8 +3,6 @@ html lang="en"
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    /content_for :title
-    /meta name="keywords" content="#{ meta_keywords }"
     meta name="description" content="Стар-Буд - гуртовий та роздрібний продаж найкращих матеріалів для будь-яких будівельних, ремонтних, реставраційних та оздоблюваних робіт. Двері, підлога, фурнітура, матеріали для утеплення, карнизи, підвіконники, лінолеум, шпалери від найкращих світових виробників."
     = favicon_link_tag 'favicon.ico', rel: 'Стар-Буд'
     title == content_for?(:title) ? yield(:title) : "Стар Буд"

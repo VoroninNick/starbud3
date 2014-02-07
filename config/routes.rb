@@ -1,11 +1,5 @@
 # coding: utf-8
 StarBud::Application.routes.draw do
-
-  if Rails.env.production?
-    get '404', :to => 'errors#page_not_found'
-    get '422', :to => 'errors#server_error'
-    get '500', :to => 'errors#server_error'
-  end
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -18,7 +12,6 @@ StarBud::Application.routes.draw do
   get "/contacts" => "main#contacts", :as => :contacts
   get "/terms_of_used" => "main#terms_of_use", :as => :tou
   root 'main#index'
-  #map.sitemap '/sitemap.xml', :controller => 'sitemap'
 
 
   resources :promotions

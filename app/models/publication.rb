@@ -2,7 +2,7 @@ class Publication < ActiveRecord::Base
   attr_accessible :title, :image, :short_description, :description, :url
 
   has_attached_file :image, styles:{
-      thumb: "260x260#", large: "800x800>"
+      thumb: "260x260#", medium: "454x322#", large: "800x800>"
   },url:'/assets/images/publications/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 

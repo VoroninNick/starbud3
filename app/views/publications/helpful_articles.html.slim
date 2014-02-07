@@ -44,7 +44,7 @@
             /a href = helpful_article_item_path(article.id) =truncate article.title, length: 60, omission: '...', :class => current_class?(helpful_article_item_path)
           span =article.created_at.strftime("%d. %m. %Y")
           .image
-            img src=article.image
+            img src=article.image.url(:medium)
           p =truncate_html article.short_description, length: 130, omission: '...'
 
 
