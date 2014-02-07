@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  helper_method :seo_meta_tags
+  def seo_meta_tags
+    return SeoMetaTags.order('updated_at asc').limit(1)
+  end
   helper_method :main_catalog
   def main_catalog
     return  MainCatalog.order('index_main_catalog asc')

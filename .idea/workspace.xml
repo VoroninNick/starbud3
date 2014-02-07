@@ -7,24 +7,26 @@
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\assets\images\about_us\certeficate\16\image_thumb.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\013\original\268662389_640.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\014\original\brand-test.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/1/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/1/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/2/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/2/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/3/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/3/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/4/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/4/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/5/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/5/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/6/image_large.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/6/image_large.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/1/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/1/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/2/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/2/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/3/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/3/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/4/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/4/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/5/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/5/image_thumb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/publications/6/image_thumb.jpg" afterPath="$PROJECT_DIR$/public/assets/images/publications/6/image_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" afterPath="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim" afterPath="$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/about.html.slim" afterPath="$PROJECT_DIR$/app/views/main/about.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/actions.html.slim" afterPath="$PROJECT_DIR$/app/views/main/actions.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.yml" afterPath="$PROJECT_DIR$/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/contacts.html.slim" afterPath="$PROJECT_DIR$/app/views/main/contacts.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/door.rb" afterPath="$PROJECT_DIR$/app/models/door.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim" afterPath="$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/publication.rb" afterPath="$PROJECT_DIR$/app/models/publication.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.slim" afterPath="$PROJECT_DIR$/app/views/main/index.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/publications/interesting_news.html.slim" afterPath="$PROJECT_DIR$/app/views/publications/interesting_news.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/special_offer.rb" afterPath="$PROJECT_DIR$/app/models/special_offer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/terms_of_use.html.slim" afterPath="$PROJECT_DIR$/app/views/main/terms_of_use.html.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" afterPath="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarBud.iws" />
@@ -37,11 +39,11 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/StarBud@db_rollback__StarBud.coverage" NAME="db:rollback: StarBud Coverage Results" MODIFIED="1391787823791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@Rails_console__StarBud.coverage" NAME="Rails console: StarBud Coverage Results" MODIFIED="1391461148178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
-    <SUITE FILE_PATH="coverage/StarBud@db_rollback__StarBud.coverage" NAME="db:rollback: StarBud Coverage Results" MODIFIED="1391423406194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@assets_precompile__StarBud.coverage" NAME="assets:precompile: StarBud Coverage Results" MODIFIED="1387990417382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
-    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1391780422853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
-    <SUITE FILE_PATH="coverage/StarBud@db_migrate__StarBud.coverage" NAME="db:migrate: StarBud Coverage Results" MODIFIED="1391683388556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
+    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1391791216133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
+    <SUITE FILE_PATH="coverage/StarBud@db_migrate__StarBud.coverage" NAME="db:migrate: StarBud Coverage Results" MODIFIED="1391790472384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_reset__StarBud.coverage" NAME="db:reset: StarBud Coverage Results" MODIFIED="1387495712203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/StarBud@Production__StarBud.coverage" NAME="Production: StarBud Coverage Results" MODIFIED="1389865374271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_create__StarBud.coverage" NAME="db:create: StarBud Coverage Results" MODIFIED="1388359224052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
@@ -57,35 +59,7 @@
     <favorites_list name="StarBud" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="interesting_news.html.slim" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/publications/interesting_news.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publications.css.scss.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="197" selection-end="197" vertical-scroll-proportion="0.204" vertical-offset="0" max-vertical-offset="6120">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publication.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/publication.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="42" selection-start="372" selection-end="372" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -106,23 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20140206090058_create_feedback_emails.rb" />
-        <option value="$PROJECT_DIR$/app/models/feedback_email.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/gmail.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/contact_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/models/contact.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/create.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/contacts/new.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/main/contacts.html.slim" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/contacts.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-        <option value="$PROJECT_DIR$/app/models/contanct_page.rb" />
-        <option value="$PROJECT_DIR$/app/models/document.rb" />
-        <option value="$PROJECT_DIR$/app/models/door_color_option.rb" />
-        <option value="$PROJECT_DIR$/app/models/door_variants_fulfillment_option.rb" />
-        <option value="$PROJECT_DIR$/app/models/floor.rb" />
-        <option value="$PROJECT_DIR$/app/models/for_brand.rb" />
         <option value="$PROJECT_DIR$/app/models/main_banner_slide.rb" />
         <option value="$PROJECT_DIR$/app/models/pdf_catalog.rb" />
         <option value="$PROJECT_DIR$/app/models/publication_banner.rb" />
@@ -132,7 +89,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20140206103142_create_terms_of_uses.rb" />
         <option value="$PROJECT_DIR$/app/models/terms_of_use.rb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/terms_of_use.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sitemap/index.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/catalog_controller.rb" />
@@ -144,19 +100,37 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/errors/server_error.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/errors_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/error.html.slim" />
         <option value="$PROJECT_DIR$/app/views/errors/not_found_error.htm.slim" />
         <option value="$PROJECT_DIR$/app/views/errors/internal_server_error.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/about_articles.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb" />
         <option value="$PROJECT_DIR$/app/models/publication.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim" />
+        <option value="$PROJECT_DIR$/app/models/door.rb" />
+        <option value="$PROJECT_DIR$/app/models/special_offer.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/catalog/door.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
+        <option value="$PROJECT_DIR$/db/migrate/20140207153625_create_seo_meta_tags.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/main/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/main/about.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/main/actions.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/main/contacts.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/main/terms_of_use.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/partials/_publictions_sidebar.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim" />
+        <option value="$PROJECT_DIR$/db/migrate/20140207162213_add_2_field_to_seo.rb" />
+        <option value="$PROJECT_DIR$/app/models/seo_meta_tags.rb" />
+        <option value="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/publications/interesting_news.html.slim" />
       </list>
     </option>
   </component>
@@ -229,20 +203,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -269,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="publications" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,46 +262,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBud" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,7 +324,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Rails.Development: StarBud">
+  <component name="RunManager" selected="Rake.db:migrate: StarBud">
     <configuration default="false" name="assets:precompile: StarBud" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="StarBud" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -695,9 +615,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:create: StarBud" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate: StarBud" />
         <item index="1" class="java.lang.String" itemvalue="Rake.db:rollback: StarBud" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate: StarBud" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:create: StarBud" />
         <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: StarBud" />
         <item index="4" class="java.lang.String" itemvalue="Rake.assets:precompile: StarBud" />
       </list>
@@ -750,7 +670,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-8" width="1308" height="784" extended-state="6" />
+    <frame x="66" y="-8" width="1308" height="784" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -759,11 +679,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2696" sideWeight="0.6712963" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2624" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.224" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64506626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5139912" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.53744495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39353892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.80615383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -793,135 +713,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/pdf_catalog.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="373" selection-end="373" vertical-scroll-proportion="0.33740458" vertical-offset="0" max-vertical-offset="655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/main_banner_slide.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="35" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/promotion.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/publication_banner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="9" selection-start="819" selection-end="819" vertical-scroll-proportion="0.8564885" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/region_contact.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="84" selection-start="125" selection-end="125" vertical-scroll-proportion="-0.14198473" vertical-offset="110" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/related_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.64174455" vertical-offset="412" max-vertical-offset="1054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/special_offer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/subscribe.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/video_on_main_page.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="397" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/useful_video.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/feedback_email.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="233" selection-end="233" vertical-scroll-proportion="0.47582698" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140206103142_create_terms_of_uses.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="167" selection-end="167" vertical-scroll-proportion="0.38931298" vertical-offset="0" max-vertical-offset="393">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/terms_of_use.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="243" selection-end="243" vertical-scroll-proportion="0.38931298" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/terms_of_use.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sitemap_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="259" selection-end="259" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.13149351" vertical-offset="81" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/interest_news_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/interest_news.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="94.0" vertical-offset="2444" max-vertical-offset="3060" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_floor.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="85" selection-start="993" selection-end="993" vertical-scroll-proportion="-0.14385965" vertical-offset="626" max-vertical-offset="1615" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="58" selection-start="1728" selection-end="1728" vertical-scroll-proportion="0.6" vertical-offset="357" max-vertical-offset="1156" />
@@ -934,12 +725,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+        <state line="7" column="26" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/catalog_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309" />
+        <state line="11" column="4" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim">
@@ -984,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1214" column="17" selection-start="37254" selection-end="37254" vertical-scroll-proportion="0.0" vertical-offset="20430" max-vertical-offset="31195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="635" column="0" selection-start="12746" selection-end="12746" vertical-scroll-proportion="0.0" vertical-offset="10497" max-vertical-offset="12529">
@@ -1005,25 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="443" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/publications.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="39" selection-start="346" selection-end="346" vertical-scroll-proportion="0.76119405" vertical-offset="0" max-vertical-offset="544">
@@ -1031,23 +800,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="72" selection-start="132" selection-end="132" vertical-scroll-proportion="0.29694322" vertical-offset="0" max-vertical-offset="3995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/publication.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="372" selection-end="372" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.37777779" vertical-offset="0" max-vertical-offset="630">
+        <state line="8" column="42" selection-start="372" selection-end="372" vertical-scroll-proportion="0.28041238" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
@@ -1059,23 +814,308 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.77272725" vertical-offset="306" max-vertical-offset="969">
+        <state line="2" column="54" selection-start="182" selection-end="182" vertical-scroll-proportion="0.072186835" vertical-offset="0" max-vertical-offset="6069">
+          <folding>
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391782332975" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1452" column="0" selection-start="43209" selection-end="43282" vertical-scroll-proportion="0.33183858" vertical-offset="24536" max-vertical-offset="31195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.86624205" vertical-offset="408" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/article_about.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/about_article.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/promotion.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/special-offers/4/image_thumb.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/special-offers/4/image_original.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/door.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="60" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/special_offer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="62" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="15" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_catalogs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.011601" vertical-offset="867" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140207153625_create_seo_meta_tags.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="96" selection-start="961" selection-end="1107" vertical-scroll-proportion="0.77862597" vertical-offset="340" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="352" selection-end="352" vertical-scroll-proportion="-0.09090909" vertical-offset="306" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="72" selection-start="132" selection-end="132" vertical-scroll-proportion="-0.3908046" vertical-offset="204" max-vertical-offset="4012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="58" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="52" selection-start="240" selection-end="240" vertical-scroll-proportion="0.29310346" vertical-offset="0" max-vertical-offset="3128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="65" selection-start="331" selection-end="331" vertical-scroll-proportion="0.51800555" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/about.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="0.16216215" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/actions.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="55" selection-end="217" vertical-scroll-proportion="0.027597403" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/contacts.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="49" selection-start="178" selection-end="178" vertical-scroll-proportion="0.11038961" vertical-offset="0" max-vertical-offset="2584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/publications.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/terms_of_use.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="54" selection-start="222" selection-end="222" vertical-scroll-proportion="0.10810811" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_publictions_sidebar.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="481" selection-end="481" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/seo_meta_tags.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="38" selection-start="3707" selection-end="3707" vertical-scroll-proportion="0.57214767" vertical-offset="2056" max-vertical-offset="2652">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140207162213_add_2_field_to_seo.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="72" selection-start="438" selection-end="438" vertical-scroll-proportion="0.28549618" vertical-offset="0" max-vertical-offset="655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/publications/useful_video.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="86" selection-end="226" vertical-scroll-proportion="0.09418283" vertical-offset="0" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/publications/interesting_news.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+        <state line="4" column="53" selection-start="227" selection-end="227" vertical-scroll-proportion="0.18836565" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/publications.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="197" selection-end="197" vertical-scroll-proportion="0.204" vertical-offset="0" max-vertical-offset="6120">
+        <state line="2" column="34" selection-start="103" selection-end="120" vertical-scroll-proportion="0.09770115" vertical-offset="0" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>

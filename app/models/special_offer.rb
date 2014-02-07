@@ -5,7 +5,7 @@ class SpecialOffer < ActiveRecord::Base
       thumb: "200x200>"
   },url:'/assets/images/special-offers/:id/image_:style.:extension',
                     path:':rails_root/public:url'
-  has_many :door
+  has_one :door
 
   rails_admin do
     navigation_label 'Іконки акцій'

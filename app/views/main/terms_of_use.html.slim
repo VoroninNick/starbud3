@@ -1,4 +1,8 @@
 .row.terms_of_use.page-content-wrapper-box-shadow
+  -seo_meta_tags.each do |s|
+    = title "#{s.terms_of_used_title}"
+    = meta_keywords "#{s.terms_of_used_keywords}"
+    = meta_description "#{s.terms_of_used_descriptions}"
   .large-12.columns
     - @tou.each do |t|
       = raw t.descriptions

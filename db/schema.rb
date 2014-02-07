@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206103142) do
+ActiveRecord::Schema.define(version: 20140207162213) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -513,6 +513,38 @@ ActiveRecord::Schema.define(version: 20140206103142) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+  end
+
+  create_table "seo_meta_tags", force: true do |t|
+    t.text     "index_title"
+    t.text     "index_keywords"
+    t.text     "index_descriptions"
+    t.text     "about_us_title"
+    t.text     "about_us_keywords"
+    t.text     "about_us_descriptions"
+    t.text     "promotion_title"
+    t.text     "promotion_keywords"
+    t.text     "promotion_descriptions"
+    t.text     "contacts_title"
+    t.text     "contacts_keywords"
+    t.text     "contacts_descriptions"
+    t.text     "terms_of_used_title"
+    t.text     "terms_of_used_keywords"
+    t.text     "terms_of_used_descriptions"
+    t.text     "site_map_title"
+    t.text     "site_map_keywords"
+    t.text     "site_map_descriptions"
+    t.text     "publication_title"
+    t.text     "publication_keywords"
+    t.text     "publication_descriptions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "useful_video_title"
+    t.text     "useful_video_keyword"
+    t.text     "useful_video_description"
+    t.text     "interest_news_title"
+    t.text     "interest_news_keyword"
+    t.text     "interest_news_description"
   end
 
   create_table "special_offers", force: true do |t|

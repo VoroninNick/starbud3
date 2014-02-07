@@ -2,6 +2,7 @@ class Door < ActiveRecord::Base
   attr_accessible :name, :descriptions, :action_id, :collection_id, :brand_id, :door_url, :special_offer_id
 
   belongs_to :collection
+
   belongs_to :special_offer
 
   has_many :door_variants_fulfillment_options
