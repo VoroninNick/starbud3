@@ -13,11 +13,11 @@ def current_class?(test_path)
   ''
 end
 #Наступних 3 обявлення для SEO
-def title(title = nil)
+def m_title(title = nil)
   if title.present?
-    content_for :title, title
+    content_for :m_title, title
   else
-    content_for?(:title) ? APP_CONFIG['default_title'] + ' | ' + content_for(:title) : APP_CONFIG['default_title']
+    content_for?(:m_title) ? APP_CONFIG['default_title'] + ' | ' + content_for(:m_title) : APP_CONFIG['default_title']
   end
 end
 def meta_keywords(tags = nil)
