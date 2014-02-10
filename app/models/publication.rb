@@ -11,6 +11,10 @@ class Publication < ActiveRecord::Base
     self.url ||= title.parameterize
   end
 
+  has_one :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic
+  attr_accessible :seo_dynamic_attributes
+
   rails_admin do
     navigation_label 'Публікації'
     label 'Корисні статті'
@@ -31,6 +35,9 @@ class Publication < ActiveRecord::Base
       field :image, :paperclip do
         label 'Зображення'
         help 'Зображення повинне мати розмір 800 х 800'
+      end
+      field :seo_dynamic do
+        label 'SEO'
       end
     end
   end

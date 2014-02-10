@@ -7,6 +7,9 @@ class SeoMetaTags < ActiveRecord::Base
 
   attr_accessible :useful_video_title, :useful_video_keyword, :useful_video_description, :interest_news_title, :interest_news_keyword, :interest_news_description
 
+  attr_accessible :floor_title, :floor_keyword, :floor_description, :int_ext_title, :int_ext_keyword, :int_ext_description
+
+  attr_accessible :exterior_title, :exterior_keyword, :exterior_description, :related_product_title, :related_product_keyword, :related_product_description
 
   rails_admin do
 
@@ -24,6 +27,10 @@ class SeoMetaTags < ActiveRecord::Base
       field :publication_title
       field :useful_video_title
       field :interest_news_title
+      field :floor_title
+      field :int_ext_title
+      field :exterior_title
+      field :related_product_title
     end
     edit do
 
@@ -144,6 +151,57 @@ class SeoMetaTags < ActiveRecord::Base
         help "Description"
       end
 
+      field :floor_title do
+        label "Підлога"
+        help "title"
+      end
+      field :floor_keyword do
+        label "Підлога"
+        help "keywords"
+      end
+      field  :floor_description do
+        label "Підлога"
+        help "description"
+      end
+
+      field :int_ext_title do
+        label "Інтер'єр"
+        help "title"
+      end
+      field :int_ext_keyword do
+        label "Інтер'єр"
+        help "keywords"
+      end
+      field :int_ext_description do
+        label "Інтер'єр"
+        help "description"
+      end
+
+      field :exterior_title do
+        label "Екстер'єр"
+        help "title"
+      end
+      field :exterior_keyword do
+        label "Екстер'єр"
+        help "keywords"
+      end
+      field :exterior_description do
+        label "Екстер'єр"
+        help "description"
+      end
+
+      field :related_product_title do
+        label "Супутні товари"
+        help "title"
+      end
+      field :related_product_keyword do
+        label "Супутні товари"
+        help "keywords"
+      end
+      field :related_product_description do
+        label "Супутні товари"
+        help "description"
+      end
     end
   end
 

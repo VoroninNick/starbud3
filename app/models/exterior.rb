@@ -51,5 +51,6 @@ class Exterior < ActiveRecord::Base
       field :alt_struct
       field :title_struct
     end
+
   end
 end

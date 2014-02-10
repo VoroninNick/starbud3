@@ -1,4 +1,9 @@
 .row.catalog-wrapper
+  -if seo_meta_tags
+    -seo_meta_tags.each do |s|
+      = m_title "#{s.floor_title}"
+      = meta_keywords "#{s.floor_keyword}"
+      = meta_description "#{s.floor_description}"
   .columns.large-12
     .row
       = render :partial => 'partials/catalog_sidebar'
@@ -27,6 +32,7 @@
           .floor-desription
             h2 = @current_collection.name
             p = raw @current_collection.descriptions
+
           .coll-line
             h3
               |Колекцiя

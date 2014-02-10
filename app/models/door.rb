@@ -15,6 +15,10 @@ class Door < ActiveRecord::Base
 
   attr_accessible :table
 
+  has_one :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic
+  attr_accessible :seo_dynamic_attributes
+
   before_validation :door_url
   def generate_door_url
     self.door_url ||= name.parameterize
@@ -79,6 +83,9 @@ class Door < ActiveRecord::Base
       field :dor_informations do
         label 'Додаткова інформація'
         help 'Технічні харектеристики. Догляд. Умови гарантії.'
+      end
+      field :seo_dynamic do
+        label 'SEO'
       end
     end
 

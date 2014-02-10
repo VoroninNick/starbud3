@@ -1,8 +1,9 @@
 .row.content-wrapper
-  -seo_meta_tags.each do |s|
-    = m_title "#{s.contacts_title}"
-    = meta_keywords "#{s.contacts_keywords}"
-    = meta_description "#{s.contacts_descriptions}"
+  -if seo_meta_tags
+    -seo_meta_tags.each do |s|
+      = m_title "#{s.contacts_title}"
+      = meta_keywords "#{s.contacts_keywords}"
+      = meta_description "#{s.contacts_descriptions}"
   .columns.large-12
     -@contact_page.each do |c|
       .columns.large-4

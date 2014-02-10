@@ -1,4 +1,8 @@
 .row.publication-article-wrapper.page-content-wrapper-box-shadow
+  - if @interest_news_item.seo_dynamic
+    = m_title "#{@interest_news_item.seo_dynamic.meta_title}"
+    = meta_keywords "#{@interest_news_item.seo_dynamic.meta_keywords}"
+    = meta_description "#{@interest_news_item.seo_dynamic.meta_descriptions}"
   .columns.breadcrambs
     span
       |//&nbsp;

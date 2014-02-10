@@ -1,8 +1,9 @@
 .row.publication-wrapper.page-content-wrapper-box-shadow
-  -seo_meta_tags.each do |s|
-    = m_title "#{s.publication_title}"
-    = meta_keywords "#{s.publication_keywords}"
-    = meta_description "#{s.publication_descriptions}"
+  -if seo_meta_tags
+    -seo_meta_tags.each do |s|
+      = m_title "#{s.publication_title}"
+      = meta_keywords "#{s.publication_keywords}"
+      = meta_description "#{s.publication_descriptions}"
   .columns.breadcrambs
     span
       |//&nbsp;

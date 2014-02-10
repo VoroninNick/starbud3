@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140207162213) do
+ActiveRecord::Schema.define(version: 20140210120345) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -515,6 +515,24 @@ ActiveRecord::Schema.define(version: 20140207162213) do
     t.text     "desc_per"
   end
 
+  create_table "seo_dynamics", force: true do |t|
+    t.text     "meta_title"
+    t.text     "meta_keywords"
+    t.text     "meta_descriptions"
+    t.integer  "door_id"
+    t.integer  "floor_id"
+    t.integer  "int_ext_id"
+    t.integer  "exterior_id"
+    t.integer  "related_product_id"
+    t.integer  "collection_id"
+    t.integer  "brand_id"
+    t.integer  "sub_catalog_id"
+    t.integer  "publication_id"
+    t.integer  "interest_news_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "seo_meta_tags", force: true do |t|
     t.text     "index_title"
     t.text     "index_keywords"
@@ -545,6 +563,18 @@ ActiveRecord::Schema.define(version: 20140207162213) do
     t.text     "interest_news_title"
     t.text     "interest_news_keyword"
     t.text     "interest_news_description"
+    t.text     "floor_title"
+    t.text     "floor_keyword"
+    t.text     "floor_description"
+    t.text     "int_ext_title"
+    t.text     "int_ext_keyword"
+    t.text     "int_ext_description"
+    t.text     "exterior_title"
+    t.text     "exterior_keyword"
+    t.text     "exterior_description"
+    t.text     "related_product_title"
+    t.text     "related_product_keyword"
+    t.text     "related_product_description"
   end
 
   create_table "special_offers", force: true do |t|

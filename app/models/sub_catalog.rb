@@ -17,6 +17,10 @@ class SubCatalog < ActiveRecord::Base
     self.sub_catalog_url ||= name.parameterize
   end
 
+  has_one :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic
+  attr_accessible :seo_dynamic_attributes
+
   rails_admin do
     navigation_label 'Каталог'
     label 'Під каталог'
@@ -37,6 +41,9 @@ class SubCatalog < ActiveRecord::Base
       field :description, :ck_editor do
         label 'Опис'
         help 'Опис до підкаталога, якщо він потрібний'
+      end
+      field :seo_dynamic do
+        label 'SEO'
       end
     end
   end

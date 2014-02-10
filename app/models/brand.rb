@@ -22,6 +22,10 @@ class Brand < ActiveRecord::Base
     self.brand_url ||= name.parameterize
   end
 
+  has_one :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic
+  attr_accessible :seo_dynamic_attributes
+
   rails_admin do
     navigation_label 'Каталог'
     label 'Бренд'
@@ -56,6 +60,9 @@ class Brand < ActiveRecord::Base
         end
         label "Під каталог"
         help "Виберіть із випадаючого списку назву під каталогу ,до якого відноситься бренд який ви заповняєте."
+      end
+      field :seo_dynamic do
+        label 'SEO'
       end
 
     end

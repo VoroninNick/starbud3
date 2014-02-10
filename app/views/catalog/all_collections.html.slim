@@ -1,4 +1,8 @@
 .row.catalog-wrapper
+  - if @current_brand.seo_dynamic
+    = m_title "#{@current_brand.seo_dynamic.meta_title}"
+    = meta_keywords "#{@current_brand.seo_dynamic.meta_keywords}"
+    = meta_description "#{@current_brand.seo_dynamic.meta_descriptions}"
   .columns.large-12
     .row
       = render :partial => 'partials/catalog_sidebar'

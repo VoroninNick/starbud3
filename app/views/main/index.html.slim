@@ -1,9 +1,10 @@
 = render :partial => 'partials/main_banner'
 .row.thumbnail-panel-box-shadow-top
-  -seo_meta_tags.each do |s|
-    = m_title "#{s.index_title}"
-    = meta_keywords "#{s.index_keywords}"
-    = meta_description "#{s.index_descriptions}"
+  -if seo_meta_tags
+    -seo_meta_tags.each do |s|
+      = m_title "#{s.index_title}"
+      = meta_keywords "#{s.index_keywords}"
+      = meta_description "#{s.index_descriptions}"
 .clearfix
 .row.search-bar.box-shadow-bottom
   .columns.large-5

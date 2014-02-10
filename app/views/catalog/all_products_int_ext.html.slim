@@ -1,4 +1,9 @@
 .row.catalog-wrapper
+  -if seo_meta_tags
+    -seo_meta_tags.each do |s|
+      = m_title "#{s.int_ext_title}"
+      = meta_keywords "#{s.int_ext_keyword}"
+      = meta_description "#{s.int_ext_description}"
   .columns.large-12
     .row
       = render :partial => 'partials/catalog_sidebar'

@@ -24,6 +24,10 @@ class Collection < ActiveRecord::Base
     self.collection_url ||= name.parameterize
   end
 
+  has_one :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic
+  attr_accessible :seo_dynamic_attributes
+
   rails_admin do
     navigation_label 'Каталог'
     label 'Колекція'
@@ -55,6 +59,9 @@ class Collection < ActiveRecord::Base
 
         label "Бренд"
         help "Виберіть із випадаючого списку назву бренду ,до якого відноситься колекція яку ви вводите."
+      end
+      field :seo_dynamic do
+        label 'SEO'
       end
     end
   end
