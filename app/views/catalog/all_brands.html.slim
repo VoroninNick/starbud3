@@ -13,8 +13,14 @@
           .catalog-content-title-inner
             .titles
               .title-top
-                -if @main_catalog.name == "Супутнi товари"
+                -if @main_catalog.main_catalogs_url == "suputni-tovari"
                   h3.related_products_title = @main_catalog.name
+                -elsif @main_catalog.main_catalogs_url == "ekster-er"
+                  h3
+                    |Екстер'eр
+                -elsif @main_catalog.main_catalogs_url == "inter-er"
+                  h3
+                    |Iнтер'eр
                 -else
                   h3 = @main_catalog.name
                 .clearfix
@@ -32,9 +38,9 @@
             - m = MainCatalog.find s.main_catalog_id
             .columns.large-3.float-left.item.brand-item
               .image
-                a href=my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), brands.name.gsub(' ','_'))
+                a href=my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brands.brand_url)
                   img src=brands.image
               h5
-                = link_to brands.name, my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'),  brands.name.gsub(' ','_'))
+                = link_to brands.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brands.brand_url)
               p
                 = "("+brands.country+")"

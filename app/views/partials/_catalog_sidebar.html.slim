@@ -14,15 +14,15 @@
                 ul.sub-cat
                   -si.sub_catalogs.each do |sc|
                     li
-                      = link_to sc.name, my_sub_catalog_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'))
+                      = link_to sc.name, my_sub_catalog_path(si.main_catalogs_url, sc.sub_catalog_url)
                       ul.brands-cat
                         -sc.brands.each do |br|
                           li
-                            = link_to br.name, my_collection_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'), br.name.gsub(' ','_'))
+                            = link_to br.name, my_collection_path(si.main_catalogs_url, sc.sub_catalog_url, br.brand_url)
                             ul.coll-cat
                               -br.collections.each do |c|
                                 li
-                                  = link_to c.name, all_products_from_collection_path(si.name.gsub(' ','_'), sc.name.gsub(' ','_'), br.name.gsub(' ','_'), c.name.gsub(' ','_') )
+                                  = link_to c.name, all_products_from_collection_path(si.main_catalogs_url, sc.sub_catalog_url, br.brand_url, c.collection_url )
 
           ul
             li.sidebar-menu.side-bar-visual-constructor

@@ -6,15 +6,16 @@ class SubCatalog < ActiveRecord::Base
   has_attached_file :image
 
   belongs_to :main_catalog
+  validates_presence_of :main_catalog, :message => "Заповніть поле головний каталог. Бранд не збережений."
 
   has_many :brands
   accepts_nested_attributes_for :brands
   attr_accessible :brands
 
   validates :name, :uniqueness => true, presence: true
-  before_validation :sub_catalog_url
+  before_validation :generate_sub_catalog_url
   def generate_sub_catalog_url
-    self.sub_catalog_url ||= name.parameterize
+    self.sub_catalog_url = name.parameterize
   end
 
   has_one :seo_dynamic

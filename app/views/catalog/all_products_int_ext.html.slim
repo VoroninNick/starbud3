@@ -13,7 +13,8 @@
             .line
           .catalog-content-title-inner
             .titles
-              h3 = @main_catalog.name
+              h3
+                |Iнтер'ер
               h4 = @current_sub_catalog.name
             .image.box-shadow-right-bottom
               img src=@main_catalog.image.url
@@ -23,20 +24,21 @@
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@it_et.each do |ie|
-            /- s = SubCatalog.find ie.sub_catalog_id
-            /- m = MainCatalog.find s.main_catalog_id
-            .columns.large-3.ie-one-item.float-left
-              a.fancybox href="#ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group"
+            - s = SubCatalog.find ie.sub_catalog_id
+            - m = MainCatalog.find s.main_catalog_id
+            .columns.large-4.ie-one-item.float-left
+              a.fancybox href="#ie-id#{ie.id}"  rel="int-group"
                 img src=ie.image_structure.url(:thumb)
                 .ie-title-info
                   h3
-                    a.fancybox.starbud-link href="#ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group" = ie.name
-                      p
-                        |(&nbsp;
-                        = ie.cpde_product
-                        |&nbsp;)
+                    span.starbud-link = ie.name
+                    p
+                      |(&nbsp;
+                      = ie.cpde_product
+                      |&nbsp;)
+                    .ie-title-info
             div style="display: none"
-              div id="ie-id#{ie.id}" data-fancybox-group="int-group" rel="int-group"
+              div id="ie-id#{ie.id}"  rel="int-group"
                 .row.floor-one-item-wrapper
                   .columns.large-12
                     .columns.large-5
@@ -47,10 +49,10 @@
                         |&nbsp;)
                       .columns.floor-breadcrambs
                         span
-                          /|//&nbsp;
-                          /= m.name
-                          /|&nbsp;/&nbsp;
-                          /= link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
+                          |//&nbsp;
+                          = m.name
+                          |&nbsp;/&nbsp;
+                          = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
 
                       .int-image-wrap
                         h4.int-ext-s

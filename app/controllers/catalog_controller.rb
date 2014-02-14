@@ -1,39 +1,40 @@
 class CatalogController < ApplicationController
 
   def all_brands
-    @brand = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' ')).brands
-    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
-    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    @brand = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog]).brands
+    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
   end
 
   def all_collections
-    @collections = Brand.find_by_name(params[:brand].gsub('_',' ')).collections
-    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
-    @current_brand = Brand.find_by_name(params[:brand].gsub('_',' '))
 
-    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
-    @subcat = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
+    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    @current_brand = Brand.find_by_brand_url(params[:brand])
 
-    @it_et = Brand.find_by_name(params[:brand].gsub('_',' ')).int_exts
-    @ext = Brand.find_by_name(params[:brand].gsub('_',' ')).exteriors
-    @rel_prod = Brand.find_by_name(params[:brand].gsub('_',' ')).related_products
+    @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
+    @subcat = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
 
-    if @main_catalog.name =="Iнтер'ер"
+    @it_et = Brand.find_by_brand_url(params[:brand]).int_exts
+    @ext = Brand.find_by_brand_url(params[:brand]).exteriors
+    @rel_prod = Brand.find_by_brand_url(params[:brand]).related_products
+
+    if @main_catalog.main_catalogs_url =="inter-er"
       render "catalog/all_products_int_ext"
-    elsif @main_catalog.name =="Екстер'ер"
+    elsif @main_catalog.main_catalogs_url =="ekster-er"
       render "catalog/all_products_exterior"
-    elsif @main_catalog.name =="Супутнi товари"
+    elsif @main_catalog.main_catalogs_url =="suputni-tovari"
       render "catalog/all_products_related_products"
     end
+    @collections = Brand.find_by_brand_url(params[:brand]).collections
   end
 
   def all_products
-    @door = Collection.find_by_name(params[:collection].gsub('_',' ')).doors
-    @current_collection = Collection.find_by_name(params[:collection].gsub('_',' '))
-    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
-    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    @door = Collection.find_by_collection_url(params[:collection]).doors
+    @current_collection = Collection.find_by_collection_url(params[:collection])
+    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
 
-    @floor = Collection.find_by_name(params[:collection].gsub('_',' ')).floors
+    @floor = Collection.find_by_collection_url(params[:collection]).floors
     if @main_catalog.name =="Пiдлога"
       render "catalog/all_products_floor"
     end
@@ -52,10 +53,12 @@ class CatalogController < ApplicationController
   end
 
   def door
-    c = Collection.find_by_name(params[:collection].gsub('_',' '))
-    @door_test = Door.where(collection_id: c.id, name: params[:door].gsub('_',' ')).first
-    @current_sub_catalog = SubCatalog.find_by_name(params[:sub_catalog].gsub('_',' '))
-    @main_catalog = MainCatalog.find_by_name(params[:main_catalog].gsub('_',' '))
+    c = Collection.find_by_collection_url(params[:collection])
+
+    @door_test = Door.where(collection_id: c.id, door_url: params[:door]).first
+
+    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
   end
 
   def floor

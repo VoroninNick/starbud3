@@ -41,12 +41,12 @@
               .columns.large-3.float-left
                 .item
                   - if door.door_variants_fulfillment_options.count <=0
-                    =link_to image_tag("doors-blank.png")+'',show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' door_blank'
+                    =link_to image_tag("doors-blank.png")+'',show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' door_blank'
                   - else
-                    a href=show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_'))
+                    a href=show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url)
                       img src=door.door_variants_fulfillment_options[0].image(:thumb)
                   h5
-                    = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
+                    = link_to door.name, show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' starbud-link'
                   span
                     |(
                     =@current_collection.name

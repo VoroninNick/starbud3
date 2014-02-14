@@ -13,7 +13,8 @@
             .line
           .catalog-content-title-inner
             .titles
-              h3 = @main_catalog.name
+              h3
+                |Екстер'ер
               h4 = @current_sub_catalog.name
             .image.box-shadow-right-bottom
               img src=@main_catalog.image.url
@@ -23,15 +24,14 @@
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@ext.each do |ext|
-            /- s = SubCatalog.find ext.sub_catalog_id
-            /- m = MainCatalog.find s.main_catalog_id
-            .columns.large-3.ie-one-item.float-left
+            - s = SubCatalog.find ext.sub_catalog_id
+            - m = MainCatalog.find s.main_catalog_id
+            .columns.large-4.ie-one-item.float-left
               a.fancybox href="#ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
                 img src=ext.image_structure.url(:thumb)
                 .ie-title-info
                   h3
-                    a.fancybox.starbud-link href="#ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
-                      = ext.name
+                    span.starbud-link = ext.name
                       p
                         |(&nbsp;
                         = ext.code_product
@@ -48,10 +48,10 @@
                         |&nbsp;)
                       .columns.floor-breadcrambs
                         span
-                          /|//&nbsp;
-                          /= m.name
-                          /|&nbsp;/&nbsp;
-                          /= link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
+                          |//&nbsp;
+                          = m.name
+                          |&nbsp;/&nbsp;
+                          = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
 
                       .int-image-wrap
                         h4.int-ext-s

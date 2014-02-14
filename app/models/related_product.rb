@@ -16,6 +16,12 @@ class RelatedProduct < ActiveRecord::Base
   belongs_to :brand
   attr_accessible :brand
 
+  attr_accessible :related_url
+  before_validation :generate_related_url
+  def generate_related_url
+    self.related_url = name.parameterize
+  end
+
   rails_admin do
     navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
     label "Супутній товар"

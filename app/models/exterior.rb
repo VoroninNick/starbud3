@@ -15,6 +15,13 @@ class Exterior < ActiveRecord::Base
 
   belongs_to :brand
 
+  attr_accessible :exterior_url
+  before_validation :generate_exterior_url
+  def generate_exterior_url
+    self.exterior_url = name.parameterize
+  end
+
+
   rails_admin do
     navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
     label "Екстер'єр"

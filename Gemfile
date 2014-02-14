@@ -67,7 +67,6 @@ gem 'paperclip'
 gem 'cocaine'
 
 gem 'russian'
-
 gem 'rails-i18n'
 
 # Truncate Html
@@ -82,3 +81,5 @@ gem 'time_diff'
 
 ##google se
 #gem "google_cse"
+
+gem 'sitemap_generator'

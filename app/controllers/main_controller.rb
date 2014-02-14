@@ -32,6 +32,7 @@ class MainController < ApplicationController
   def contacts
     @title = "Контакти"
     @contact = Contact.new
+
     @contact_page = ContanctPage.order('updated_at desc')
     @region_person = RegionContact.order('region asc')
 
@@ -39,5 +40,8 @@ class MainController < ApplicationController
 
   def terms_of_use
     @tou = TermsOfUse.all
+  end
+  def send_message
+    ContactMailer.new_message(@contact).deliver
   end
 end

@@ -2,7 +2,7 @@ class PublicationBanner < ActiveRecord::Base
   attr_accessible :title, :image, :short_description, :description, :index_sorting, :link
 
   has_attached_file :image, styles:{
-      large: "1800x600>"
+      large: "1800x900>"
   },url:'/assets/images/publication_banner/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
@@ -26,7 +26,7 @@ class PublicationBanner < ActiveRecord::Base
       end
       field :image do
         label ''
-        help 'Розмір зображення 1800x600'
+        help 'Розмір зображення 1800x900'
       end
       field :short_description do
         label ''

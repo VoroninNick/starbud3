@@ -12,7 +12,7 @@
       span
         |Публікації
       |&nbsp;/&nbsp;
-      = link_to 'Корисні статті', helpful_article_item_path
+      /= link_to 'Корисні статті', helpful_article_item_path
       |&nbsp;/&nbsp;
       span = @helpful_articles_item.title
   .columns.large-12
@@ -41,9 +41,9 @@
         .columns.large-6.publication-item
           .columns
             h4
-              a.starbud-link href = helpful_article_item_path(articles.id) = truncate  articles.title, length: 43, omission: '...'
+              a.starbud-link href = helpful_article_item_path(articles.url) = truncate  articles.title, length: 43, omission: '...'
           .columns.large-4
-            a href = helpful_article_item_path(articles.id)
+            a href = helpful_article_item_path(articles.url)
               img src= articles.image.url(:thumb)
             span.publication-date = articles.created_at.strftime("%d. %m. %Y")
           .columns.large-8

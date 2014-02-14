@@ -10,8 +10,8 @@ class InterestNewsController < ApplicationController
   # GET /interest_news/1
   # GET /interest_news/1.json
   def show
-    @interest_news_item = InterestNews.find_by_id(params[:id])
-    @related_interest_news = InterestNews.where('id != '+params[:id]+'').limit(4).order('updated_at desc')
+    @interest_news_item = InterestNews.find_by_url(params[:url])
+    @related_interest_news = InterestNews.where('url != "'+params[:url]+'"').limit(4).order('updated_at desc')
   end
 
   # GET /interest_news/new
@@ -66,7 +66,7 @@ class InterestNewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_interest_news
-      @interest_news = InterestNews.find(params[:id])
+      @interest_news = InterestNews.find_by_url(:url)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

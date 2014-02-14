@@ -3,6 +3,7 @@ class Door < ActiveRecord::Base
 
   belongs_to :collection
 
+
   belongs_to :special_offer
 
   has_many :door_variants_fulfillment_options
@@ -21,7 +22,7 @@ class Door < ActiveRecord::Base
 
   before_validation :door_url
   def generate_door_url
-    self.door_url ||= name.parameterize
+    self.door_url = name.parameterize
   end
   rails_admin do
     navigation_label 'Двері'
@@ -46,6 +47,7 @@ class Door < ActiveRecord::Base
 
         enum do
           Collection.includes(:brand).all.map { |i| [i.brand.name + ', ' + i.name, i.id] }
+          #Collection.includes(:brand).all.map { |i| [(i.brand.empty? ? '' : i.brand.name + ', ')  + i.name, i.id] }
         end
 
         label 'Колекція'

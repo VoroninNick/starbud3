@@ -1,0 +1,28 @@
+.row.content-wrapper.error-page-wrapper
+  = m_title "404 - ERROR"
+  = meta_keywords "404, error"
+  = meta_description "Ви вибрали неправильні двері, попробуйте ще раз."
+  .large-12.columns
+    .large-6.columns.push-3
+      = image_tag ("404-error.png")
+  .large-10.columns.push-1
+    p
+      b
+        |404
+      |Ви вибрали неправильні двері, попробуйте ще раз.
+      = link_to "Ще раз", root_path
+
+  .row.search-form.err-search
+    .large-8.columns.push-2
+      javascript:
+        (function() {
+          var cx = '010860152595732084541:dgjb7gnpx94';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+              '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      gcse:search

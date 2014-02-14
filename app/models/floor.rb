@@ -23,6 +23,12 @@ class Floor < ActiveRecord::Base
   accepts_nested_attributes_for :floor_technical_datas
   attr_accessible :floor_technical_datas_attributes
 
+  attr_accessible :floor_url
+  before_validation :generate_floor_url
+  def generate_floor_url
+    self.floor_url = name.parameterize
+  end
+
   rails_admin do
     navigation_label 'Підлога'
     label 'Підлога'

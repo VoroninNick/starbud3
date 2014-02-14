@@ -43,12 +43,12 @@
               - b = Brand.find c.brand_id
               - s = SubCatalog.find b.sub_catalog_id
               - m = MainCatalog.find s.main_catalog_id
-              .columns.large-3.float-left.floor-item-wrapper
+              .columns.large-4.float-left.floor-item-wrapper
                 .item.floor-one-item
                   a.fancybox href="#floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
                     img src=f.image_perspective.url(:thum)
                     h5 = f.name
-                     / = link_to door.name, show_door_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'), c.name.gsub(' ','_'), door.name.gsub(' ','_')), class: ' starbud-link'
+                      /= link_to door.name, show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.name.gsub(' ','_')), class: ' starbud-link'
                     span
                       |(
                       =@current_collection.name
@@ -63,16 +63,18 @@
                           .columns.floor-breadcrambs
                             span
                               |//&nbsp;
-                              = link_to b.name, my_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'))
+                              = link_to b.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url)
                               |&nbsp;/&nbsp;
-                              = link_to c.name, all_products_from_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'),c.name.gsub(' ','_'))
+                              = link_to c.name, all_products_from_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url,c.collection_url)
                           h5.tech-pad-top
                             |Технічні дані
                           .flt-image
-                            -f.floor_technical_datas.each do |ftd|
+                            -f.floor_technical_datas.each_with_index do |ftd, i|
                               .column.large-3.ftd-one-item.float-left
                                 img src=ftd.image.url(:thumb) alt=ftd.alt_image title=ftd.title_image
+                              - break if i >= 4
                             .clearfix
+
 
                           .clearfix
 

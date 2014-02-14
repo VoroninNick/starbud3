@@ -15,6 +15,12 @@ class IntExt < ActiveRecord::Base
 
   belongs_to :brand
 
+  attr_accessible :interior_url
+  before_validation :generate_interior_url
+  def generate_interior_url
+    self.interior_url = name.parameterize
+  end
+
   rails_admin do
     navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
     label "Інтер'єр"

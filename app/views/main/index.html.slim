@@ -28,17 +28,18 @@
   .columns.large-6
     .row.search-form
       javascript:
-          (function() {
-            var cx = '010860152595732084541:dgjb7gnpx94';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                '//www.google.com/cse/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-          })();
+        (function() {
+          var cx = '010860152595732084541:dgjb7gnpx94';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+              '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
       gcse:search
+      /= render :partial => 'partials/search'
     .columns.search-bar-background-right
   .clearfix
 .row.main-page-wrapper
@@ -77,7 +78,7 @@
             .columns
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
-                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.name.gsub(' ','_'), sub_catalog.name.gsub(' ','_'))
+                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.main_catalogs_url, sub_catalog.sub_catalog_url)
       .columns.large-4.float-left
         .pdf-block
           -pdf_catalog.each do |pdf|
@@ -170,10 +171,10 @@
                 img src=article.image.url(:thumb)
               .columns.large-8
                 h5
-                  a href = helpful_article_item_path(article.id) = truncate article.title, length: 60, omission: '...'
+                  a href = helpful_article_item_path(article.url) = truncate article.title, length: 60, omission: '...'
                 span = truncate_html article.short_description, length: 130, omission: '...'
                 .main-page-read-more-wrapper
                   .main-page-read-more.box-shadow-right-bottom
-                    = link_to image_tag("Arrow-button.png") + '', helpful_article_item_path(article.id), :title => 'Детальніше'
+                    = link_to image_tag("Arrow-button.png") + '', helpful_article_item_path(article.url), :title => 'Детальніше'
 
 

@@ -6,6 +6,12 @@ class Promotion < ActiveRecord::Base
   },url:'/assets/images/promotions/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
+  attr_accessible :promotion_url
+  before_validation :generate_promotion_url
+  def generate_promotion_url
+    self.promotion_url = title.parameterize
+  end
+
   rails_admin do
     navigation_label 'Акції'
     label 'Акція'

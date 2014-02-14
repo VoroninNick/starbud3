@@ -14,14 +14,16 @@ class Collection < ActiveRecord::Base
 
   belongs_to :brand
   attr_accessible :brand
+  validates_presence_of :brand, :message => "Заповніть поле бренд. Колекція не збережена."
 
   has_many :doors
   has_many :floors
 
   #validates :name, :uniqueness => true, presence: true
-  before_validation :generate_collection_url
+
+  before_validation :collection_url
   def generate_collection_url
-    self.collection_url ||= name.parameterize
+    self.collection_url = name.parameterize
   end
 
   has_one :seo_dynamic

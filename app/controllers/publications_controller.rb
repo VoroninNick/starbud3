@@ -23,8 +23,8 @@ class PublicationsController < ApplicationController
   # GET /publications/1
   # GET /publications/1.json
   def show
-    @helpful_articles_item = Publication.find_by_id(params[:id])
-    @related_helpful_articles = Publication.where('id != '+params[:id]+'').limit(4).order('updated_at desc')
+    @helpful_articles_item = Publication.find_by_url(params[:url])
+    @related_helpful_articles = Publication.where('url != "'+params[:url]+'"').limit(4).order('updated_at desc')
   end
 
   # GET /publications/new
@@ -79,7 +79,7 @@ class PublicationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_publication
-      @publication = Publication.find(params[:id])
+      @publication = Publication.find_by_url(:url)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

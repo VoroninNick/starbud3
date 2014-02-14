@@ -28,7 +28,7 @@
             - s = SubCatalog.find b.sub_catalog_id
             - m = MainCatalog.find s.main_catalog_id
             .item.item-coll
-              a href=all_products_from_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'),  collect.name.gsub(' ','_'))
+              a desc="#{collect.collection_url.inspect}" href=all_products_from_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, collect.collection_url)
                 .image
                   img src=collect.image(:large)
                 .info
@@ -36,4 +36,4 @@
                     h4
                       |Колекцiя
                     h5
-                      = link_to collect.name, all_products_from_collection_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'), b.name.gsub(' ','_'),  collect.name.gsub(' ','_'))
+                      = link_to collect.name, all_products_from_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url,  collect.collection_url)

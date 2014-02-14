@@ -11,7 +11,10 @@ StarBud::Application.routes.draw do
   get "/publication" => "main#publications", :as => :publications
   get "/contacts" => "main#contacts", :as => :contacts
   get "/terms_of_used" => "main#terms_of_use", :as => :tou
-  root 'main#index'
+
+
+
+  post "/contacts" => "main#send_message"
 
 
   resources :promotions
@@ -28,8 +31,8 @@ StarBud::Application.routes.draw do
   get "publication/useful_video" => "publications#useful_video", :as => :useful_video_link
   get "publication/helpful_articles" => "publications#helpful_articles", :as => :helpful_articles
 
-  get '/publication/helpful_articles/:id' => 'publications#show', :as => :helpful_article_item
-  get '/publication/interest_news/:id' => 'interest_news#show', :as => :interest_news_item
+  get '/publication/helpful_articles/:url' => 'publications#show', :as => :helpful_article_item
+  get '/publication/interest_news/:url' => 'interest_news#show', :as => :interest_news_item
 
   get '/promotion/:id', to:'promotions#show', as:'promotion_one_item'
 
@@ -121,4 +124,6 @@ StarBud::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get "*a" => "errors#page_not_found"
+  root 'main#index'
 end

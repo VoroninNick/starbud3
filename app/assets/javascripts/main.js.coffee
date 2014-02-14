@@ -29,18 +29,18 @@ $(document).ready ->
     $(".ps1 a").addClass(" active_menu ")
 
 
-  if url.indexOf("%D0%94%D0%B2%D0%B5%D1%80i") >=0
+  if url.indexOf("dveri") >=0
     $(".catalog>a").addClass(" active_menu ")
 
-  if url.indexOf("%D0%9Fi%D0%B4%D0%BB%D0%BE%D0%B3%D0%B0") >=0
+  if url.indexOf("pidloga") >=0
     $(".catalog>a").addClass(" active_menu ")
 
-  if url.indexOf("%D0%95%D0%BA%D1%81%D1%82%D0%B5%D1%80'%D0%B5%D1%80") >=0
+  if url.indexOf("ekster-er") >=0
     $(".catalog>a").addClass(" active_menu ")
 
-  if url.indexOf("I%D0%BD%D1%82%D0%B5%D1%80'%D0%B5%D1%80") >=0
+  if url.indexOf("inter-er") >=0
     $(".catalog>a").addClass(" active_menu ")
-  if url.indexOf("%D0%A1%D1%83%D0%BF%D1%83%D1%82%D0%BDi_%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8") >=0
+  if url.indexOf("suputni-tovari") >=0
     $(".catalog>a").addClass(" active_menu ")
 
 

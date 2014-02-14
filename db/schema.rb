@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210120345) do
+ActiveRecord::Schema.define(version: 20140214081415) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -239,6 +239,7 @@ ActiveRecord::Schema.define(version: 20140210120345) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+    t.string   "exterior_url"
   end
 
   create_table "feedback_emails", force: true do |t|
@@ -289,6 +290,7 @@ ActiveRecord::Schema.define(version: 20140210120345) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+    t.string   "floor_url"
   end
 
   create_table "for_brands", force: true do |t|
@@ -323,6 +325,7 @@ ActiveRecord::Schema.define(version: 20140210120345) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+    t.string   "interior_url"
   end
 
   create_table "interest_news", force: true do |t|
@@ -434,6 +437,7 @@ ActiveRecord::Schema.define(version: 20140210120345) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "promotion_url"
   end
 
   create_table "publication_banners", force: true do |t|
@@ -513,6 +517,7 @@ ActiveRecord::Schema.define(version: 20140210120345) do
     t.string   "alt_per"
     t.string   "title_per"
     t.text     "desc_per"
+    t.string   "related_url"
   end
 
   create_table "seo_dynamics", force: true do |t|

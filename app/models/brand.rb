@@ -7,6 +7,7 @@ class Brand < ActiveRecord::Base
 
   belongs_to :sub_catalog
   attr_accessible :sub_catalog
+  validates_presence_of :sub_catalog, :message => "Заповніть поле суб катол. Бранд не збережений."
 
   has_many :collections
   attr_accessible :collections
@@ -16,10 +17,11 @@ class Brand < ActiveRecord::Base
 
   has_many :related_products
 
-  validates :name, :uniqueness => true, presence: true
+  #validates :name, :uniqueness => true, presence: true
+
   before_validation :generate_brand_url
   def generate_brand_url
-    self.brand_url ||= name.parameterize
+    self.brand_url = name.parameterize
   end
 
   has_one :seo_dynamic

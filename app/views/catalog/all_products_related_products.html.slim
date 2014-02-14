@@ -26,15 +26,14 @@
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@rel_prod.each do |r|
-            /- s = SubCatalog.find rpr.sub_catalog_id
+            /- s = SubCatalog.find r.sub_catalog_id
             /- m = MainCatalog.find s.main_catalog_id
-            .columns.large-3.ie-one-item.float-left
+            .columns.large-4.ie-one-item.float-left
               a.fancybox href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
                 img src=r.image_structure.url(:thumb)
                 .ie-title-info
                   h3
-                    a.fancybox.starbud-link href="#r-id#{r.id}" data-fancybox-group="r-group" rel="r-group"
-                      = r.name
+                    span.starbud-link  = r.name
                       p
                         |(&nbsp;
                         = r.code_product
@@ -54,7 +53,7 @@
                       /    |//&nbsp;
                       /    = m.name
                       /    |&nbsp;/&nbsp;
-                      /    = link_to s.name, my_sub_catalog_path(m.name.gsub(' ','_'), s.name.gsub(' ','_'))
+                      /    = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
 
                       .int-image-wrap
                         h4.int-ext-s

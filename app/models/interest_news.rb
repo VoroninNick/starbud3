@@ -7,9 +7,9 @@ class InterestNews < ActiveRecord::Base
                     path:':rails_root/public:url'
 
 
-  before_validation :generate_article_url
-  def generate_article_url
-    self.url ||= title.parameterize
+  before_validation :generate_url
+  def generate_url
+    self.url = title.parameterize
   end
 
   has_one :seo_dynamic
