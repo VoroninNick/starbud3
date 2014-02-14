@@ -21,6 +21,7 @@ class SeoDynamic < ActiveRecord::Base
   belongs_to :interest_news
 
   rails_admin do
+    visible false
     navigation_label 'S E O'
     label 'SEO на динамічні сторінки'
     label_plural 'SEO на динамічні сторінки'

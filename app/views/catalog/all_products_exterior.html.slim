@@ -24,8 +24,8 @@
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@ext.each do |ext|
-            - s = SubCatalog.find ext.sub_catalog_id
-            - m = MainCatalog.find s.main_catalog_id
+            /- s = SubCatalog.find ext.sub_catalog_id
+            /- m = MainCatalog.find s.main_catalog_id
             .columns.large-4.ie-one-item.float-left
               a.fancybox href="#ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
                 img src=ext.image_structure.url(:thumb)
@@ -46,12 +46,12 @@
                         |(&nbsp;
                         = ext.code_product
                         |&nbsp;)
-                      .columns.floor-breadcrambs
-                        span
-                          |//&nbsp;
-                          = m.name
-                          |&nbsp;/&nbsp;
-                          = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
+                      /.columns.floor-breadcrambs
+                      /  span
+                      /    |//&nbsp;
+                      /    = m.name
+                      /    |&nbsp;/&nbsp;
+                      /    = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
 
                       .int-image-wrap
                         h4.int-ext-s

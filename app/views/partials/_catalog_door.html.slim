@@ -1,8 +1,8 @@
 .catalog-content-wrapper
   .columns.image-block
     .special-offer-label
-      -@door_test.special_offer do |d|
-        img src=d.image(:thumb)
+      - if @door_test.special_offer
+        img src=@door_test.special_offer.image.url(:thumb)
     - if @door_test.door_variants_fulfillment_options.count <=0
       a.fancybox data-fancybox-group="doorgroup" rel="doorgroup" href=asset_path("doors-blank.png")
         img.cloudzoom src=asset_path("doors-blank.png")
