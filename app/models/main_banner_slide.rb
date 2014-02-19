@@ -10,7 +10,7 @@ class MainBannerSlide < ActiveRecord::Base
 
   has_attached_file :layer_image, styles:{
       large: "500x600>"
-  },url:'/assets/images/main_banner/slide/:id/image_:style.:extension',
+  },url:'/assets/images/main_banner/layer/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
 
@@ -18,10 +18,7 @@ class MainBannerSlide < ActiveRecord::Base
 
 
   rails_admin do
-    #navigation_label 'Слайдери'
-    #label 'Банер слайд'
-    #label_plural 'Банери слайди'
-
+    visible false
     list do
       field :name
       field :future
