@@ -6,6 +6,7 @@ class DoorColorOption < ActiveRecord::Base
   },url:'/assets/images/door/door_color_option/:id/image_:style.:extension',
                     path:':rails_root/public:url'
 
+
   belongs_to :door_variants_fulfillment_option
 
 

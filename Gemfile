@@ -62,7 +62,7 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'protected_attributes'
-gem 'paperclip'
+gem "paperclip", "~> 3.5.3"
 
 gem 'cocaine'
 

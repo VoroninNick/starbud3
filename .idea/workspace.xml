@@ -7,14 +7,13 @@
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\assets\images\about_us\certeficate\16\image_thumb.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\013\original\268662389_640.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\StarBudTasks\StarBud\public\system\brands\images\000\000\014\original\brand-test.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" afterPath="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim" afterPath="$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim" afterPath="$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/rails_admin.rb" afterPath="$PROJECT_DIR$/config/initializers/rails_admin.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/seo_dynamic.rb" afterPath="$PROJECT_DIR$/app/models/seo_dynamic.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StarBud.iml" afterPath="$PROJECT_DIR$/.idea/StarBud.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/door_color_option.rb" afterPath="$PROJECT_DIR$/app/models/door_color_option.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/door_variants_fulfillment_option.rb" afterPath="$PROJECT_DIR$/app/models/door_variants_fulfillment_option.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarBud.iws" />
@@ -30,7 +29,7 @@
     <SUITE FILE_PATH="coverage/StarBud@db_rollback__StarBud.coverage" NAME="db:rollback: StarBud Coverage Results" MODIFIED="1392369781273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@Rails_console__StarBud.coverage" NAME="Rails console: StarBud Coverage Results" MODIFIED="1392365369193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@assets_precompile__StarBud.coverage" NAME="assets:precompile: StarBud Coverage Results" MODIFIED="1387990417382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
-    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1392394436639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
+    <SUITE FILE_PATH="coverage/StarBud@Development__StarBud.coverage" NAME="Development: StarBud Coverage Results" MODIFIED="1392815189767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_migrate__StarBud.coverage" NAME="db:migrate: StarBud Coverage Results" MODIFIED="1392369818409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
     <SUITE FILE_PATH="coverage/StarBud@db_reset__StarBud.coverage" NAME="db:reset: StarBud Coverage Results" MODIFIED="1387495712203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/StarBud@db_create__StarBud.coverage" NAME="db:create: StarBud Coverage Results" MODIFIED="1388359224052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="StarBud" />
@@ -68,14 +67,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/publications/useful_video.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/app/mailers/contact_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/contact_mailer/new_message.htm.slim" />
         <option value="$PROJECT_DIR$/app/views/partials/_search.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" />
         <option value="$PROJECT_DIR$/app/views/errors/page_not_found.html.slim" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140214004604_add_url.rb" />
         <option value="$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim" />
@@ -99,7 +95,6 @@
         <option value="$PROJECT_DIR$/app/views/partials/_catalog_sidebar.html.slim" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_brands.html.slim" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/index.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/main.js.coffee" />
         <option value="$PROJECT_DIR$/app/models/publication_banner.rb" />
         <option value="$PROJECT_DIR$/app/views/publications/show.html.slim" />
@@ -119,6 +114,10 @@
         <option value="$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim" />
         <option value="$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/main/index.html.slim" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/models/door_color_option.rb" />
+        <option value="$PROJECT_DIR$/app/models/door_variants_fulfillment_option.rb" />
       </list>
     </option>
   </component>
@@ -177,6 +176,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -232,7 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,6 +247,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StarBud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,7 +310,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,7 +320,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/RubymineProjects/wt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="136" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="810" />
@@ -310,7 +349,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Rake.db:migrate: StarBud">
+  <component name="RunManager" selected="Rails.Development: StarBud">
     <configuration default="false" name="assets:precompile: StarBud" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="StarBud" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -600,11 +639,12 @@
       <item index="8" class="java.lang.String" itemvalue="Rake.db:create: StarBud" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate: StarBud" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:create: StarBud" />
         <item index="1" class="java.lang.String" itemvalue="Rake.db:rollback: StarBud" />
-        <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: StarBud" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:create: StarBud" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate: StarBud" />
+        <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: StarBud" />
+        <item index="4" class="java.lang.String" itemvalue="Rake.assets:precompile: StarBud" />
       </list>
     </recent_temporary>
   </component>
@@ -655,28 +695,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-8" width="1308" height="784" extended-state="1" />
+    <frame x="66" y="-8" width="1308" height="784" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38619676" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2696" sideWeight="0.6712963" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64506626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4329897" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.80615383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38586158" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2696" sideWeight="0.6712963" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2184" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34067547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2344" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64506626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5714286" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39617082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.80615383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -719,357 +760,267 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.bxslider.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/catalog.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140214004604_add_url.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="316" selection-end="316" vertical-scroll-proportion="0.5682451" vertical-offset="0" max-vertical-offset="359">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.56202143" vertical-offset="367" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131219091157_add_column_main_catalog_url_to_main_catalog.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="53" selection-start="151" selection-end="151" vertical-scroll-proportion="0.2367688" vertical-offset="0" max-vertical-offset="359">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="3" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="46" column="3" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="140" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-9.807693" vertical-offset="561" max-vertical-offset="1003">
-          <folding />
-        </state>
+        <state line="48" column="140" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-9.807693" vertical-offset="561" max-vertical-offset="1003" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140214081415_generate_url_fields_for.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="420" selection-end="420" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
+        <state line="16" column="40" selection-start="420" selection-end="420" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/main_catalog.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="365" selection-end="365" vertical-scroll-proportion="0.25757575" vertical-offset="68" max-vertical-offset="748">
-          <folding />
-        </state>
+        <state line="13" column="27" selection-start="365" selection-end="365" vertical-scroll-proportion="0.25757575" vertical-offset="68" max-vertical-offset="748" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1326">
-          <folding />
-        </state>
+        <state line="23" column="19" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1326" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/collection.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="58" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1292">
+        <state line="24" column="58" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/floor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/promotion.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="55" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_sidebar.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="158" selection-start="1064" selection-end="1064" vertical-scroll-proportion="1.038168" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="171" selection-start="1231" selection-end="1245" vertical-scroll-proportion="-17.653847" vertical-offset="51" max-vertical-offset="765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_brands.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="52" selection-start="945" selection-end="945" vertical-scroll-proportion="-7.8461537" vertical-offset="187" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="38" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.25801528" vertical-offset="409" max-vertical-offset="2295" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/interest_news.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="380" selection-end="380" vertical-scroll-proportion="0.26259542" vertical-offset="15" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/publications.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_publictions_sidebar.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/publication_banner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="38" selection-start="729" selection-end="729" vertical-scroll-proportion="0.72671753" vertical-offset="0" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="141" selection-start="1438" selection-end="1438" vertical-scroll-proportion="-19.615385" vertical-offset="204" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/publication.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="397" selection-end="397" vertical-scroll-proportion="0.025954198" vertical-offset="153" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/publications/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="40" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-10.615385" vertical-offset="336" max-vertical-offset="952" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/publications/interesting_news.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="69" selection-start="847" selection-end="847" vertical-scroll-proportion="1.235589" vertical-offset="0" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/interest_news/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="40" selection-start="1244" selection-end="1244" vertical-scroll-proportion="1.0211039" vertical-offset="0" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/interest_news_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="110" selection-start="479" selection-end="479" vertical-scroll-proportion="0.29923666" vertical-offset="25" max-vertical-offset="1394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/publications_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="96" selection-start="912" selection-end="912" vertical-scroll-proportion="0.18769716" vertical-offset="357" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/floor.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/related_product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="129" selection-start="157" selection-end="171" vertical-scroll-proportion="0.02681388" vertical-offset="0" max-vertical-offset="1156" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/int_ext.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="828" selection-end="828" vertical-scroll-proportion="0.5362776" vertical-offset="0" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/exterior.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="831" selection-end="831" vertical-scroll-proportion="0.5078864" vertical-offset="18" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="49" selection-start="72" selection-end="87" vertical-scroll-proportion="0.025954198" vertical-offset="0" max-vertical-offset="969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="7" selection-start="1310" selection-end="1310" vertical-scroll-proportion="-15.692307" vertical-offset="153" max-vertical-offset="1241" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/catalog_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="80" selection-start="1568" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_floor.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="20" selection-start="1124" selection-end="1133" vertical-scroll-proportion="8.384615" vertical-offset="813" max-vertical-offset="1751" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="538" column="1" selection-start="11028" selection-end="11028" vertical-scroll-proportion="-3.72549" vertical-offset="8956" max-vertical-offset="12580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="483" selection-end="483" vertical-scroll-proportion="0.49312976" vertical-offset="0" max-vertical-offset="655" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/seo_meta_tags.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/seo_dynamic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="697" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.13798702" vertical-offset="0" max-vertical-offset="31637" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/rails_admin.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="47" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.7943925" vertical-offset="0" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.027597403" vertical-offset="0" max-vertical-offset="1496" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="61" selection-start="167" selection-end="167" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="34" selection-start="1844" selection-end="2052" vertical-scroll-proportion="0.8003247" vertical-offset="408" max-vertical-offset="1241" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="847" selection-end="945" vertical-scroll-proportion="0.3262987" vertical-offset="241" max-vertical-offset="1258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="26" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.79479325" vertical-offset="603" max-vertical-offset="1717" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="623" selection-end="623" vertical-scroll-proportion="0.39050537" vertical-offset="0" max-vertical-offset="653" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="35" selection-start="2928" selection-end="2935" vertical-scroll-proportion="0.33333334" vertical-offset="1044" max-vertical-offset="4012" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="29" selection-start="6735" selection-end="6742" vertical-scroll-proportion="0.74111676" vertical-offset="2571" max-vertical-offset="3162" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/dor_information.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/door.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="1717">
+        <state line="24" column="18" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/floor.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/door_color_option.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1394">
+        <state line="7" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/promotion.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/door_variants_fulfillment_option.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="833">
+        <state line="9" column="51" selection-start="370" selection-end="370" vertical-scroll-proportion="0.23430322" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/door.html.slim">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_sidebar.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="158" selection-start="1064" selection-end="1064" vertical-scroll-proportion="1.038168" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="171" selection-start="1231" selection-end="1245" vertical-scroll-proportion="-17.653847" vertical-offset="51" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_brands.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="945" selection-end="945" vertical-scroll-proportion="-7.8461537" vertical-offset="187" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.25801528" vertical-offset="409" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/interest_news.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="380" selection-end="380" vertical-scroll-proportion="0.26259542" vertical-offset="15" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="130" selection-start="3015" selection-end="3030" vertical-scroll-proportion="-10.461538" vertical-offset="969" max-vertical-offset="4012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/publications.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_publictions_sidebar.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.7145038" vertical-offset="246" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/publication_banner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="729" selection-end="729" vertical-scroll-proportion="0.72671753" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="122" selection-start="3071" selection-end="3071" vertical-scroll-proportion="-24.038462" vertical-offset="735" max-vertical-offset="3162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publications/helpful_articles.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="141" selection-start="1438" selection-end="1438" vertical-scroll-proportion="-19.615385" vertical-offset="204" max-vertical-offset="1054">
-          <folding>
-            <marker date="1392341064369" expanded="true" signature="-1:-1" placeholder="do ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/publication.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="397" selection-end="397" vertical-scroll-proportion="0.025954198" vertical-offset="153" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publications/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="40" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-10.615385" vertical-offset="336" max-vertical-offset="952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publications/interesting_news.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="69" selection-start="847" selection-end="847" vertical-scroll-proportion="1.235589" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/interest_news/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="40" selection-start="1244" selection-end="1244" vertical-scroll-proportion="1.0211039" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/interest_news_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="110" selection-start="479" selection-end="479" vertical-scroll-proportion="0.29923666" vertical-offset="25" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/publications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="96" selection-start="912" selection-end="912" vertical-scroll-proportion="0.18769716" vertical-offset="357" max-vertical-offset="1615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/floor.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/related_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="129" selection-start="157" selection-end="171" vertical-scroll-proportion="0.02681388" vertical-offset="0" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/int_ext.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="828" selection-end="828" vertical-scroll-proportion="0.5362776" vertical-offset="0" max-vertical-offset="1173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/exterior.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="831" selection-end="831" vertical-scroll-proportion="0.5078864" vertical-offset="18" max-vertical-offset="1173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49" selection-start="72" selection-end="87" vertical-scroll-proportion="0.025954198" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_related_products.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="7" selection-start="1310" selection-end="1310" vertical-scroll-proportion="-15.692307" vertical-offset="153" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/catalog_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="80" selection-start="1568" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_floor.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="20" selection-start="1124" selection-end="1133" vertical-scroll-proportion="8.384615" vertical-offset="813" max-vertical-offset="1751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/catalog.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="538" column="1" selection-start="11028" selection-end="11028" vertical-scroll-proportion="-3.72549" vertical-offset="8956" max-vertical-offset="12580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="483" selection-end="483" vertical-scroll-proportion="0.49312976" vertical-offset="0" max-vertical-offset="655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/seo_meta_tags.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/seo_dynamic.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.13798702" vertical-offset="0" max-vertical-offset="31637">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/rails_admin.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="47" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.7943925" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_door.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.027597403" vertical-offset="0" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_catalog_enter_door.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="61" selection-start="167" selection-end="167" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_exterior.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="1844" selection-end="2052" vertical-scroll-proportion="0.8003247" vertical-offset="408" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products_int_ext.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="847" selection-end="945" vertical-scroll-proportion="0.3262987" vertical-offset="241" max-vertical-offset="1258">
+        <state line="67" column="43" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.41653904" vertical-offset="867" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
