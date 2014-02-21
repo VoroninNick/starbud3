@@ -8,7 +8,7 @@ class AboutArticle < ActiveRecord::Base
 
   attr_accessible :id_article_about_us
 
-  before_validation :id_article_about_us
+  before_validation :generate_id_article_about_us
   def generate_id_article_about_us
     self.id_article_about_us ||= name.parameterize
   end

@@ -15,7 +15,7 @@ class IntExt < ActiveRecord::Base
 
   belongs_to :brand
 
-  attr_accessible :interior_url
+  attr_accessible :generate_interior_url
   before_validation :generate_interior_url
   def generate_interior_url
     self.interior_url = name.parameterize

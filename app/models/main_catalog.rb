@@ -9,6 +9,7 @@ class MainCatalog < ActiveRecord::Base
   has_many :sub_catalogs
 
   validates :name, :uniqueness => true, presence: true
+
   before_validation :generate_main_catalogs_url
   def generate_main_catalogs_url
     self.main_catalogs_url = name.parameterize

@@ -2,6 +2,7 @@ class Door < ActiveRecord::Base
   attr_accessible :name, :descriptions, :action_id, :collection_id, :brand_id, :door_url, :special_offer_id
 
   belongs_to :collection
+  validates_presence_of :collection, :message => "Заповніть поле Колекція. Двері не збережені."
 
 
   belongs_to :special_offer
@@ -20,10 +21,11 @@ class Door < ActiveRecord::Base
   accepts_nested_attributes_for :seo_dynamic
   attr_accessible :seo_dynamic_attributes
 
-  before_validation :door_url
+  before_validation :generate_door_url
   def generate_door_url
     self.door_url = name.parameterize
   end
+
   rails_admin do
     navigation_label 'Двері'
     label 'Двері'

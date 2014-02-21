@@ -21,7 +21,7 @@ class Collection < ActiveRecord::Base
 
   #validates :name, :uniqueness => true, presence: true
 
-  before_validation :collection_url
+  before_validation :generate_collection_url
   def generate_collection_url
     self.collection_url = name.parameterize
   end
