@@ -25,7 +25,15 @@ class CatalogController < ApplicationController
     elsif @main_catalog.main_catalogs_url =="suputni-tovari"
       render "catalog/all_products_related_products"
     end
-    @collections = Brand.find_by_brand_url(params[:brand]).collections
+
+    query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}'"
+    result = ActiveRecord::Base.connection.execute( query )
+    @collections = []
+    result.each do |row|
+      @collections.append( Collection.find( row['id'] ) )
+    end
+
+    #@collections = Brand.find_by_brand_url(params[:brand]).collections
   end
 
   def all_products
