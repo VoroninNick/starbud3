@@ -1,0 +1,76 @@
+set :vs_app_name, 'StarBud'
+set :vs_repo_url, 'git@github.com:VoroninNick/starbud3.git'
+set :vs_deploy_to, '/home/applications/develop/starbud'
+
+# will be featured in future
+#set :dns_names, %w[zurc.voroninstudio.eu www.zurc.voroninstudio.eu]
+
+set :vs_rvm_path, '[[ -s "$HOME/.rvm/bin/rvm" ]] && . "$HOME/.rvm/bin/rvm"'
+namespace :vs do
+  desc 'setup'
+  task :setup do
+    invoke 'vs:git_clone'
+    invoke 'vs:bundle_install'
+    invoke 'vs:rake_db_create'
+    invoke 'vs:rake_db_migrate'
+    invoke 'vs:restart'
+  end
+
+  desc 'deploy'
+  task :deploy do
+    invoke 'vs:git_pull'
+    invoke 'vs:bundle_install'
+    invoke 'vs:rake_db_migrate'
+    invoke 'vs:restart'
+  end
+
+  desc 'restart'
+  task :restart do
+    on roles :app do
+      execute "/bin/nginx-200-restart"
+    end
+  end
+
+  desc 'git clone'
+  task :git_clone do
+    on roles :app do
+      execute "git clone #{fetch :vs_repo_url} #{fetch :vs_deploy_to}"
+    end
+  end
+
+  desc 'git pull'
+  task :git_pull do
+    on roles :app do
+      execute "cd #{fetch :vs_deploy_to} && git pull"
+    end
+  end
+
+  desc 'bundle install'
+  task :bundle_install do
+    on roles :app do
+      execute   "#{fetch :vs_rvm_path} && cd #{fetch :vs_deploy_to} && bundle install"
+    end
+  end
+
+
+  desc 'rake db:create'
+  task :rake_db_create do
+    on roles :app do
+      execute "#{fetch :vs_rvm_path} && cd #{fetch :vs_deploy_to} && rake db:create"
+    end
+  end
+
+  desc 'rake db:migrate'
+  task :rake_db_migrate do
+    on roles :app do
+      execute "#{fetch :vs_rvm_path} && cd #{fetch :vs_deploy_to} && rake db:migrate"
+    end
+  end
+
+  desc 'rake db:rollback'
+  task :db_rollback do
+    on roles :app do
+      execute "#{fetch :vs_rvm_path} && cd #{fetch :vs_deploy_to} && rake db:rollback"
+    end
+  end
+end

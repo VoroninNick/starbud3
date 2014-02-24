@@ -29,7 +29,15 @@ class CatalogController < ApplicationController
   end
 
   def all_products
-    @door = Collection.find_by_collection_url(params[:collection]).doors
+    #@door = Collection.find_by_collection_url(params[:collection]).doors
+
+    query = "select d.id from doors d, collections c, brands b where d.collection_id == c.id and c.brand_id == b.id and c.collection_url == '#{params[:collection]}'"
+    result = ActiveRecord::Base.connection.execute( query )
+    @door = []
+    result.each do |row|
+      @door.append( Door.find( row['id'] ) )
+    end
+
     @current_collection = Collection.find_by_collection_url(params[:collection])
     @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])

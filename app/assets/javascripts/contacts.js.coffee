@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  lat = 49.806660
-  lng = 24.057296
+  lat = 49.80888
+  lng = 24.04313
   myLatlng = new google.maps.LatLng(lat, lng)
   myOptions =
     zoom: 17

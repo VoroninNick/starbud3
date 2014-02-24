@@ -83,3 +83,7 @@ gem 'time_diff'
 #gem "google_cse"
 
 gem 'sitemap_generator'
+
+gem 'capistrano'
+
+gem 'capistrano-rails'
