@@ -26,7 +26,7 @@ class CatalogController < ApplicationController
       render "catalog/all_products_related_products"
     end
 
-    query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}'"
+    query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
     result = ActiveRecord::Base.connection.execute( query )
     @collections = []
     result.each do |row|

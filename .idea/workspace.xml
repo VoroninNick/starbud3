@@ -52,7 +52,16 @@
       <file leaf-file-name="catalog_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/catalog_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="4" selection-start="1568" selection-end="1568" vertical-scroll-proportion="0.7355769" vertical-offset="153" max-vertical-offset="1632">
+            <state line="33" column="200" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.8173077" vertical-offset="51" max-vertical-offset="1632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sub_catalog.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
@@ -61,7 +70,7 @@
       <file leaf-file-name="all_collections.html.slim" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="765">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.8846154" vertical-offset="153" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -1035,11 +1044,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/subscribe.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="17" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0778626" vertical-offset="0" max-vertical-offset="655" />
@@ -1171,13 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="71" selection-start="94" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
@@ -1185,9 +1182,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catalog/all_collections.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.8846154" vertical-offset="153" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sub_catalog.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/catalog_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="4" selection-start="1568" selection-end="1568" vertical-scroll-proportion="0.7355769" vertical-offset="153" max-vertical-offset="1632">
+        <state line="33" column="200" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.8173077" vertical-offset="51" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
