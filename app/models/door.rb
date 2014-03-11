@@ -36,8 +36,6 @@ class Door < ActiveRecord::Base
       field :special_offer
       field :collection
       field :descriptions
-      field :door_variants_fulfillment_options
-      field :dor_informations
     end
 
     edit do
