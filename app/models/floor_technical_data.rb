@@ -8,6 +8,7 @@ class FloorTechnicalData < ActiveRecord::Base
 
   belongs_to :about_article
   rails_admin do
+    visible false
     navigation_label 'Підлога'
     label 'Технічні дані'
     label_plural 'Технічні дані'

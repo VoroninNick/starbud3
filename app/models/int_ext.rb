@@ -22,7 +22,7 @@ class IntExt < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
+    navigation_label "Продукти"
     label "Інтер'єр"
     label_plural "Інтер'єри"
 

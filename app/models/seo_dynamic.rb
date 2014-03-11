@@ -8,10 +8,6 @@ class SeoDynamic < ActiveRecord::Base
   attr_accessible :publication_id, :interest_news_id
 
   belongs_to :door
-  #belongs_to :floor
-  #belongs_to :int_ext
-  #belongs_to :exterior
-  #belongs_to :related_product
 
   belongs_to :collection
   belongs_to :brand

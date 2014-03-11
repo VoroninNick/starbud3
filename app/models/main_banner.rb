@@ -2,7 +2,7 @@ class MainBanner < ActiveRecord::Base
   attr_accessible :name
 
   has_many :main_banner_slides
-  accepts_nested_attributes_for :main_banner_slides
+  accepts_nested_attributes_for :main_banner_slides, allow_destroy: true
   attr_accessible :main_banner_slides_attributes
 
   rails_admin do

@@ -8,17 +8,17 @@ class Door < ActiveRecord::Base
   belongs_to :special_offer
 
   has_many :door_variants_fulfillment_options
-  accepts_nested_attributes_for :door_variants_fulfillment_options
+  accepts_nested_attributes_for :door_variants_fulfillment_options, allow_destroy: true
   attr_accessible :door_variants_fulfillment_options_attributes
 
   has_many :dor_informations
-  accepts_nested_attributes_for :dor_informations
+  accepts_nested_attributes_for :dor_informations, allow_destroy: true
   attr_accessible :dor_informations_attributes
 
   attr_accessible :table
 
   has_one :seo_dynamic
-  accepts_nested_attributes_for :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic, allow_destroy: true
   attr_accessible :seo_dynamic_attributes
 
   before_validation :generate_door_url
@@ -27,7 +27,7 @@ class Door < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label 'Двері'
+    navigation_label 'Продукти'
     label 'Двері'
     label_plural 'Двері'
 

@@ -20,7 +20,7 @@ class Floor < ActiveRecord::Base
   belongs_to :collection
 
   has_many :floor_technical_datas
-  accepts_nested_attributes_for :floor_technical_datas
+  accepts_nested_attributes_for :floor_technical_datas, allow_destroy: true
   attr_accessible :floor_technical_datas_attributes
 
   attr_accessible :floor_url
@@ -30,7 +30,7 @@ class Floor < ActiveRecord::Base
   end
 
   rails_admin do
-    navigation_label 'Підлога'
+    navigation_label 'Продукти'
     label 'Підлога'
     label_plural 'Підлога'
 

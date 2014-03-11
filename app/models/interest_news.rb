@@ -13,7 +13,7 @@ class InterestNews < ActiveRecord::Base
   end
 
   has_one :seo_dynamic
-  accepts_nested_attributes_for :seo_dynamic
+  accepts_nested_attributes_for :seo_dynamic, allow_destroy: true
   attr_accessible :seo_dynamic_attributes
 
   rails_admin do

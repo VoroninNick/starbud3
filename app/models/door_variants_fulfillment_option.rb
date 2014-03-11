@@ -12,10 +12,11 @@ class DoorVariantsFulfillmentOption < ActiveRecord::Base
 
   has_many :door_color_options
 
-  accepts_nested_attributes_for :door_color_options
+  accepts_nested_attributes_for :door_color_options, allow_destroy: true
   attr_accessible :door_color_options_attributes
 
   rails_admin do
+    visible false
     navigation_label 'Двері'
     label 'Варіанти виконання'
     label_plural 'Варіанти виконання'

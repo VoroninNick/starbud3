@@ -97,11 +97,11 @@
     min-height: 12px;
 }
 #variants-color .door_color_one_item:first-child {
-    margin-left: -20px;
+    /*margin-left: -20px;*/
 }
 #variants-color .door_color_one_item {
     position: relative;
-    margin-left: -27px;
+    /*margin-left: -27px;*/
     transition: 0.4s ease-out all;
     -webkit-transition: 0.4s ease-out all;
 }
@@ -171,22 +171,38 @@
 .content-block .bx-controls-direction {
     display: none;
 }
+#variants-color ul li:first-child {
+    margin-left: 0 !important;
+}
 #variants-color ul li {
+    margin-left: -20px;
     float: left;
+    width: 90px;
+    position: relative;
+}
+#variants-color ul li h6 {
+    text-align: center;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+#variants-color ul li a {
     width: 90px;
     height: 90px;
     overflow: hidden;
     border-radius: 50%;
+    display: block;
 }
 #variants-color ul {
     margin: 0;
 }
 #variants-color {
-    /*left: -20px;*/
     width: 123%!important;
     padding-top: 20px;
+    margin-left: 0!important;
 }
-#variants-color ul li img {
+#variants-color ul li .image img {
     position: relative;
     top: -65%;
 }
@@ -660,7 +676,7 @@
     padding-top: 40px;
 }
 .catalog-content-wrapper .bx-viewport {
-    height: 120px!important;
+    height: 165px!important;
 }
 .img-wrp img {
     height: 195px;

@@ -23,7 +23,7 @@ class Exterior < ActiveRecord::Base
 
 
   rails_admin do
-    navigation_label "Інтер'єр, Екстер'єр, Супутні товари"
+    navigation_label "Продукти"
     label "Екстер'єр"
     label_plural "Екстер'єри"
 

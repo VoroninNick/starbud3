@@ -6,6 +6,7 @@ class MainController < ApplicationController
     @publication_main_page = Publication.order('updated_at desc').limit(4)
     @main_banner = MainBanner.order('updated_at desc')
     @subs = Subscribe.new
+    @index_about = IndexPageAboutCompany.order('updated_at asc').limit(1)
   end
   def about
     @title = "Про нас"

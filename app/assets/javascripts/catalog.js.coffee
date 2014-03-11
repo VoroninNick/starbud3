@@ -25,6 +25,7 @@ $(document).ready ->
     $(".image-block a img").attr src: mainImage
     false
 
+
 #tabs dor options
 tab = (tab) ->
   document.getElementById("tab1").style.display = "none"

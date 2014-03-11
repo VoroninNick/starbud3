@@ -9,7 +9,7 @@ class SubCatalog < ActiveRecord::Base
   validates_presence_of :main_catalog, :message => "Заповніть поле головний каталог. Бранд не збережений."
 
   has_many :brands
-  accepts_nested_attributes_for :brands
+  accepts_nested_attributes_for :brands, allow_destroy: true
   attr_accessible :brands
 
   validates :name, :uniqueness => true, presence: true

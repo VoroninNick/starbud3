@@ -12,7 +12,7 @@ class DoorColorOption < ActiveRecord::Base
 
 
   rails_admin do
-
+    visible false
     navigation_label 'Двері'
     label 'Варіанти кольору'
     label_plural 'Варіанти кольору'

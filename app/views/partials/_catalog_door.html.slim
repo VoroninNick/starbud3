@@ -49,10 +49,11 @@
         li
           ul
             -img_v.door_color_options.each do |img_v_c|
-              li.door_color_one_item.box-shadow-right-bottom style="z-index:#{door_color_z_index}; "
-                a.fancybox href=img_v_c.image.url(:thumb) data-fancybox-group="doorgroup" rel="doorgroup"
+              li style="z-index:#{door_color_z_index}; "
+                a.fancybox.image.door_color_one_item.box-shadow-right-bottom href=img_v_c.image.url(:thumb) data-fancybox-group="doorgroup" rel="doorgroup"
                   img src=img_v_c.image.url(:thumb)
                 -door_color_z_index +=10
+                h6 = img_v_c.name
   .clearfix
   =raw @door_test.table
   .door-info
