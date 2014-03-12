@@ -7,13 +7,13 @@
         .columns.large-9.catalog-sidebar
           ul#catalog-sidebar
             - main_catalog.each do |si|
-              li.sidebar-menu.sidebar-dor
+              li.sidebar-menu.sidebar-dor class="#{si.main_catalogs_url}"
                 h2
                   img src=si.image
                   =si.name
                 ul.sub-cat
                   -si.sub_catalogs.each do |sc|
-                    li
+                    li class=" #{sc.sub_catalog_url} "
                       = link_to sc.name, my_sub_catalog_path(si.main_catalogs_url, sc.sub_catalog_url)
                       ul.brands-cat
                         -sc.brands.each do |br|
