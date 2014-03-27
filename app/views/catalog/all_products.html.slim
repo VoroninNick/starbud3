@@ -44,8 +44,9 @@
                     =link_to image_tag("doors-blank.png")+'',show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' door_blank'
                   - else
                     a href=show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url)
-                      .s-o-l
-                        img src=door.special_offer.image.url(:thumb)
+                      -if door.special_offer.image
+                        .s-o-l
+                          img src=door.special_offer.image.url(:thumb)
                       img src=door.door_variants_fulfillment_options[0].image(:thumb)
                   h5
                     = link_to door.name, show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' starbud-link'
