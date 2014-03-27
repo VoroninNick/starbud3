@@ -52,7 +52,7 @@
       <file leaf-file-name="all_products.html.slim" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="22" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.7181572" vertical-offset="483" max-vertical-offset="1054">
+            <state line="38" column="71" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.4417344" vertical-offset="483" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -992,7 +992,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="58" selection-start="77" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326" />
+        <state line="1" column="58" selection-start="77" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/door.rb">
@@ -1053,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/catalog/all_products.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="22" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.7181572" vertical-offset="483" max-vertical-offset="1054">
+        <state line="38" column="71" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.4417344" vertical-offset="483" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
