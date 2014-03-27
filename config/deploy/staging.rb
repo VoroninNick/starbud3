@@ -34,6 +34,6 @@ server 'voroninstudio.eu',
            keys: %w(/home/deploy/.ssh/id_rsa),
            forward_agent: false,
            auth_methods: %w(publickey password),
-           password: 'casper12345'
+           password: 'casper2014'
        }
 # setting per server overrides global ssh_options

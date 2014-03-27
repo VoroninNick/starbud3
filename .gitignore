@@ -18,3 +18,5 @@
 /public/assets/*
 /.idea/*
 /Gemfile.lock
+/config/deploy/*
+/lib/capistrano/*
