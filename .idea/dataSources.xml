@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails StarBud: development" uuid="3592ffab-676d-4cbf-b6d6-6879ad4c0ae8">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\StarBudTasks\StarBud\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Tron\RubymineProjects\starbud\db\development.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
@@ -14,7 +14,7 @@
     <data-source source="LOCAL" name="Rails StarBud: test" uuid="f6e72730-89e1-4cac-b929-c99f1642759e">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\StarBudTasks\StarBud\db\test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Tron\RubymineProjects\starbud\db\test.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
