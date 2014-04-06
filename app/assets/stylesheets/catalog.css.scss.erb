@@ -186,8 +186,9 @@
     text-align: center;
     color: #666666;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 200;
+    width: 86px
 }
 #variants-color ul li a {
     width: 90px;
@@ -756,4 +757,24 @@
     top: -20px;
     left: -15px;
     width: 70px;
+}
+.exterior_title:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 251px;
+    top: 81px;
+    background: url("<%= asset_path('e.png') %>")no-repeat!important;
+    width: 30px;
+    height: 27px;
+}
+.interior_title:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 251px;
+    top: 81px;
+    background: url("<%= asset_path('e.png') %>")no-repeat!important;
+    width: 30px;
+    height: 27px;
 }

@@ -176,20 +176,20 @@ body
       .columns.large-7
         nav.footer-menu
           li
-            a
+            a href="/#main-short-description"
               |Про нас
           li
             a href="/#centre-main-page-menu-link"
               |Каталог
           li
-            a
-              |Акції
+            = link_to "Акції", actions_path
+            /a
+            /  |Акції
           li
             a href="/#publication-link"
               |Публікації
           li
-            a href="about_us/#Співпраця"
-              |Співпраця
+            = link_to "Співпраця", about_path
           li
             =link_to "Контакти", contacts_path
     .row.footer-bottom-content-down
