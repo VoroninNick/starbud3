@@ -16,7 +16,15 @@ class CatalogController < ApplicationController
 
     @it_et = Brand.find_by_brand_url(params[:brand]).int_exts
     @ext = Brand.find_by_brand_url(params[:brand]).exteriors
-    @rel_prod = Brand.find_by_brand_url(params[:brand]).related_products
+
+    # @rel_prod = Brand.find_by_brand_url(params[:brand]).related_products
+
+    query = "select r.id from related_products r, brands b, sub_catalogs s where r.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
+    result = ActiveRecord::Base.connection.execute( query )
+    @rel_prod = []
+    result.each do |row|
+      @rel_prod.append( RelatedProduct.find( row['id'] ) )
+    end
 
     if @main_catalog.main_catalogs_url =="inter-er"
       render "catalog/all_products_int_ext"
@@ -26,31 +34,48 @@ class CatalogController < ApplicationController
       render "catalog/all_products_related_products"
     end
 
-    query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}' "
+    # @collections = Brand.find_by_brand_url(params[:brand]).collections
+    query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
     result = ActiveRecord::Base.connection.execute( query )
     @collections = []
     result.each do |row|
       @collections.append( Collection.find( row['id'] ) )
     end
-
-    #@collections = Brand.find_by_brand_url(params[:brand]).collections
   end
 
   def all_products
     #@door = Collection.find_by_collection_url(params[:collection]).doors
 
-    query = "select d.id from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}'"
+    query = "select d.id from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
     result = ActiveRecord::Base.connection.execute( query )
     @door = []
     result.each do |row|
       @door.append( Door.find( row['id'] ) )
     end
+    #
+    # c = @door.collection
+    b = Brand.find_by_brand_url(params[:brand])
+    @current_collection = Collection.where(brand_id: b.id, collection_url: params[:collection]).first
 
-    @current_collection = Collection.find_by_collection_url(params[:collection])
+    # query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
+    # result = ActiveRecord::Base.connection.execute( query )
+    # @current_collection = []
+    # result.each do |row|
+    #   @current_collection.append( Collection.find( row['id'] ) )
+    # end
+
     @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
 
-    @floor = Collection.find_by_collection_url(params[:collection]).floors
+
+    query = "select f.id from floors f, collections c, brands b, sub_catalogs s where f.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
+    result = ActiveRecord::Base.connection.execute( query )
+    @floor = []
+    result.each do |row|
+      @floor.append( Floor.find( row['id'] ) )
+    end
+
+    # @floor = Collection.find_by_collection_url(params[:collection]).floors
     if @main_catalog.name =="Пiдлога"
       render "catalog/all_products_floor"
     end
@@ -69,9 +94,20 @@ class CatalogController < ApplicationController
   end
 
   def door
-    c = Collection.find_by_collection_url(params[:collection])
 
-    @door_test = Door.where(collection_id: c.id, door_url: params[:door]).first
+    # c = Collection.find_by_collection_url(params[:collection])
+    # #
+    # @door_test = Door.where(collection_id: c.id, door_url: params[:door]).first
+    # render inline: @door_test.inspect
+
+    query = "select d.id from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and d.door_url == '#{params[:door]}' and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}' "
+    result = ActiveRecord::Base.connection.execute( query )
+    @door_test = []
+    result.each do |row|
+      @door_test.append( Door.find( row['id'] ) )
+    end
+    @door_test = @door_test.first
+    # render inline: @door_test[0].seo_dynamic.inspect
 
     @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])

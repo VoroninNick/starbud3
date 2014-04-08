@@ -25,6 +25,7 @@
         .curent-brand-descriptions
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
+
           -@rel_prod.each do |r|
             /- s = SubCatalog.find r.sub_catalog_id
             /- m = MainCatalog.find s.main_catalog_id
