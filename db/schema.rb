@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311130305) do
+ActiveRecord::Schema.define(version: 20140408135933) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -215,7 +215,7 @@ ActiveRecord::Schema.define(version: 20140311130305) do
 
   create_table "exteriors", force: true do |t|
     t.string   "name"
-    t.integer  "code_product"
+    t.string   "code_product"
     t.string   "image_interior_file_name"
     t.string   "image_interior_content_type"
     t.integer  "image_interior_file_size"
@@ -321,7 +321,7 @@ ActiveRecord::Schema.define(version: 20140311130305) do
     t.integer  "sub_catalog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "cpde_product"
+    t.string   "cpde_product"
     t.string   "alt_inter"
     t.string   "title_inter"
     t.text     "desc_inter"
@@ -499,7 +499,7 @@ ActiveRecord::Schema.define(version: 20140311130305) do
 
   create_table "related_products", force: true do |t|
     t.string   "name"
-    t.integer  "code_product"
+    t.string   "code_product"
     t.string   "image_interior_file_name"
     t.string   "image_interior_content_type"
     t.integer  "image_interior_file_size"
