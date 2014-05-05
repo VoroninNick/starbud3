@@ -468,7 +468,10 @@ p, a, h1, h2, h3, h4, h5, span, li, div, input, select, textarea, select {
 .header-top-center p {
   padding: 10px 0 0 25px;
   font-weight: 100;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
+
 .header-social-buttons {
   padding-top: 10px;
     float: right;
@@ -1180,9 +1183,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
   width: 35%!important;
   padding-top: 11px;
 }
-.header-top-center p {
-    margin-bottom: 0;
-}
+
 .header-top-center p span {
   font-size: 21px;
     font-weight: 400;
@@ -1891,8 +1892,20 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     position: absolute;
     top: -4px;
     left: 1%;
-    z-index: 69;
+    z-index: 10;
     width: 98%;
     display: block;
     content: '';
+}
+
+.subscribe-form .subscribe button {
+    background: url("<%= asset_path('Arrow-button.png') %>")no-repeat!important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 46px;
+    height: 45px;
+    background-size: 98% !important;
+}
+input:focus {
+    outline: none !important;
 }
