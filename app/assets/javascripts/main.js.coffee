@@ -12,7 +12,10 @@ $(document).ready ->
     if $(this).attr("href") is "/publication/"
       $(".publication a").addClass "active"
 
-
+  $('.vd_nav_ico.vd_nav').click (e) ->
+    e.preventDefault()
+    $('#vd_door_nav').toggleClass('right_null')
+    $(this).toggleClass('passive')
 
   url = document.location.href
 

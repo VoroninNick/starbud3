@@ -123,4 +123,7 @@ class CatalogController < ApplicationController
   def show_item
   end
 
+  def designer
+
+  end
 end

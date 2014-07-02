@@ -11,8 +11,7 @@ StarBud::Application.routes.draw do
   get "/publication" => "main#publications", :as => :publications
   get "/contacts" => "main#contacts", :as => :contacts
   get "/terms_of_used" => "main#terms_of_use", :as => :tou
-
-
+  get "/designer" => "catalog#designer", :as => 'designer'
 
   post "/contacts" => "main#send_message"
 

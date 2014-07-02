@@ -1,0 +1,22 @@
+.row
+  .designer-wrapper.page-content-wrapper-box-shadow
+    #visual_designer
+      #vd_view
+        = image_tag asset_path('Render_2.jpg')
+        #vd_components
+          .vd_nav_ico.vd_comp
+          .vd_component_one_item.vd_render_interior
+            .vd_image style="background: url('#{asset_path('Render_2.jpg')}')no-repeat center center;"
+            .vd_render_interior_title
+              = embedded_svg "1401117751_photo.svg", class: 'svg_class'
+              |рендер інтер’єру
+          .vd_component_one_item
+            |Двері
+          .vd_component_one_item
+            |Ламінат
+          .vd_component_one_item
+            |Колір стін
+          .vd_component_one_item
+            |Колір плінтуса
+        #vd_door_nav
+          .vd_nav_ico.vd_nav
