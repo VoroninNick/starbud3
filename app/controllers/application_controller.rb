@@ -51,4 +51,17 @@ class ApplicationController < ActionController::Base
   def pdf_catalog
     return PdfCatalog.order('selected_catalog').limit(1)
   end
+
+  helper_method :vd_brands
+
+  def vd_brands
+   @brands = Brand.where("sub_catalog_id = 1").order("name asc")
+  end
+
+  helper_method :vd_doors
+
+  def vd_doors
+    @doors = Door.where('collection_id = 1 ')
+    return @doors
+  end
 end

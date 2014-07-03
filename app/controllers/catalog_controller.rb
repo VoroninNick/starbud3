@@ -126,4 +126,10 @@ class CatalogController < ApplicationController
   def designer
 
   end
+  def get_coll
+    names =Collection.find_names_by_brand_url(params[:brand])
+
+    s = names.join(',')
+    render(inline: s)
+  end
 end

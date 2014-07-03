@@ -30,6 +30,18 @@ class Collection < ActiveRecord::Base
   accepts_nested_attributes_for :seo_dynamic
   attr_accessible :seo_dynamic_attributes
 
+
+  def self.find_names_by_brand_url(name)
+    query = "select c.name as name from brands b, collections c where b.id = c.brand_id and b.name = '#{name}'"
+    rows = ActiveRecord::Base.connection.execute(query)
+    names = []
+    rows.each do |row|
+      names.push(row['name'])
+    end
+    names
+  end
+
+
   rails_admin do
     navigation_label 'Каталог'
     label 'Колекція'

@@ -13,6 +13,8 @@ StarBud::Application.routes.draw do
   get "/terms_of_used" => "main#terms_of_use", :as => :tou
   get "/designer" => "catalog#designer", :as => 'designer'
 
+  get "/get_collection_from_brand" => "catalog#get_coll", :as => 'get_coll'
+
   post "/contacts" => "main#send_message"
 
 

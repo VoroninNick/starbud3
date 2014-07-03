@@ -6,17 +6,45 @@
         #vd_components
           .vd_nav_ico.vd_comp
           .vd_component_one_item.vd_render_interior
+            .vd_render_interior_select_wrapper
+              = image_tag asset_path('Render_2.jpg')
+              = image_tag asset_path('Render_2.jpg')
+              = image_tag asset_path('Render_2.jpg')
             .vd_image style="background: url('#{asset_path('Render_2.jpg')}')no-repeat center center;"
             .vd_render_interior_title
-              = embedded_svg "1401117751_photo.svg", class: 'svg_class'
+              = embedded_svg "SB-1.svg", class: 'svg_class'
               |рендер інтер’єру
-          .vd_component_one_item
+          .vd_component_one_item.vdc_dor
+            = embedded_svg "SB-2.svg", class: 'svg_class'
             |Двері
-          .vd_component_one_item
+          .vd_component_one_item.vdc_laminate
+            = embedded_svg "SB-3.svg", class: 'svg_class'
             |Ламінат
-          .vd_component_one_item
+          .vd_component_one_item.vdc_wall
+            = embedded_svg "SB-4.svg", class: 'svg_class'
             |Колір стін
-          .vd_component_one_item
+          .vd_component_one_item.vdc_baseboard
+            = embedded_svg "SB-5.svg", class: 'svg_class'
             |Колір плінтуса
         #vd_door_nav
           .vd_nav_ico.vd_nav
+          .vd_tab.tab_door
+            .vd_door_drop_down
+              -if vd_brands
+                select id="vd_brand"
+                  - vd_brands.each do |b|
+                    option value="#{b.name}" = b.name
+              select#testVD
+              .vd_doors_wrapper.vd_scroll_panel
+                .vd_doors_inner
+                  - if vd_doors
+                    - vd_doors.each do |d|
+                      - d.door_variants_fulfillment_options.each do |dop|
+                        .vd_doors_item
+                          = image_tag src=dop.image.url(:thumb)
+          .vd_tab.tab_laminate.tab_hide
+            |Ламінат
+          .vd_tab.tab_wall.tab_hide
+            |Колір стін
+          .vd_tab.tab_baseboard.tab_hide
+            |Колір плінтуса
