@@ -124,6 +124,7 @@ class CatalogController < ApplicationController
   end
 
   def designer
+    @render_interior = RenderInterior.order("updated_at asc")
 
   end
   def get_coll

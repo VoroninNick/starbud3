@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408135933) do
+ActiveRecord::Schema.define(version: 20140704134929) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -347,6 +347,30 @@ ActiveRecord::Schema.define(version: 20140408135933) do
     t.datetime "updated_at"
   end
 
+  create_table "laminate_images", force: true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
+    t.integer  "laminate_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "laminates", force: true do |t|
+    t.string   "name"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.integer  "render_interior_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "main_banner_slides", force: true do |t|
     t.string   "name"
     t.string   "back_image_file_name"
@@ -524,6 +548,24 @@ ActiveRecord::Schema.define(version: 20140408135933) do
     t.string   "title_per"
     t.text     "desc_per"
     t.string   "related_url"
+  end
+
+  create_table "render_interiors", force: true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
+    t.integer  "position_x"
+    t.integer  "position_y"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "seo_dynamics", force: true do |t|

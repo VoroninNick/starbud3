@@ -1,0 +1,24 @@
+@mixin scrollbar($size,$size-track,$size-thumb, $primary, $secondary: lighten($primary, 25%)) {
+    ::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $primary;
+        width: $size-thumb;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $secondary;
+        width: $size-track;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    // For Internet Explorer
+    body {
+        scrollbar-face-color: $primary;
+        scrollbar-track-color: $secondary;
+    }
+}

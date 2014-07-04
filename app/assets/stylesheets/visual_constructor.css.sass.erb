@@ -1,3 +1,7 @@
+@import "nazariy_mixin"
+
+html
+    @include scrollbar(15px,15px,9px,#7d7d7d, #bebdbe )
 .designer-wrapper
     background: #999999
     padding:
@@ -16,8 +20,32 @@
     -moz-box-shadow: 3px 4px 0px rgba(33, 43, 51, 0.2)
     box-shadow: 0px 10px 0px rgba(33, 43, 51, 0.2)
 
+    img.vd_door_prev
+        position: absolute
+        width: 140px
+
+    .vd_get_render_one_item
+        position: relative
+        -webkit-transition: opacity 0.5s ease-out
+        -moz-transition: opacity 0.5s ease-out
+        -o-transition: opacity 0.5s ease-out
+        transition: opacity 0.5s ease-out
+
+        &:before
+            background: rgba(61, 61, 61, 0.7)
+            display: block
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+
+        &:hover:before
+            opacity: 0
+
     .vd_render_interior_select_wrapper
-        height: 593px
+        height: 0
         background: rgba(61, 61, 61, 0.7)
         position: relative
         top: 0
@@ -25,6 +53,10 @@
         -moz-transition: top 0.5s ease-out
         -o-transition: top 0.5s ease-out
         transition: top 0.5s ease-out
+
+        .vd_render_interior_select_inner
+            overflow-y: hidden
+            overflow-x: hidden
 
     .vd_comp_top_453px
         top: -453px !important
@@ -40,6 +72,7 @@
 
         img
             width: 100%
+            cursor: pointer
 
     .tab_hide
         display: none
@@ -225,6 +258,18 @@
 
             svg
                 fill: #ffffff
+            &.active_control:before
+                display: block
+                position: absolute
+                top: -10px
+                left: 45%
+                content: ""
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 0 10px 10px 10px
+                border-color: transparent transparent #58595b transparent
+
         &:hover .vd_render_interior_title
             color: #004b8c !important
             & svg
@@ -280,8 +325,14 @@
 #vd_door_nav.right_null
     right: -305px !important
 
-
-
+.vdc_interior_close
+    position: absolute
+    top: 140px
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 777
+    /*background: green*/
 
 #visual_constructor
     width: 1099px

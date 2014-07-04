@@ -11,17 +11,7 @@ $(document).ready ->
   $('select#vd_brand').change (e) ->
     e.preventDefault()
     brand= $(this).val()
-
     valuesToSubmit = {brand: brand}
-
-  $('.active_control').click ->
-    e.preventDefault()
-    alert('test')
-    $('#visual_designer .vd_render_interior_select_wrapper').removeClass('.vd_comp_top_453px')
-    $('#visual_designer .vd_render_interior_select_wrapper').css({top:'0'})
-    $('.vd_render_interior_title').removeClass('active_control')
-
-
     $.ajax
       url: '/get_collection_from_brand'
       type: "GET"
@@ -39,15 +29,10 @@ $(document).ready ->
         options = s.split(',')
 
 #        alert(options)
-        $(options).each (name) ->
-
-          option = $(this)
-          alert(option)
-          $("select#testVD").append "<option>" + option + "</option>"
-#        for i in [0...options.length]
+        $.each options, (index, name) ->
 #          option = $(this)
-#          $("select#testVD").append "<option>" + option + "</option>"
-#          i++
+          $("select#testVD").append "<option>" + name + "</option>"
+          return
         return
 
 
@@ -58,29 +43,80 @@ $(document).ready ->
     if $(this).attr("href") is "/publication/"
       $(".publication a").addClass "active"
 
-  $('.vd_render_interior_title').click (e) ->
+#
+  $('.vd_get_render_one_item').click (e) ->
+    e.preventDefault()
+    dataRenderImage = $(this).attr("data-render-image")
+    positionX = $(this).attr("data-position-x")
+    positionY = $(this).attr("data-position-y")
+    imageView = $('img.image_view')
+    imageView.attr src: dataRenderImage
+    imageView.attr("data-position-x", positionX)
+    imageView.attr("data-position-y", positionY)
+
+    $('#visual_designer .vd_render_interior_select_wrapper').css({top:'0'})
+    $('#visual_designer .vd_render_interior_select_wrapper').css({height:'0'})
+    $('#visual_designer .vd_render_interior_select_inner').css('overflow-y', 'hidden')
+    $('.vd_render_interior_title').removeClass('active_control')
+    $('.vdc_interior_close').css({top:'140px'})
+
+
+  $('.vd_doors_item img').click (e) ->
+    e.preventDefault()
+    imageView = $('img.image_view')
+    positionX = imageView.attr("data-position-x")
+    positionY = imageView.attr("data-position-y")
+
+    objectImage = $(this).attr("src")
+    $("#vd_view").append "<img class=\"vd_door_prev\" src="+objectImage+" style=\"left:"+positionX+"px; top:"+positionY+"px;\"/>"
+
+#
+  $('.vd_interior_open').click (e) ->
     e.preventDefault()
     $(this).addClass('active_control')
-    imageLength = $('.vd_render_interior_select_wrapper').children().length
+
+    imageLength = $('.vd_render_interior_select_inner').children().length
     if imageLength == 1
       imageHeight = $('.vd_render_interior_select_wrapper img').height()
       imageHeight = imageHeight * 1
       $('#visual_designer .vd_render_interior_select_wrapper').css({top:'-'+imageHeight+'px'})
+      $('#visual_designer .vd_render_interior_select_wrapper').css({height:imageHeight+'px'})
 
     if imageLength == 2
       imageHeight = $('.vd_render_interior_select_wrapper img').height()
       imageHeight = imageHeight * 2
       $('#visual_designer .vd_render_interior_select_wrapper').css({top:'-'+imageHeight+'px'})
+      $('#visual_designer .vd_render_interior_select_wrapper').css({height:imageHeight+'px'})
 
     if imageLength == 3
       imageHeight = $('.vd_render_interior_select_wrapper img').height()
       imageHeight = imageHeight * 3
       $('#visual_designer .vd_render_interior_select_wrapper').css({top:'-'+imageHeight+'px'})
+      $('#visual_designer .vd_render_interior_select_wrapper').css({height:imageHeight+'px'})
 
     if imageLength >= 4
-      $('#visual_designer .vd_render_interior_select_wrapper').addClass('.vd_comp_top_453px')
+      $('#visual_designer .vd_render_interior_select_wrapper').css({top:'-453px'})
+      $('#visual_designer .vd_render_interior_select_wrapper').css({height:'453px'})
+      $('#visual_designer .vd_render_interior_select_inner').css({height:'453px'})
+      $('#visual_designer .vd_render_interior_select_inner').css('overflow-y', 'scroll')
 
 
+    $('.vd_render_interior_title').removeClass('vd_interior_open')
+    $('.vd_render_interior_title').addClass('vd_interior_close')
+    $('.vdc_interior_close').css({top:'0'})
+
+
+#
+  $('.vdc_interior_close').click (e) ->
+    e.preventDefault()
+    $('#visual_designer .vd_render_interior_select_wrapper').css({top:'0'})
+    $('#visual_designer .vd_render_interior_select_wrapper').css({height:'0'})
+    $('#visual_designer .vd_render_interior_select_inner').css('overflow-y', 'hidden')
+    $('.vd_render_interior_title').removeClass('active_control')
+    $('.vdc_interior_close').css({top:'140px'})
+
+
+#
   $('.vd_nav_ico.vd_nav').click (e) ->
     e.preventDefault()
     $('#vd_door_nav').toggleClass('right_null')

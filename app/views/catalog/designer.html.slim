@@ -2,18 +2,23 @@
   .designer-wrapper.page-content-wrapper-box-shadow
     #visual_designer
       #vd_view
-        = image_tag asset_path('Render_2.jpg')
+        = image_tag asset_path('Render_2.jpg'), :class => 'image_view'
         #vd_components
-          .vd_nav_ico.vd_comp
+
           .vd_component_one_item.vd_render_interior
             .vd_render_interior_select_wrapper
-              = image_tag asset_path('Render_2.jpg')
-              = image_tag asset_path('Render_2.jpg')
-              = image_tag asset_path('Render_2.jpg')
+              .vd_nav_ico.vd_comp
+              .vd_render_interior_select_inner
+                - if @render_interior
+                  - @render_interior.each do |object|
+                    .vd_get_render_one_item data-render-image=object.image.url(:large) data-position-x=object.position_x data-position-y=object.position_y
+                      = image_tag src=object.thumb.url(:thumb)
+
             .vd_image style="background: url('#{asset_path('Render_2.jpg')}')no-repeat center center;"
-            .vd_render_interior_title
+            .vd_render_interior_title.vd_interior_open
               = embedded_svg "SB-1.svg", class: 'svg_class'
               |рендер інтер’єру
+            .vdc_interior_close
           .vd_component_one_item.vdc_dor
             = embedded_svg "SB-2.svg", class: 'svg_class'
             |Двері
