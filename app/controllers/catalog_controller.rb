@@ -133,4 +133,26 @@ class CatalogController < ApplicationController
     s = names.join(',')
     render(inline: s)
   end
+  def get_laminate
+    laminates = Laminate.where(render_interior_id: (params[:id]))
+    @images = []
+    laminates.each do |l|
+      l.laminate_images.each do |img|
+        @images.push img
+      end
+    end
+    render template: 'constructor/get_laminate.xml'
+  end
+
+  def get_wall
+    walls = ColorWall.where(render_interior_id: (params[:id]))
+    @images = []
+    walls.each do |w|
+      w.color_wall_images.each do |img|
+        @images.push img
+      end
+    end
+    render template: 'constructor/get_wall.xml'
+  end
+
 end

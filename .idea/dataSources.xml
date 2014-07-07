@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1312111464">
+  <component name="DataSourceManagerImpl" format="xml" hash="8020307">
     <data-source source="LOCAL" name="Rails StarBud: development" uuid="3592ffab-676d-4cbf-b6d6-6879ad4c0ae8">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>

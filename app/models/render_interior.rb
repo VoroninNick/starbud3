@@ -19,6 +19,16 @@ class RenderInterior < ActiveRecord::Base
   accepts_nested_attributes_for :laminates, allow_destroy: true
   attr_accessible :laminates_attributes
 
+  has_many :color_walls
+
+  accepts_nested_attributes_for :color_walls, allow_destroy: true
+  attr_accessible :color_walls_attributes
+
+  has_many :color_baseboards
+
+  accepts_nested_attributes_for :color_baseboards, allow_destroy: true
+  attr_accessible :color_baseboards_attributes
+
   rails_admin do
     navigation_label 'Візуальний конструктор'
     label "Рендер інтер'єру"
@@ -55,7 +65,15 @@ class RenderInterior < ActiveRecord::Base
         help ''
       end
       field :laminates do
-        label ''
+        label 'ЛАМІНАТ'
+        help ''
+      end
+      field :color_walls do
+        label 'КОЛІР СТІН'
+        help ''
+      end
+      field :color_baseboards do
+        label 'КОЛІР ПЛІНТУСА'
         help ''
       end
       field :public do

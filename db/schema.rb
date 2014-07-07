@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704134929) do
+ActiveRecord::Schema.define(version: 20140704202600) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -112,6 +112,54 @@ ActiveRecord::Schema.define(version: 20140704134929) do
     t.integer  "actions_label_id"
     t.integer  "brand_id"
     t.string   "collection_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "color_baseboard_images", force: true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
+    t.integer  "color_baseboard_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "color_baseboards", force: true do |t|
+    t.string   "name"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.integer  "render_interior_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "color_wall_images", force: true do |t|
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
+    t.integer  "color_wall_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "color_walls", force: true do |t|
+    t.string   "name"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.integer  "render_interior_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -11,7 +11,7 @@
               .vd_render_interior_select_inner
                 - if @render_interior
                   - @render_interior.each do |object|
-                    .vd_get_render_one_item data-render-image=object.image.url(:large) data-position-x=object.position_x data-position-y=object.position_y
+                    .vd_get_render_one_item data-render-interior-id=object.id data-render-image=object.image.url(:large) data-position-x=object.position_x data-position-y=object.position_y
                       = image_tag src=object.thumb.url(:thumb)
 
             .vd_image style="background: url('#{asset_path('Render_2.jpg')}')no-repeat center center;"
@@ -22,13 +22,13 @@
           .vd_component_one_item.vdc_dor
             = embedded_svg "SB-2.svg", class: 'svg_class'
             |Двері
-          .vd_component_one_item.vdc_laminate
+          .vd_component_one_item.vdc_laminate data-laminate-parent-id=""
             = embedded_svg "SB-3.svg", class: 'svg_class'
             |Ламінат
-          .vd_component_one_item.vdc_wall
+          .vd_component_one_item.vdc_wall data-color-wall-parent-id=""
             = embedded_svg "SB-4.svg", class: 'svg_class'
             |Колір стін
-          .vd_component_one_item.vdc_baseboard
+          .vd_component_one_item.vdc_baseboard data-color-baseboard-parent-id=""
             = embedded_svg "SB-5.svg", class: 'svg_class'
             |Колір плінтуса
         #vd_door_nav
@@ -48,8 +48,6 @@
                         .vd_doors_item
                           = image_tag src=dop.image.url(:thumb)
           .vd_tab.tab_laminate.tab_hide
-            |Ламінат
           .vd_tab.tab_wall.tab_hide
-            |Колір стін
           .vd_tab.tab_baseboard.tab_hide
             |Колір плінтуса

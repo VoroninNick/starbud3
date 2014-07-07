@@ -1,15 +1,16 @@
-class Laminate < ActiveRecord::Base
+class ColorBaseboard < ActiveRecord::Base
   attr_accessible :name, :public, :index_sort, :render_interiors_id
 
   belongs_to :render_interior
-  has_many :laminate_images
-  accepts_nested_attributes_for :laminate_images, allow_destroy: true
-  attr_accessible :laminate_images_attributes
+
+  has_many :color_baseboard_images
+  accepts_nested_attributes_for :color_baseboard_images, allow_destroy: true
+  attr_accessible :color_baseboard_images_attributes
 
   rails_admin do
     parent RenderInterior
-    label "Ламінат"
-    label_plural "Ламінати"
+    label "КОЛІР ПЛІНТУСА"
+    label_plural "КОЛЬОРИ ПЛІНТУСІВ"
 
     list do
       field :name
@@ -34,7 +35,7 @@ class Laminate < ActiveRecord::Base
         label ''
         help ''
       end
-      field :laminate_images do
+      field :color_baseboard_images do
         label ''
         help ''
       end
@@ -47,6 +48,5 @@ class Laminate < ActiveRecord::Base
     end
     #end Rails admin hide belongs_to field in has_many nested form
   end
-
 
 end

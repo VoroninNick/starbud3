@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<images>
+    <% @images.each do |img| %>
+        <img src="<%= img.thumb.url(:thumb) %>" data-src="<%= img.image.url(:large)%>" data-tooltip="<%= img.name%>" />
+    <% end %>
+</images>
