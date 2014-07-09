@@ -1,7 +1,15 @@
 
 $(document).ready ->
+
   attrRenderID = $("#visual_designer .vd_get_render_one_item:first-child").attr("data-render-interior-id")
   $("#vd_view img.image_view").attr("data-render-interior-id", attrRenderID)
+  dataRenderImage = $("#visual_designer .vd_get_render_one_item:first-child").attr("data-render-image")
+  positionX = $("#visual_designer .vd_get_render_one_item:first-child").attr("data-position-x")
+  positionY = $("#visual_designer .vd_get_render_one_item:first-child").attr("data-position-y")
+  imageView = $('img.image_view')
+#  imageView.attr src: dataRenderImage
+  imageView.attr("data-position-x", positionX)
+  imageView.attr("data-position-y", positionY)
 
   $('select#vd_brand').change (e) ->
     e.preventDefault()
@@ -15,19 +23,45 @@ $(document).ready ->
         return
       success: (data) ->
 
-        $select = $('select#testVD')
+        $select = $('select#vd_collections')
         $select.children().remove()
 
         s = data
         options = s.split(',')
         $.each options, (index, name) ->
-          $("select#testVD").append "<option>" + name + "</option>"
+          $("select#vd_collections").append "<option>" + name + "</option>"
           return
         return
 
       complete: ->
         return
 
+  $('select#vd_collections').change ->
+    collection= $(this).val()
+    $(this).removeClass("select_collection")
+    valuesToSubmit = {collection: collection}
+    $.ajax
+      url: '/get_doors_from_collection'
+      type: "GET"
+      data: valuesToSubmit
+      beforeSend: ->
+        return
+      success: (data) ->
+        $data = $(data)
+        $images = $data.find('img')
+        $doorsWrap = $(".vd_doors_inner")
+        $doorsWrap.children().remove()
+        $.each $images, (index, img) ->
+          $img = $(img)
+          src = $img.attr('src')
+          dataToolTip = $img.attr('data-tooltip')
+          dataSrc = $img.attr('data-src')
+          $img = $("<div class='vd_doors_item'  data-tooltip="+dataToolTip+"><img src="+src+" ></div>")
+          $img.appendTo($doorsWrap)
+        return
+
+      complete: ->
+        return
 
 
   #
@@ -50,9 +84,7 @@ $(document).ready ->
     $('.vdc_interior_close').css({top:'140px'})
 
 
-
-  $('.vd_doors_item img').click (e) ->
-    e.preventDefault()
+  $(".vd_doors_inner").on "click", ".vd_doors_item img", ->
     imageView = $('img.image_view')
     positionX = imageView.attr("data-position-x")
     positionY = imageView.attr("data-position-y")
@@ -207,10 +239,42 @@ $(document).ready ->
     $wall.appendTo('#vd_view')
     return
 
-  $('.vdc_baseboard').click (e) ->
-    e.preventDefault()
+  $('.vdc_baseboard').click ->
     $('.vd_component_one_item').removeClass('active')
     $(this).addClass('active')
     $('#vd_door_nav .vd_tab').removeClass('tab_hide')
     $('#vd_door_nav .vd_tab').addClass('tab_hide')
     $('#vd_door_nav .tab_baseboard').removeClass('tab_hide')
+
+    attrRenderID = $('img.image_view').attr('data-render-interior-id')
+    $tabBaseboard = $('.vd_tab.tab_baseboard')
+    $tabBaseboard.children().remove()
+    valuesToSubmit = {id: attrRenderID}
+    $.ajax
+      url: '/get_baseboard'
+      dataType: 'xml'
+      type: "GET"
+      data: valuesToSubmit
+      beforeSend: ->
+        return
+      success: (data) ->
+        $data = $(data)
+        $images = $data.find('img')
+        $.each $images, (index, img) ->
+          $img = $(img)
+          src = $img.attr('src')
+          dataToolTip = $img.attr('data-tooltip')
+          dataSrc = $img.attr('data-src')
+          $img = $("<div class='vd_baseboard_thumb' data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" /></div>")
+          $img.appendTo($tabBaseboard)
+
+        return
+
+      complete: ->
+        return
+
+  $(".vd_tab.tab_baseboard").on "click", ".vd_baseboard_thumb img", ->
+    largeImageBaseboard = $(this).attr("data-src")
+    $baseboard = $("<div class=\"layer_baseboard\"><img src="+largeImageBaseboard+"/></div>")
+    $baseboard.appendTo('#vd_view')
+    return

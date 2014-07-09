@@ -14,8 +14,13 @@ StarBud::Application.routes.draw do
   get "/designer" => "catalog#designer", :as => 'designer'
 
   get "/get_collection_from_brand" => "catalog#get_coll", :as => 'get_coll'
+  get "/get_doors_from_collection" => "catalog#get_doors", :as => 'get_doors'
+
   get "/get_laminate" => "catalog#get_laminate", :as => 'get_laminate'
   get "/get_wall" => "catalog#get_wall", :as => 'get_wall'
+  get "/get_baseboard" => "catalog#get_baseboard", :as => 'get_baseboard'
+
+
 
   post "/contacts" => "main#send_message"
 

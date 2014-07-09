@@ -43,10 +43,7 @@ class ApplicationController < ActionController::Base
   def main_carousel_label
     return MainLabelCarousel.order('index_sorting desc')
   end
-  #helper_method :main_banner
-  #def main_banner
-  #  return MainBanner.order('updated_at desc')
-  #end
+
   helper_method :pdf_catalog
   def pdf_catalog
     return PdfCatalog.order('selected_catalog').limit(1)

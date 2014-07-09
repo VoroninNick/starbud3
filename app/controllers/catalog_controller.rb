@@ -133,6 +133,22 @@ class CatalogController < ApplicationController
     s = names.join(',')
     render(inline: s)
   end
+
+  def get_doors
+    name = params[:collection]
+    sql = "select d.* from collections c, doors d where c.id = d.collection_id and c.name = '#{name}'"
+    doors =Door.find_by_sql(sql)
+    @door_images = []
+    doors.each do |d|
+      d.door_variants_fulfillment_options.each do |dv|
+        dv.door_color_options.each do |dc|
+          @door_images.push dc
+        end
+      end
+    end
+    render template: 'constructor/get_doors.xml'
+  end
+
   def get_laminate
     laminates = Laminate.where(render_interior_id: (params[:id]))
     @images = []
@@ -153,6 +169,17 @@ class CatalogController < ApplicationController
       end
     end
     render template: 'constructor/get_wall.xml'
+  end
+
+  def get_baseboard
+    baseboards = ColorBaseboard.where(render_interior_id: (params[:id]))
+    @images = []
+    baseboards.each do |b|
+      b.color_baseboard_images.each do |img|
+        @images.push img
+      end
+    end
+    render template: 'constructor/get_baseboard.xml'
   end
 
 end

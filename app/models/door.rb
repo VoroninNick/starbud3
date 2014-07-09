@@ -26,6 +26,16 @@ class Door < ActiveRecord::Base
     self.door_url = name.parameterize
   end
 
+  def self.find_names_by_collection_url(name)
+    query = "select d.name as name from collections c, doors d where c.id = d.collection_id and c.name = '#{name}'"
+    rows = ActiveRecord::Base.connection.execute(query)
+    names = []
+    rows.each do |row|
+      names.push(row['name'])
+    end
+    names
+  end
+
   rails_admin do
     navigation_label 'Продукти'
     label 'Двері'

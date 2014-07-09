@@ -5,8 +5,8 @@ html
 .designer-wrapper
     background: #999999
     padding:
-        bottom: 100px
-        top: 132px
+        bottom: 160px
+        top: 160px
     position: relative
 
 #visual_designer
@@ -19,6 +19,50 @@ html
     -webkit-box-shadow: 3px 4px 0px rgba(33, 43, 51, 0.2)
     -moz-box-shadow: 3px 4px 0px rgba(33, 43, 51, 0.2)
     box-shadow: 0px 10px 0px rgba(33, 43, 51, 0.2)
+    select
+        width: 100%
+        border: none
+        margin-bottom: 0
+        height: 40px
+        outline: none !important
+        text-transform: uppercase
+        font:
+            size: 1.125rem
+            weight: 600
+
+    select
+
+        color: #004b8c
+        text-align: center
+        background: #ffffff /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #bfbebf 100%) /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#bfbebf)) /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#bfbebf 100%) /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#bfbebf 100%) /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#bfbebf 100%) /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#bfbebf 100%) /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfbebf',GradientType=0 ) /* IE6-9 */
+
+        &:focus
+            color: #ffffff
+            background: #005aa9
+            background: -moz-linear-gradient(top, #005aa9 0%, #003f77 100%)
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005aa9), color-stop(100%,#003f77))
+            background: -webkit-linear-gradient(top, #005aa9 0%,#003f77 100%)
+            background: -o-linear-gradient(top, #005aa9 0%,#003f77 100%)
+            background: -ms-linear-gradient(top, #005aa9 0%,#003f77 100%)
+            background: linear-gradient(to bottom, #005aa9 0%,#003f77 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005aa9', endColorstr='#003f77',GradientType=0 )
+        > option
+            background: #bebdbe !important
+            border-bottom: 1px solid #ffffff !important
+
+            &:hover
+                background: #a1a1a1 !important
+    select#vd_collections.select_collection
+        background: #a1a1a1 !important
+        color: #ffffff !important
+        text-transform: none !important
 
     .layer_laminate
         position: absolute
@@ -49,6 +93,20 @@ html
             right: 0
             bottom: 0
             z-index: 41
+    .layer_baseboard
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 50
+        img
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 51
     .tab_laminate
         .vd_laminate_thumb
             margin: 0 auto
@@ -57,16 +115,32 @@ html
             margin-top: 1rem
             cursor: pointer
             position: relative
-            /*&:hover:before*/
-                /*display: block*/
-                /*content: attr(data-tooltip)*/
-                /*background: rgba(61, 61, 61, 0.7)*/
-                /*color: white*/
-                /*position: absolute*/
-                /*top: 0*/
-                /*left: 0*/
-                /*bottom: 0*/
-                /*right: 0*/
+
+            img
+                width: 100%
+                height: 100%
+
+    .tab_wall
+        .vd_wall_thumb
+            margin: 0 auto
+            width: 242px
+            height: 70px
+            margin-top: 1rem
+            cursor: pointer
+            position: relative
+
+            img
+                width: 100%
+                height: 100%
+
+    .tab_baseboard
+        .vd_baseboard_thumb
+            margin: 0 auto
+            width: 242px
+            height: 70px
+            margin-top: 1rem
+            cursor: pointer
+            position: relative
 
             img
                 width: 100%
@@ -118,6 +192,8 @@ html
 
     .vd_doors_item
         width: 50px
+        height: 110px
+        margin-bottom: 14px
         float: left
         margin-left: 7px
         margin-right: 7px
@@ -130,9 +206,10 @@ html
         display: none
 
     .vd_scroll_panel
-        height: 593px
+        height: 513px
         overflow-y: scroll
         overflow-x: hidden
+        padding-top: 18px
 
     svg
         height: 60px
@@ -143,10 +220,16 @@ html
         fill: #004b8c
 
     .vd_comp
-        top: -38px
+        top: -21px
 
     .vd_nav
-        left: -40px
+        left: -26px
+        top: 4px
+        -moz-transform: rotate(15deg)
+        -ms-transform: rotate(15deg)
+        -webkit-transform: rotate(90deg)
+        -o-transform: rotate(15deg)
+        transform: rotate(15deg)
 
     .vd_nav_ico
         position: absolute
@@ -161,19 +244,19 @@ html
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9898', endColorstr='#bdbebf',GradientType=0 ) /* IE6-9 */
 
         cursor: pointer
-        width: 40px
-        height: 38px
+        width: 30px
+        height: 21px
 
         &:before
             display: block
             content: ""
             position: absolute
-            top: 5px
-            left: 5px
-            width: 30px
-            height: 28px
-            border-top: 17px double #58595b
-            border-bottom: 6px solid #58595b
+            top: 3px
+            left: 3px
+            width: 24px
+            height: 15px
+            border-top: 9px double #58595b
+            border-bottom: 3px solid #58595b
         &.passive
             // needs latest Compass, add '@import "compass"' to your scss
             background: #fefefe /* Old browsers */
@@ -189,12 +272,12 @@ html
                 display: block
                 content: ""
                 position: absolute
-                top: 5px
-                left: 5px
-                width: 30px
-                height: 28px
-                border-top: 17px double #004b8c
-                border-bottom: 6px solid #004b8c
+                top: 3px
+                left: 3px
+                width: 24px
+                height: 15px
+                border-top: 9px double #004b8c
+                border-bottom: 3px solid #004b8c
             &:hover
                 background: #9c9898 /* Old browsers */
                 background: -moz-linear-gradient(top,  #9c9898 0%, #bdbebf 100%) /* FF3.6+ */
@@ -209,12 +292,12 @@ html
                     display: block
                     content: ""
                     position: absolute
-                    top: 5px
-                    left: 5px
-                    width: 30px
-                    height: 28px
-                    border-top: 17px double #58595b
-                    border-bottom: 6px solid #58595b
+                    top: 3px
+                    left: 3px
+                    width: 24px
+                    height: 15px
+                    border-top: 9px double #58595b
+                    border-bottom: 3px solid #58595b
 
     .vd_nav_ico:hover
         // needs latest Compass, add '@import "compass"' to your scss
@@ -231,12 +314,12 @@ html
             display: block
             content: ""
             position: absolute
-            top: 5px
-            left: 5px
-            width: 30px
-            height: 28px
-            border-top: 17px double #004b8c
-            border-bottom: 6px solid #004b8c
+            top: 3px
+            left: 3px
+            width: 24px
+            height: 15px
+            border-top: 9px double #004b8c
+            border-bottom: 3px solid #004b8c
 
     .vd_component_one_item
         position: relative

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<images>
+    <% @door_images.each do |img| %>
+        <img src="<%= img.image.url(:thumb) %>" data-src="<%= img.image.url(:large)%>" data-tooltip="<%= img.name%>" />
+    <% end %>
+</images>
