@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<images>
+    <% @plinth_images.each do |img| %>
+        <img src="<%= img.thumb.url(:thumb) %>" data-src="<%= img.image.url(:large)%>" data-tooltip="<%= img.title%>" title="<%=  img.title%>" />
+    <% end %>
+</images>

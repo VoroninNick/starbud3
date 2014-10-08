@@ -123,12 +123,48 @@ class CatalogController < ApplicationController
   def show_item
   end
 
+
   def designer
     @render_interior = RenderInterior.order("updated_at asc")
 
+    @floor = DDoorBrand.order("updated_at asc")
+    @plinth = DPlinthBrand.order("updated_at asc")
+
   end
+  # def get_d_door_collection
+  #   # @subcategories = Subcategory.find_all_by_category_id( params[:id]).sort_by{ |k| k['name'] }
+  #   # render :partial => "subcategories", :locals => {:subcategories => @subcategories}, :layout => false
+  # end
+
+  def update_sub_cat
+    if params[:id].present?
+      @sub_categories = DDoorCollection.find_all_by_d_door_brand_id(params[:id])
+    else
+      @sub_categories = []
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
+
+
+
   def get_coll
     names =Collection.find_names_by_brand_url(params[:brand])
+
+    s = names.join(',')
+    render(inline: s)
+  end
+  def get_coll_floor
+    names =DDoorCollection.find_names_by_brand_self(params[:brand])
+
+    s = names.join(',')
+    render(inline: s)
+  end
+  def get_coll_plinth
+    names =DPlinthCollection.find_names_by_brand_self(params[:brand])
 
     s = names.join(',')
     render(inline: s)
@@ -148,6 +184,32 @@ class CatalogController < ApplicationController
     end
     render template: 'constructor/get_doors.xml'
   end
+  def get_floor
+    name = params[:collection]
+    sql = "select p.* from d_door_collections c, d_doors p where c.id = p.d_door_collection_id and c.name = '#{name}'"
+    doors =DDoor.find_by_sql(sql)
+    @floor_images = []
+    doors.each do |d|
+      d.d_product_images.each do |di|
+        @floor_images.push di
+      end
+    end
+    render template: 'constructor/get_floors.xml'
+  end
+  def get_plinth
+    name = params[:collection]
+    sql = "select p.* from d_plinth_collections c, d_plinths p where c.id = p.d_plinth_collection_id and c.name = '#{name}'"
+    plinth =DPlinth.find_by_sql(sql)
+    @plinth_images = []
+    plinth.each do |d|
+      d.d_product_images.each do |di|
+        @plinth_images.push di
+      end
+    end
+    render template: 'constructor/get_plinths.xml.erb'
+  end
+
+
 
   def get_laminate
     laminates = Laminate.where(render_interior_id: (params[:id]))

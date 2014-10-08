@@ -39,16 +39,63 @@
                 select#vd_brand
                   - vd_brands.each do |b|
                     option value="#{b.name}" = b.name
-              select#vd_collections.select_collection
-                option disabled=""
-                  |Колекція не вибрана
+              -if vd_brands[0]
+                select#vd_collections.select_collection
+                  -vd_brands[0].collections.each do |c|
+                    option value="#{c.name}" = c.name
               .vd_doors_wrapper
                 .vd_doors_inner.vd_scroll_panel
-                  - if vd_doors
-                    - vd_doors.each do |d|
+                  - if vd_brands[0].collections[0]
+                    - vd_brands[0].collections[0].doors.each do |d|
                       - d.door_variants_fulfillment_options.each do |dop|
                         .vd_doors_item
                           = image_tag src=dop.image.url(:thumb)
+
           .vd_tab.tab_laminate.tab_hide
+            .vd_floor_drop_down
+              -if @floor
+                select#vf_brand.vf_select
+                  - @floor.each do |fb|
+                    option value="#{fb.name}" = fb.name
+                -if @floor[0]
+                  select#vf_collections.select_collection.vf_select
+                    -@floor[0].d_door_collections.each do |sc|
+                      option value="#{sc.name}" = sc.name
+              .vf_floor_wrapper
+                .vf_floors_inner.vd_scroll_panel
+                  - if @floor[0].d_door_collections[0]
+                    - @floor[0].d_door_collections[0].d_doors.each do |f|
+                      .vd_laminate_thumb  data-tooltip=""
+                        img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
+                      /- d.door_variants_fulfillment_options.each do |dop|
+                      /  .vd_doors_item
+                      /    = image_tag src=dop.image.url(:thumb)
+                /#category-select
+                /  category = collection_select :post_category, :id, @floor, :id, :name, options = {:prompt => "Select a category"}
+                //= observe_field :product_collection, :url => {:controller => 'catalog', :action => 'get_d_door_collection'},  :update => "sub-category-select"
+                /#sub-category-select
+
           .vd_tab.tab_wall.tab_hide
           .vd_tab.tab_baseboard.tab_hide
+            .vd_plinth_drop_down
+              -if @plinth
+                select#vp_brand.vp_select
+                  - @plinth.each do |vp|
+                    option value="#{vp.name}" = vp.name
+                -if @plinth[0]
+                  select#vp_collections.select_collection.vp_select
+                    -@plinth[0].d_plinth_collections.each do |sc|
+                      option value="#{sc.name}" = sc.name
+                .vp_plinth_wrapper
+                  .vp_plinths_inner.vd_scroll_panel
+                    - if @plinth[0].d_plinth_collections[0]
+                      - @plinth[0].d_plinth_collections[0].d_plinths.each do |f|
+                        .vd_baseboard_thumb data-tooltip=""
+                          img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
+              /.vd_doors_wrapper
+              /  .vd_doors_inner.vd_scroll_panel
+              /    - if vd_doors
+              /      - vd_doors.each do |d|
+              /        - d.door_variants_fulfillment_options.each do |dop|
+              /          .vd_doors_item
+              /            = image_tag src=dop.image.url(:thumb)

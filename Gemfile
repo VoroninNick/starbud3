@@ -2,7 +2,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 #gem 'pg'
 
@@ -65,6 +65,7 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'protected_attributes'
 gem "paperclip", "~> 3.5.3"
+gem 'paperclip-compression'
 
 gem 'cocaine'
 
@@ -91,3 +92,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 
 gem 'mailchimp-api', require: 'mailchimp'
+
+
+gem 'prototype_legacy_helper', '0.0.0', :git => 'git://github.com/rails/prototype_legacy_helper.git'
+gem 'prototype-rails'

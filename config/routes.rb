@@ -16,11 +16,18 @@ StarBud::Application.routes.draw do
   get "/get_collection_from_brand" => "catalog#get_coll", :as => 'get_coll'
   get "/get_doors_from_collection" => "catalog#get_doors", :as => 'get_doors'
 
+  get "/get_collection_from_brand_floor" => "catalog#get_coll_floor", :as => 'get_coll_floor'
+  get "/get_floors_from_collection" => "catalog#get_floor", :as => 'get_floors'
+
+  get "/get_collection_from_brand_plinth" => "catalog#get_coll_plinth", :as => 'get_coll_plinth'
+  get "/get_plinths_from_collection" => "catalog#get_plinth", :as => 'get_plinths'
+
   get "/get_laminate" => "catalog#get_laminate", :as => 'get_laminate'
   get "/get_wall" => "catalog#get_wall", :as => 'get_wall'
   get "/get_baseboard" => "catalog#get_baseboard", :as => 'get_baseboard'
 
-
+  get "/designer/d_door_brand/d_door_collection/:id" => "catalog#update_sub_cat"
+  get '/nazariy' => 'catalog#get_d_door_collection'
 
   post "/contacts" => "main#send_message"
 

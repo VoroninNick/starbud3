@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-/public/assets/*
+/public/assets/
 /public/system/brands/*
 /public/uploads/ckeditor/pictures/*
 /.idea/*

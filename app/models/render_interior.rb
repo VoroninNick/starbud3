@@ -14,20 +14,22 @@ class RenderInterior < ActiveRecord::Base
   has_attached_file :thumb, styles:{ thumb: "228x128#"
   },url:'/assets/images/visual_designer/:class/thumb/:id/image_:style.:extension',
                     path:':rails_root/public:url'
-  has_many :laminates
+  has_many :d_doors
+  attr_accessible :d_door_ids
 
-  accepts_nested_attributes_for :laminates, allow_destroy: true
-  attr_accessible :laminates_attributes
+  # accepts_nested_attributes_for :d_doors, allow_destroy: true
+  # attr_accessible :d_doors_attributes
 
   has_many :color_walls
 
   accepts_nested_attributes_for :color_walls, allow_destroy: true
   attr_accessible :color_walls_attributes
 
-  has_many :color_baseboards
+  has_many :d_plinths
+  attr_accessible :d_plinth_ids
 
-  accepts_nested_attributes_for :color_baseboards, allow_destroy: true
-  attr_accessible :color_baseboards_attributes
+  # accepts_nested_attributes_for :d_plinths, allow_destroy: true
+  # attr_accessible :d_plinths_attributes
 
   rails_admin do
     navigation_label 'Візуальний конструктор'
@@ -64,7 +66,7 @@ class RenderInterior < ActiveRecord::Base
         label ''
         help ''
       end
-      field :laminates do
+      field :d_doors do
         label 'ЛАМІНАТ'
         help ''
       end
@@ -72,7 +74,7 @@ class RenderInterior < ActiveRecord::Base
         label 'КОЛІР СТІН'
         help ''
       end
-      field :color_baseboards do
+      field :d_plinths do
         label 'КОЛІР ПЛІНТУСА'
         help ''
       end
