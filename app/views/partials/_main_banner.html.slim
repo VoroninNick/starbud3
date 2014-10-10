@@ -4,7 +4,8 @@
       -m.main_banner_slides.each do |s|
         li
           a href=s.slide_link
-            img src=s.back_image.url
+            .background_slide style="background: url('#{s.back_image.url}')no-repeat center center;"
+            /img src=s.back_image.url
             .image-layer-1
               img src=s.layer_image.url
             .image-layer-2
@@ -15,6 +16,5 @@
             .button-layer.box-shadow-right-bottom
               a href=s.slide_link
                 = image_tag("Arrow-button.png")
-            .clearfix
 
 

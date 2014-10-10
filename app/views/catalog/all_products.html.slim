@@ -1,12 +1,12 @@
-.row.catalog-wrapper
+.fixed-row.row.catalog-wrapper
   -if @current_collection.seo_dynamic
     = m_title "#{@current_collection.seo_dynamic.meta_title}"
     = meta_keywords "#{@current_collection.seo_dynamic.meta_keywords}"
     = meta_description "#{@current_collection.seo_dynamic.meta_descriptions}"
-  .columns.large-12
+  .columns
     .row
       = render :partial => 'partials/catalog_sidebar'
-      .columns.large-8
+      .columns.large-8.medium-8.small-8
         .catalog-content-title-wrapper
           .line-wrapper
             .line
@@ -38,7 +38,7 @@
               - b = Brand.find c.brand_id
               - s = SubCatalog.find b.sub_catalog_id
               - m = MainCatalog.find s.main_catalog_id
-              .columns.large-3.float-left
+              .columns.large-3.medium-3.small-3.float-left
                 .item
                   - if door.door_variants_fulfillment_options.count <=0
                     =link_to image_tag("doors-blank.png")+'',show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' door_blank'

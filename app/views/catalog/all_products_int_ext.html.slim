@@ -1,13 +1,13 @@
-.row.catalog-wrapper
+.fixed-row.row.catalog-wrapper
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.int_ext_title}"
       = meta_keywords "#{s.int_ext_keyword}"
       = meta_description "#{s.int_ext_description}"
-  .columns.large-12
+  .columns
     .row
       = render :partial => 'partials/catalog_sidebar'
-      .columns.large-8
+      .columns.large-8.medium-8.small-8
         .catalog-content-title-wrapper
           .line-wrapper
             .line
@@ -24,9 +24,7 @@
           = raw @current_brand.text_to_brand
         .catalog-content-wrapper.int-ext-content-wrapper
           -@it_et.each do |ie|
-            /- s = SubCatalog.find ie.sub_catalog_id
-            /- m = MainCatalog.find s.main_catalog_id
-            .columns.large-4.ie-one-item.float-left
+            .columns.large-4.medium-4.small-4.ie-one-item.float-left
               a.fancybox href="#ie-id#{ie.id}"  rel="int-group"
                 img src=ie.image_structure.url(:thumb)
                 .ie-title-info
@@ -39,27 +37,20 @@
                     .ie-title-info
             div style="display: none"
               div id="ie-id#{ie.id}"  rel="int-group"
-                .row.floor-one-item-wrapper
-                  .columns.large-12
-                    .columns.large-5
+                .fixed-row.row.floor-one-item-wrapper
+                  .columns
+                    .columns.large-5.medium-5.small-5
                       h5.int-ext-l =ie.name
                       h4.int-ext-code
                         |(&nbsp;
                         = ie.cpde_product
                         |&nbsp;)
-                      /.columns.floor-breadcrambs
-                      /  span
-                      /    |//&nbsp;
-                      /    = m.name
-                      /    |&nbsp;/&nbsp;
-                      /    = link_to s.name, my_sub_catalog_path(m.main_catalogs_url, s.sub_catalog_url)
-
                       .int-image-wrap
                         h4.int-ext-s
                           |Інтер'єр
                         .int-image
                           img.header-box-shadow-right-bottom src=ie.image_interior.url alt=ie.alt_inter title=ie.title_inter
-                    .columns.large-7
+                    .columns.large-7.medium-7.small-7
                       h5.int-ext-l
                         |Структура
                       .struct-image
