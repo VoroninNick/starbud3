@@ -1,4 +1,4 @@
-.row.publication-wrapper.page-content-wrapper-box-shadow
+.fixed-row.row.publication-wrapper.page-content-wrapper-box-shadow
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.publication_title}"
@@ -15,13 +15,13 @@
       |&nbsp;/&nbsp;
       span
         |Корисні статті
-  .columns.large-12
+  .columns
     .row.line-wrapp
-      .columns.large-5
+      .columns.large-5.medium-5.small-5
         .title-about-us
           h3
             /|Публікації: Корисні статті
-      .columns.large-7
+      .columns.large-7.medium-7.small-7
         = render :partial => 'partials/publictions_sidebar'
       .grey-line-banner
     .row
@@ -43,7 +43,7 @@
 
     .row
       -@helpful_article.each do |article|
-        .columns.large-4.helpful_articles.float-left
+        .columns.large-4.medium-4.small-4.helpful_articles.float-left
           h5
             =link_to truncate(article.title, length: 60, omission: '...'), helpful_article_item_path(article.url), :class => current_class?(helpful_article_item_path(article.url))
             /a href = helpful_article_item_path(article.id) =truncate article.title, length: 60, omission: '...', :class => current_class?(helpful_article_item_path)

@@ -1,5 +1,5 @@
-.row.promotion-wrapper.page-content-wrapper-box-shadow
-  .columns.large-12
+.fixed-row.row.promotion-wrapper.page-content-wrapper-box-shadow
+  .columns
     .promotion-one-item-content
       .columns
         .title-about-us
@@ -47,25 +47,25 @@
                 =@promotion_item.end_promotion.strftime("%d %m %y")
             =raw @promotion_item.description
     .row.title-wrapper.promocion-wrapper.left-minus-15
-      .columns.large-3.title.box-shadow-right-bottom.titl-backg
+      .columns.large-3.medium-3.small-3.title.box-shadow-right-bottom.titl-backg
         .title-inner.box-shadow-bottom.titl-backg
           h2 Інші акції
-      .columns.large-9
+      .columns.large-9.medium-9.small-9
         p
           |
     .row.related-promotion-wrapper
-      .columns.large-1
+      .columns.large-1.medium-1.small-1
         p
           |
-      .columns.large-10.related-promotion-items
+      .columns.large-10.medium-10.small-10.related-promotion-items
         -@related_promotion_items.each do |rp|
-          .columns.large-6.related-promotion-item
+          .columns.large-6.medium-6.small-6.related-promotion-item
             h3
               =link_to rp.title,promotion_one_item_path(rp.id), class: " starbud-link"
             .image
               a href=promotion_one_item_path(rp.id)
                 = image_tag rp.image.url(:thumb), alt: '', class: " box-shadow-right-bottom"
             p =rp.short_description
-      .columns.large-1
+      .columns.large-1.medium-1.small-1
         p
           |

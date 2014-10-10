@@ -1,4 +1,4 @@
-.row.publication-wrapper.page-content-wrapper-box-shadow
+.fixed-row.row.publication-wrapper.page-content-wrapper-box-shadow
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.useful_video_title}"
@@ -15,19 +15,19 @@
       |&nbsp;/&nbsp;
       span
         |Цікаві відео
-  .columns.large-12
+  .columns
     .row
-      .columns.large-5
+      .columns.large-5.medium-5.small-5
         .title-about-us
           h3
-      .columns.large-7
+      .columns.large-7.medium-7.small-7
         = render :partial => 'partials/publictions_sidebar'
     .row
       -@useful_video_item.each_with_index do |item, index|
         .row.useful_video_item class=(index%2==0 ? "float_left" : "float_right")
-          .columns.large-6.video
+          .columns.large-6.medium-6.small-6.video
             =raw item.video_url
-          .columns.large-6.content
+          .columns.large-6.medium-6.small-6.content
             h5 =item.title
             span
               |Завантажено -

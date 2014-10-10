@@ -1,10 +1,10 @@
-.row.promotion-wrapper.page-content-wrapper-box-shadow
+.fixed-row.row.promotion-wrapper.page-content-wrapper-box-shadow
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.promotion_title}"
       = meta_keywords "#{s.promotion_keywords}"
       = meta_description "#{s.promotion_descriptions}"
-  .columns.large-12
+  .columns
     .columns
       .title-about-us
         h3

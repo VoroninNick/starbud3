@@ -1,4 +1,4 @@
-.row.publication-wrapper.page-content-wrapper-box-shadow
+.fixed-row.row.publication-wrapper.page-content-wrapper-box-shadow
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.interest_news_title}"
@@ -15,22 +15,22 @@
       |&nbsp;/&nbsp;
       span
         |Свіжі новини
-  .columns.large-12
+  .columns
     .row
-      .columns.large-5
+      .columns.large-5.medium-5.small-5
         .title-about-us
           h3
             /|Публікації: Цікаві новини
-      .columns.large-7
+      .columns.large-7.medium-7.small-7
         = render :partial => 'partials/publictions_sidebar'
     .row
       -@interest_article.each do |article|
-        .columns.large-6.interesting_news.float-left
+        .columns.large-6.medium-6.small-6.interesting_news.float-left
           h5
             a.starbud-link href = interest_news_item_path(article.url) =truncate article.title, length: 60, omission: '...'
-          .columns.large-4.image
+          .columns.large-4.medium-4.small-4.image
             img src=article.image
-          .columns.large-8
+          .columns.large-8.medium-8.small-8
             p =truncate_html article.short_description, length: 130, omission: '...'
           .row
             .columns

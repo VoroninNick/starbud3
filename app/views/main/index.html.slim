@@ -6,8 +6,8 @@
       = meta_keywords "#{s.index_keywords}"
       = meta_description "#{s.index_descriptions}"
 .clearfix
-.row.search-bar.box-shadow-bottom
-  .columns.large-5
+.fixed-row.row.search-bar.box-shadow-bottom
+  .columns.large-5.medium-5.small-5
     .columns.search-bar-background-left
     ul#bx-pager.main-page-tumb
       -dsi = 0
@@ -23,9 +23,9 @@
             -dsi+=1
             .clearfix
       .clearfix
-  .columns.large-1
+  .columns.large-1.medium-1.small-1
     p
-  .columns.large-6
+  .columns.large-6.medium-6.small-6
     .row.search-form
       javascript:
         (function() {
@@ -42,18 +42,18 @@
       /= render :partial => 'partials/search'
     .columns.search-bar-background-right
   .clearfix
-.row.main-page-wrapper
-  .columns.large-12
+.fixed-row.row.main-page-wrapper
+  .columns.large-12.medium-12.small-12
     #main-short-description.main-short-description
       -@index_about.each do |c|
         = raw c.description
         .clearfix
     .row
-      .columns.large-2.read-more
+      .columns.large-2.medium-2.small-2.read-more
         = link_to 'Детальніше...', about_path, :class => is_active?("about_us")
     .row#centre-main-page-menu-link.centre-main-page-menu
       - main_catalog.each do |main_menu|
-        .columns.large-4.float-left
+        .columns.large-4.medium-4.small-4.float-left
           .title-centre-main-page-menu
             .row
               .columns
@@ -65,7 +65,7 @@
               -main_menu.sub_catalogs.each do |sub_catalog|
                 li
                   = link_to sub_catalog.name, my_sub_catalog_path(main_menu.main_catalogs_url, sub_catalog.sub_catalog_url)
-      .columns.large-4.float-left
+      .columns.large-4.medium-4.small-4.float-left
         .pdf-block
           -pdf_catalog.each do |pdf|
             a href=pdf.path
@@ -76,47 +76,47 @@
       .clearfix
     .clearfix
     .row.visual-constructor
-      .columns.large-2
+      .columns.large-2.medium-2.small-2
         .row
           .columns
             .row
               .columns.visual-constructor-left
                 p
-      .columns.large-2
+      .columns.large-2.medium-2.small-2
         a href=designer_path
           img src=asset_path("visual-constructor-icon.png")
-      .columns.large-5
+      .columns.large-5.medium-5.small-5
         h3
           a href=designer_path
             |Візуальний Конструктор
         span
           |За все время работы с рекламой, дизайном, организацией любых творческих процессов, автор вывел для себя важное правило.
-      .columns.large-1
+      .columns.large-1.medium-1.small-1
         p
-      .columns.large-1
+      .columns.large-1.medium-1.small-1
         .vb
           a href=designer_path
             img src=asset_path("Arrow-button.png")
-      .columns.large-1
+      .columns.large-1.medium-1.small-1
         .row
           .columns
             .row
               .columns.visual-constructor-right
                 p
     .row.interest-info#publication-link
-      .columns.large-7
+      .columns.large-7.medium-7.small-7
         .row.title-wrapper
-          .columns.large-8.title.box-shadow-right-bottom.titl-backg
+          .columns.large-8.medium-8.small-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
               h2
                 = link_to 'Свіжі новини', interesting_news_path, class: ' ptl'
           .columns
             -@interesting_news.each do |i_n|
               li.item
-                .columns.large-3.image
+                .columns.large-3.medium-3.small-3.image
                   a
                     img src=i_n.image.url(:thumb)
-                .columns.large-9
+                .columns.large-9.medium-9.small-9
                   h5
                     a href = interest_news_item_path(i_n.url) = truncate  i_n.title, length: 70, omission: '...'
                   span = truncate_html i_n.short_description, length: 140, omission: '...'
@@ -124,7 +124,7 @@
                     .main-page-read-more.box-shadow-right-bottom
                       = link_to image_tag("Arrow-button.png") + '', interest_news_item_path(i_n.url), :title => 'Детальніше'
 
-      .columns.large-5.video-wrapper
+      .columns.large-5.medium-5.small-5.video-wrapper
         .row.title-wrapper.video
           .columns.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
@@ -145,19 +145,19 @@
                 img src=mcl.label_image
       .carousel-margin-right
     .row.helpful-articles
-      .columns.large-7
+      .columns.large-7.medium-7.small-7
         .row.title-wrapper
-          .columns.large-8.title.box-shadow-right-bottom.titl-backg
+          .columns.large-8.medium-8.small-8.title.box-shadow-right-bottom.titl-backg
             .title-inner.box-shadow-bottom.titl-backg
               h2
                 = link_to 'Корисні статті', helpful_articles_path, class: ' ptl'
       .helpful-articles-content
         -@publication_main_page.each do |article|
-          .columns.large-6.float-left
+          .columns.large-6.medium-6.small-6.float-left
             li.item
-              .columns.large-4.image
+              .columns.large-4.medium-4.small-4.image
                 img src=article.image.url(:thumb)
-              .columns.large-8
+              .columns.large-8.medium-8.small-8
                 h5
                   a href = helpful_article_item_path(article.url) = truncate article.title, length: 60, omission: '...'
                 span = truncate_html article.short_description, length: 130, omission: '...'

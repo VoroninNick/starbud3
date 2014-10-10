@@ -1,31 +1,31 @@
-.row.content-wrapper
+.fixed-row.row.content-wrapper
   -if seo_meta_tags
     -seo_meta_tags.each do |s|
       = m_title "#{s.contacts_title}"
       = meta_keywords "#{s.contacts_keywords}"
       = meta_description "#{s.contacts_descriptions}"
-  .columns.large-12
+  .columns
     -@contact_page.each do |c|
-      .columns.large-4
+      .columns.large-4.medium-4.small-4
         h3
           |Контакти
       .clearfix
       .contacts
-        .columns.large-3
+        .columns.large-3.medium-3.small-3
           h4
             |Адреса:
           = raw c.address
-        .columns.large-1
+        .columns.large-1.medium-1.small-1
           h4
             |
-        .columns.large-3
+        .columns.large-3.medium-3.small-3
           h4
             |Графік роботи:
           = raw c.working_hours
-        .columns.large-1
+        .columns.large-1.medium-1.small-1
           h4
             |
-        .columns.large-4
+        .columns.large-4.medium-4.small-4
           h4
             |Телефони:
           = raw c.phones
@@ -38,7 +38,7 @@
           span
             |GPS: 58.6° Пн. Ш. 49.6° Сх. Д.
     .google-maps-wrapper
-      .columns.large-12
+      .columns
         #map.box-shadow-right-bottom
     .call-order
       .columns
@@ -46,14 +46,14 @@
           |Зворотній зв’язок:
     .contacts-form
       = simple_form_for @contact, :html => {:class => 'form-horizontal' },:url => contacts_path do |f|
-        .columns.large-6.form-horizontal-left
+        .columns.large-6.medium-6.small-6.form-horizontal-left
           = f.input :name, :required => true, placeholder: 'Олександр Олександрієвський', :label=>false, :class=>" name"
           = f.label :"ім'я", :for=>"contact_name"
           = f.input :email, :required => false, placeholder: 'voronin.nick@gmail.com', :label=>false
           = f.label :"ел.скринька", :for=>"contact_phone"
           = f.input :phone, :required => true, placeholder: '+38 (050) 417 07 28', :label=>false
           = f.label :"телефон", :for=>"contact_email"
-        .columns.large-6.form-horizontal-right
+        .columns.large-6.medium-6.small-6.form-horizontal-right
           = f.input :message, :as => :text, :required => false, placeholder: 'Будемо раді почути відгуки та запитання від Вас.', :label=>false
           = f.label :"текст вашого повідомлення", :for=>"contact_message"
           .form-actions
@@ -62,11 +62,11 @@
       .columns
         h4
           |Представники в області:
-      .column.large-12.obl-contacts
+      .column.obl-contacts
         /.row
         -@region_person.each_with_index do |o, index|
           -if index%3==0
-            .columns.large-4.obl-address.oa_left.float_left
+            .columns.large-4.medium-4.small-4.obl-address.oa_left.float_left
               .obl-ttl-wrapper.box-shadow-right-bottom
                 h4 = o.region
               .row
@@ -93,7 +93,7 @@
                   .clearfix
 
           -elsif index%3==1
-            .columns.large-4.obl-address.oa_center.float_left
+            .columns.large-4.medium-4.small-4.obl-address.oa_center.float_left
               .obl-ttl-wrapper.box-shadow-right-bottom
                 h4 = o.region
               .row
@@ -120,7 +120,7 @@
                   .clearfix
 
           -elsif index%3==2
-            .columns.large-4.obl-address.oa_right.float_left
+            .columns.large-4.medium-4.small-4.obl-address.oa_right.float_left
               .obl-ttl-wrapper.box-shadow-right-bottom
                 h4 = o.region
               .row
