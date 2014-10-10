@@ -55,4 +55,4 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     }
 }
 
-alert(document.querySelector('meta[name="viewport"]').getAttribute('content'));
+//alert(document.querySelector('meta[name="viewport"]').getAttribute('content'));
