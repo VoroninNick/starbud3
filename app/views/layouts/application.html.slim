@@ -2,7 +2,14 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta name="viewport" content="width=device-width"
+    /meta name="viewport" content="width=device-width"
+    /meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    /meta name="viewport" content="width=device-width, initial-scale=1.5"
+    /meta name="viewport" content="initial-scale=1"
+
+
+    /META NAME="viewport" CONTENT="width=device-width, height=device-height, initial-scale=1, user-scalable=no"
+
     = favicon_link_tag 'favicon.ico', rel: 'Стар-Буд'
     title == content_for?(:m_title) ? yield(:m_title) : "Стар Буд"
     meta name="keywords" content=meta_keywords

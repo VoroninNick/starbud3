@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
+
+
 $(document).ready ->
   setTimeout (->
     $("#gsc-i-id1").attr "placeholder", "Введіть, що ви шукаєте..."

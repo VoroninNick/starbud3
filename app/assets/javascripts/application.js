@@ -16,4 +16,43 @@
 
 //= require_tree .
 
-//$(function(){ $(document).foundation(); });
+
+function getViewportWidth() {
+    if (window.innerWidth) {
+        return window.innerWidth;
+    }
+    else if (document.body && document.body.offsetWidth) {
+        return document.body.offsetWidth;
+    }
+    else {
+        return 0;
+    }
+}
+
+function getViewportHeight() {
+    if (window.innerHeight) {
+        return window.innerHeight;
+    }
+    else if (document.body && document.body.offsetHeight) {
+        return document.body.offsetHeight;
+    }
+    else {
+        return 0;
+    }
+}
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var actual_width = getViewportWidth();
+    var actual_height = getViewportHeight();
+
+    var min_width = 887;
+    var min_height = 615;
+
+    var ratio = Math.min(actual_width / min_width, actual_height / min_height);
+
+    if (ratio < 1) {
+        document.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + actual_width);
+    }
+}
+
+alert(document.querySelector('meta[name="viewport"]').getAttribute('content'));
