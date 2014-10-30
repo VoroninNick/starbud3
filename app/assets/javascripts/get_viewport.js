@@ -2,9 +2,6 @@
  * Created by tor on 10/30/14.
  */
 
-
-<!--
-
 var viewportwidth;
 var viewportheight;
 
@@ -33,6 +30,6 @@ else
     viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
         viewportheight = document.getElementsByTagName('body')[0].clientHeight
 }
-document.write('<p>Your viewport width is '+viewportwidth+'x'+viewportheight+'</p>');
-//-->
+//document.write('<p>Your viewport width is '+viewportwidth+'x'+viewportheight+'</p>');
+
 
