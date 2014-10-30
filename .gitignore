@@ -18,7 +18,7 @@
 /public/assets/*
 /public/system/brands/*
 /public/uploads/ckeditor/pictures/*
-/.idea/*
+.idea
 /Gemfile.lock
 /config/deploy/*
 /lib/capistrano/*
