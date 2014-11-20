@@ -15,28 +15,23 @@ class ColorWall < ActiveRecord::Base
     list do
       field :name
       field :public
-      field :index_sort
     end
 
     edit do
       field :render_interior do
-        label ''
-        help ''
+        label "Рендер інтер'єру"
+        help "Виберіть рендер інтер'єру до якого належіть цей колір стіни"
       end
       field :name do
-        label ''
-        help ''
-      end
-      field :public do
-        label ''
-        help ''
-      end
-      field :index_sort do
-        label ''
+        label 'Назва'
         help ''
       end
       field :color_wall_images do
-        label ''
+        label 'Зображення'
+        help 'Рендер та іконка'
+      end
+      field :public do
+        label 'Активний'
         help ''
       end
     end

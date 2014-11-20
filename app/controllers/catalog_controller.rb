@@ -108,7 +108,7 @@ class CatalogController < ApplicationController
 
 
   def designer
-    @render_interior = RenderInterior.order("updated_at asc")
+    @render_interior = RenderInterior.where(public: true).order("updated_at asc")
 
     @floor = DDoorBrand.order("updated_at asc")
     @plinth = DPlinthBrand.order("updated_at asc")

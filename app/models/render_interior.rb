@@ -42,49 +42,44 @@ class RenderInterior < ActiveRecord::Base
       field :position_x
       field :position_y
       field :public
-      field :index_sort
     end
 
     edit do
       field :name do
-        label ''
+        label 'Назва'
         help ''
       end
       field :image, :paperclip do
-        label ''
+        label 'Рендер'
         help ''
       end
       field :thumb, :paperclip do
-        label ''
+        label 'Іконка рендера'
         help ''
       end
       field :position_x do
-        label ''
-        help ''
+        label 'X'
+        help 'Ліва координата для дверей. Відступ від лівого краю'
       end
       field :position_y do
-        label ''
-        help ''
+        label 'Y'
+        help 'Верхня координата для дверей. Відступ від верху'
       end
       field :d_doors do
         label 'ЛАМІНАТ'
-        help ''
+        help 'Виберіть ламінати які відносяться до цього інтерєру'
       end
       field :color_walls do
         label 'КОЛІР СТІН'
-        help ''
+        help "Кольори стін які належать до цього інтер'єру"
       end
       field :d_plinths do
         label 'КОЛІР ПЛІНТУСА'
-        help ''
+        help 'Виберіть плінтуса які відносяться до цього інтерєру'
       end
       field :public do
-        label ''
-        help ''
-      end
-      field :index_sort do
-        label ''
-        help ''
+        label 'Опубліковати'
+        help 'Вімічено галочкою буде відображатись в конструкторі'
       end
     end
   end

@@ -32,10 +32,6 @@ class DPlinth < ActiveRecord::Base
         label 'Активний'
         help ''
       end
-      field :index_sort do
-        label 'Сортування'
-        help ''
-      end
     end
 
     edit do
@@ -51,10 +47,6 @@ class DPlinth < ActiveRecord::Base
       end
       field :public do
         label 'Активний'
-        help ''
-      end
-      field :index_sort do
-        label 'Сортування'
         help ''
       end
     end
