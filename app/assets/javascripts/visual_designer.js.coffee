@@ -11,6 +11,7 @@ $(document).ready ->
   imageView.attr("data-position-x", positionX)
   imageView.attr("data-position-y", positionY)
 
+#  select dor brand
   $('select#vd_brand').change (e) ->
     e.preventDefault()
     brand= $(this).val()
@@ -20,22 +21,39 @@ $(document).ready ->
       type: "GET"
       data: valuesToSubmit
       beforeSend: ->
-        return
       success: (data) ->
-
         $select = $('select#vd_collections')
         $select.children().remove()
-
         s = data
         options = s.split(',')
         $.each options, (index, name) ->
           $("select#vd_collections").append "<option value="+name+">" + name + "</option>"
-          return
-        return
-
       complete: ->
-        return
+        collection= $('select#vd_collections option:first').val()
+        $('select#vd_collections').removeClass("select_collection")
+        valuesToSubmit = {collection: collection}
 
+        $.ajax
+          url: '/get_doors_from_collection'
+          type: "GET"
+          data: valuesToSubmit
+          beforeSend: ->
+            return
+          success: (data) ->
+            $data = $(data)
+            $images = $data.find('img')
+            $doorsWrap = $(".vd_doors_inner")
+            $doorsWrap.children().remove()
+            $.each $images, (index, img) ->
+              $img = $(img)
+              src = $img.attr('src')
+              dataToolTip = $img.attr('data-tooltip')
+              dataSrc = $img.attr('data-src')
+              $img = $("<div class='vd_doors_item'  data-tooltip="+dataToolTip+"><img src="+src+" ></div>")
+              $img.appendTo($doorsWrap)
+            return
+
+# select dor collection
   $('select#vd_collections').change ->
     collection= $(this).val()
     $(this).removeClass("select_collection")
@@ -151,19 +169,15 @@ $(document).ready ->
       type: "GET"
       data: valuesToSubmit
       beforeSend: ->
-        return
       success: (data) ->
         $select = $('select#vp_collections')
         $select.children().remove()
-
         s = data
         options = s.split(',')
         $.each options, (index, name) ->
           $("select#vp_collections").append "<option value="+name+">" + name + "</option>"
-          return
-        return
-
       complete: ->
+
         collection= $('select#vp_collections option:first').val()
         $('select#vp_collections').removeClass("select_collection")
         valuesToSubmit = {collection: collection}
@@ -172,7 +186,6 @@ $(document).ready ->
           type: "GET"
           data: valuesToSubmit
           beforeSend: ->
-            return
           success: (data) ->
             $data = $(data)
             $images = $data.find('img')
@@ -186,7 +199,6 @@ $(document).ready ->
               dataSrc = $img.attr('data-src')
               $img = $("<div class='vd_baseboard_thumb'  data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" title="+title+" ></div>")
               $img.appendTo($doorsWrap)
-        return
 
   #select plinth from select collection
   $('select#vp_collections').change ->
@@ -330,32 +342,6 @@ $(document).ready ->
     $('#vd_door_nav .vd_tab').addClass('tab_hide')
     $('#vd_door_nav .tab_laminate').removeClass('tab_hide')
 
-#    attrRenderID = $('img.image_view').attr('data-render-interior-id')
-#    $tabLaminate = $('.vd_tab.tab_laminate')
-#    $tabLaminate.children().remove()
-#    valuesToSubmit = {id: attrRenderID}
-#    $.ajax
-#      url: '/get_laminate'
-#      dataType: 'xml'
-#      type: "GET"
-#      data: valuesToSubmit
-#      beforeSend: ->
-#        return
-#      success: (data) ->
-#        $data = $(data)
-#        $images = $data.find('img')
-#        $.each $images, (index, img) ->
-#          $img = $(img)
-#          src = $img.attr('src')
-#          dataToolTip = $img.attr('data-tooltip')
-#          dataSrc = $img.attr('data-src')
-#          $img = $("<div class='vd_laminate_thumb' data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" /></div>")
-#          $img.appendTo($tabLaminate)
-#
-#        return
-#
-#      complete: ->
-#        return
 
   $(".vd_tab.tab_laminate").on "click", ".vd_laminate_thumb img", ->
     largeImageLaminate = $(this).attr("data-src")
@@ -412,32 +398,6 @@ $(document).ready ->
     $('#vd_door_nav .vd_tab').addClass('tab_hide')
     $('#vd_door_nav .tab_baseboard').removeClass('tab_hide')
 
-#    attrRenderID = $('img.image_view').attr('data-render-interior-id')
-#    $tabBaseboard = $('.vd_tab.tab_baseboard')
-#    $tabBaseboard.children().remove()
-#    valuesToSubmit = {id: attrRenderID}
-#    $.ajax
-#      url: '/get_baseboard'
-#      dataType: 'xml'
-#      type: "GET"
-#      data: valuesToSubmit
-#      beforeSend: ->
-#        return
-#      success: (data) ->
-#        $data = $(data)
-#        $images = $data.find('img')
-#        $.each $images, (index, img) ->
-#          $img = $(img)
-#          src = $img.attr('src')
-#          dataToolTip = $img.attr('data-tooltip')
-#          dataSrc = $img.attr('data-src')
-#          $img = $("<div class='vd_baseboard_thumb' data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" /></div>")
-#          $img.appendTo($tabBaseboard)
-#
-#        return
-#
-#      complete: ->
-#        return
 
   $(".vd_tab.tab_baseboard").on "click", ".vd_baseboard_thumb img", ->
     largeImageBaseboard = $(this).attr("data-src")
