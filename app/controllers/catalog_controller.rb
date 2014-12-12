@@ -157,7 +157,8 @@ class CatalogController < ApplicationController
 
   def get_doors
     col_name = params[:collection]
-    doors = Door.joins(collection: [{brand: :sub_catalog}]).where(collections: {name: col_name}).where(sub_catalogs: {id: '1'})
+    brand_name = params[:brand]
+    doors = Door.joins(collection: [{brand: :sub_catalog}]).where(collections: {name: col_name}).where(brands: {name: brand_name}).where(sub_catalogs: {id: '1'})
 
     # sql = "select d.* from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.name = '#{col_name}' and s.id == '1' "
 
@@ -173,6 +174,7 @@ class CatalogController < ApplicationController
     end
     render template: 'constructor/get_doors.xml'
   end
+
   def get_floor
     name = params[:collection]
     sql = "select p.* from d_door_collections c, d_doors p where c.id = p.d_door_collection_id and c.name = '#{name}'"

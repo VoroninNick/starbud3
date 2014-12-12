@@ -11,6 +11,7 @@ $(document).ready ->
   imageView.attr("data-position-x", positionX)
   imageView.attr("data-position-y", positionY)
 
+  $brandName = ''
 #  select dor brand
   $('select#vd_brand').change (e) ->
     e.preventDefault()
@@ -29,10 +30,11 @@ $(document).ready ->
         $.each options, (index, name) ->
           $("select#vd_collections").append '<option value="'+name+'">' + name + "</option>"
       complete: ->
+        $brandName = brand
         collection= $('select#vd_collections option:first').val()
         $('select#vd_collections').removeClass("select_collection")
-        valuesToSubmit = {collection: collection}
-        alert collection
+        valuesToSubmit = {collection: collection, brand: $brandName}
+#        alert collection
         $.ajax
           url: '/get_doors_from_collection'
           type: "GET"
@@ -57,14 +59,14 @@ $(document).ready ->
   $('select#vd_collections').change ->
     collection= $(this).val()
     $(this).removeClass("select_collection")
-    valuesToSubmit = {collection: collection}
+    valuesToSubmit = {collection: collection, brand: $brandName}
     $.ajax
       url: '/get_doors_from_collection'
       type: "GET"
       data: valuesToSubmit
       beforeSend: ->
-        alert collection
-        return
+#        alert collection
+#        return
       success: (data) ->
         $data = $(data)
         $images = $data.find('img')
