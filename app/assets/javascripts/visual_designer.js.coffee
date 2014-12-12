@@ -63,6 +63,7 @@ $(document).ready ->
       type: "GET"
       data: valuesToSubmit
       beforeSend: ->
+        alert valuesToSubmit
         return
       success: (data) ->
         $data = $(data)
