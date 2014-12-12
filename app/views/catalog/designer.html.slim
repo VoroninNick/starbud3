@@ -67,13 +67,6 @@
                     - @floor[0].d_door_collections[0].d_doors.each do |f|
                       .vd_laminate_thumb  data-tooltip=""
                         img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
-                      /- d.door_variants_fulfillment_options.each do |dop|
-                      /  .vd_doors_item
-                      /    = image_tag src=dop.image.url(:thumb)
-                /#category-select
-                /  category = collection_select :post_category, :id, @floor, :id, :name, options = {:prompt => "Select a category"}
-                //= observe_field :product_collection, :url => {:controller => 'catalog', :action => 'get_d_door_collection'},  :update => "sub-category-select"
-                /#sub-category-select
 
           .vd_tab.tab_wall.tab_hide
           .vd_tab.tab_baseboard.tab_hide
@@ -92,10 +85,3 @@
                       - @plinth[0].d_plinth_collections[0].d_plinths.each do |f|
                         .vd_baseboard_thumb data-tooltip=""
                           img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
-              /.vd_doors_wrapper
-              /  .vd_doors_inner.vd_scroll_panel
-              /    - if vd_doors
-              /      - vd_doors.each do |d|
-              /        - d.door_variants_fulfillment_options.each do |dop|
-              /          .vd_doors_item
-              /            = image_tag src=dop.image.url(:thumb)

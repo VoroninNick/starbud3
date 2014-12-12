@@ -95,3 +95,5 @@ gem 'mailchimp-api', require: 'mailchimp'
 
 
 gem 'google-analytics-rails'
+
+gem "squeel"

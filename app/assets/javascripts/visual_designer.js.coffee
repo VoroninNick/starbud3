@@ -27,7 +27,7 @@ $(document).ready ->
         s = data
         options = s.split(',')
         $.each options, (index, name) ->
-          $("select#vd_collections").append "<option value="+name+">" + name + "</option>"
+          $("select#vd_collections").append '<option value="'+name+'">' + name + "</option>"
       complete: ->
         collection= $('select#vd_collections option:first').val()
         $('select#vd_collections').removeClass("select_collection")
@@ -38,7 +38,7 @@ $(document).ready ->
           type: "GET"
           data: valuesToSubmit
           beforeSend: ->
-            return
+
           success: (data) ->
             $data = $(data)
             $images = $data.find('img')
@@ -49,7 +49,7 @@ $(document).ready ->
               src = $img.attr('src')
               dataToolTip = $img.attr('data-tooltip')
               dataSrc = $img.attr('data-src')
-              $img = $("<div class='vd_doors_item'  data-tooltip="+dataToolTip+"><img src="+src+" ></div>")
+              $img = $("<div class='vd_doors_item'  data-tooltip=\"+dataToolTip+\"><img src="+src+" ></div>")
               $img.appendTo($doorsWrap)
             return
 

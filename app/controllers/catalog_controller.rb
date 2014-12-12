@@ -131,17 +131,23 @@ class CatalogController < ApplicationController
 
 
   def get_coll
-    names =Collection.find_names_by_brand_url(params[:brand])
+    collections = Collection.joins(brand: :sub_catalog).where(brands: {name: params[:brand]}).where(sub_catalogs: {id: '1'})
 
-    s = names.join(',')
+    collections_name = []
+    collections.each do |c|
+      collections_name.push(c.name)
+    end
+    s = collections_name.join(',')
     render(inline: s)
   end
+
   def get_coll_floor
     names =DDoorCollection.find_names_by_brand_self(params[:brand])
 
     s = names.join(',')
     render(inline: s)
   end
+
   def get_coll_plinth
     names =DPlinthCollection.find_names_by_brand_self(params[:brand])
 
@@ -150,9 +156,13 @@ class CatalogController < ApplicationController
   end
 
   def get_doors
-    name = params[:collection]
-    sql = "select d.* from collections c, doors d where c.id = d.collection_id and c.name = '#{name}'"
-    doors =Door.find_by_sql(sql)
+    col_name = params[:collection]
+    doors = Door.joins(collection: [{brand: :sub_catalog}]).where(collections: {name: col_name}).where(sub_catalogs: {id: '1'})
+
+    # sql = "select d.* from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.name = '#{col_name}' and s.id == '1' "
+
+    # sql = "select d.* from collections c, doors d, sub_catalog s where c.id = d.collection_id and c.name = '#{name}' and  "
+    # doors =Door.find_by_sql(sql)
     @door_images = []
     doors.each do |d|
       d.door_variants_fulfillment_options.each do |dv|

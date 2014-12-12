@@ -28,6 +28,7 @@ class SubCatalog < ActiveRecord::Base
     label_plural 'Під каталоги'
 
     list do
+      field :id
       field :name
       field :main_catalog
       field :description
