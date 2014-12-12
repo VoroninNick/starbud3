@@ -32,7 +32,7 @@ $(document).ready ->
         collection= $('select#vd_collections option:first').val()
         $('select#vd_collections').removeClass("select_collection")
         valuesToSubmit = {collection: collection}
-
+        alert collection
         $.ajax
           url: '/get_doors_from_collection'
           type: "GET"
