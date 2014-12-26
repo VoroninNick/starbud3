@@ -30,6 +30,7 @@ StarBud::Application.routes.draw do
   get '/nazariy' => 'catalog#get_d_door_collection'
 
   post "/contacts" => "main#send_message"
+  post "/call_order" => "main#call_order"
 
 
   resources :promotions

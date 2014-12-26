@@ -37,6 +37,7 @@ body
                 |тел.:+38&nbsp;
                 span
                   |(032) 242 38 41
+            a.fancybox-call-order data-fancybox-group="call-order" href="#call-order" rel="call-order" Замовити дзвінок!
           .header-top-right
             ul.header-social-buttons
               li
@@ -227,6 +228,8 @@ body
         p
           |Cб:
           span 10:00 — 14:00
+  = render partial: 'partials/call_order_form'
+  = render partial: 'partials/chat'
 
 
 

@@ -42,7 +42,16 @@ class MainController < ApplicationController
   def terms_of_use
     @tou = TermsOfUse.all
   end
+
   def send_message
     ContactMailer.new_message(@contact).deliver
+  end
+
+  def call_order
+    name = params[:name]
+    phone = params[:phone]
+    call_time_begin = params[:call_time_begin]
+    call_time_end = params[:call_time_end]
+    CustomForms.call_order_data(name, phone, call_time_begin, call_time_end).deliver
   end
 end

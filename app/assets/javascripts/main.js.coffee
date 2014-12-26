@@ -6,6 +6,26 @@
 
 
 $(document).ready ->
+
+  $('form.star-bud-form').submit (event) ->
+    # Stop the browser from submitting the form.
+    event.preventDefault()
+    # Serialize the form data.
+    $thisForm = $(this).closest('form')
+    formData = $thisForm.serialize()
+    # Submit the form using AJAX.
+    $.ajax
+      type: "POST"
+      url: $thisForm.attr("action")
+      data: formData
+      beforeSend: ->
+        alert "Відсилання..."
+      success: ->
+        alert "Відіслано..."
+        $thisForm.find("input[type=text],input[type=email] textarea").val("")
+      error: ->
+        alert "Something went wrong!"
+
   setTimeout (->
     $("#gsc-i-id1").attr "placeholder", "Введіть, що ви шукаєте..."
   ), 5000

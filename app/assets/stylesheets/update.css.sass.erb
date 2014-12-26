@@ -1,0 +1,91 @@
+.close_fancybox_gallery
+    position: absolute
+    top: 10px
+    right: 25px
+#gallery_wrapper
+    .fancybox-skin
+        padding: 0 !important
+.blue-gradient
+    background: #003e74 /* Old browsers */
+    background: -moz-linear-gradient(top,  #003e74 0%, #005baa 100%) /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003e74), color-stop(100%,#005baa)) /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #003e74 0%,#005baa 100%) /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #003e74 0%,#005baa 100%) /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #003e74 0%,#005baa 100%) /* IE10+ */
+    background: linear-gradient(to bottom,  #003e74 0%,#005baa 100%) /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003e74', endColorstr='#005baa',GradientType=0 ) /* IE6-9 */
+
+.fancybox-call-order
+    color: #e1e1e1
+    font-size: 14px
+    line-height: 18px
+    font-weight: 100
+    margin-left: 25px
+    border-bottom: 1px dotted #fff
+    &:hover
+        color: #e1e1e1
+.header-top-center
+    p
+        line-height: 1rem
+
+#call-order
+    width: 335px
+    .header
+        height: 45px
+        width: inherit
+    .form, form, .input, input
+        width: 100%
+    .form
+        padding: 45px 25px 55px 25px
+        background: #fff
+        form
+            .input
+                input
+                    margin-bottom: 1rem
+            .select
+                select
+                    width: 40%
+                    height: 55px
+                    border: none
+                    background-color: rgba(235, 235, 235, 0.29)
+                    -moz-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    -webkit-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    font-size: 1.2em
+                    font-weight: 300
+                    font-style: italic
+                    padding-left: 15px
+                    padding-right: 15px
+                    &:focus
+                        background-color: #ebebeb
+                        -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15)
+                        -webkit-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15)
+                        box-shadow: 3px 3px #c3c3c3
+                        color: #003162
+                        font-size: 1.4em
+                        outline: none !important
+                        outline-style: none !important
+            .line
+                display: inline-block
+                width: 54px
+                height: 55px
+
+            .form-actions
+                input
+                    border: none
+                    background: url("<%= asset_path('soc-button-subs.jpg') %>")no-repeat
+                    width: 46px
+                    height: 45px
+                    -webkit-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8)
+                    -moz-box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8)
+                    box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8)
+                    padding: 0
+                    cursor: pointer
+            label
+                font-weight: 400
+                font-size: 0.8em
+                letter-spacing: -1px
+                color: #003162
+                padding-left: 15px
+                position: relative
+                top: -10px

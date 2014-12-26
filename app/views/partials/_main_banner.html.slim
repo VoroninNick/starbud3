@@ -10,11 +10,12 @@
               img src=s.layer_image.url
             .image-layer-2
               img src=s.layer_image.url
-            .content-layer
-              .content-inner
-                =raw s.content
-            .button-layer.box-shadow-right-bottom
-              a href=s.slide_link
-                = image_tag("Arrow-button.png")
+            -if s.content.present?
+              .content-layer
+                .content-inner
+                  =raw s.content
+              .button-layer.box-shadow-right-bottom
+                a href=s.slide_link
+                  = image_tag("Arrow-button.png")
 
 
