@@ -1,17 +1,18 @@
 div style="display: none"
   #call-order  data-fancybox-group="call-order" rel="call-order"
     .header.blue-gradient
+      h3 Замовити дзвінок
       a class="close_fancybox_gallery" onclick="$.fancybox.close()"
     .form
-      form.star-bud-form method="POST" action="/call_order"
+      form.star-bud-form.sb-popup-form method="POST" action="/call_order"
         input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"
         .input
-          input placeholder="Олександр Олександрієвський" name="name"  required=""
+          input placeholder="Олександр Олександрієвський" name="name" type="text"  required=""
           label ім'я
         .input
-          input placeholder="+38 (050) 417 07 28" name="phone"  required=""
+          input placeholder="+38 (050) 417 07 28" name="phone" type="text"  required=""
           label телефон
-        .select
+        .input.select
           select name="call_time_begin"
             option value="09:00" selected="selected" 09:00
             option value="10:00" 10:00
@@ -36,6 +37,7 @@ div style="display: none"
             option value="17:00" 17:00
             option value="18:00" 18:00
             option value="19:00" selected="selected" 19:00
+          .clearfix
           label зрyчний час для дзвінка
         .form-actions.right
           input type="submit" value=''

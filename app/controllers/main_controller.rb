@@ -54,4 +54,14 @@ class MainController < ApplicationController
     call_time_end = params[:call_time_end]
     CustomForms.call_order_data(name, phone, call_time_begin, call_time_end).deliver
   end
+  def order_product
+    brand = params[:brand_name]
+    collection = params[:collection_name]
+    product = params[:product]
+    name = params[:name]
+    email = params[:email]
+    phone = params[:phone]
+    message = params[:message]
+    CustomForms.order_product_data(brand, collection, product, name, phone, email, message).deliver
+  end
 end

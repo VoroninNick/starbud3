@@ -47,6 +47,12 @@
                 -door_color_z_index +=10
                 h6 = img_v_c.name
   .clearfix
+  .row
+    .columns
+      .columns
+        a.fancybox-order-product.order-product-button href="#op-form" data-fancybox-group="op-form" rel="op-form"
+          |Замовити
+      =render partial: 'partials/op_form', locals: { item: @door_test }
   .door_table_info
     =raw @door_test.table
   .door-info

@@ -27,13 +27,13 @@
 #  }
 # and/or per server
 server 'voroninstudio.eu',
-       user: 'root',
+       user: 'nazariy',
        roles: %w{web app},
        ssh_options: {
-           user: 'root', # overrides user setting above
+           user: 'nazariy', # overrides user setting above
            keys: %w(/home/deploy/.ssh/id_rsa),
            forward_agent: false,
            auth_methods: %w(publickey password),
-           password: 'casper#2014'
+           password: 'nazariy12345'
        }
 # setting per server overrides global ssh_options

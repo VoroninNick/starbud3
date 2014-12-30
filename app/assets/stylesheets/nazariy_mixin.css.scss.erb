@@ -22,3 +22,31 @@
         scrollbar-track-color: $secondary;
     }
 }
+@mixin my_vertical_align($size: 50%) {
+    position: relative;
+    top: $size;
+    -webkit-transform: translateY(-$size);
+    -moz-transform: translateY(-$size);
+    -ms-transform: translateY(-$size);
+    -o-transform: translateY(-$size);
+    transform: translateY(-$size);
+    @content
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin transition_all( $transition-time){
+    -webkit-transition: $transition-time;
+    -moz-transition: $transition-time;
+    -ms-transition: $transition-time;
+    -o-transition: $transition-time;
+    transition: $transition-time;
+    @content
+}
+

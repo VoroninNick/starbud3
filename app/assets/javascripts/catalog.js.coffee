@@ -17,11 +17,23 @@ $(document).ready ->
       title:
         type: "outside"
     tpl:
-      wrap: "<div id=\"gallery_wrapper\" class=\"fancybox-wrap mywrap\" tabIndex=\"-1\"><div class=\"fancybox-skin\"><div class=\"fancybox-outer\"><div class=\"fancybox-inner\"></div><a class=\"close_fancybox_gallery\" onclick=\"$.fancybox.close()\"><svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
-width=\"14.85px\" height=\"14.849px\" viewBox=\"0 0 14.85 14.849\" enable-background=\"new 0 0 14.85 14.849\" xml:space=\"preserve\">
-<polygon fill=\"#D1D3D4\" points=\"14.85,0.707 14.143,0 7.425,6.718 0.707,0 0,0.707 6.718,7.425 0,14.142 0.707,14.849 7.425,8.132
-	14.143,14.849 14.85,14.142 8.132,7.425 \"/>
-</svg></a></div></div></div>"
+      wrap: "<div id=\"gallery_wrapper\" class=\"fancybox-wrap mywrap\" tabIndex=\"-1\"><div class=\"fancybox-skin\"><div class=\"fancybox-outer\"><div class=\"fancybox-inner\"></div><a class=\"close_fancybox_custom\" onclick=\"$.fancybox.close()\"><img src=\"/assets/Cross-button.png\"></a></div></div></div>"
+  $("a.fncy-custom-close").click (e) ->
+    e.preventDefault()
+    $.fancybox.close()
+    return
+
+  $(".fancybox-order-product").fancybox
+    padding: 0
+    width: '100%'
+    closeBtn : false
+    prevEffect: "none"
+    nextEffect: "none"
+    helpers:
+      title:
+        type: "outside"
+    tpl:
+      wrap: "<div id=\"op-form_wrapper\" class=\"fancybox-wrap mywrap\" tabIndex=\"-1\"><div class=\"fancybox-skin\"><div class=\"fancybox-outer\"><div class=\"fancybox-inner\"></div><a class=\"close_fancybox_custom\" onclick=\"$.fancybox.close()\"><img src=\"/assets/Cross-button.png\"></a></div></div></div>"
   $("a.fncy-custom-close").click (e) ->
     e.preventDefault()
     $.fancybox.close()

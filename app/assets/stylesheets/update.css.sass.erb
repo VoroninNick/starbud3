@@ -1,3 +1,5 @@
+@import 'nazariy_mixin'
+
 .close_fancybox_gallery
     position: absolute
     top: 10px
@@ -31,17 +33,23 @@
 #call-order
     width: 335px
     .header
-        height: 45px
+        height: 50px
         width: inherit
+        h3
+            color: white
+            font-size: 1.8125rem
+            font-family: "Open Sans", sans-serif
+            font-weight: 400
+            margin: 0
+            padding: 0
+            line-height: 50px
+            padding-left: 25px
     .form, form, .input, input
         width: 100%
     .form
         padding: 45px 25px 55px 25px
         background: #fff
         form
-            .input
-                input
-                    margin-bottom: 1rem
             .select
                 select
                     width: 40%
@@ -56,6 +64,7 @@
                     font-style: italic
                     padding-left: 15px
                     padding-right: 15px
+                    float: left
                     &:focus
                         background-color: #ebebeb
                         -moz-box-shadow: 3px 4px 0 rgba(0, 1, 1, 0.15)
@@ -66,7 +75,7 @@
                         outline: none !important
                         outline-style: none !important
             .line
-                display: inline-block
+                float: left
                 width: 54px
                 height: 55px
 
@@ -81,11 +90,242 @@
                     box-shadow: 3px 4px 0px rgba(180, 180, 180, 0.8)
                     padding: 0
                     cursor: pointer
-            label
-                font-weight: 400
-                font-size: 0.8em
-                letter-spacing: -1px
-                color: #003162
-                padding-left: 15px
-                position: relative
-                top: -10px
+
+
+.subscribe-popup-overlay
+    height: 100%
+    width: 100%
+    position: fixed
+    left: 0px
+    top: 0px
+    z-index: 2999
+    background: rgba(0, 0, 0, 0.6)
+    .subscribe-popup
+        +my_vertical_align
+        .pp-header
+            height: 50px
+            background: #003e74 /* Old browsers */
+            background: -moz-linear-gradient(top,  #005baa 0%, #003e74 100%) /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005baa), color-stop(100%,#003e74)) /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #005baa 0%,#003e74 100%) /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #005baa 0%,#003e74 100%) /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #005baa 0%,#003e74 100%) /* IE10+ */
+            background: linear-gradient(to bottom,  #005baa 0%,#003e74 100%) /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003e74', endColorstr='#005baa',GradientType=0 ) /* IE6-9 */
+            h4
+                color: #fff
+                font:
+                    size: 1.8125rem
+                    family: 'Open Sans', sans-serif
+                    weight: 600
+                margin: 0
+                padding: 0
+                line-height: 50px
+                padding-left: 65px
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75)
+                .pp-close
+                    color: #fff
+                    cursor: pointer
+        .pp-content
+            padding-bottom: 55px
+            background-color: #fff
+            background-image: url("<%= asset_path('PhoneOperator.png') %>")
+            background-size: 35%
+            background-position: bottom right
+            background-repeat: no-repeat
+            .pp-content-list
+                padding-left: 65px
+                padding-top: 30px
+                h3
+                    color: #005baa
+                    font:
+                        size: 1.5rem
+                        family: 'Open Sans', sans-serif
+                ul
+                    margin-left: 0
+                    li
+                        list-style: none
+                        color: #666
+                        padding-left: 27px
+                        position: relative
+                        font:
+                            family: 'Open Sans', sans-serif
+                            size: 1.125rem
+                            weight: 300
+                        margin-bottom: .6rem
+                        line-height: 1.5rem
+                        &:before
+                            display: block
+                            content: ''
+                            position: relative
+                            width: 25px
+                            height: 1px
+                            position: absolute
+                            top: 20px
+                            left: 0
+                            background-color: #666
+                        span
+                            color: #00529a
+                            font:
+                                style: italic
+            h3
+                color: #004e93
+                font:
+                    family: 'Open Sans', sans-serif
+                    size: 1.125rem
+                    style: italic
+                margin-bottom: 0
+                line-height: 1.5rem
+
+            h5
+                font:
+                    size: .875rem
+                color: #777
+            form
+                input, .subscribe
+                    float: left
+                input
+                    width: calc(100% - 48px)
+                    height: 45px
+                    /*background: rgba(255, 255, 255, 0.4)*/
+                    border: none
+                    background-color: rgba(235, 235, 235, 0.29)
+                    -moz-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    -webkit-box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    box-shadow: inset 3px 4px 0 rgba(0, 1, 1, 0.15)
+                    font-size: 1.2em
+                    font-weight: 300
+                    font-style: italic
+                    padding-left: 15px
+                    padding-right: 15px
+                button
+                    background: url("<%= asset_path('Arrow-button.png') %>") no-repeat !important
+                    margin: 0 !important
+                    padding: 0 !important
+                    width: 46px
+                    height: 45px
+                    background-size: 98% !important
+
+.order-product-button
+    background: #840000 /* Old browsers */
+    background: -moz-linear-gradient(top,  #840000 0%, #a90000 100%) /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#840000), color-stop(100%,#a90000)) /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #840000 0%,#a90000 100%) /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #840000 0%,#a90000 100%) /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #840000 0%,#a90000 100%) /* IE10+ */
+    background: linear-gradient(to bottom,  #840000 0%,#a90000 100%) /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003e74', endColorstr='#005baa',GradientType=0 ) /* IE6-9 */
+    height: 50px
+    width: 293px
+    line-height: 50px
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    cursor: pointer
+    -webkit-box-shadow: 2px 3px 0px #d2d2d2
+    -moz-box-shadow: 2px 3px 0px #d2d2d2
+    box-shadow: 2px 3px 0px #d2d2d2
+    margin-top: 25px
+    font:
+        family: 'Open Sans', sans-serif
+        size: 1.8rem
+        weight: 300
+    display: block
+    &:hover
+        color: #fff
+.fixed
+    position: fixed !important
+    top: 0
+    left: 0
+    width: 100%
+.main-menu-wrap
+    height: 72px
+    /*position: absolute*/
+    /*left: 0*/
+    /*right: 0*/
+    &.fixed
+        .fixed-row
+            margin: auto
+    .main-menu-inner
+        position: relative
+        width: 100%
+        height: 100%
+        .main-header-logo
+            +transition_all(1s)
+
+.header-navigation-wrap
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+.header-padding-for-page
+    width: 100%
+    height: 90px
+.close_fancybox_custom
+    width: 25px
+    height: 25px
+    position: absolute
+    top: 10px
+    right: 25px
+
+ul.op-title
+    margin-left: 0
+    li
+        list-style: none
+        height: 90px
+        width: 90px
+        float: left
+        position: relative
+        margin-right: 20px
+        .li-inner
+            +my_vertical_align
+                position: absolute
+        h4
+            color: #666666
+            font:
+                family: 'Open Sans', sans-serif
+                size: 32px
+                weight: 500
+            padding: 0
+            margin: 0
+        .round-ico-wrap
+            width: 90px
+            height: 90px
+            overflow: hidden
+            border-radius: 50%
+            position: relative
+            img
+                +my_vertical_align
+                    position: absolute
+#op-form
+    width: 800px
+    .header
+        height: 50px
+        width: inherit
+        h3
+            color: white
+            font-size: 1.8125rem
+            font-family: "Open Sans", sans-serif
+            font-weight: 400
+            margin: 0
+            padding: 0
+            line-height: 50px
+            padding-left: 25px
+            /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75)*/
+    .op-form-wrap
+        padding: 35px 12px 45px 12px
+        background: #fff
+.sb-popup-form
+    .input
+        input, textarea, select
+            margin-bottom: 0
+        label
+            font-weight: 400
+            font-size: 0.8em
+            color: #003162
+            padding-left: 15px
+            margin-top: 2px
+            margin-bottom: 6px
+#op-form_wrapper
+    .fancybox-skin
+        padding: 0 !important

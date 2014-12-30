@@ -17,6 +17,12 @@
     .clearfix
   .clearfix
   =raw @door_test.table
+  .row
+    .columns
+      .columns
+        a.fancybox-order-product.order-product-button href="#op-form" data-fancybox-group="op-form" rel="op-form"
+          |Замовити
+      =render partial: 'partials/op_form', locals: { item: @door_test }
   .door-info
     .columns#tab-container.tab-container
       ul.etabs.header-box-shadow-right-bottom

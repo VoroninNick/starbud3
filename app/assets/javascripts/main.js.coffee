@@ -2,6 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+$(window).scroll ->
+  logo = $(".main-header-logo")
+  sticky = $(".main-menu-wrap")
+  scroll = $(window).scrollTop()
+  if scroll <=7
+    logo.css('top', scroll)
+  if scroll ==0
+    logo.css('top', -50)
+  if scroll >= 7
+    sticky.addClass "fixed"
+  else
+    sticky.removeClass "fixed"
 
 
 

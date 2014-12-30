@@ -31,6 +31,7 @@ StarBud::Application.routes.draw do
 
   post "/contacts" => "main#send_message"
   post "/call_order" => "main#call_order"
+  post "/order_product" => "main#order_product"
 
 
   resources :promotions
