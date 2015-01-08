@@ -18,6 +18,7 @@ html.fixed-test-width lang="en"
 
     = csrf_meta_tag
     = analytics_init :local => Rails.env.development?
+
 body
   #page-wrapper
     .page-black-background
@@ -27,7 +28,7 @@ body
   = render partial: 'partials/footer'
   = render partial: 'partials/call_order_form'
   = render partial: 'partials/chat'
-  /= render partial: 'partials/subscribe_popup'
+  = render partial: 'partials/subscribe_popup'
 
 
 

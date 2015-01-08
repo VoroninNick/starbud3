@@ -15,9 +15,17 @@ $(window).scroll ->
   else
     sticky.removeClass "fixed"
 
-
-
 $(document).ready ->
+
+#  $('a#nazariy-button').trigger('click')
+#  fancybox one time popup form
+  unless $.cookie("star_bud_subscribe_status") is "1"
+    setTimeout (->
+      $('a#nazariy-button').trigger('click')
+      jQuery.cookie "star_bud_subscribe_status", "1",
+        expires: 31
+      return
+    ), 1000
 
   $('form.star-bud-form').submit (event) ->
     # Stop the browser from submitting the form.
