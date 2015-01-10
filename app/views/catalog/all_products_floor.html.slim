@@ -54,43 +54,51 @@
                       |)
               div style="display: none"
                 div id="floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
-                  .fixed-row.row.floor-one-item-wrapper
-                    .columns
-                      .columns.large-5.medium-5.small-5
-                        h4.p-b = f.name
-                        .l-content
-                          .columns.floor-breadcrambs
-                            span
-                              |//&nbsp;
-                              = link_to b.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url)
-                              |&nbsp;/&nbsp;
-                              = link_to c.name, all_products_from_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url,c.collection_url)
-                          h5.tech-pad-top
-                            |Технічні дані
-                          .flt-image
-                            -f.floor_technical_datas.each_with_index do |ftd, i|
-                              .column.large-3.medium-3.small-3.ftd-one-item.float-left
-                                img src=ftd.image.url(:thumb) alt=ftd.alt_image title=ftd.title_image
-                              - break if i >= 4
+                  .order-floor-form-overlay
+                    .order-floor-form-wrap
+                      =render partial: 'partials/op_floor_form', locals: { item: f }
+                    .fixed-row.row.floor-one-item-wrapper
+                      .columns
+                        .columns.large-5.medium-5.small-5
+                          h4.p-b = f.name
+                          .l-content
+                            .row
+                              .columns
+                                .order-floor-wrap
+                                  .order-flor-button
+                                    |Замовити
+                            /.columns.floor-breadcrambs
+                            /  span
+                            /    |//&nbsp;
+                            /    = link_to b.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url)
+                            /    |&nbsp;/&nbsp;
+                            /    = link_to c.name, all_products_from_collection_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url,c.collection_url)
+                            h5.tech-pad-top
+                              |Технічні дані
+                            .flt-image
+                              -f.floor_technical_datas.each_with_index do |ftd, i|
+                                .column.large-3.medium-3.small-3.ftd-one-item.float-left
+                                  img src=ftd.image.url(:thumb) alt=ftd.alt_image title=ftd.title_image
+                                - break if i >= 4
+                              .clearfix
+
+
                             .clearfix
 
+                          h5.p-b
+                            |Інтер'єр
+                          .fl-image.img-wrp
+                            img.header-box-shadow-right-bottom src=f.image_interior.url(:large) alt=f.alt_inter title=f.title_inter
 
-                          .clearfix
-
-                        h5.p-b
-                          |Інтер'єр
-                        .fl-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_interior.url(:large) alt=f.alt_inter title=f.title_inter
-
-                      .columns.large-7.medium-7.small-7
-                        h4.p-b
-                          |Перспектива
-                        .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_perspective.url(:large) alt=f.alt_per title=f.title_per
-                        h4
-                          |Структура
-                        .fr-image.img-wrp
-                          img.header-box-shadow-right-bottom src=f.image_structure.url(:large) alt=f.alt_struct title=f.title_struct
+                        .columns.large-7.medium-7.small-7
+                          h4.p-b
+                            |Перспектива
+                          .fr-image.img-wrp
+                            img.header-box-shadow-right-bottom src=f.image_perspective.url(:large) alt=f.alt_per title=f.title_per
+                          h4
+                            |Структура
+                          .fr-image.img-wrp
+                            img.header-box-shadow-right-bottom src=f.image_structure.url(:large) alt=f.alt_struct title=f.title_struct
 
 
 

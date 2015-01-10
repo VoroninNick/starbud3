@@ -4,9 +4,29 @@
 #->
 #  CloudZoom.quickStart()
 $(document).ready ->
+# show order floor form
+  $('.order-flor-button').click ->
+    $parent = $(this).closest('.order-floor-form-overlay')
+    $form_wrap = $parent.find('.order-floor-form-wrap')
+    if $form_wrap.hasClass('expand-form')
+      $form_wrap.removeClass('expand-form')
+    else
+      $form_wrap.addClass('expand-form')
+
+# hide order floor form
+  $('a.close-form').click ->
+    $parent = $(this).closest('.order-floor-form-overlay')
+    $form_wrap = $parent.find('.order-floor-form-wrap')
+    if $form_wrap.hasClass('expand-form')
+      $form_wrap.removeClass('expand-form')
+    else
+      $form_wrap.addClass('expand-form')
 
 #defaault fancy box
-  $(".fancybox").fancybox()
+  $(".fancybox").fancybox
+    afterLoad: ->
+      if $('.order-floor-form-wrap').hasClass('expand-form')
+        $('.order-floor-form-wrap').removeClass('expand-form')
   $(".fancybox-call-order").fancybox
     padding: 0
     width: '100%'

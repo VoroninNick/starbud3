@@ -43,6 +43,8 @@ $(document).ready ->
       success: ->
         alert "Відіслано..."
         $thisForm.find("input[type=text],input[type=email] textarea").val("")
+        if $('.order-floor-form-wrap').hasClass('expand-form')
+          $('.order-floor-form-wrap').removeClass('expand-form')
       error: ->
         alert "Something went wrong!"
 
