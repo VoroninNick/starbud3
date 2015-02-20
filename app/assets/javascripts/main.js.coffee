@@ -10,6 +10,8 @@ $(window).scroll ->
     logo.css('top', scroll)
   if scroll ==0
     logo.css('top', -50)
+  else
+    logo.css('top', 0)
   if scroll >= 7
     sticky.addClass "fixed"
   else
@@ -23,13 +25,16 @@ $(document).ready ->
     setTimeout (->
       $('a#nazariy-button').trigger('click')
       jQuery.cookie "star_bud_subscribe_status", "1",
-        expires: 31
+        expires: 7
       return
     ), 1000
 
   $('form.star-bud-form').submit (event) ->
     # Stop the browser from submitting the form.
     event.preventDefault()
+    $parent = $(this).closest('.form')
+    $list = $parent.find('.loading-status')
+
     # Serialize the form data.
     $thisForm = $(this).closest('form')
     formData = $thisForm.serialize()
@@ -39,12 +44,20 @@ $(document).ready ->
       url: $thisForm.attr("action")
       data: formData
       beforeSend: ->
-        alert "Відсилання..."
+        if $('.loading-status').hasClass('hide')
+          $('.loading-status').removeClass('hide')
+
       success: ->
-        alert "Відіслано..."
+        $('.loading-status').addClass('hide')
+        if $('.success').hasClass('hide')
+          $('.success').removeClass('hide')
+
         $thisForm.find("input[type=text],input[type=email] textarea").val("")
         if $('.order-floor-form-wrap').hasClass('expand-form')
           $('.order-floor-form-wrap').removeClass('expand-form')
+        setTimeout (->
+          $('.success').addClass('hide')
+        ), 1500
       error: ->
         alert "Something went wrong!"
 

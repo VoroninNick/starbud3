@@ -3,19 +3,29 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+
+  about_target = window.location.hash
+  if about_target == "#spivpracia"
+#    alert "anchor "+about_target
+    $('a.spivpratsya').addClass " selected"
+    $('.about_us_start').addClass(' dn')
+    $('.spivpratsya_tab').show()
 #  text spoiler
   $(".spoiler h4").click ->
     $(this).parent().children("div.splCont").toggle "normal"
     false
 #  sidebar menu
-  $('.about_us_start').removeClass(" dn")
+
   $("#about-us-sidebar").on "click", "a", ->
+#    $('.about_us_start').removeClass(" dn")
     $('.about_us_start').addClass(" dn")
     # fade out all open subcontents
     $(".about-item:visible").fadeOut()
     # fade in new selected subcontent
     $(".about-item[id=" + $(this).attr("data-id") + "]").fadeIn()
+
 # add class selected oncklick on sidebar menu item
+
   $(".about-us-sidebar li a").click ->
     $(".about-us-sidebar li a").removeClass  "selected"
     $(this).addClass " selected"

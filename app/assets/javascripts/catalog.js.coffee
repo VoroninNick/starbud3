@@ -27,6 +27,7 @@ $(document).ready ->
     afterLoad: ->
       if $('.order-floor-form-wrap').hasClass('expand-form')
         $('.order-floor-form-wrap').removeClass('expand-form')
+
   $(".fancybox-call-order").fancybox
     padding: 0
     width: '100%'

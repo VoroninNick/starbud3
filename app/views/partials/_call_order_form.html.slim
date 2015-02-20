@@ -4,6 +4,14 @@ div style="display: none"
       h3 Замовити дзвінок
       a class="close_fancybox_gallery" onclick="$.fancybox.close()"
     .form
+      .loading-status.sending-status-wrap.hide
+        = image_tag "loading.gif"
+      .success.sending-status-wrap.hide
+        h3 Ваш запит надіслано!
+        h3 Найближчим часом з Вами зв’яжеться наш оператор.
+      .error.sending-status-wrap.hide
+        h3 Помилка!
+        h3 Повідомлення не надіслано!
       form.star-bud-form.sb-popup-form method="POST" action="/call_order"
         input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"
         .input

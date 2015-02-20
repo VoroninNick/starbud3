@@ -49,6 +49,33 @@
     .form
         padding: 45px 25px 55px 25px
         background: #fff
+        position: relative
+        .sending-status-wrap
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            background: #fff
+            h3
+                color: #666666
+                font-family: "Open Sans", sans-serif
+                font-size: 1.5rem
+                font-weight: 500
+                padding: 0
+                margin: 0
+                text-align: center
+        .loading-status
+            z-index: 1
+            img
+                display: block
+                width: 18%
+                +my_center_align
+                    position: absolute
+        .success
+            padding: 45px 0
+        .error
+            z-index: 3
         form
             .select
                 select
@@ -290,10 +317,12 @@
     width: 100%
 .main-menu-wrap
     height: 72px
+    position: fixed
     /*position: absolute*/
     /*left: 0*/
     /*right: 0*/
     &.fixed
+        top: 0
         .fixed-row
             margin: auto
     .main-menu-inner
@@ -379,3 +408,11 @@ ul.op-title
 #op-form_wrapper
     .fancybox-skin
         padding: 0 !important
+
+.sh_btn
+    .sh_btn_char
+        color: #004b8c !important
+
+#gs_tti50
+    input
+        height: 45px!important

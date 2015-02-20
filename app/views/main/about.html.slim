@@ -13,14 +13,14 @@
       nav.about-us-sidebar#about-us-sidebar
         - @about_us.each do |sidebar|
           li
-            a  data-id=sidebar.name.gsub(' ','_') = truncate sidebar.name, length: 16
+            a class="#{sidebar.name.gsub(' ','_').parameterize}"  data-id=sidebar.name.gsub(' ','_') = truncate sidebar.name, length: 16
 
     .columns.large-9.medium-9.small-9.about-us-content
       - @main_article.each do |ma|
         = raw ma.main_article_about_us
 
       - @about_us.each do |article|
-        li.about-item.history-about id=article.name.gsub(' ','_')
+        li.about-item.history-about class="#{article.name.gsub(' ','_').parameterize}_tab" id=article.name.gsub(' ','_')
           h3 =article.name
           p =raw article.content
           ul.sert
