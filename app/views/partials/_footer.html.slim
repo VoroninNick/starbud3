@@ -54,7 +54,7 @@
           a href="/#publication-link"
             |Публікації
         li
-          = link_to "Співпраця", controller: "main", action: "about", anchor: "spivpracia"
+          = link_to_unless devise?, "Співпраця", controller: "main", action: "about", anchor: "spivpracia"
         li
           =link_to "Контакти", contacts_path
   .fixed-row.row.footer-bottom-content-down

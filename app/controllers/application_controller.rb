@@ -62,4 +62,9 @@ class ApplicationController < ActionController::Base
     @doors = Door.where('collection_id = 1 ')
     return @doors
   end
+
+  helper_method :devise?
+  def devise?
+    params[:controller].scan(/\Adevise/).any?
+  end
 end
