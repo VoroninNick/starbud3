@@ -7,7 +7,7 @@
 
           .vd_component_one_item.vd_render_interior
             .vd_render_interior_select_wrapper
-              .vd_nav_ico.vd_comp
+              .vd_nav_ico.vd_comp title="Приховати"
               .vd_render_interior_select_inner
                 - if @render_interior
                   - @render_interior.each do |object|
@@ -24,7 +24,7 @@
             |Двері
           .vd_component_one_item.vdc_laminate data-laminate-parent-id=""
             = embedded_svg "SB-3.svg", class: 'svg_class'
-            |Ламінат
+            |Підлога
           .vd_component_one_item.vdc_wall data-color-wall-parent-id=""
             = embedded_svg "SB-4.svg", class: 'svg_class'
             |Колір стін
@@ -32,7 +32,7 @@
             = embedded_svg "SB-5.svg", class: 'svg_class'
             |Колір плінтуса
         #vd_door_nav
-          .vd_nav_ico.vd_nav
+          .vd_nav_ico.vd_nav title="Приховати"
           .vd_tab.tab_door
             .vd_door_drop_down
               -if vd_brands
@@ -49,7 +49,7 @@
                     - vd_brands[0].collections[0].doors.each do |d|
                       - d.door_variants_fulfillment_options.each do |dop|
                         .vd_doors_item
-                          = image_tag src=dop.image.url(:thumb)
+                          = image_tag src="#{dop.image.url(:thumb)}"
 
           .vd_tab.tab_laminate.tab_hide
             .vd_floor_drop_down
@@ -66,7 +66,7 @@
                   - if @floor[0].d_door_collections[0]
                     - @floor[0].d_door_collections[0].d_doors.each do |f|
                       .vd_laminate_thumb  data-tooltip=""
-                        img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
+                        img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large) title="#{f.name}"
 
           .vd_tab.tab_wall.tab_hide
           .vd_tab.tab_baseboard.tab_hide
@@ -84,4 +84,4 @@
                     - if @plinth[0].d_plinth_collections[0]
                       - @plinth[0].d_plinth_collections[0].d_plinths.each do |f|
                         .vd_baseboard_thumb data-tooltip=""
-                          img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large)
+                          img src=f.d_product_images[0].thumb.url(:thumb) data-src=f.d_product_images[0].image.url(:large) title="#{f.name}"

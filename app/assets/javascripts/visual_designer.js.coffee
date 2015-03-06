@@ -51,7 +51,7 @@ $(document).ready ->
               src = $img.attr('src')
               dataToolTip = $img.attr('data-tooltip')
               dataSrc = $img.attr('data-src')
-              $img = $("<div class='vd_doors_item'  data-tooltip=\"+dataToolTip+\"><img src="+src+" ></div>")
+              $img = $("<div class='vd_doors_item'  data-tooltip="+dataToolTip+"><img src="+src+" title="+dataToolTip+" ></div>")
               $img.appendTo($doorsWrap)
             return
 
@@ -379,7 +379,7 @@ $(document).ready ->
           src = $img.attr('src')
           dataToolTip = $img.attr('data-tooltip')
           dataSrc = $img.attr('data-src')
-          $img = $("<div class='vd_wall_thumb' data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" /></div>")
+          $img = $("<div class='vd_wall_thumb' data-tooltip="+dataToolTip+"><img src="+src+" data-src="+dataSrc+" title="+dataToolTip+" /></div>")
           $img.appendTo($tabWall)
 
         return
