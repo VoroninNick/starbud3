@@ -36,24 +36,40 @@
                         |&nbsp;)
             div style="display: none"
               div id="ext-id#{ext.id}" data-fancybox-group="ext-group" rel="ext-group"
-                .row.floor-one-item-wrapper
-                  .columns
-                    .columns.large-5.medium-5.small-5
-                      h5.int-ext-l =ext.name
-                      h4.int-ext-code
-                        |(&nbsp;
-                        = ext.code_product
-                        |&nbsp;)
-                      .int-image-wrap
-                        h4.int-ext-s
-                          |Інтер'єр
-                        .int-image
-                          img.header-box-shadow-right-bottom src=ext.image_interior.url alt=ext.alt_inter title=ext.title_inter
-                    .columns.large-7.medium-7.small-7
-                      h5.int-ext-l
-                        |Структура
-                      .struct-image
-                        img.header-box-shadow-right-bottom src=ext.image_structure.url(:large) alt=ext.alt_inter title=ext.title_inter
-
+                .order-form-overlay-wrap
+                  .loading-status.sending-status-wrap.hide
+                    = image_tag "loading.gif"
+                  .success.sending-status-wrap.hide
+                    h3 Ваше замовлення надіслано!
+                    h3 Найближчим часом з Вами зв’яжеться наш оператор.
+                  .error.sending-status-wrap.hide
+                    h3 Помилка!
+                    h3 Повідомлення не надіслано!
+                  .order-form-wrap
+                    =render partial: 'partials/op_exterior_form', locals: { item: ext }
+                  .fixed-row.row.floor-one-item-wrapper
+                    .columns
+                      .columns.large-5.medium-5.small-5
+                        h5.int-ext-l =ext.name
+                        h4.int-ext-code
+                          |&nbsp;&nbsp;(&nbsp;
+                          = ext.code_product
+                          |&nbsp;)
+                        .row
+                          .columns
+                            .pf-order-button-wrap
+                              .pf-order-button
+                                |Замовити
+                        .int-image-wrap
+                          h4.int-ext-s
+                            |Інтер'єр
+                          .int-image
+                            img.header-box-shadow-right-bottom src=ext.image_interior.url alt=ext.alt_inter title=ext.title_inter
+                      .columns.large-7.medium-7.small-7
+                        h5.int-ext-l
+                          |Структура
+                        .struct-image
+                          img.header-box-shadow-right-bottom src=ext.image_structure.url(:large) alt=ext.alt_inter title=ext.title_inter
+                      .clearfix
         .columns.about-int-ext-wrapper
           = raw @subcat.description

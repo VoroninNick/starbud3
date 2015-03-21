@@ -4,6 +4,37 @@
 #->
 #  CloudZoom.quickStart()
 $(document).ready ->
+
+# show order form
+  $('.pf-order-button').click ->
+    $parent = $(this).closest('.order-form-overlay-wrap')
+    $form_wrap = $parent.find('.order-form-wrap')
+
+    if $parent.hasClass('parent-expand')
+      $parent.removeClass('parent-expand')
+    else
+      $parent.addClass('parent-expand')
+
+    if $form_wrap.hasClass('expand')
+      $form_wrap.removeClass('expand')
+    else
+      $form_wrap.addClass('expand')
+
+# hide order form
+  $('a.close-form').click ->
+    $parent = $(this).closest('.order-form-overlay-wrap')
+    $form_wrap = $parent.find('.order-form-wrap')
+
+    if $parent.hasClass('parent-expand')
+      $parent.removeClass('parent-expand')
+    else
+      $parent.addClass('parent-expand')
+
+    if $form_wrap.hasClass('expand')
+      $form_wrap.removeClass('expand')
+    else
+      $form_wrap.addClass('expand')
+
 # show order floor form
   $('.order-flor-button').click ->
     $parent = $(this).closest('.order-floor-form-overlay')
@@ -27,6 +58,10 @@ $(document).ready ->
     afterLoad: ->
       if $('.order-floor-form-wrap').hasClass('expand-form')
         $('.order-floor-form-wrap').removeClass('expand-form')
+      if $('.order-form-wrap').hasClass('expand')
+        $('.order-form-wrap').removeClass('expand')
+      if $('.order-form-overlay-wrap').hasClass('parent-expand')
+        $('.order-form-overlay-wrap').removeClass('parent-expand')
 
   $(".fancybox-call-order").fancybox
     padding: 0

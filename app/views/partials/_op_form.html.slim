@@ -4,6 +4,14 @@ div style="display: none"
       h3 Форма замовлення
       a class="close_fancybox_gallery" onclick="$.fancybox.close()"
     .op-form-wrap
+      .loading-status.sending-status-wrap.hide
+        = image_tag "loading.gif"
+      .success.sending-status-wrap.hide
+        h3 Ваше замовлення надіслано!
+        h3 Найближчим часом з Вами зв’яжеться наш оператор.
+      .error.sending-status-wrap.hide
+        h3 Помилка!
+        h3 Повідомлення не надіслано!
       .row
         .columns
           ul.op-title

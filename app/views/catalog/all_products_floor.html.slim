@@ -55,6 +55,14 @@
               div style="display: none"
                 div id="floor-id#{f.id}" data-fancybox-group="floor-group" rel="floor-group"
                   .order-floor-form-overlay
+                    .loading-status.sending-status-wrap.hide
+                      = image_tag "loading.gif"
+                    .success.sending-status-wrap.hide
+                      h3 Ваше замовлення надіслано!
+                      h3 Найближчим часом з Вами зв’яжеться наш оператор.
+                    .error.sending-status-wrap.hide
+                      h3 Помилка!
+                      h3 Повідомлення не надіслано!
                     .order-floor-form-wrap
                       =render partial: 'partials/op_floor_form', locals: { item: f }
                     .fixed-row.row.floor-one-item-wrapper

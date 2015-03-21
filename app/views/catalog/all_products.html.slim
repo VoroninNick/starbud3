@@ -25,12 +25,13 @@
         .catalog-content-wrapper
           .current-collection-wrapper
             .image
-              img src=@current_collection.image.url(:large)
+              -if @current_collection && @current_collection.image.exist?
+                img src=@current_collection.image.url(:large)
             .info
               .info-inner
                 h4
                   |Колекцiя
-                h5  =@current_collection.name
+                h5  =@current_collection.try(:name)
           .clearfix
           .row.doors-from-collections
             - @door.each do |door|
@@ -52,5 +53,5 @@
                     = link_to door.name, show_door_path(m.main_catalogs_url, s.sub_catalog_url, b.brand_url, c.collection_url, door.door_url), class: ' starbud-link'
                   span
                     |(
-                    =@current_collection.name
+                    =@current_collection.try(:name)
                     |)

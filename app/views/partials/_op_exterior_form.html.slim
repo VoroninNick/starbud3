@@ -3,29 +3,30 @@
   a.close-form
     = image_tag 'Cross-button.png'
 .op-form-wrap
+  -brand = item.brand.name
   .row
     .columns
       ul.op-title
         li.ico
           .li-inner
             .ico-wrap.box-shadow-right-bottom
-              =image_tag item.image_perspective.url(:thum)
+              =image_tag item.image_structure.url(:thumb)
           .clearfix
         li
           .li-inner
             h4
+              =brand
+              |&nbsp;
               =item.name
           .clearfix
         .clearfix
-  -collection = item.collection.name
-  -brand = item.collection.brand.name
+
   .row
     .form
       form.star-bud-form.sb-popup-form method="POST" action="/order_product"
         input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"
         .columns.large-6.medium-6
           input type="hidden" name="brand_name" value=brand
-          input type="hidden" name="collection_name" value=collection
           input type="hidden" name="product" value=item.name
           .input
             input placeholder="Олександр Олександрієвський" name="name" type="text"   required=""
