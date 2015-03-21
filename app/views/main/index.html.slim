@@ -62,9 +62,10 @@
                   =main_menu.name
           .row
             .columns
-              -main_menu.sub_catalogs.each do |sub_catalog|
-                li
-                  = link_to sub_catalog.name, my_sub_catalog_path(main_menu.main_catalogs_url, sub_catalog.sub_catalog_url)
+              ul.main-menu-one-group-wrap
+                -main_menu.sub_catalogs.each do |sub_catalog|
+                  li
+                    = link_to sub_catalog.name, my_sub_catalog_path(main_menu.main_catalogs_url, sub_catalog.sub_catalog_url)
       .columns.large-4.medium-4.small-4.float-left
         .pdf-block
           -pdf_catalog.each do |pdf|
