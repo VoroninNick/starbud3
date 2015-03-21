@@ -32,13 +32,19 @@ $(document).ready ->
 
 #    auto positions sidebar menu
 $ ->
+  dh =$(document).height() - ($('.footer-wrapper').height() + 250)
+#  console.log(dh)
   offset = $("#about-us-sidebar").offset()
-  topPadding = 50
+#  console.log(offset)
+  topPadding = 170
   $(window).scroll ->
-    if $(window).scrollTop() > offset.top
-      $("#about-us-sidebar").stop().animate marginTop: $(window).scrollTop() - offset.top + topPadding
+    st = $(this).scrollTop()
+#    console.log(st)
+    if st >= 150 && st < dh
+      $("#about-us-sidebar").stop().animate marginTop: st - offset.top + topPadding
     else
       $("#about-us-sidebar").stop().animate marginTop: 0
+
 
 
 
