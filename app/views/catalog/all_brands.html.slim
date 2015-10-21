@@ -3,6 +3,10 @@
     = m_title "#{@current_sub_catalog.seo_dynamic.meta_title}"
     = meta_keywords "#{@current_sub_catalog.seo_dynamic.meta_keywords}"
     = meta_description "#{@current_sub_catalog.seo_dynamic.meta_descriptions}"
+  /p
+  /  = @current_sub_catalog.first.main_catalog.name
+  /p
+  /  = @current_sub_catalog.first.name
   .columns
     .row
       = render :partial => 'partials/catalog_sidebar'
@@ -33,14 +37,15 @@
           .clearfix
         .catalog-content-wrapper
           .clearfix
-          - @brand.each do |brands|
-            - s = SubCatalog.find brands.sub_catalog_id
-            - m = MainCatalog.find s.main_catalog_id
-            .columns.large-3.medium-3.small-3.float-left.item.brand-item
-              .image
-                a href=my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brands.brand_url)
-                  img src=brands.image
-              h5
-                = link_to brands.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brands.brand_url)
-              p
-                = "("+brands.country+")"
+          -if @brands.any?
+            - @brands.each do |brand|
+              - s = SubCatalog.find brand.sub_catalog_id
+              - m = MainCatalog.find s.main_catalog_id
+              .columns.large-3.medium-3.small-3.float-left.item.brand-item
+                .image
+                  a href=my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brand.brand_url)
+                    img src=brand.image
+                h5
+                  = link_to brand.name, my_collection_path(m.main_catalogs_url, s.sub_catalog_url, brand.brand_url)
+                p
+                  = "("+brand.country+")"

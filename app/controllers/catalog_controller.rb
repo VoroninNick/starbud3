@@ -1,9 +1,14 @@
 class CatalogController < ApplicationController
 
   def all_brands
-    @brand = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog]).brands
-    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    # @brands = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog]).brands
+
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
+    # @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+
+    @current_sub_catalog = SubCatalog.joins(:main_catalog).where(sub_catalogs: {sub_catalog_url: params[:sub_catalog]},main_catalog: {id: @main_catalog})
+    @brands = SubCatalog.find(@current_sub_catalog).brands
+    # @brands = Brand.joins(sub_catalog: :main_catalog).where(su_catalog: {sub_catalog_url: params[:sub_catalog]}).where(main_catalog: {main_catalogs_url: params[:main_catalog]})
   end
 
   def all_collections
