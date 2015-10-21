@@ -21,22 +21,6 @@
           = link_to @current_collection.first.name, all_products_from_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url, @current_collection.first.collection_url)
           |&nbsp;/&nbsp;
           span =@door_test.name
-      /.row
-        .medium-9.columns.right
-          ul.breadcrumbs
-            li
-              =link_to 'Головна', root_path
-            li.unavailable
-              a href="#" =@main_catalog.name
-            li
-              = link_to @current_sub_catalog.first.name, my_sub_catalog_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url)
-            li
-              = link_to @current_brand.first.name, my_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url)
-            li
-              = link_to @current_collection.first.name, all_products_from_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url, @current_collection.first.collection_url)
-              /a href="#" =@current_collection.first.name
-            li.current
-              a href="#" =@door_test.name
 
       = render :partial => 'partials/catalog_sidebar'
       .columns.large-8.medium-8.small-8
