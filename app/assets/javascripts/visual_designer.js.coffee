@@ -59,7 +59,17 @@ $(document).ready ->
   $('select#vd_collections').change ->
     collection= $(this).val()
     $(this).removeClass("select_collection")
-    valuesToSubmit = {collection: collection, brand: $brandName}
+    $door_wrap = $(@).closest('.vd_door_drop_down')
+    $door_brand = $door_wrap.find('#vd_brand')
+
+    if !$('#vd_brand option:selected').length
+      $brandNam = $door_brand.find('option:eq(0)').val()
+      console.log('no selected-'+$brandNam)
+    else
+      $brandNam = $('#vd_brand option:selected').val()
+      console.log('selected-'+$brandNam)
+
+    valuesToSubmit = { brand: $brandNam, collection: collection}
     $.ajax
       url: '/get_doors_from_collection'
       type: "GET"

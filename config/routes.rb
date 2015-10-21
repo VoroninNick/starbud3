@@ -29,6 +29,8 @@ StarBud::Application.routes.draw do
   get "/designer/d_door_brand/d_door_collection/:id" => "catalog#update_sub_cat"
   get '/nazariy' => 'catalog#get_d_door_collection'
 
+  get 'develop' => 'main#develop'
+
   post "/contacts" => "main#send_message"
   post "/call_order" => "main#call_order"
   post "/order_product" => "main#order_product"

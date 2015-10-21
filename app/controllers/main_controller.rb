@@ -64,4 +64,8 @@ class MainController < ApplicationController
     message = params[:message]
     CustomForms.order_product_data(brand, collection, product, name, phone, email, message).deliver
   end
+
+  def develop
+    @main_catalog = MainCatalog.all
+  end
 end

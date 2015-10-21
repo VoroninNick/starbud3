@@ -156,20 +156,21 @@ class CatalogController < ApplicationController
   end
 
   def get_doors
-    col_name = params[:collection]
     brand_name = params[:brand]
+    col_name = params[:collection]
     doors = Door.joins(collection: [{brand: :sub_catalog}]).where(collections: {name: col_name}).where(brands: {name: brand_name}).where(sub_catalogs: {id: '1'})
 
     # sql = "select d.* from doors d, collections c, brands b, sub_catalogs s where d.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.name = '#{col_name}' and s.id == '1' "
 
     # sql = "select d.* from collections c, doors d, sub_catalog s where c.id = d.collection_id and c.name = '#{name}' and  "
     # doors =Door.find_by_sql(sql)
+
     @door_images = []
-    doors.each do |d|
-      d.door_variants_fulfillment_options.each do |dv|
-        dv.door_color_options.each do |dc|
-          @door_images.push dc
-        end
+    doors.each do |door|
+      door.door_variants_fulfillment_options.each do |door_variant|
+        # dv.door_color_options.each do |dc|
+        @door_images.push door_variant
+        # end
       end
     end
     render template: 'constructor/get_doors.xml'

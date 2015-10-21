@@ -1,0 +1,41 @@
+.row
+  .columns.develop-page
+    - if @main_catalog.any?
+      ul
+        -@main_catalog.each do |catalog|
+          li
+
+            =catalog.name
+            -if catalog.sub_catalogs.any?
+              ul
+                -catalog.sub_catalogs.each do |sub_catalog|
+                  li
+                    |категорія ---
+                    =sub_catalog.name
+                    -if sub_catalog.brands.any?
+                      ul
+                        -sub_catalog.brands.each do |brand|
+                          li
+                            |бренд ---
+                            =brand.name
+                            -if brand.collections.any?
+                              ul
+                                -brand.collections.each do |collection|
+                                  li
+                                    |колекці ---
+                                    =collection.name
+                                    -if collection.doors.any?
+                                      ul
+                                        -collection.doors.each do |door|
+                                          li
+                                            |двері ---
+                                            =door.name
+                                    -else
+                                      div empty products
+                            -else
+                              div empty collections
+                    -else
+                      div empty brands
+            -else
+              div empty sub catalog
+
