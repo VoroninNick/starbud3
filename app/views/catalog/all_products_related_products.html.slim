@@ -5,6 +5,22 @@
       = meta_keywords "#{s.related_product_keyword}"
       = meta_description "#{s.related_product_description}"
   .columns
+    .columns.breadcrambs
+      span
+        |//&nbsp;
+        a href="/"
+          |Головна
+        |&nbsp;/&nbsp;
+        span
+          =@main_catalog.name
+        |&nbsp;/&nbsp;
+        = link_to @current_sub_catalog.first.name, my_sub_catalog_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url)
+        |&nbsp;/&nbsp;
+        /= link_to @current_brand.first.name, my_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url)
+        /|&nbsp;/&nbsp;
+        /= link_to @current_collection.first.name, all_products_from_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url, @current_collection.first.collection_url)
+        /|&nbsp;/&nbsp;
+        span =@current_brand.name
     .row
       = render :partial => 'partials/catalog_sidebar'
       .columns.large-8.medium-8.small-8
