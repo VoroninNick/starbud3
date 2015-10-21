@@ -13,10 +13,12 @@ class CatalogController < ApplicationController
 
   def all_collections
 
-    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
+    # @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @current_brand = Brand.find_by_brand_url(params[:brand])
 
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
+    @current_sub_catalog = SubCatalog.joins(:main_catalog).where(sub_catalogs: {sub_catalog_url: params[:sub_catalog]},main_catalog: {id: @main_catalog})
+
     @subcat = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
 
     @it_et = Brand.find_by_brand_url(params[:brand]).int_exts
@@ -40,6 +42,7 @@ class CatalogController < ApplicationController
     # @collections = Brand.find_by_brand_url(params[:brand]).collections
     query = "select c.id from collections c, brands b, sub_catalogs s where c.brand_id == b.id and b.sub_catalog_id == s.id and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
     result = ActiveRecord::Base.connection.execute( query )
+
     @collections = []
     result.each do |row|
       @collections.append( Collection.find( row['id'] ) )
@@ -54,12 +57,12 @@ class CatalogController < ApplicationController
     result.each do |row|
       @door.append( Door.find( row['id'] ) )
     end
-    b = Brand.find_by_brand_url(params[:brand])
-    @current_collection = Collection.where(brand_id: b.id, collection_url: params[:collection]).first
 
+    @brand = Brand.find_by_brand_url(params[:brand])
+    @current_collection = Collection.where(brand_id: @brand.id, collection_url: params[:collection]).first
 
-    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
+    @current_sub_catalog = SubCatalog.joins(:main_catalog).where(sub_catalogs: {sub_catalog_url: params[:sub_catalog]},main_catalog: {id: @main_catalog})
 
 
     query = "select f.id from floors f, collections c, brands b, sub_catalogs s where f.collection_id == c.id and c.brand_id == b.id and b.sub_catalog_id == s.id and c.collection_url == '#{params[:collection]}' and b.brand_url == '#{params[:brand]}' and s.sub_catalog_url == '#{params[:sub_catalog]}'"
@@ -97,8 +100,11 @@ class CatalogController < ApplicationController
     @door_test = @door_test.first
     # render inline: @door_test[0].seo_dynamic.inspect
 
-    @current_sub_catalog = SubCatalog.find_by_sub_catalog_url(params[:sub_catalog])
     @main_catalog = MainCatalog.find_by_main_catalogs_url(params[:main_catalog])
+    @current_sub_catalog = SubCatalog.joins(:main_catalog).where(sub_catalogs: {sub_catalog_url: params[:sub_catalog]},main_catalog: {id: @main_catalog})
+    @current_brand = Brand.joins(:sub_catalog).where(brands: {brand_url: params[:brand]}, sub_catalog: {id: @current_sub_catalog.first})
+    @current_collection = Collection.joins(:brand).where(collections: {collection_url: params[:collection]}, brand: {id: @current_brand.first})
+
   end
 
   def floor
