@@ -16,7 +16,7 @@
           |&nbsp;/&nbsp;
           = link_to @current_sub_catalog.first.name, my_sub_catalog_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url)
           |&nbsp;/&nbsp;
-          = link_to @brand.name, my_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @brand.brand_url)
+          = link_to @current_brand.first.name, my_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url)
           |&nbsp;/&nbsp;
           /= link_to @current_collection.first.name, all_products_from_collection_path(@main_catalog.main_catalogs_url, @current_sub_catalog.first.sub_catalog_url, @current_brand.first.brand_url, @current_collection.first.collection_url)
           /|&nbsp;/&nbsp;
