@@ -23,7 +23,11 @@
                               -br.collections.each do |c|
                                 li
                                   = link_to c.name, all_products_from_collection_path(si.main_catalogs_url, sc.sub_catalog_url, br.brand_url, c.collection_url )
-
+                                  -if c.doors.any?
+                                    ul.product-sidebar
+                                      -c.doors.each do |item|
+                                        li
+                                          =link_to item.name, show_door_path(si.main_catalogs_url, sc.sub_catalog_url, br.brand_url, c.collection_url, item.door_url)
           ul
             li.sidebar-menu.side-bar-visual-constructor
               h4.box-shadow-right-bottom
