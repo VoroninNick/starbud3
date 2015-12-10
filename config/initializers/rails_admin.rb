@@ -58,12 +58,12 @@ if !ENV['si']
     config.model PromotionPrice do
       visible false
     end
-    config.model AssetsDoor do
-      # parent false
-      navigation_label 'Акційні прайси'
-      label 'Двері'
-      label_plural 'Двері'
-    end
+    # config.model AssetsDoor do
+    #   # parent false
+    #   navigation_label 'Акційні прайси'
+    #   label 'Двері'
+    #   label_plural 'Двері'
+    # end
 
   end
 end

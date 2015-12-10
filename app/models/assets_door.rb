@@ -2,6 +2,9 @@ class AssetsDoor < PromotionPrice
 
 
   rails_admin do
+    navigation_label 'Акційні прайси'
+    label 'Двері'
+    label_plural 'Двері'
 
     edit do
       field :published do
