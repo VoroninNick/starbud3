@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704202600) do
+ActiveRecord::Schema.define(version: 20151210132057) do
 
   create_table "about_article_images", force: true do |t|
     t.integer  "about_article_id"
@@ -178,6 +178,111 @@ ActiveRecord::Schema.define(version: 20140704202600) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_door_brands", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_door_collections", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "d_door_brand_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_doors", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "d_door_collection_id"
+    t.integer  "render_interior_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_plinth_brands", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_plinth_collections", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "d_plinth_brand_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_plinths", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "d_plinth_collection_id"
+    t.integer  "render_interior_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.boolean  "public"
+    t.integer  "index_sort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_product_images", force: true do |t|
+    t.string   "title"
+    t.string   "alt"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -499,6 +604,21 @@ ActiveRecord::Schema.define(version: 20140704202600) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "catalog_product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "promotion_prices", force: true do |t|
+    t.string   "type"
+    t.string   "title"
+    t.date     "custom_date"
+    t.text     "comment"
+    t.boolean  "published"
+    t.integer  "position"
+    t.string   "price_file_name"
+    t.string   "price_content_type"
+    t.integer  "price_file_size"
+    t.datetime "price_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

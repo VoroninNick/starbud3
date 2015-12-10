@@ -31,6 +31,10 @@ StarBud::Application.routes.draw do
 
   get 'develop' => 'main#develop'
 
+  get 'assets_door' => 'document#door'
+  get 'assets_floor' => 'document#floor'
+  get 'assets_wall' => 'document#wall'
+
   post "/contacts" => "main#send_message"
   post "/call_order" => "main#call_order"
   post "/order_product" => "main#order_product"
