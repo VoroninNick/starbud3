@@ -1,0 +1,28 @@
+table
+  thead.blue-gradient
+    tr
+      th width="200"  Назва
+      th Коментар
+      th width="80" = image_tag "save-icon.png"
+
+  - if prices.any?
+    tbody
+      - prices.each do |price|
+
+        tr
+          td
+            p.pp-title
+              = price.title
+              span = price.custom_date.strftime('%d.%m.%Y')
+          td
+            p
+              = price.comment
+          td
+            .download-pp.blue-gradient
+              a href=price.price.url
+                .download-pp-inner
+                  = image_tag "save-icon.png"
+                  |Завантажити
+                  span
+                    = File.extname(price.price_file_name)
+                    = number_to_human_size(price.price_file_size)

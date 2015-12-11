@@ -3,7 +3,9 @@ class DocumentController < ApplicationController
     @prices = AssetsDoor.published
   end
   def floor
+    @prices = AssetsFloor.published
   end
   def wall
+    @prices = AssetsWall.published
   end
 end
