@@ -1,9 +1,9 @@
 table
-  thead.blue-gradient
+  thead
     tr
-      th width="200"  Назва
-      th Коментар
-      th width="80" = image_tag "save-icon.png"
+      th.blue-gradient width="200"  Назва
+      th.blue-gradient Коментар
+      th.blue-gradient width="80" = image_tag "save-icon.png"
 
   - if prices.any?
     tbody
@@ -25,4 +25,5 @@ table
                   |Завантажити
                   span
                     = File.extname(price.price_file_name)
+                    |&nbsp;
                     = number_to_human_size(price.price_file_size)
