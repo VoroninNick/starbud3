@@ -7,6 +7,9 @@ class MainController < ApplicationController
     @main_banner = MainBanner.order('updated_at desc')
     @subs = Subscribe.new
     @index_about = IndexPageAboutCompany.order('updated_at asc').limit(1)
+
+    @pdf_catalog = PdfCatalog.where(selected_catalog: :t).limit(1)
+    render layout: "landing"
   end
   def about
     @title = "Про нас"
@@ -63,6 +66,18 @@ class MainController < ApplicationController
     phone = params[:phone]
     message = params[:message]
     CustomForms.order_product_data(brand, collection, product, name, phone, email, message).deliver
+  end
+
+  def become_a_dealer
+    data = params.permit(:name, :phone, :email, :company)
+    CustomForms.become_a_dealer(data).deliver
+    head :ok
+  end
+
+  def contact_us
+    data = params.permit(:name, :email, :message)
+    CustomForms.contact_us(data).deliver
+    head :ok
   end
 
   def develop

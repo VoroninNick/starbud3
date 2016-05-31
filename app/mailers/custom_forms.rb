@@ -25,4 +25,13 @@ class CustomForms < ActionMailer::Base
     mail(:template_path => 'notifications_mailer', :template_name => 'order_product', :subject => "Замовлення товару...", to: to)
   end
 
+  def become_a_dealer(data)
+    @data = data
+    mail( :template_path => 'notifications_mailer', :layout => false, :subject => "#{@data[:name]}, забажав стати диллером ...", :to => 'starbud@ukr.net')
+  end
+
+  def contact_us(data)
+    @data = data
+    mail( :template_path => 'notifications_mailer', :layout => false, :subject => "#{@data[:name]}, написав нам ...", :to => 'starbud@ukr.net')
+  end
 end

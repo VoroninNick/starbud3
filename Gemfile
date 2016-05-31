@@ -97,3 +97,7 @@ gem 'mailchimp-api', require: 'mailchimp'
 gem 'google-analytics-rails'
 
 gem "squeel"
+
+
+# new gem for v2
+gem 'inline_svg'

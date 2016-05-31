@@ -38,7 +38,8 @@ StarBud::Application.routes.draw do
   post "/contacts" => "main#send_message"
   post "/call_order" => "main#call_order"
   post "/order_product" => "main#order_product"
-
+  post 'become-a-dealer' => 'main#become_a_dealer', as: :become_a_dealer
+  post 'contact-us' => 'main#contact_us', as: :contact_us_form
 
   resources :promotions
   resources :video_on_main_pages

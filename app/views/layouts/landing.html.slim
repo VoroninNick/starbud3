@@ -1,0 +1,35 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    link rel="icon" type="image/png" href=asset_path("landing/favicon-16x16.png") sizes="16x16"
+    link rel="icon" type="image/png" href=asset_path("landing/favicon-32x32.png") sizes="32x32"
+    link rel="icon" type="image/png" href=asset_path("landing/favicon-96x96.png") sizes="96x96"
+    link rel="icon" type="image/png" href=asset_path("landing/favicon-196x196.png") sizes="196x196"
+    link rel="icon" type="image/png" href=asset_path("landing/favicon-228x228.png") sizes="228x228"
+    link rel="apple-touch-icon-precomposed" sizes="76x76" href=asset_path("landing/touch-icon-ipad.png")
+    link rel="apple-touch-icon-precomposed" sizes="180x180" href=asset_path("landing/touch-icon-iphone-6plus.png")
+
+    title == content_for?(:title) ? yield(:title) : "Стар Буд"
+
+    /= stylesheet_link_tag "v2/landing.css"
+    link href="assets/landing/landing.css" media="screen" rel="stylesheet"
+
+    = csrf_meta_tag
+
+  body
+    = render "layouts/v2/header"
+    = render "layouts/v2/mobile_menu"
+    main
+      = render "layouts/v2/index"
+    = render "layouts/v2/footer"
+
+    = render "layouts/v2/popups/become_a_dealer"
+    = render "layouts/v2/popups/contact_us"
+
+    = javascript_include_tag "https://maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry"
+    = javascript_include_tag 'https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
+
+    = javascript_include_tag "landing/landing.js"

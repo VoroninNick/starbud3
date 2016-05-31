@@ -1,0 +1,29 @@
+header
+  .header-logo
+    /= inline_svg "Starbud-logo.svg"
+    = inline_svg "landing/Logo.svg"
+
+  nav#main-menu
+    li
+      a href=about_path title="Про нас" Про нас
+    li
+      a href=actions_path title="Акції" Акції
+    li
+      a href=interesting_news_path title="Публікації"  Публікації
+    li
+      a href=contacts_path title="Контакти"  Контакти
+
+  .mobile-menu-icon-wrap.float-right
+    .mobile-menu-icon
+      span
+      span
+      span
+      span
+
+  a.constructor-link.float-right href=designer_path
+    = image_tag "landing/visual-constructor-icon.png"
+
+
+
+  .material-component.ripple.default-button.red.float-right
+    a data-open="become_s_dealer" Стати дилером

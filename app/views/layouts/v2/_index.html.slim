@@ -1,0 +1,717 @@
+=render "layouts/v2/main_banner"
+
+.main-page-media-block-wrap.main-page-about-company-video
+  .unit-of-measurement
+  .main-page-media-block-inner
+    .main-page-media-block.video-wrap
+      .video-item
+        iframe allowfullscreen="" class="youtube_video" data-video="http://www.youtube.com/embed/fSpzIO_Gx38?controls=2&amp;showinfo=0&amp;autoplay=1&amp;autohide=1" frameborder="0" id="video_4" src=""
+        .video-control-info-panel.video_panel_4
+          .image style="background: url('#{asset_path("landing/Starbud-video.jpg")}')no-repeat center center;"
+          .video-play-button data-video-id="video_4" data-video-panel="video_panel_4"
+            = image_tag "landing/Starbud-play-button-1.png"
+
+.main-page-media-block-wrap.main-page-about-company
+  .unit-of-measurement
+  .main-page-media-block-inner
+    .main-page-media-block
+      .row
+        .columns
+          .title Компанія «Стар-Буд»
+
+          span.about-company-slogan 10 років креативної та ексклюзивної роботи на ринку України.
+
+          .mp-ac-description
+            p Головними принципами роботи компанії «Стар-Буд» є вибір якісної і актуальної продукції в галузі, постійний аналіз тенденцій попиту на ринку,
+              надання взаємовигідних умов для партнерів, надійність і виконання всіх поставлених задач і зобов’язань.
+
+          .subtitle Наші сертифікати
+
+          ul#main-page-certificates-slider
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-1.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-2.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-3.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-4.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-5.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-6.jpg")}')no-repeat center center;"
+            li
+              .image style="background: url('#{asset_path("landing/Starbud-sertificates-v1-7.jpg")}')no-repeat center center;"
+
+          a.main-page-link-to href="http://star-bud.ua/about_us"
+            = inline_svg "landing/ic_arrow_forward_black_48px.svg"
+
+.main-page-media-block-wrap
+  .unit-of-measurement
+  .main-page-media-block-inner
+    .main-page-media-block
+      .main-page-media-block-part
+        .image style="background: url('#{asset_path("landing/Starbud-photos-peoples-1-1.jpg")}')no-repeat center center;"
+
+      .main-page-media-block-part
+        .image style="background: url('#{asset_path("landing/Starbud-photos-peoples-1-2.jpg")}')no-repeat center center;"
+
+.main-page-media-block-wrap
+  .unit-of-measurement
+  .main-page-media-block-inner
+    .main-page-media-block
+      .image style="background: url('#{asset_path("landing/Starbud-photos-peoples-1-3.jpg")}')no-repeat center center;"
+
+.clearfix
+
+.main-page-navigation-blocks-wrap
+  .main-page-link-to-catalog
+    - if @pdf_catalog.any?
+      a href=@pdf_catalog.path
+        = inline_svg "landing/file-pdf-box.svg"
+        span Завантажити каталог
+    - else
+      a href=""
+        = inline_svg "landing/file-pdf-box.svg"
+        span Завантажити каталог
+
+  .main-page-navigation-block-inner
+    .main-page-navigation-block
+      .main-page-navigation-item
+        a href="http://star-bud.ua/dveri/mizhkimnatni" title="Каталог дверей"
+          .image style="background: url('#{asset_path("landing/Starbud-catalogue-1-1.jpg")}')no-repeat center center;"
+          .main-page-navigation-item-title
+            .title Двері
+            p 452 одиниці
+
+  .main-page-navigation-block-inner.mp-nb-last
+    .main-page-navigation-block
+      .main-page-navigation-item
+        a href="http://star-bud.ua/pidloga/laminovana" title="Каталог підлоги"
+          .image style="background: url('#{asset_path("landing/Starbud-catalogue-1-2.jpg")}')no-repeat center center;"
+          .main-page-navigation-item-title
+            .title Підлога
+            p 123 одиниці
+
+    .main-page-navigation-block
+      .main-page-navigation-item
+        a href="http://star-bud.ua/ekster-er/sayding" title="Каталог матеріалів для стіни"
+          .image style="background: url('#{asset_path("landing/Starbud-catalogue-1-3.jpg")}')no-repeat center center;"
+          .main-page-navigation-item-title
+            .title Стіни
+            p 300 одиниць
+
+      .main-page-navigation-item
+        a href="http://star-bud.ua/suputni-tovari/dverna-furnitura" title="Каталог супутніх товарів"
+          .image style="background: url('#{asset_path("landing/Starbud-catalogue-1-4.jpg")}')no-repeat center center;"
+          .main-page-navigation-item-title
+            .title Супутні товари
+            p 997 одиниць
+
+  .clearfix
+
+
+.coverage-map-wrap
+  .coverage-map-navigation-wrap
+    .coverage-map-navigation-inner
+      .coverage-map-navigation
+        .title Карта покриття україни
+        .subtitle 10 областей західної та центральної україни
+
+        #navigation-map
+          = inline_svg "landing/Starbud-map-Ukraine-v1.svg"
+
+  .coverage-map-slider-wrap
+    .unit-of-measurement
+    .coverage-map-slider-inner
+      .coverage-map-slider
+        .coverage-map-slide-status
+          span.current-slide
+            |1
+          |/
+          span.total-slide
+            |6
+        ul#coverage-map
+          li data-slide-to-region="14"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Lviv.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Львівська обл.
+                  .subtitle з 2006 року
+                  p Серце компанії «Стар-Буд». У 2006  році в м. Львів було прийняте рішення про організацію підприємницької діяльності  в сфері продажу будівельних матеріалів. На даний момент дана область обслуговує понад 150 активних клієнтів.
+                  p Саме у Львові знаходиться головний офіс та основні склади з продукцією.
+
+          li data-slide-to-region="7"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Uzhgorod.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Закарпатська обл.
+                  .subtitle з 2007 року
+                  p Область лідер за розвитком та якістю співпраці. На даний момент якісна співпраця гарантована роботою 2 менеджерів з продажу.
+                  p З 2007 р. компанія Стар-Буд збільшує територію покриття, станом на 2016 р. понад 200 торгових точок, по усій території Закарпатської області. Компанія Стар-Буд співпрацює з найбільшими містами області, а саме: Ужгород, Великий Бичків, Мукачеве, Іршава, Хуст, Тячів, Виноградів, Чоп, Берегове, Солотвино, Свалява, Буштино, Рахів, Ясіня, Дубове, Вишково, Міжгір'я, Тересва, Королево, Великий Березний.
+
+          li data-slide-to-region="3"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Lutsk.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Волинська обл.
+                  .subtitle з 2007 року
+                  p Одна з перших областей в котрій компанія «Стар-Буд» розпочала свою діяльність. Покриваючи понад 200 торгових точок, компанія працює над покращення пропозиції придатної саме для Волинської обл.
+                    Оперативність  та своєчасна доставка гарантована регулярними логістичними доставками практично у будь-яку точку області.
+
+          li data-slide-to-region="18"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Rivnenska.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Рівненська обл.
+                  .subtitle з 2007 року
+                  p Безперервний розвиток даної обл. гарантував стабільні відносини з усіма торговими точками даної області. Станом на 2016 рік компанія «Стар-Буд» зуміла розповсюдити дистрибуторські послуги у більше ніж 150 ТТ.
+
+          li data-slide-to-region="20"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Ternopil.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Тернопільська обл.
+                  .subtitle з 2007 року
+                  p Історія діяльності компанії «Стар-Буд» розпочинається у Тернопільській обл., а саме у 2007 році було прийнято рішення про збільшення території покриття. Активно співпрацюючи з клієнтами, станом на 2016 рік, компанія «Стар-Буд» задовольняє потребу, у сфері будівельних матеріалів, понад 120 активних клієнтів області. Основні міста лідери області: Бережани, Кременець, Тернопіль, Чортків, Борщів, Бучач,  Заліщики, Збараж, Зборів …
+
+          li data-slide-to-region="26"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Chernivtsi.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Чернівецька обл.
+                  .subtitle з 2008 року
+                  p Компанія Стар-Буд розпочала свою діяльність в даній області у 2008 р. і успішно розширює свою територію покриття. Станом на 2016 р. клієнтська база становить – 150 ТТ.
+
+          li data-slide-to-region="9"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Ivano-f.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Івано-Франківська обл.
+                  .subtitle з 2008 року
+                  p Безперервний розвиток даної обл. гарантував стабільні відносини з усіма торговими точками даної області. Станом на 2016 рік компанія «Стар-Буд» зуміла розповсюдити дистрибуторські послуги у більше ніж 150 ТТ.
+
+          li data-slide-to-region="23"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Khmelnytsk.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Хмельницька обл.
+                  .subtitle з 2008 року
+                  p У 2008 році було прийнято рішення про збільшення території покриття, станом на 2016 р. компанія Стар-Буд, у Хмельницькій обл., активно співпрацює з понад 150 активними клієнтами.
+
+          li data-slide-to-region="2"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Vinnutsa.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Вінницька обл.
+                  .subtitle з 2012 року
+                  p Незважаючи на віддалене, від складських приміщень, розташування компанія «Стар-Буд» сформувала стійкий ланцюг логістичної доставки у практично усі торгові точки області. Компанія безперервно працює над оперативністю доставки  та покращенням пропозиції. У 2016 р. обладнано нові складські приміщення, що дозволить якісно змінити бачення своєчасності доставки для клієнтів Вінницької обл..
+                  p На даний момент область обслуговує понад 150 активних клієнтів.
+
+          li data-slide-to-region="6"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Zhytomir.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Житомирська обл.
+                  .subtitle з 2012 року
+                  p Незважаючи на віддалене, від складських приміщень, розташування компанія «Стар-Буд» сформувала стійкий ланцюг логістичної доставки у практично усі торгові точки області. Компанія безперервно працює над оперативністю доставки та покращенням пропозиції. У 2016 р. обладнано нові складські приміщення, що дозволить якісно змінити бачення своєчасності доставки для клієнтів Житомирської обл..
+                  p На даний момент область обслуговує понад 150 активних клієнтів.
+
+          li data-slide-to-region="10"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Kyiv.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Київська обл.
+                  .subtitle з 2016 року
+                  p У 2016  році було прийняте рішення про збільшення території покриття, оплюючи додаткові 5 областей Центральної України, а саме: Київська, Сумська, Черкаська, Чернігівська, Полтавська. У Київській обл. розміщено додаткових 2 складський приміщення, які направлення на збільшення оперативності доставки основних замовлень Центральної України. Для комфортної співпраці у Києві відкрито новий офіс центри компанії «Стар-Буд».
+
+                    
+          li data-slide-to-region="19"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Symu.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Сумська обл.
+                  .subtitle з 2016 року
+                  p У 2016  році було прийняте рішення про збільшення території покриття, оплюючи додаткові 5 областей Центральної України, а саме: Київська, Сумська, Черкаська, Чернігівська, Полтавська. У Київській обл. розміщено додаткових 2 складський приміщення, які направлення на збільшення оперативності доставки основних замовлень Центральної України. Для комфортної співпраці у Києві відкрито новий офіс центри компанії «Стар-Буд».
+
+
+          li data-slide-to-region="24"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Cherkasy.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Черкаська обл.
+                  .subtitle з 2016 року
+                  p У 2016  році було прийняте рішення про збільшення території покриття, оплюючи додаткові 5 областей Центральної України, а саме: Київська, Сумська, Черкаська, Чернігівська, Полтавська. У Київській обл. розміщено додаткових 2 складський приміщення, які направлення на збільшення оперативності доставки основних замовлень Центральної України. Для комфортної співпраці у Києві відкрито новий офіс центри компанії «Стар-Буд».
+
+          li data-slide-to-region="25"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Chernigivl.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Чернігівська обл.
+                  .subtitle з 2016 року
+                  p У 2016  році було прийняте рішення про збільшення території покриття, оплюючи додаткові 5 областей Центральної України, а саме: Київська, Сумська, Черкаська, Чернігівська, Полтавська. У Київській обл. розміщено додаткових 2 складський приміщення, які направлення на збільшення оперативності доставки основних замовлень Центральної України. Для комфортної співпраці у Києві відкрито новий офіс центри компанії «Стар-Буд».
+
+          li data-slide-to-region="17"
+            .cover-photo
+              .image style="background: url('#{asset_path("landing/Starbud-cities-Poltava.jpg")}')no-repeat center center;"
+            .coverage-object-info-wrap
+              .unit-of-measurement
+              .coverage-object-info-inner
+                .coverage-object-info
+                  .title Полтавська обл.
+                  .subtitle з 2016 року
+                  p У 2016  році було прийняте рішення про збільшення території покриття, оплюючи додаткові 5 областей Центральної України, а саме: Київська, Сумська, Черкаська, Чернігівська, Полтавська. У Київській обл. розміщено додаткових 2 складський приміщення, які направлення на збільшення оперативності доставки основних замовлень Центральної України. Для комфортної співпраці у Києві відкрито новий офіс центри компанії «Стар-Буд».
+
+
+
+  .clearfix
+
+.main-page-jobs-dealers-wrap
+  .main-page-jobs-wrap
+    .main-page-jobs-inner
+      .main-page-jobs
+        .main-page-jobs-top-wrap
+          .main-page-jobs-top-inner
+            .title Станьте нашим диллером
+            .subtitle
+              |Та отримайте&nbsp;
+              span унікальні переваги
+
+            .mp-jobs-why-we-wrap
+              .mp-jobs-why-we
+                = inline_svg "landing/Starbyd-icon-for dealer-v1.svg"
+                p
+                  |Доступ до нашої
+                  br
+                    |Crm системи
+
+              .mp-jobs-why-we
+                = inline_svg "landing/Starbyd-icon-for dealer-v2.svg"
+                p
+                  |Спеціальні
+                  br
+                    |пропозиції
+
+              .mp-jobs-why-we
+                = inline_svg "landing/Starbyd-icon-for dealer-v3.svg"
+                p
+                  |Доступ до
+                  br
+                    | каталогу товарів
+              .clearfix
+
+            .mp-jobs-why-we-button
+              .material-component.ripple.default-button.red.float-center
+                a data-open="become_s_dealer" Стати дилером
+
+        .main-page-jobs-bottom-wrap
+          .main-page-jobs-bottom-inner
+            .title Відгуки клієнтів
+            ul#feedback-clients-carousel
+              li
+                /.feedback-client-avatar
+                  .avatar
+                    .image style="background: url('#{asset_path("Historical-Santa-Claus-Male-icon.png")}')no-repeat center center;"
+                  p Людмила
+                .feedback-client-description
+                  blockquote ...компанія Стар-Буд це завжди приємна співпраця, підкажете по роботі зорієнтує по товару, завчасно попереджаєте про нюанси які випадково трапляються. Власне мені завжди з вами приємно працювати.
+                  p.client-name  Людмила, Магазин «Квартал»
+              li
+                /.feedback-client-avatar
+                  .avatar
+                    .image style="background: url('#{asset_path("Historical-Santa-Claus-Male-icon.png")}')no-repeat center center;"
+                  p Гудзій Роман
+                .feedback-client-description
+                  blockquote ...лаконічно скажу про компанію Стар-Буд -  Вау!!!, радий співпрацюю з такими приємними людьми які якісно та вчасно надають інформацію та товар.
+                  p.client-name Гудзій Роман, «Галерея Паркету»
+              li
+                /.feedback-client-avatar
+                  .avatar
+                    .image style="background: url('#{asset_path("Historical-Santa-Claus-Male-icon.png")}')no-repeat center center;"
+                  p Валентин Петрович
+                .feedback-client-description
+                  blockquote Співпраця із компанією «Стар-Буд» приємно здивувала швидкістю оформлення замовлення та оперативної доставки  магазин. Особливо приємно було почути кваліфіковану відповідь на усі мої запитання, а також допомогу у підборі комплектуючих. Загалом хороша компанія із хорошими людьми!!! Кращої ціни та якості не знайти! Рекомендую.
+                  p.client-name Стопачинський Валентин Петрович
+              li
+                /.feedback-client-avatar
+                  .avatar
+                    .image style="background: url('#{asset_path("Historical-Santa-Claus-Male-icon.png")}')no-repeat center center;"
+                  p Людмила
+                .feedback-client-description
+                  blockquote ...компанія Стар-Буд мені подобається, нічого поганого не можу сказати, усі обіцянки виконуються, усе як має бути, спілкуємось нормально, замовлення виконується вчасно. Нормально працюємо, немає жодних нарікань. Усе добре.
+                  p.client-name Людмила, «Галерея Дверей»
+              li
+                /.feedback-client-avatar
+                  .avatar
+                    .image style="background: url('#{asset_path("Historical-Santa-Claus-Male-icon.png")}')no-repeat center center;"
+                  p Мицак Мирослав
+                .feedback-client-description
+                  blockquote ...дуже добре що компанія «Стар-Буд» розділяє і сайт і ціни між роздрібом та гуртом. Існує розуміння роботи двох напрямків. Завжди можу розраховувати на кваліфіковану підтримку.
+                  p.client-name Мицак Мирослав
+
+  .main-page-jobs-wrap.main-page-jobs-wrap-second
+    .main-page-jobs-inner
+      .main-page-jobs
+        .image style="background: url('#{asset_path("landing/Starbud-photos-peoples-1-4.jpg")}')no-repeat center center;"
+
+  .main-page-dealers-wrap
+    .main-page-dealers-inner
+      .main-page-dealers
+        .image style="background: url('#{asset_path("landing/Starbud-photos-peoples-1-5.jpg")}')no-repeat center center;"
+  .main-page-dealers-wrap.main-page-dealers-wrap-mobile
+    .main-page-dealers-inner
+      .main-page-dealers.jobs-list
+        .title Вакансії
+        .subtitle Доступно 13 вакансій
+        ul
+          li
+            a
+              .title Координатор продаж
+              .subtitle Львів
+              .icon-link-to
+                = inline_svg "landing/ic_arrow_forward_black_48px.svg"
+          li
+            a
+              .title Дизайнер, 3D-візуалізатор
+              .subtitle Львів
+              .icon-link-to
+                = inline_svg "landing/ic_arrow_forward_black_48px.svg"
+
+        a.main-page-link-to href="http://star-bud.ua/about_us"
+          = inline_svg "landing/ic_arrow_forward_black_48px.svg"
+  .clearfix
+
+.main-page-our-partners-wrap
+  /.title 1976d2
+  .title Наші партнери
+  .subtitle
+    |26 партнерів
+    span &nbsp;по всій україні
+
+  ul#our-partners
+    li
+      = inline_svg "landing/Starbyd-logo-v1.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v2.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v3.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v4.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v5.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v6.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v7.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v8.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v9.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v10.svg"
+    li
+      = inline_svg "landing/Starbyd-logo-v11.svg"
+
+.main-page-contacts-block-wrap
+  .main-page-contacts-map-wrap
+    .main-page-contacts-map-inner
+      #map_canvas.main-page-contacts-map data-lat="49.80888" data-lng="24.04313" data-city="" data-address="м. Львів, вул. Луганська, 18"
+
+
+  .main-page-contacts-info-wrap
+    .main-page-contacts-info-info
+      .main-page-contacts-info-inner
+        .main-page-contacts-info
+          .title
+            |Наші контакти
+            ul#contacts-by-city.tabs data-tabs=""
+              li.tabs-title.is-active
+                a href="#lviv" aria-selected="true" Львів
+              li.tabs-title
+                a href="#kyiv" aria-selected="true" Київ
+
+          .tabs-content data-tabs-content="contacts-by-city"
+            #lviv.tabs-panel.is-active
+              p
+                span.label-contact
+                  |Магазин т.:
+                span +38 (032) 295 85 00
+              p
+                span.label-contact
+                  |Офіс т./факс:
+                a href="tel:+380322423841" +38 (032) 242 38 41
+              p
+                span.label-contact
+                  |Офіс моб.:
+                a href="tel:+380673400901" +38 (067) 340 09 01
+              p
+                span.label-contact
+                  |Ел. скринька:
+                a href="mailto:info@star-bud.com.ua" info@star-bud.com.ua
+              p
+                span.label-contact
+                  |СтарДизайн:
+                span +38(097)513 63 32
+
+              p
+                span.label-contact
+                  |Адреса:
+                span м. Львів, вул. Луганська, 18
+              p
+                span.label-contact
+                  |Графік роботи:
+
+                span
+                  span
+                    span.sub-label-contact Пн-Пт:
+                    |8:30 — 18:00
+                  span
+                    span.sub-label-contact Cб:
+                    |9:00 — 14:00
+
+            #kyiv.tabs-panel
+              p
+                span.label-contact
+                  |Офіс т./факс:
+                a href="tel:+380445007801" +38 (044) 500 78 01
+              p
+                span.label-contact
+                  |Офіс моб.:
+                a href="tel:+380674803635" +38 (067) 480 36 35
+              p
+                span.label-contact
+                  |Ел. скринька:
+                a href="mailto:info@star-bud.com.ua" info@star-bud.com.ua
+              p
+                span.label-contact
+                  |Адреса:
+                span м.Київ, вул.Алма-Атинська, 35-А
+
+              p
+                span.label-contact
+                  |Графік роботи:
+
+                span
+                  span
+                    span.sub-label-contact Пн-Пт:
+                    |8:30 — 18:00
+                  span
+                    span.sub-label-contact Cб:
+                    |9:00 — 14:00
+
+          .material-component.ripple.default-button.red
+            a data-open="contact_us" Написати нам
+
+
+.representatives-wrap
+  .representatives-one-person-wrap.representatives-one-person-wrap-mobile
+    .representatives-one-person-inner
+      .representatives-one-person.black
+        .title
+          |Представники
+          br
+            |в області
+
+        .subtitle в 15 областях україни
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/1.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Черкаська
+              .subtitle Наталя
+              p
+                span.label-contact тел.моб.:
+                span +38(067)340 09 01
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/3.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Рівенська / Волинська
+              .subtitle Роксолана
+              p
+                span.label-contact тел.моб.:
+                span +38(067)670 04 33
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/2.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Івано-Франківська / Полтавська
+              .subtitle Олеся
+              p
+                span.label-contact тел.моб.:
+                span +38(067)696 70 53
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/5.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Житомирська / Чернівецька
+              .subtitle Лілія
+              p
+                span.label-contact тел.моб.:
+                span +38(097)103 13 06
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/4.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Хмельницька / Тернопільська
+              .subtitle Христина
+              p
+                span.label-contact тел.моб.:
+                span +38(067)674 71 91
+  /new personal
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/7.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Львів / Буд організації
+              .subtitle Галина
+              p
+                span.label-contact тел.моб.:
+                span +38(067)551 19 88
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/8.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Вінницька / Львівська
+              .subtitle Олег
+              p
+                span.label-contact тел.моб.:
+                span +38(067)671 46 68
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/9.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Закарпатська
+              .subtitle Генадій
+              p
+                span.label-contact тел.моб.:
+                span +38(067)671 46 56
+
+  / old person
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/6.jpg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Закарпатська / Львівська
+              .subtitle Віра
+              p
+                span.label-contact тел.моб.:
+                span +38(067)551 43 14
+
+  /new person
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/7R8Ir2sQ.jpeg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Чернігівська / Сумська
+              .subtitle Наталія
+              p
+                span.label-contact тел.моб.:
+                span +38(067)671 43 23
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person
+        .image style="background: url('#{asset_path("landing/AN6-DJAv.jpeg")}')no-repeat center center;"
+        .representatives-one-person-details-wrap
+          .representatives-one-person-details-inner
+            .representatives-one-person-details
+              .title Київська
+              .subtitle Інна
+              p
+                span.label-contact тел.моб.:
+                span +38(067)480 36 35
+
+
+  .representatives-one-person-wrap
+    .representatives-one-person-inner
+      .representatives-one-person.representative-future-wrap
+        .representative-future
+          = inline_svg "landing/headphones.svg"
+          .title
+            |Майбутній
+            br
+              |представник
+          .subtitle Очікуєм розширення в 2016
+
+  .clearfix
+
