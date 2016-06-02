@@ -10,8 +10,25 @@
  *
  *= require_self
  *= require foundation_and_overrides
+ *= require about_articles
+ *= require animate-custom
+ *= require catalog
+ *= require contacts
+ *= require document
+ *= require jquery.bxslider
+ *= require jquery.fancybox
+ *= require main
+ *= require mctabs
+ *= require nazariy_mixin
+ *= require publications
+ *= require superslides
+ *= require update
+ *= require validationEngine.jquery
+ *= require visual_constructor
 
- *= require_tree .
+
+
+ * require_tree .
  */
 
 
