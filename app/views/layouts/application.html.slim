@@ -10,12 +10,6 @@ html.fixed-test-width lang="en"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,cyrillic"
 
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
-    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?sensor=false"
-    = javascript_include_tag "//vk.com/js/api/openapi.js?101"
-    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"
-
     = csrf_meta_tag
     = analytics_init :local => Rails.env.development?
 
@@ -30,7 +24,11 @@ body
   = render partial: 'partials/chat'
   = render partial: 'partials/subscribe_popup'
 
+  = javascript_include_tag "application", "data-turbolinks-track" => true
 
-
+  = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?sensor=false"
+  = javascript_include_tag "//vk.com/js/api/openapi.js?101"
+  = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"
 
 
