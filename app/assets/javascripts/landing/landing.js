@@ -23667,7 +23667,7 @@ if (typeof Object.create !== "function") {
             position: myLatlng,
             map: map,
             title: 'Budapest',
-            icon: '/assets/landing/map-marker.svg'
+            icon: '/assets/landing/map-marker.png'
         });
         return google.maps.event.addListener(marker, 'click', function() {
             return infowindow.open(map, marker);
